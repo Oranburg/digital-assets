@@ -1,6 +1,6 @@
 {
   "id": "dao",
-  "term": "Decentralized Autonomous Organization (DAO)",
+  "term": "DAO",
   "tags": [
     "governance",
     "entity",
@@ -33,5 +33,6 @@
   ],
   "verification": {
     "status": "verified"
-  }
+  },
+  "full_name": "Decentralized Autonomous Organization"
 }

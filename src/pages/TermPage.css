@@ -39,6 +39,12 @@
   line-height: 1.15;
 }
 
+.term-header__fullname {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
+}
+
 .term-header__tags {
   display: flex;
   flex-wrap: wrap;

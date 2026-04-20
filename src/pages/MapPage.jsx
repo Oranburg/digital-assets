@@ -101,7 +101,7 @@ export default function MapPage() {
           <p className="entry-card__desc serif">
             Consensus, cryptography, smart contracts, and the mechanics underneath.
           </p>
-          <span className="entry-card__link">Explore techne &#8594;</span>
+          <span className="entry-card__link">Explore technology &#8594;</span>
         </Link>
 
         <Link to="/lens/teleology" className="entry-card">

@@ -1,6 +1,6 @@
 {
   "id": "defi",
-  "term": "DeFi (Decentralized Finance)",
+  "term": "DeFi",
   "tags": [
     "DeFi",
     "blockchain",
@@ -27,5 +27,6 @@
   ],
   "verification": {
     "status": "unverified"
-  }
+  },
+  "full_name": "Decentralized Finance"
 }

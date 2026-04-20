@@ -117,6 +117,9 @@ export default function TermPage() {
         {/* Header */}
         <header className="term-header">
           <h1 className="term-header__title">{term.term}</h1>
+          {term.full_name && (
+            <p className="term-header__fullname serif">{term.full_name}</p>
+          )}
           {term.tags?.length > 0 && (
             <div className="term-header__tags">
               {term.tags.map(tag => (
