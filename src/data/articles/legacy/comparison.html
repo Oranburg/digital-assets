@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choosing a Jurisdiction | NH DAO Law Explorer</title>
+  <meta name="description" content="Side-by-side comparison of DAO statutes in New Hampshire, Wyoming, Utah, Tennessee, and Vermont. Covers formation, decentralization standards, fiduciary duties, dispute resolution, and registry requirements.">
+  <meta name="author" content="Seth C. Oranburg">
+  <meta name="keywords" content="DAO statute comparison, state DAO law, New Hampshire DAO, Wyoming DAO LLC, Utah DAO, Tennessee DAO, Vermont BBLLC, RSA 301-B, jurisdiction selection, DAO formation, decentralization, fiduciary duties, dispute resolution">
+  <link rel="canonical" href="https://oranburg.law/NH-RSA-301-B/comparison.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Choosing a Jurisdiction: How State DAO Statutes Compare">
+  <meta property="og:description" content="Side-by-side comparison of five state DAO statutes. Covers formation, decentralization standards, fiduciary duties, dispute resolution, and registry requirements across NH, WY, UT, TN, and VT.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oranburg.law/NH-RSA-301-B/comparison.html">
+  <meta property="og:site_name" content="NH DAO Law Explorer">
+  <meta property="article:author" content="Seth C. Oranburg">
+  <meta property="article:published_time" content="2026-04-18">
+  <meta property="article:section" content="Law">
+  <meta property="article:tag" content="DAO statute comparison">
+  <meta property="article:tag" content="jurisdiction selection">
+  <meta property="article:tag" content="state DAO law">
+  <meta property="article:tag" content="blockchain governance">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Choosing a Jurisdiction: How State DAO Statutes Compare">
+  <meta name="twitter:description" content="Side-by-side comparison of five state DAO statutes covering formation, decentralization, fiduciary duties, dispute resolution, and registry requirements.">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Choosing a Jurisdiction: How State DAO Statutes Compare",
+    "headline": "How Five State DAO Statutes Compare",
+    "description": "Side-by-side comparison of DAO statutes in New Hampshire, Wyoming, Utah, Tennessee, and Vermont. Covers formation, decentralization standards, fiduciary duties, dispute resolution, and registry requirements.",
+    "url": "https://oranburg.law/NH-RSA-301-B/comparison.html",
+    "datePublished": "2026-04-18",
+    "author": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law",
+      "jobTitle": "Professor of Law",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "University of New Hampshire Franklin Pierce School of Law"
+      },
+      "sameAs": [
+        "https://github.com/Oranburg",
+        "https://orcid.org/0000-0002-5698-7962"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "NH DAO Law Explorer",
+      "url": "https://oranburg.law/NH-RSA-301-B/"
+    },
+    "about": {
+      "@type": "LegislationObject",
+      "name": "State DAO Statutes",
+      "legislationJurisdiction": "US"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', theme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    /* ===== Design Tokens (shared with index.html) ===== */
+    :root, [data-theme="dark"] {
+      --blue-deep:    #0A3255;
+      --blue-bright:  #2459A9;
+      --blue-light:   #6DACDE;
+      --gold:         #C4972F;
+      --gold-light:   #E8C560;
+      --granite:      #6B7B8D;
+      --white-mtn:    #E8ECF0;
+
+      --bg:           #000000;
+      --bg-secondary: #0A3255;
+      --bg-soft:      #0D3D68;
+      --text:         #FFFFFF;
+      --muted:        #9CA3AF;
+      --border:       #1E5080;
+      --accent:       #6DACDE;
+      --accent-2:     #E8C560;
+
+      --font-headline: 'Oswald', sans-serif;
+      --font-body:     'Roboto', sans-serif;
+      --font-accent:   'Crimson Text', serif;
+      --font-mono:     'Roboto Mono', 'Consolas', 'Courier New', monospace;
+
+      --max-width:   1100px;
+      --radius-sm:   4px;
+      --radius-md:   8px;
+
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.5rem;
+      --space-xl:  2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+    }
+
+    [data-theme="light"] {
+      --bg:           #FFFFFF;
+      --bg-secondary: #F8F9FA;
+      --bg-soft:      #E9ECEF;
+      --text:         #000000;
+      --muted:        #555555;
+      --border:       #D0D8E4;
+      --accent:       #2459A9;
+      --accent-2:     #C4972F;
+    }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-2); }
+
+    /* ===== Progress Bar ===== */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      z-index: 1000; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ===== Top Nav ===== */
+    .top-nav {
+      background-color: var(--blue-deep);
+      padding: 0.6rem var(--space-md);
+      position: sticky; top: 0; z-index: 200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .top-nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+    }
+    .top-nav a {
+      color: #FFFFFF; font-family: var(--font-body); font-size: 0.82rem;
+      font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .top-nav a:hover { color: var(--accent-2); }
+    .top-nav a.nav-active { color: var(--accent-2); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
+    .nav-pages { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+    .top-nav a.nav-current {
+      color: var(--accent-2); font-weight: 700;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: var(--space-md);
+    }
+    .theme-toggle {
+      background: none; border: none; cursor: pointer; color: #FFFFFF;
+      padding: 0.25rem; display: flex; align-items: center; transition: color 0.2s;
+    }
+    .theme-toggle:hover { color: var(--accent-2); }
+    [data-theme="dark"] .icon-sun  { display: inline; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: inline; }
+
+    /* ===== Page Layout ===== */
+    .page-layout {
+      display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 52px);
+    }
+
+    /* ===== Sidebar ===== */
+    .toc-sidebar {
+      width: 260px; min-width: 260px; position: sticky; top: 52px;
+      height: calc(100vh - 52px); overflow-y: auto;
+      padding: var(--space-lg) var(--space-md);
+      border-right: 1px solid var(--border); background: var(--bg);
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .toc-sidebar::-webkit-scrollbar { width: 4px; }
+    .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .toc-heading {
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-sm); padding: 0;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.35rem 0.5rem; font-size: 0.83rem; line-height: 1.35;
+      color: var(--muted); border-left: 2px solid transparent;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; transition: all 0.2s;
+    }
+    .toc-list a:hover { color: var(--text); background: var(--bg-soft); }
+    .toc-list a.active {
+      color: var(--accent); border-left-color: var(--accent);
+      background: var(--bg-soft); font-weight: 600;
+    }
+    .toc-sub {
+      font-size: 0.78rem; padding-left: 1rem;
+    }
+    .toc-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: var(--space-md) 0;
+    }
+    .toc-stat-badge {
+      display: inline-block; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.2rem 0.5rem;
+      font-size: 0.75rem; color: var(--muted); margin: 0.2rem 0;
+    }
+
+    /* ===== Content Area ===== */
+    .content-area {
+      flex: 1; min-width: 0; padding: var(--space-2xl) var(--space-xl);
+    }
+    .page-content {
+      max-width: 740px; margin: 0 auto;
+    }
+
+    /* ===== Typography ===== */
+    .page-content h1 {
+      font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700;
+      line-height: 1.15; margin: 0 0 var(--space-md);
+      color: var(--text); border-bottom: 2px solid var(--accent);
+      padding-bottom: var(--space-sm);
+    }
+    .page-content h2 {
+      font-family: var(--font-headline); font-size: 1.5rem; font-weight: 600;
+      line-height: 1.2; margin: var(--space-3xl) 0 var(--space-md); color: var(--text);
+      border-bottom: 1px solid var(--border); padding-bottom: var(--space-xs);
+      scroll-margin-top: 70px;
+    }
+    .page-content h3 {
+      font-family: var(--font-headline); font-size: 1.2rem; font-weight: 600;
+      margin: var(--space-2xl) 0 var(--space-sm); color: var(--text);
+      scroll-margin-top: 70px;
+    }
+    .page-content h4 {
+      font-family: var(--font-headline); font-size: 1rem; font-weight: 500;
+      margin: var(--space-lg) 0 var(--space-xs); color: var(--accent-2);
+    }
+    .page-content p {
+      font-family: var(--font-accent); font-size: 1.1rem; line-height: 1.85;
+      margin: 0 0 var(--space-md); text-align: justify; hyphens: auto;
+    }
+    .page-content ul, .page-content ol {
+      font-family: var(--font-accent); font-size: 1.05rem;
+      margin: 0 0 var(--space-md); padding-left: var(--space-xl);
+    }
+    .page-content li { margin-bottom: var(--space-xs); }
+    .page-content strong { font-weight: 700; }
+    .page-content em { font-style: italic; }
+
+    /* ===== Hero ===== */
+    .hero {
+      text-align: center; padding: var(--space-xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--border); margin-bottom: var(--space-2xl);
+    }
+    .hero h1 {
+      border-bottom: none; font-size: 2.6rem; margin-bottom: var(--space-md);
+    }
+    .hero .subtitle {
+      font-family: var(--font-accent); font-size: 1.2rem; color: var(--muted);
+      max-width: 560px; margin: 0 auto var(--space-lg); text-align: center; hyphens: none;
+    }
+    .hero-breadcrumb {
+      font-size: 0.85rem; color: var(--muted); margin-bottom: var(--space-md);
+    }
+
+    /* ===== Statute Box ===== */
+    .statute-box {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-left: 4px solid var(--accent); border-radius: var(--radius-md);
+      padding: var(--space-lg); margin: var(--space-lg) 0;
+    }
+    .statute-box-label {
+      font-family: var(--font-headline); font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent);
+      margin: 0 0 var(--space-sm);
+    }
+    .statute-box blockquote {
+      font-family: var(--font-accent); font-size: 1rem; line-height: 1.75;
+      color: var(--white-mtn); margin: 0; padding: 0;
+      font-style: italic;
+    }
+
+    /* ===== Call-out ===== */
+    .callout {
+      border-left: 4px solid var(--gold); background: rgba(196,151,47,0.08);
+      padding: var(--space-md) var(--space-lg); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: var(--space-lg) 0;
+    }
+    .callout p {
+      font-family: var(--font-accent) !important; font-size: 1rem !important;
+      margin: 0 !important; text-align: left !important;
+    }
+    .callout-info { border-left-color: var(--accent); background: rgba(109,172,222,0.08); }
+
+    /* ===== Comparison Table ===== */
+    .comparison-table-wrapper { overflow-x: auto; margin: var(--space-lg) 0; }
+    .comparison-table {
+      width: 100%; border-collapse: collapse; font-size: 0.88rem;
+      min-width: 600px;
+    }
+    .comparison-table th {
+      background: var(--bg-secondary); text-align: left;
+      font-family: var(--font-headline); font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted);
+      padding: 0.6rem 0.8rem; border-bottom: 2px solid var(--border);
+    }
+    .comparison-table td {
+      padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border);
+      vertical-align: top; line-height: 1.4;
+    }
+    .comparison-table tr:hover td { background: var(--bg-soft); }
+    .jur-badge {
+      display: inline-block; padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm); font-size: 0.78rem;
+      font-weight: 700; font-family: var(--font-headline);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .jur-nh { background: #1a3d6e; color: var(--blue-light); }
+    .jur-wy { background: #2d4a1e; color: #86efac; }
+    .jur-ut { background: #4a1e1e; color: #fca5a5; }
+    .jur-tn { background: #3a2a10; color: #fcd34d; }
+    .jur-vt { background: #1e3a2a; color: #6ee7b7; }
+
+    /* ===== Comparison cell colors ===== */
+    .cmp-required { color: #4ade80; font-weight: 600; }
+    .cmp-formation { color: #fcd34d; font-weight: 500; }
+    .cmp-optional  { color: var(--muted); font-style: italic; }
+    .cmp-none      { color: var(--muted); }
+
+    /* ===== Expandable Details ===== */
+    details.math-detail {
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      margin: var(--space-md) 0; overflow: hidden;
+    }
+    details.math-detail summary {
+      padding: var(--space-sm) var(--space-md);
+      background: var(--bg-secondary); cursor: pointer;
+      font-family: var(--font-headline); font-size: 0.9rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent);
+      list-style: none; display: flex; align-items: center; gap: 0.5rem;
+      user-select: none;
+    }
+    details.math-detail summary::-webkit-details-marker { display: none; }
+    details.math-detail summary::before {
+      content: '\25B6'; font-size: 0.7rem; transition: transform 0.2s; flex-shrink: 0;
+    }
+    details[open].math-detail summary::before { transform: rotate(90deg); }
+    details.math-detail .detail-body {
+      padding: var(--space-md) var(--space-lg); font-family: var(--font-accent);
+      font-size: 1rem; line-height: 1.8;
+    }
+    details.math-detail .detail-body p { margin: 0 0 var(--space-sm); }
+    details.math-detail .detail-body ul {
+      font-family: var(--font-accent); font-size: 1rem;
+      margin: 0 0 var(--space-sm); padding-left: var(--space-xl);
+    }
+    details.math-detail .detail-body li { margin-bottom: var(--space-xs); }
+
+    /* ===== Defined Terms ===== */
+    .defined-term {
+      cursor: help;
+      border-bottom: 1px dotted var(--accent-2);
+      transition: background 0.2s;
+    }
+    .defined-term:hover { background: rgba(232, 197, 96, 0.15); }
+    .def-tooltip {
+      display: none; position: fixed; z-index: 800;
+      background: var(--bg-secondary); border: 1px solid var(--accent-2);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 440px; width: 90vw; overflow: hidden;
+    }
+    .def-tooltip.visible { display: block; }
+    .def-tooltip-header {
+      background: var(--blue-deep); color: var(--accent-2); padding: 0.5rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .def-tooltip-header small {
+      font-family: var(--font-body); font-size: 0.72rem; font-weight: 400;
+      color: var(--muted); text-transform: none; letter-spacing: 0;
+    }
+    .def-tooltip-close {
+      background: none; border: none; color: var(--accent-2); font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .def-tooltip-body {
+      padding: 0.75rem; font-family: var(--font-accent); font-size: 0.82rem;
+      line-height: 1.6; color: var(--text); max-height: 300px; overflow-y: auto;
+    }
+    .def-tooltip-source {
+      font-family: var(--font-body); font-size: 0.75rem; font-style: italic;
+      color: var(--muted); margin-top: 0.5rem; border-top: 1px solid var(--border);
+      padding-top: 0.4rem;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      border-top: 1px solid var(--border); padding: var(--space-xl) var(--space-md);
+      text-align: center; font-size: 0.85rem; color: var(--muted);
+    }
+    .site-footer a { color: var(--accent); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .toc-sidebar { display: none; }
+      .content-area { padding: var(--space-lg); }
+    }
+    @media (max-width: 600px) {
+      .page-content h1 { font-size: 1.6rem; }
+      .page-content h2 { font-size: 1.25rem; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+        <div class="top-nav-inner">
+      <span class="nav-title">NH DAO Law</span>
+      <div class="nav-pages">
+        <a href="index.html">Statute</a>
+        <a href="decentralization.html">Decentralization</a>
+        <a href="registry.html">Registry</a>
+        <a href="comparison.html" class="nav-active">Compare</a>
+        <a href="genius.html">GENIUS</a>
+        <a href="stable-tokens.html">Stable Tokens</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:var(--space-sm);">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Layout -->
+  <div class="page-layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc-sidebar" id="tocSidebar">
+      <p class="toc-heading">On This Page</p>
+      <ul class="toc-list">
+        <li><a href="#landscape" data-target="landscape">The Landscape</a></li>
+        <li><a href="#requirements-table" data-target="requirements-table">Requirements Comparison</a></li>
+        <li><a href="#profiles" data-target="profiles">Jurisdiction Profiles</a></li>
+        <li><a href="#profile-nh" data-target="profile-nh" class="toc-sub">&#8594; New Hampshire</a></li>
+        <li><a href="#profile-wy" data-target="profile-wy" class="toc-sub">&#8594; Wyoming</a></li>
+        <li><a href="#profile-ut" data-target="profile-ut" class="toc-sub">&#8594; Utah</a></li>
+        <li><a href="#profile-tn" data-target="profile-tn" class="toc-sub">&#8594; Tennessee</a></li>
+        <li><a href="#profile-vt" data-target="profile-vt" class="toc-sub">&#8594; Vermont</a></li>
+        <li><a href="#key-differences" data-target="key-differences">Key Differences</a></li>
+        <li><a href="#resources" data-target="resources">Resources</a></li>
+      </ul>
+      <hr class="toc-divider">
+      <p class="toc-heading" style="margin-top:0;">Jurisdictions</p>
+      <div class="toc-stat-badge"><span class="jur-badge jur-nh" style="font-size:0.7rem;">NH</span> RSA 301-B (2024)</div><br>
+      <div class="toc-stat-badge"><span class="jur-badge jur-wy" style="font-size:0.7rem;">WY</span> Ch. 31 (2021)</div><br>
+      <div class="toc-stat-badge"><span class="jur-badge jur-ut" style="font-size:0.7rem;">UT</span> Ch. 5 (2023)</div><br>
+      <div class="toc-stat-badge"><span class="jur-badge jur-tn" style="font-size:0.7rem;">TN</span> Ch. 250 (2022)</div><br>
+      <div class="toc-stat-badge"><span class="jur-badge jur-vt" style="font-size:0.7rem;">VT</span> &sect; 4173 (2018)</div>
+      <hr class="toc-divider">
+      <p style="font-size:0.78rem; color:var(--muted); margin:0;">Part of the<br><strong>NH DAO Law Explorer</strong><br>series on DAO jurisdiction.</p>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content-area">
+      <article class="page-content">
+
+        <!-- Hero -->
+        <div class="hero">
+          <p class="hero-breadcrumb">
+            <a href="index.html">RSA 301-B</a> &rsaquo; Comparing Jurisdictions
+          </p>
+          <h1>Choosing a Jurisdiction</h1>
+          <p class="subtitle">How Five State DAO Statutes Compare</p>
+        </div>
+
+
+        <!-- ============================
+             SECTION 1: THE LANDSCAPE
+             ============================ -->
+        <h2 id="landscape">The Landscape</h2>
+
+        <p>Five states have enacted DAO-specific legislation. Each takes a different approach &mdash; from New Hampshire&rsquo;s prescriptive 11-requirement framework to Vermont&rsquo;s permissive LLC overlay. The choice of jurisdiction depends on what your DAO needs: maximum legal certainty, minimal regulatory burden, or something in between.</p>
+
+        <p>This page compares the five state DAO statutes side by side, examining formation requirements, decentralization standards, fiduciary duty treatment, dispute resolution, and entity structure. For a deep dive into New Hampshire&rsquo;s specific requirements, see the <a href="registry.html">Registry Requirements</a> checklist; for the mathematical analysis of decentralization, see <a href="decentralization.html">Measuring Decentralization</a>.</p>
+
+
+        <!-- ============================
+             SECTION 2: REQUIREMENTS TABLE
+             ============================ -->
+        <h2 id="requirements-table">Requirements Comparison</h2>
+
+        <p>The table below shows which of the eleven listing requirements imposed by New Hampshire&rsquo;s RSA 301-B:15 are also found in the other four state DAO statutes. New Hampshire is the most demanding; no other state requires all eleven.</p>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Requirement</th>
+                <th><span class="jur-badge jur-nh">NH</span></th>
+                <th><span class="jur-badge jur-wy">WY</span></th>
+                <th><span class="jur-badge jur-ut">UT</span></th>
+                <th><span class="jur-badge jur-tn">TN</span></th>
+                <th><span class="jur-badge jur-vt">VT</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>(a) Permissionless blockchain</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(b) Public address</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(c) Open-source code</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(d) Quality assurance testing</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(e) Graphical user interface</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(f) Public bylaws</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-optional">Optional</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(g) Public communications</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(h) Internal dispute resolution</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(i) Third-party dispute resolution</td>
+                <td class="cmp-required">Required</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(j) Decentralized network</td>
+                <td class="cmp-required">Required (ongoing)</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-formation">At formation</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+              <tr>
+                <td>(k) Decentralized governance</td>
+                <td class="cmp-required">Required (ongoing)</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-formation">At formation</td>
+                <td class="cmp-none">&mdash;</td>
+                <td class="cmp-none">&mdash;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Note the contrast: Wyoming requires an operating agreement (analogous to bylaws) but does not mandate any of the technical infrastructure or decentralization requirements. Utah closely mirrors NH on technical requirements but does not require third-party dispute resolution and requires decentralization only at formation, not on an ongoing basis. Tennessee allows but does not require an operating agreement. Vermont&rsquo;s BBLLC statute is an enabling framework that imposes no DAO-specific requirements.</p>
+
+
+        <!-- ============================
+             SECTION 3: JURISDICTION PROFILES
+             ============================ -->
+        <h2 id="profiles">Jurisdiction Profiles</h2>
+
+        <p>Each state&rsquo;s DAO statute reflects a distinct legislative philosophy. The profiles below summarize the key features of each framework.</p>
+
+        <!-- New Hampshire -->
+        <details class="math-detail" id="profile-nh">
+          <summary><span class="jur-badge jur-nh">NH</span>&nbsp; New Hampshire (RSA 301-B, 2024)</summary>
+          <div class="detail-body">
+            <ul>
+              <li><strong>Approach:</strong> Standalone chapter, 31 sections, most prescriptive of the five states</li>
+              <li><strong>Entity type:</strong> &ldquo;New Hampshire DAO&rdquo; &mdash; a distinct entity, not an LLC</li>
+              <li><strong>Formation:</strong> Notice to Secretary of State plus registry listing (&sect;&nbsp;301-B:12)</li>
+              <li><strong>Filing fee:</strong> $100</li>
+              <li><strong>Registry:</strong> Blockchain-based, administered by UNH-IOL (&sect;&nbsp;301-B:14)</li>
+              <li><strong>Decentralization:</strong> Required &ldquo;at all times&rdquo; with 20% bright-line and three-prong test (&sect;&nbsp;301-B:5(IX))</li>
+              <li><strong>Fiduciary duties:</strong> No implied fiduciary duties (&sect;&nbsp;301-B:20)</li>
+              <li><strong>Fallback law:</strong> RSA 304-C (LLC Act) (&sect;&nbsp;301-B:28)</li>
+              <li><strong>Unique features:</strong> Third-party dispute resolution, QA testing by registry administrator, code-supremacy clause, contentious fork rules</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Wyoming -->
+        <details class="math-detail" id="profile-wy">
+          <summary><span class="jur-badge jur-wy">WY</span>&nbsp; Wyoming (Wyo. Stat. &sect;&sect; 17-31-101 to -116, 2021)</summary>
+          <div class="detail-body">
+            <ul>
+              <li><strong>Approach:</strong> Supplement to LLC Act (Chapter 29), 16 sections</li>
+              <li><strong>Entity type:</strong> &ldquo;DAO LLC&rdquo; &mdash; an LLC with DAO designation</li>
+              <li><strong>Formation:</strong> Articles of organization filed with Secretary of State</li>
+              <li><strong>Decentralization:</strong> Not defined with numerical thresholds</li>
+              <li><strong>Management:</strong> May be &ldquo;algorithmically managed&rdquo; or &ldquo;member managed&rdquo;</li>
+              <li><strong>Fiduciary duties:</strong> LLC Act duties apply by default</li>
+              <li><strong>Unique features:</strong> First state to enact DAO legislation; algorithmically managed option</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Utah -->
+        <details class="math-detail" id="profile-ut">
+          <summary><span class="jur-badge jur-ut">UT</span>&nbsp; Utah (Utah Code &sect;&sect; 48-5-101 to -406, 2023)</summary>
+          <div class="detail-body">
+            <ul>
+              <li><strong>Approach:</strong> Within LLC code, 26 sections</li>
+              <li><strong>Entity type:</strong> &ldquo;DAO LLC&rdquo;</li>
+              <li><strong>Formation:</strong> Certificate of organization with Division of Corporations; 9 requirements at formation</li>
+              <li><strong>Decentralization:</strong> Required at formation but NOT &ldquo;at all times&rdquo;</li>
+              <li><strong>Fiduciary duties:</strong> Modified business judgment rule (&sect;&nbsp;48-5-307)</li>
+              <li><strong>Unique features:</strong> Closest to NH on technical requirements; addresses forks and failure events</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Tennessee -->
+        <details class="math-detail" id="profile-tn">
+          <summary><span class="jur-badge jur-tn">TN</span>&nbsp; Tennessee (Tenn. Code Ann. &sect;&sect; 48-250-101 to -115, 2022)</summary>
+          <div class="detail-body">
+            <ul>
+              <li><strong>Approach:</strong> Supplement to LLC Act (Chapter 249), 15 sections</li>
+              <li><strong>Entity type:</strong> &ldquo;Decentralized Organization&rdquo; (DO or DAO)</li>
+              <li><strong>Formation:</strong> Articles of organization filed with Secretary of State</li>
+              <li><strong>Decentralization:</strong> Not defined; no numerical thresholds</li>
+              <li><strong>Management:</strong> Member-managed or smart-contract-managed</li>
+              <li><strong>Fiduciary duties:</strong> No fiduciary duty unless contractually agreed (&sect;&nbsp;48-250-109)</li>
+              <li><strong>Unique features:</strong> Lightest touch; smart-contract-managed option; NOTICE OF RESTRICTIONS on duties/transfers</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Vermont -->
+        <details class="math-detail" id="profile-vt">
+          <summary><span class="jur-badge jur-vt">VT</span>&nbsp; Vermont (11 V.S.A. &sect; 4173, 2018)</summary>
+          <div class="detail-body">
+            <ul>
+              <li><strong>Approach:</strong> Single section within LLC Act, not a separate entity type</li>
+              <li><strong>Entity type:</strong> Blockchain-Based LLC (BBLLC) &mdash; an LLC with blockchain governance election</li>
+              <li><strong>Formation:</strong> Standard LLC formation with blockchain governance election</li>
+              <li><strong>Decentralization:</strong> Not addressed</li>
+              <li><strong>Unique features:</strong> First state to legislate (2018); permissive/enabling rather than prescriptive</li>
+            </ul>
+          </div>
+        </details>
+
+
+        <!-- ============================
+             SECTION 4: KEY DIFFERENCES
+             ============================ -->
+        <h2 id="key-differences">Key Differences</h2>
+
+        <p>The five state DAO statutes vary along several major axes. Understanding these differences is essential for choosing the right jurisdiction.</p>
+
+        <h4>1. Prescriptiveness</h4>
+        <p>New Hampshire imposes 11 registry requirements with ongoing compliance obligations. Tennessee, at the other extreme, sets minimal requirements at formation only. Wyoming and Utah fall in between, and Vermont operates as a pure enabling statute with no DAO-specific requirements at all.</p>
+
+        <h4>2. Decentralization Standards</h4>
+        <p>New Hampshire is the only state with a quantitative decentralization test: the 20% bright-line threshold, enforced &ldquo;at all times&rdquo; through a three-prong definition with rolling lookback windows. Utah requires decentralization at formation but does not impose ongoing monitoring. Wyoming, Tennessee, and Vermont do not define decentralization with numerical thresholds.</p>
+
+        <h4>3. Entity Structure</h4>
+        <p>New Hampshire creates a standalone entity type (&ldquo;New Hampshire DAO&rdquo;) in its own chapter. Wyoming, Utah, and Tennessee layer DAO provisions onto existing LLC statutes, creating a &ldquo;DAO LLC&rdquo; variant. Vermont adds a single section to its LLC Act to permit blockchain-based governance without creating a new entity type at all.</p>
+
+        <h4>4. Fiduciary Duties</h4>
+        <p>New Hampshire and Tennessee eliminate implied fiduciary duties by default &mdash; participants and administrators owe no fiduciary duties to the DAO or each other unless the bylaws say otherwise. Wyoming applies standard LLC fiduciary duties by default. Utah takes a middle path with a modified business judgment rule that accounts for the role of smart contracts in DAO governance.</p>
+
+        <h4>5. Dispute Resolution</h4>
+        <p>New Hampshire uniquely requires both internal dispute resolution (among participants) <em>and</em> third-party dispute resolution (with outsiders). No other state DAO statute mandates a mechanism for resolving disputes with third parties. Utah requires internal dispute resolution but not third-party. Wyoming, Tennessee, and Vermont leave dispute resolution entirely to the operating agreement.</p>
+
+        <h4>6. Registry Technology</h4>
+        <p>New Hampshire is the only state that requires a blockchain-based registry administered by a designated entity (UNH-IOL). All other states use standard state filing with the Secretary of State or Division of Corporations. The NH registry is designed to enable automated on-chain monitoring of ongoing compliance.</p>
+
+
+        <!-- ============================
+             SECTION 5: RESOURCES
+             ============================ -->
+        <h2 id="resources">Resources and Further Reading</h2>
+
+        <h4>State Statutes</h4>
+        <ul>
+          <li><a href="index.html">N.H. Rev. Stat. Ann. ch. 301-B</a> &mdash; Full statutory text with interactive annotations (this site)</li>
+          <li><a href="https://www.wyoleg.gov/Legislation/2021/SF0038" target="_blank" rel="noopener noreferrer">Wyo. Stat. &sect;&sect; 17-31-101 to -116</a> &mdash; Wyoming DAO Supplement (SF0038, 2021)</li>
+          <li><a href="https://le.utah.gov/~2023/bills/static/HB0357.html" target="_blank" rel="noopener noreferrer">Utah Code &sect;&sect; 48-5-101 to -406</a> &mdash; Utah Decentralized Autonomous Organizations Act (HB 357, 2023)</li>
+          <li><a href="https://www.capitol.tn.gov/Bills/112/Bill/SB2854.pdf" target="_blank" rel="noopener noreferrer">Tenn. Code Ann. &sect;&sect; 48-250-101 to -115</a> &mdash; Tennessee Decentralized Organizations (SB 2854, 2022)</li>
+          <li><a href="https://legislature.vermont.gov/statutes/section/11/025/04173" target="_blank" rel="noopener noreferrer">11 V.S.A. &sect; 4173</a> &mdash; Vermont Blockchain-Based LLCs (2018)</li>
+        </ul>
+
+        <h4>Related Pages</h4>
+        <ul>
+          <li><a href="registry.html">Registry Requirements</a> &mdash; Interactive checklist of the 11 NH requirements</li>
+          <li><a href="decentralization.html">Measuring Decentralization</a> &mdash; Mathematical analysis, interactive calculator, and state comparison</li>
+        </ul>
+
+        <h4>Scholarship</h4>
+        <ul>
+          <li>Oranburg, Seth C., &ldquo;How is Decentralization Legally Defined?&rdquo; (HiDL paper) &mdash; Compares decentralization definitions across all four post-2018 state DAO statutes</li>
+        </ul>
+
+        <p style="margin-top:var(--space-2xl); font-size:0.88rem; color:var(--muted);">
+          Maintained by <a href="https://oranburg.law">Seth C. Oranburg</a>, Professor of Law, UNH Franklin Pierce School of Law.
+          Statutory text is public law. Educational analysis and display tool &copy; 2026 Seth C. Oranburg. MIT License.
+        </p>
+
+      </article>
+    </div><!-- /.content-area -->
+  </div><!-- /.page-layout -->
+
+  <!-- Defined-term tooltip -->
+  <div class="def-tooltip" id="defTooltip">
+    <div class="def-tooltip-header">
+      <span id="defTermName"></span>
+      <button class="def-tooltip-close" onclick="closeDefTooltip()">&times;</button>
+    </div>
+    <div class="def-tooltip-body">
+      <div id="defTermBody"></div>
+      <div class="def-tooltip-source" id="defTermSource"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>
+      <a href="index.html">RSA 301-B Statute</a> &nbsp;&bull;&nbsp;
+      <a href="decentralization.html">Decentralization</a> &nbsp;&bull;&nbsp;
+      <a href="registry.html">Registry</a> &nbsp;&bull;&nbsp;
+      <a href="comparison.html">Comparison</a> &nbsp;&bull;&nbsp;
+      <a href="https://github.com/Oranburg/NH-RSA-301-B">GitHub</a> &nbsp;&bull;&nbsp;
+      <a href="https://nh-token-commission.org">Commission</a> &nbsp;&bull;&nbsp;
+      <a href="https://oranburg.law">oranburg.law</a>
+    </div>
+    <p style="margin-top:0.5rem;">Statutory text: public law of the State of New Hampshire. Analysis &copy; 2026 Seth C. Oranburg. MIT License.</p>
+  </footer>
+
+  <script>
+    /* ===== Theme ===== */
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    /* ===== Progress Bar ===== */
+    (function() {
+      var bar = document.getElementById('progressBar');
+      function update() {
+        var pct = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (pct > 0 ? Math.min(window.scrollY / pct * 100, 100) : 0) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    })();
+
+    /* ===== Sidebar Scroll Spy ===== */
+    (function() {
+      var links = document.querySelectorAll('.toc-list a[data-target]');
+      var sections = [];
+      links.forEach(function(a) {
+        var el = document.getElementById(a.getAttribute('data-target'));
+        if (el) sections.push({ el: el, link: a });
+      });
+      var current = null;
+      function onScroll() {
+        var scrollY = window.scrollY + 90;
+        var active = null;
+        for (var i = sections.length - 1; i >= 0; i--) {
+          if (sections[i].el.offsetTop <= scrollY) { active = sections[i]; break; }
+        }
+        if (active && active !== current) {
+          if (current) current.link.classList.remove('active');
+          active.link.classList.add('active');
+          current = active;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* ===== Defined-Term Glossary ===== */
+    var defined_terms = {
+      "decentralized network": { def: "A blockchain system where no person had unilateral authority to control functionality, no person owned 20% or more of related digital assets, and no issuer directed 20% or more of voting power, each over a 12-month lookback period.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX)" },
+      "decentralized governance system": { def: "A rules-based system permitting users to form consensus or reach agreement in the development, management, or administration of a blockchain system. Excludes systems where any person or group can unilaterally alter consensus rules or determine final outcomes.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(X)" },
+      "decentralized autonomous organization": { def: "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(VIII)" },
+      "dao": { def: "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(VIII)" },
+      "permissionless blockchain": { def: "A blockchain system that allows any person to transact and produce blocks in accordance with the blockchain protocol, whereby the validity of the block is not determined by the identity of the producer.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXX)" },
+      "smart contract": { def: "Software code deployed in a blockchain system that consists of predefined and deterministic instructions and conditions executed in a decentralized manner. Execution produces a change in the blockchain state.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XLI)" },
+      "digital asset": { def: "Any fungible digital representation of value that can be exclusively possessed and transferred, person to person, without necessary reliance on an intermediary, and is recorded on a blockchain system.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XII)" },
+      "blockchain": { def: "Any technology where data is shared across a network to create a public ledger of verified transactions, linked using cryptography to maintain integrity, and distributed among participants in an automated fashion; and composed of source code that is publicly available.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(III)" },
+      "blockchain system": { def: "Any blockchain or blockchain protocol.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(V)" },
+      "token": { def: "A record on a permissionless blockchain, typically representing an asset, participation right, or other entitlement.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XLII)" },
+      "participant": { def: "Unless the bylaws provide otherwise, any person who is entitled under the bylaws to exercise governance rights in a DAO.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXIX)" },
+      "administrator": { def: "A person, irrespective of title, appointed in a manner specified in the bylaws to make discretionary decisions on behalf of the New Hampshire DAO with regard to specific, predefined operations.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(I)" },
+      "registry administrator": { def: "The person, including the University of New Hampshire Interoperability Laboratory, or any other entity authorized by the secretary of state to administer the New Hampshire DAO registry.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXXVI)" },
+      "on-chain": { def: "Any action or transaction that is recorded and verified on a blockchain according to a blockchain protocol\u2019s consensus mechanism.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXVI)" },
+      "off-chain": { def: "Any action or transaction that is not on-chain.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXV)" },
+      "new hampshire dao": { def: "A decentralized autonomous organization that is listed on the New Hampshire DAO registry.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXIII)" },
+      "related digital asset": { def: "A digital asset intrinsically linked to a blockchain system, including where its value is generated by programmatic functioning, represents voting rights, or is issued through programmatic functioning of the blockchain system.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXXIX)" },
+      "limited liability": { def: "The principle that participants and administrators of a New Hampshire DAO are not personally obligated for debts or liabilities of the DAO solely by reason of their role. The DAO meets its liabilities through its on-chain and off-chain assets.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:11(I)" },
+      "legal personality": { def: "The capacity of an entity to exist as a separate legal person distinct from its developers, participants, administrators, and legal representatives, with the ability to sue, be sued, own property, and enter contracts.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:7(I); \u00a7 301-B:10(I)" },
+      "nakamoto coefficient": { def: "The minimum number of entities required to control over half of a network\u2019s critical resources.", source: "Cong et al., Decentralized Governance in Blockchain-Based Organizations, Oxford Rev. Econ. Pol\u2019y 36(2) (2020)" },
+      "gini coefficient": { def: "A measure of distributional inequality ranging from 0.0 (perfect equality) to 1.0 (total concentration; one actor controls all).", source: "Standard statistical measure; applied to DAO governance in Fritsch, M\u00fcller & Wattenhofer (2022)" },
+      "voting power": { def: "The capacity to influence governance decisions in a DAO, typically exercised through token-weighted voting or delegation. RSA 301-B:5(IX)(b)(2) prohibits any issuer or affiliated person from directing 20% or more of outstanding voting power.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX)(b)(2)" },
+      "bright-line": { def: "A clearly defined legal rule that provides certainty by establishing a specific threshold (such as 20% ownership) rather than requiring case-by-case analysis. Contrasted with a \u2018standard,\u2019 which requires judgment about whether conduct is reasonable.", source: "Legal usage; applied to DAO decentralization in RSA 301-B:5(IX)(b)" }
+    };
+
+    /* ===== Annotate Defined Terms ===== */
+    function annotateDefinedTerms() {
+      var content = document.querySelector('.page-content');
+      if (!content) return;
+      var termKeys = Object.keys(defined_terms).sort(function(a, b) { return b.length - a.length; });
+      var escaped = termKeys.map(function(t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
+      var re = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+
+      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+
+      nodes.forEach(function(node) {
+        if (node.parentElement.classList && node.parentElement.classList.contains('defined-term')) return;
+        var tag = node.parentElement.tagName;
+        if (tag === 'H1' || tag === 'H2' || tag === 'H3' || tag === 'SCRIPT' || tag === 'STYLE' || tag === 'A' || tag === 'BUTTON') return;
+        var text = node.textContent;
+        if (!re.test(text)) return;
+        re.lastIndex = 0;
+        var frag = document.createDocumentFragment();
+        var last = 0, m;
+        re.lastIndex = 0;
+        while ((m = re.exec(text)) !== null) {
+          if (m.index > last) frag.appendChild(document.createTextNode(text.substring(last, m.index)));
+          var span = document.createElement('span');
+          span.className = 'defined-term';
+          span.setAttribute('tabindex', '0');
+          span.setAttribute('role', 'button');
+          span.setAttribute('aria-label', 'Definition: ' + m[0]);
+          span.setAttribute('data-term', m[0].toLowerCase());
+          span.textContent = m[0];
+          frag.appendChild(span);
+          last = re.lastIndex;
+        }
+        if (last < text.length) frag.appendChild(document.createTextNode(text.substring(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+
+      content.addEventListener('click', function(e) {
+        var t = e.target.closest('.defined-term');
+        if (t) showDefTooltip(t);
+      });
+    }
+
+    function showDefTooltip(el) {
+      var key = el.getAttribute('data-term');
+      var entry = defined_terms[key];
+      if (!entry) return;
+      document.getElementById('defTermName').innerHTML = '<span>' + el.textContent + '</span>';
+      document.getElementById('defTermBody').textContent = entry.def;
+      document.getElementById('defTermSource').textContent = 'Source: ' + entry.source;
+      var tooltip = document.getElementById('defTooltip');
+      tooltip.classList.add('visible');
+      var rect = el.getBoundingClientRect();
+      var top = rect.bottom + 8;
+      var left = rect.left;
+      if (top + 200 > window.innerHeight) top = Math.max(8, rect.top - 220);
+      if (left + 440 > window.innerWidth) left = window.innerWidth - 450;
+      if (left < 8) left = 8;
+      tooltip.style.top = top + 'px';
+      tooltip.style.left = left + 'px';
+    }
+    function closeDefTooltip() { document.getElementById('defTooltip').classList.remove('visible'); }
+    document.addEventListener('click', function(e) {
+      var tt = document.getElementById('defTooltip');
+      if (tt.classList.contains('visible') && !tt.contains(e.target) && !e.target.classList.contains('defined-term')) closeDefTooltip();
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDefTooltip(); });
+
+    // Run after page loads
+    annotateDefinedTerms();
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "id": "stablecoin",
+  "term": "Stablecoin",
+  "layer": 2,
+  "tags": ["currency", "payments", "defi"],
+  "parent": null,
+  "related": ["payment-stablecoin", "depeg", "reserve-requirement", "usdc"],
+  "definitions": {
+    "technical": "A digital asset designed to maintain a stable value relative to a reference asset (typically the U.S. dollar) through reserve backing, algorithmic mechanisms, or crypto-collateralization. The total stablecoin market exceeds $200 billion in capitalization, with fiat-backed variants (USDC, USDT) representing approximately 87% of the market. Stablecoin issuers collectively rank among the top 20 holders of U.S. Treasury securities globally.",
+    "lay": "A digital currency designed to always be worth one dollar (or another stable value). Unlike Bitcoin, which swings wildly in price, stablecoins stay steady because each token is backed by real dollars or Treasury bills held in reserve. They combine the speed of cryptocurrency with the stability of regular money.",
+    "parenthetical": "(a digital currency pegged to the dollar, backed by reserve assets to maintain a stable one-to-one value)"
+  },
+  "statutes": ["genius-act"],
+  "see_also": ["/analysis/stable-tokens/"],
+  "visualization": null,
+  "sources": ["occ-glossary", "nh-token-glossary"],
+  "verification": { "status": "verified" }
+}

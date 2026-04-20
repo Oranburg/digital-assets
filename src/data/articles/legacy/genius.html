@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GENIUS Act | Full Text | Pub. L. 119-27</title>
+  <meta name="description" content="Full text of the Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act), Pub. L. 119-27, enacted July 18, 2025. Interactive reader with defined-term tooltips, internal cross-references, and section navigation. The first federal stablecoin law in U.S. history.">
+  <meta name="author" content="Seth C. Oranburg">
+  <meta name="keywords" content="GENIUS Act, stablecoin, payment stablecoin, Pub. L. 119-27, federal stablecoin law, S. 1582, digital asset, distributed ledger, OCC, Federal Reserve, stablecoin regulation, crypto law">
+  <link rel="canonical" href="https://oranburg.law/NH-RSA-301-B/genius.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GENIUS Act — Full Federal Text | Pub. L. 119-27">
+  <meta property="og:description" content="Interactive reader for the Guiding and Establishing National Innovation for U.S. Stablecoins Act (GENIUS Act), the first federal stablecoin law, enacted July 18, 2025.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oranburg.law/NH-RSA-301-B/genius.html">
+  <meta property="og:site_name" content="NH DAO Law Explorer">
+  <meta property="article:author" content="Seth C. Oranburg">
+  <meta property="article:published_time" content="2025-07-18">
+  <meta property="article:section" content="Law">
+  <meta property="article:tag" content="stablecoin">
+  <meta property="article:tag" content="crypto law">
+  <meta property="article:tag" content="federal legislation">
+  <meta property="article:tag" content="digital asset">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GENIUS Act — Full Text | Pub. L. 119-27">
+  <meta name="twitter:description" content="Interactive reader for the first federal stablecoin law, the GENIUS Act (Pub. L. 119-27), with defined-term tooltips and internal cross-references.">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegislationObject",
+    "name": "Guiding and Establishing National Innovation for U.S. Stablecoins Act",
+    "alternateName": "GENIUS Act",
+    "legislationIdentifier": "Pub. L. 119-27",
+    "legislationDate": "2025-07-18",
+    "legislationLegalForce": "InForce",
+    "legislationType": "Statute",
+    "jurisdiction": {
+      "@type": "Country",
+      "name": "United States of America",
+      "sameAs": "https://www.wikidata.org/wiki/Q30"
+    },
+    "legislationPassedBy": {
+      "@type": "LegislativeBody",
+      "name": "United States Congress"
+    },
+    "description": "Establishes the first federal framework for payment stablecoins in the United States, requiring permitted issuers to maintain 1:1 reserve backing, comply with anti-money laundering requirements, and obtain approval from federal or state regulators.",
+    "url": "https://oranburg.law/NH-RSA-301-B/genius.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "NH DAO Law Explorer",
+      "url": "https://oranburg.law/NH-RSA-301-B/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law",
+      "jobTitle": "Professor of Law",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "University of New Hampshire Franklin Pierce School of Law"
+      }
+    },
+    "about": [
+      { "@type": "Thing", "name": "Payment stablecoin" },
+      { "@type": "Thing", "name": "Digital asset regulation" },
+      { "@type": "Thing", "name": "Stablecoin issuer" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', theme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    /* ---------- Design Tokens ---------- */
+    :root, [data-theme="dark"] {
+      --blue-deep:    #0A3255;
+      --blue-bright:  #2459A9;
+      --blue-light:   #6DACDE;
+      --gold:         #C4972F;
+      --gold-light:   #E8C560;
+      --granite:      #6B7B8D;
+      --white-mtn:    #E8ECF0;
+
+      --bg:           #000000;
+      --bg-secondary: #0A3255;
+      --bg-soft:      #0D3D68;
+      --text:         #FFFFFF;
+      --muted:        #9CA3AF;
+      --border:       #1E5080;
+      --accent:       #6DACDE;
+      --accent-2:     #E8C560;
+
+      --font-headline: 'Oswald', sans-serif;
+      --font-body:     'Roboto', sans-serif;
+      --font-accent:   'Crimson Text', serif;
+      --font-mono:     'Roboto Mono', 'Consolas', 'Courier New', monospace;
+
+      --max-width:     1100px;
+      --radius-sm:     4px;
+      --radius-md:     8px;
+
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.5rem;
+      --space-xl:  2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+    }
+
+    [data-theme="light"] {
+      --bg:           #FFFFFF;
+      --bg-secondary: #F8F9FA;
+      --bg-soft:      #E9ECEF;
+      --text:         #000000;
+      --muted:        #555555;
+      --border:       #D0D8E4;
+      --accent:       #2459A9;
+      --accent-2:     #C4972F;
+    }
+
+    /* ---------- Reset & Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-2); }
+
+    /* ---------- Progress Bar ---------- */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      z-index: 1000; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ---------- Top Nav ---------- */
+    .top-nav {
+      background-color: var(--blue-deep);
+      padding: 0.6rem var(--space-md);
+      position: sticky; top: 0; z-index: 200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .top-nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+    }
+    .top-nav a {
+      color: #FFFFFF; font-family: var(--font-body); font-size: 0.82rem;
+      font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .top-nav a:hover { color: var(--accent-2); }
+    .top-nav a.nav-active { color: var(--accent-2); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
+    .nav-title {
+      font-family: var(--font-headline); font-size: 0.95rem; font-weight: 600;
+      color: var(--accent-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      flex-shrink: 0;
+    }
+    .nav-pages { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+    .theme-toggle {
+      background: none; border: none; cursor: pointer; color: #FFFFFF;
+      padding: 0.25rem; display: flex; align-items: center; transition: color 0.2s;
+    }
+    .theme-toggle:hover { color: var(--accent-2); }
+    [data-theme="dark"] .icon-sun  { display: inline; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: inline; }
+
+    /* ---------- Project Banner ---------- */
+    .project-banner {
+      background: var(--bg-secondary); border-bottom: 1px solid var(--border);
+      padding: var(--space-lg) var(--space-md);
+    }
+    .project-banner-inner {
+      max-width: 740px; margin: 0 auto;
+      display: flex; align-items: flex-start; gap: var(--space-lg);
+    }
+    .banner-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+    .banner-text { flex: 1; }
+    .banner-text h2 {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--accent-2); margin: 0 0 var(--space-xs);
+    }
+    .banner-text p {
+      font-size: 0.95rem; line-height: 1.6; color: var(--muted); margin: 0 0 var(--space-sm);
+    }
+    .banner-text p:last-child { margin-bottom: 0; }
+    .banner-actions {
+      display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md);
+    }
+    .banner-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.45rem 0.9rem; border-radius: var(--radius-sm);
+      font-family: var(--font-body); font-size: 0.85rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.03em;
+      cursor: pointer; border: 1px solid var(--border); transition: all 0.2s;
+      background: transparent; color: var(--accent); text-decoration: none;
+    }
+    .banner-btn:hover { background: var(--bg-soft); color: var(--text); }
+    .banner-btn-primary { background: var(--accent); color: #000; border-color: var(--accent); }
+    .banner-btn-primary:hover { background: var(--accent-2); color: #000; }
+    .banner-dismiss {
+      background: none; border: none; color: var(--muted); font-size: 1.4rem;
+      cursor: pointer; padding: 0; line-height: 1; flex-shrink: 0;
+    }
+    .banner-dismiss:hover { color: var(--text); }
+    .project-banner.hidden { display: none; }
+
+    /* ---------- Layout ---------- */
+    .page-layout {
+      display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 52px);
+    }
+
+    /* ---------- Sidebar / TOC ---------- */
+    .toc-sidebar {
+      width: 280px; min-width: 280px; position: sticky; top: 52px;
+      height: calc(100vh - 52px); overflow-y: auto;
+      padding: var(--space-lg) var(--space-md);
+      border-right: 1px solid var(--border); background: var(--bg);
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .toc-sidebar::-webkit-scrollbar { width: 4px; }
+    .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .toc-heading {
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-sm); padding: 0;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.35rem 0.5rem; font-size: 0.85rem; line-height: 1.35;
+      color: var(--muted); border-left: 2px solid transparent;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; transition: all 0.2s;
+    }
+    .toc-list a:hover { color: var(--text); background: var(--bg-soft); }
+    .toc-list a.active {
+      color: var(--accent); border-left-color: var(--accent);
+      background: var(--bg-soft); font-weight: 600;
+    }
+
+    .toc-tools {
+      margin-top: var(--space-xl); padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+    .toc-tools a, .toc-tools button {
+      display: block; width: 100%; text-align: left;
+      padding: 0.4rem 0.5rem; font-size: 0.82rem; color: var(--muted);
+      background: none; border: none; cursor: pointer;
+      font-family: var(--font-body); transition: color 0.2s;
+    }
+    .toc-tools a:hover, .toc-tools button:hover { color: var(--accent); }
+
+    /* ---------- Mobile TOC Toggle ---------- */
+    .toc-mobile-toggle {
+      display: none; position: fixed; bottom: var(--space-lg); right: var(--space-lg);
+      z-index: 300; background: var(--blue-deep); color: #FFFFFF; border: none;
+      border-radius: 50%; width: 52px; height: 52px; font-size: 1.3rem;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s;
+    }
+    .toc-mobile-toggle:hover { transform: scale(1.1); }
+    .toc-mobile-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 250;
+    }
+
+    /* ---------- Content Area ---------- */
+    .content-area { flex: 1; min-width: 0; padding: var(--space-2xl) var(--space-xl); }
+    .statute-content {
+      max-width: 740px; margin: 0 auto;
+      font-family: var(--font-accent); font-size: 1.125rem; line-height: 1.85;
+    }
+    .statute-content h1 {
+      font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700;
+      line-height: 1.15; margin: var(--space-3xl) 0 var(--space-lg);
+      color: var(--text); border-bottom: 2px solid var(--accent); padding-bottom: var(--space-sm);
+    }
+    .statute-content h1:first-child {
+      margin-top: 0; font-size: 2.4rem; text-align: center; border-bottom: none; padding-bottom: 0;
+    }
+    .statute-content h2 {
+      font-family: var(--font-headline); font-size: 1.5rem; font-weight: 600;
+      line-height: 1.2; margin: var(--space-3xl) 0 var(--space-md); color: var(--text);
+      border-bottom: 1px solid var(--border); padding-bottom: var(--space-xs);
+    }
+    .statute-content h3 {
+      font-family: var(--font-headline); font-size: 1.25rem; font-weight: 500;
+      margin: var(--space-2xl) 0 var(--space-sm); color: var(--text);
+    }
+    .statute-content p { margin: 0 0 var(--space-md); text-align: justify; hyphens: auto; }
+    .statute-content strong { font-weight: 700; color: var(--text); }
+    .statute-content em { font-style: italic; }
+    .statute-content hr {
+      border: none; border-top: 1px solid var(--border);
+      margin: var(--space-2xl) auto; max-width: 200px;
+    }
+    .statute-content ul, .statute-content ol { margin: 0 0 var(--space-md); padding-left: var(--space-xl); }
+    .statute-content li { margin-bottom: var(--space-xs); }
+    .statute-content h1:first-child + p {
+      text-align: center; font-size: 1.1rem; color: var(--muted); margin-bottom: var(--space-2xl);
+    }
+
+    /* ---------- Section anchor links ---------- */
+    .statute-content h2 { position: relative; cursor: pointer; }
+    .statute-content h2:hover::after {
+      content: '#'; position: absolute; left: -1.2em;
+      color: var(--muted); font-weight: 300; font-size: 0.8em;
+    }
+
+    /* ---------- About Modal ---------- */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+      z-index: 600; justify-content: center; align-items: center; padding: var(--space-md);
+    }
+    .modal-overlay.visible { display: flex; }
+    .modal-box {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: var(--radius-md); max-width: 640px; width: 100%;
+      max-height: 85vh; overflow-y: auto; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .modal-header {
+      background: var(--blue-deep); color: #fff; padding: 1rem 1.25rem;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0;
+    }
+    .modal-header h2 {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; margin: 0;
+    }
+    .modal-close {
+      background: none; border: none; color: #fff; font-size: 1.5rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .modal-body {
+      padding: 1.25rem; font-family: var(--font-accent); font-size: 1.05rem;
+      line-height: 1.75; color: var(--text);
+    }
+    .modal-body h3 {
+      font-family: var(--font-headline); font-size: 1.15rem; font-weight: 600;
+      margin: 1.5rem 0 0.5rem; color: var(--accent-2);
+    }
+    .modal-body h3:first-child { margin-top: 0; }
+    .modal-body p { margin: 0 0 0.75rem; }
+    .modal-body ul { padding-left: 1.25rem; margin: 0 0 0.75rem; }
+    .modal-body li { margin-bottom: 0.3rem; }
+    .modal-body .version-badge {
+      display: inline-block; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.2rem 0.6rem;
+      font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);
+    }
+
+    /* ---------- Defined Terms ---------- */
+    .defined-term {
+      cursor: help;
+      border-bottom: 1px dotted var(--accent-2);
+      transition: background 0.2s;
+    }
+    .defined-term:hover {
+      background: rgba(232, 197, 96, 0.15);
+    }
+    .def-tooltip {
+      display: none; position: fixed; z-index: 800;
+      background: var(--bg-secondary); border: 1px solid var(--accent-2);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 420px; width: 90vw; overflow: hidden;
+    }
+    .def-tooltip.visible { display: block; }
+    .def-tooltip-header {
+      background: var(--blue-deep); color: var(--accent-2); padding: 0.5rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .def-tooltip-header small {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 400;
+      color: var(--muted); text-transform: none; letter-spacing: 0;
+    }
+    .def-tooltip-close {
+      background: none; border: none; color: var(--accent-2); font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .def-tooltip-close:hover { color: #fff; }
+    .def-tooltip-body {
+      padding: 0.75rem; font-family: var(--font-accent); font-size: 0.95rem;
+      line-height: 1.6; color: var(--text); max-height: 300px; overflow-y: auto;
+    }
+    .def-tooltip-body .def-goto {
+      display: inline-block; margin-top: 0.5rem;
+      font-family: var(--font-body); font-size: 0.8rem; color: var(--accent);
+    }
+    .def-tooltip-body .def-goto:hover { color: var(--accent-2); }
+
+    /* ---------- Internal Cross-References ---------- */
+    .xref-internal {
+      color: var(--accent); border-bottom: 1px dashed var(--accent);
+      cursor: pointer; transition: color 0.2s;
+    }
+    .xref-internal:hover { color: var(--accent-2); border-bottom-color: var(--accent-2); }
+
+    /* ---------- Section Metadata Panel ---------- */
+    .section-panel {
+      display: none; position: fixed; z-index: 800;
+      background: var(--bg-secondary); border: 1px solid var(--accent);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 520px; width: 90vw; overflow: hidden;
+    }
+    .section-panel.visible { display: block; }
+    .section-panel-header {
+      background: var(--blue-deep); color: #fff; padding: 0.6rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.9rem; font-weight: 600;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .section-panel-close {
+      background: none; border: none; color: #fff; font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .section-panel-close:hover { color: var(--accent-2); }
+    .section-panel-body {
+      padding: 0.75rem; font-family: var(--font-body); font-size: 0.88rem;
+      line-height: 1.55; color: var(--text); max-height: 400px; overflow-y: auto;
+    }
+    .section-panel-body h4 {
+      font-family: var(--font-headline); font-size: 0.82rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-2);
+      margin: 0.8rem 0 0.3rem; padding: 0;
+    }
+    .section-panel-body h4:first-child { margin-top: 0; }
+    .section-panel-body .meta-line {
+      font-size: 0.82rem; color: var(--muted); margin: 0.15rem 0;
+    }
+    .concept-pill {
+      display: inline-block; font-size: 0.72rem; padding: 0.1rem 0.45rem;
+      border-radius: 10px; border: 1px solid var(--border); color: var(--accent);
+      margin: 0.15rem 0.2rem 0.15rem 0; font-family: var(--font-mono);
+    }
+    .comparable-row {
+      display: flex; gap: 0.5rem; align-items: baseline;
+      padding: 0.25rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+    .comparable-row:last-child { border-bottom: none; }
+    .comparable-jur {
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
+      min-width: 28px; text-align: center; padding: 0.1rem 0.3rem;
+      border-radius: 3px; flex-shrink: 0;
+    }
+    .jur-wy { background: #8B6914; color: #fff; }
+    .jur-ut { background: #BE3A34; color: #fff; }
+    .jur-vt { background: #2E6B3E; color: #fff; }
+    .comparable-note { color: var(--muted); font-size: 0.78rem; }
+    .commission-item {
+      font-size: 0.82rem; padding: 0.2rem 0;
+    }
+    .commission-item .comm-date {
+      font-family: var(--font-mono); color: var(--accent); font-size: 0.78rem;
+    }
+
+    /* ---------- Comparable Badges on Headings ---------- */
+    .comparable-badges { display: inline-flex; gap: 0.25rem; margin-left: 0.5rem; vertical-align: middle; }
+    .comp-badge {
+      display: inline-block; font-size: 0.6rem; padding: 0.08rem 0.35rem;
+      border-radius: 3px; font-family: var(--font-mono); font-weight: 700;
+      cursor: pointer; vertical-align: middle; letter-spacing: 0.02em;
+    }
+
+    /* ---------- Sidebar Commission Context ---------- */
+    .toc-commission {
+      margin-top: var(--space-md); padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+    .toc-commission-heading {
+      font-family: var(--font-headline); font-size: 0.78rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-xs);
+    }
+    .toc-commission a {
+      display: block; padding: 0.25rem 0.5rem; font-size: 0.78rem;
+      color: var(--muted); transition: color 0.2s;
+    }
+    .toc-commission a:hover { color: var(--accent); }
+    .toc-commission .comm-badge {
+      font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent);
+    }
+
+    @media (max-width: 900px) {
+      .section-panel {
+        position: fixed; bottom: 0; left: 0; right: 0; top: auto;
+        max-width: 100%; width: 100%; border-radius: var(--radius-md) var(--radius-md) 0 0;
+        max-height: 60vh;
+      }
+    }
+
+    /* ---------- Cross-Link Banner ---------- */
+    .crosslink {
+      background: linear-gradient(135deg, var(--blue-deep), #1a4a7a);
+      padding: 0.45rem var(--space-md); text-align: center;
+      font-family: var(--font-body); font-size: 0.85rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center; gap: var(--space-sm);
+    }
+    .crosslink a { color: var(--accent-2); font-weight: 500; }
+    .crosslink a:hover { color: #fff; }
+    .crosslink.hidden { display: none; }
+    .crosslink-dismiss {
+      background: none; border: none; color: var(--muted); font-size: 1.1rem;
+      cursor: pointer; padding: 0 0 0 var(--space-sm); line-height: 1; flex-shrink: 0;
+    }
+    .crosslink-dismiss:hover { color: var(--text); }
+
+    /* ---------- Toast ---------- */
+    .toast {
+      position: fixed; bottom: var(--space-xl); left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--bg-secondary); border: 1px solid var(--accent);
+      border-radius: var(--radius-md); padding: 0.65rem 1.25rem;
+      font-family: var(--font-body); font-size: 0.9rem; color: var(--accent);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 700;
+      opacity: 0; transition: all 0.3s ease; pointer-events: none;
+    }
+    .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ---------- Issuer Pathway Diagram ---------- */
+    .issuer-diagram {
+      max-width: 740px; margin: 0 auto var(--space-2xl);
+      padding: 0 var(--space-md);
+    }
+    .issuer-diagram-heading {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--accent-2); margin: 0 0 var(--space-md); text-align: center;
+    }
+    .issuer-columns {
+      display: flex; gap: var(--space-md); justify-content: center;
+    }
+    .issuer-card {
+      flex: 1; max-width: 220px; background: var(--bg-secondary);
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: var(--space-md); text-align: center;
+      display: flex; flex-direction: column; gap: var(--space-sm);
+    }
+    .issuer-card-icon {
+      font-size: 1.6rem; line-height: 1;
+    }
+    .issuer-card-title {
+      font-family: var(--font-headline); font-size: 0.9rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em; color: var(--accent);
+    }
+    .issuer-card-regulator {
+      font-family: var(--font-mono); font-size: 0.78rem;
+      color: var(--accent-2); background: var(--bg-soft);
+      border-radius: var(--radius-sm); padding: 0.15rem 0.4rem;
+      display: inline-block; margin: 0 auto;
+    }
+    .issuer-card-detail {
+      font-family: var(--font-accent); font-size: 0.88rem;
+      color: var(--muted); line-height: 1.5;
+    }
+    .issuer-arrow {
+      display: flex; align-items: center; color: var(--muted); font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    @media (max-width: 700px) {
+      .issuer-columns { flex-direction: column; align-items: center; }
+      .issuer-card { max-width: 100%; }
+      .issuer-arrow { transform: rotate(90deg); }
+    }
+
+    /* ---------- Reserve Composition Cards ---------- */
+    .reserve-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-sm); margin: var(--space-md) 0 var(--space-lg);
+    }
+    .reserve-card {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent); border-radius: var(--radius-md);
+      padding: var(--space-sm) var(--space-md);
+    }
+    .reserve-card-title {
+      font-family: var(--font-headline); font-size: 0.82rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em; color: var(--accent);
+      margin: 0 0 0.2rem;
+    }
+    .reserve-card-desc {
+      font-family: var(--font-accent); font-size: 0.88rem;
+      color: var(--muted); line-height: 1.45; margin: 0;
+    }
+    @media (max-width: 600px) {
+      .reserve-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--bg-secondary); padding: var(--space-xl) var(--space-md);
+      text-align: center; color: var(--muted); font-size: 0.85rem;
+    }
+    .site-footer a { color: var(--accent); margin: 0 0.5rem; }
+
+    /* ---------- Loading ---------- */
+    .loading {
+      text-align: center; padding: var(--space-3xl); color: var(--muted);
+      font-family: var(--font-body); font-size: 1.1rem;
+    }
+    .loading-spinner {
+      display: inline-block; width: 28px; height: 28px;
+      border: 3px solid var(--border); border-top-color: var(--accent);
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: var(--space-md);
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .toc-sidebar {
+        position: fixed; left: -320px; top: 0; height: 100vh; z-index: 300;
+        width: 300px; min-width: 300px; transition: left 0.3s ease;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.3); padding-top: calc(52px + var(--space-lg));
+      }
+      .toc-sidebar.open { left: 0; }
+      .toc-mobile-toggle { display: flex; align-items: center; justify-content: center; }
+      .toc-mobile-overlay.visible { display: block; }
+      .content-area { padding: var(--space-xl) var(--space-md); }
+      .statute-content h1:first-child { font-size: 1.8rem; }
+      .project-banner-inner { flex-direction: column; }
+      .banner-icon { display: none; }
+    }
+    @media (max-width: 600px) {
+      .content-area { padding: var(--space-md) var(--space-sm); }
+      .statute-content { font-size: 1.05rem; }
+      .statute-content h1 { font-size: 1.8rem; }
+      .statute-content h2 { font-size: 1.25rem; }
+      .nav-title { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Top navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <span class="nav-title">NH DAO Law</span>
+      <div class="nav-pages">
+        <a href="index.html">Statute</a>
+        <a href="decentralization.html">Decentralization</a>
+        <a href="registry.html">Registry</a>
+        <a href="comparison.html">Compare</a>
+        <a href="genius.html" class="nav-active">GENIUS</a>
+        <a href="stable-tokens.html">Stable Tokens</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:var(--space-sm);">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cross-link banner -->
+  <div class="crosslink" id="crosslinkBanner">
+    <span>See also: <a href="stable-tokens.html">The GENIUS Dilemma</a> &mdash; how this federal law intersects with state DAO acts and NH&rsquo;s stable token initiative</span>
+    <button class="crosslink-dismiss" onclick="dismissCrosslink()" title="Dismiss">&times;</button>
+  </div>
+
+  <!-- Project banner -->
+  <div class="project-banner" id="projectBanner">
+    <div class="project-banner-inner">
+      <div class="banner-icon">&#128178;</div>
+      <div class="banner-text">
+        <h2>GENIUS Act &mdash; Full Federal Text</h2>
+        <p>This is the full text of the <strong>Guiding and Establishing National Innovation for U.S. Stablecoins Act</strong> (GENIUS Act), <strong>Pub. L. 119-27</strong>, enacted July 18, 2025 &mdash; the first comprehensive federal stablecoin law in U.S. history. The Act establishes a licensing and supervisory framework for payment stablecoin issuers, requiring 1:1 reserve backing with high-quality liquid assets and compliance with Bank Secrecy Act obligations.</p>
+        <p><strong>Interactive.</strong> Hover over any <span class="defined-term" style="cursor:default;">defined term</span> to see its definition from &sect; 2. Click any section heading to copy a direct link.</p>
+        <div class="banner-actions">
+          <button class="banner-btn banner-btn-primary" onclick="openAbout()">About This Act</button>
+          <a class="banner-btn" href="genius.md" download="GENIUS-Act.md">&#11015; Download Markdown</a>
+          <a class="banner-btn" href="https://github.com/Oranburg/NH-RSA-301-B/issues">&#9998; Open Issue</a>
+        </div>
+      </div>
+      <button class="banner-dismiss" onclick="dismissBanner()" title="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <!-- Issuer pathway diagram -->
+  <div class="issuer-diagram">
+    <p class="issuer-diagram-heading">Three-Tier Issuer Structure</p>
+    <div class="issuer-columns">
+      <div class="issuer-card">
+        <div class="issuer-card-icon">&#127970;</div>
+        <div class="issuer-card-title">Federal Qualified</div>
+        <span class="issuer-card-regulator">OCC</span>
+        <div class="issuer-card-detail">Nationwide issuance, no cap on outstanding stablecoins</div>
+      </div>
+      <div class="issuer-card">
+        <div class="issuer-card-icon">&#127963;</div>
+        <div class="issuer-card-title">State Qualified</div>
+        <span class="issuer-card-regulator">State Regulator</span>
+        <div class="issuer-card-detail">$10B cap; state regime certified by Treasury committee</div>
+      </div>
+      <div class="issuer-card">
+        <div class="issuer-card-icon">&#127974;</div>
+        <div class="issuer-card-title">IDI Subsidiary</div>
+        <span class="issuer-card-regulator">Parent Bank Regulator</span>
+        <div class="issuer-card-detail">Existing bank subsidiary, via parent&rsquo;s federal banking agency</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENIUS Act Regulatory Architecture Flowchart -->
+  <div style="max-width:740px;margin:0 auto var(--space-2xl);padding:0 var(--space-md);text-align:center;">
+    <svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:600px;" font-family="Roboto, sans-serif" role="img" aria-label="GENIUS Act Regulatory Architecture Flowchart">
+      <!-- Top box: GENIUS Act -->
+      <rect x="200" y="10" width="200" height="40" rx="8" ry="8" fill="var(--blue-deep)" stroke="var(--border)" stroke-width="1.5"/>
+      <text x="300" y="36" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">GENIUS Act</text>
+      <!-- Vertical line from top box -->
+      <line x1="300" y1="50" x2="300" y2="80" stroke="var(--muted)" stroke-width="1.5"/>
+      <!-- Horizontal branching line -->
+      <line x1="100" y1="80" x2="500" y2="80" stroke="var(--muted)" stroke-width="1.5"/>
+      <!-- Three vertical lines down from branch -->
+      <line x1="100" y1="80" x2="100" y2="100" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="300" y1="80" x2="300" y2="100" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="500" y1="80" x2="500" y2="100" stroke="var(--muted)" stroke-width="1.5"/>
+      <!-- Pathway A: Federal Qualified -->
+      <rect x="15" y="100" width="170" height="44" rx="6" ry="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+      <text x="100" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="var(--text)">Federal Qualified</text>
+      <text x="100" y="136" text-anchor="middle" font-size="11" fill="var(--muted)">&sect; 5, OCC</text>
+      <!-- Pathway B: State Qualified -->
+      <rect x="215" y="100" width="170" height="44" rx="6" ry="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+      <text x="300" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="var(--text)">State Qualified</text>
+      <text x="300" y="136" text-anchor="middle" font-size="11" fill="var(--muted)">&sect; 7, State Regulator</text>
+      <!-- Pathway C: IDI Subsidiary -->
+      <rect x="415" y="100" width="170" height="44" rx="6" ry="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+      <text x="500" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="var(--text)">IDI Subsidiary</text>
+      <text x="500" y="136" text-anchor="middle" font-size="11" fill="var(--muted)">&sect; 5, Parent Regulator</text>
+      <!-- Detail lines below each pathway -->
+      <line x1="100" y1="144" x2="100" y2="168" stroke="var(--muted)" stroke-width="1"/>
+      <line x1="300" y1="144" x2="300" y2="168" stroke="var(--muted)" stroke-width="1"/>
+      <line x1="500" y1="144" x2="500" y2="168" stroke="var(--muted)" stroke-width="1"/>
+      <!-- Detail labels -->
+      <text x="100" y="182" text-anchor="middle" font-size="11" fill="var(--muted)">No size cap</text>
+      <text x="300" y="182" text-anchor="middle" font-size="11" fill="var(--muted)">$10B cap</text>
+      <text x="500" y="178" text-anchor="middle" font-size="11" fill="var(--muted)">Existing bank</text>
+      <text x="500" y="192" text-anchor="middle" font-size="11" fill="var(--muted)">supervision</text>
+      <!-- Converging lines to bottom -->
+      <line x1="100" y1="195" x2="100" y2="220" stroke="var(--muted)" stroke-width="1"/>
+      <line x1="300" y1="195" x2="300" y2="220" stroke="var(--muted)" stroke-width="1"/>
+      <line x1="500" y1="200" x2="500" y2="220" stroke="var(--muted)" stroke-width="1"/>
+      <line x1="100" y1="220" x2="500" y2="220" stroke="var(--muted)" stroke-width="1"/>
+      <line x1="300" y1="220" x2="300" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
+      <!-- Bottom result box -->
+      <rect x="150" y="240" width="300" height="44" rx="8" ry="8" fill="var(--bg-secondary)" stroke="var(--accent-2)" stroke-width="2"/>
+      <text x="300" y="258" text-anchor="middle" font-size="14" font-weight="700" fill="var(--accent-2)">Payment Stablecoin</text>
+      <text x="300" y="276" text-anchor="middle" font-size="11" fill="var(--muted)">Reserves per &sect; 4</text>
+    </svg>
+    <p style="font-size:0.78rem;color:var(--muted);text-align:center;">Fig. 1. GENIUS Act regulatory architecture: three issuer pathways converge on a single reserve standard.</p>
+  </div>
+
+  <!-- Reserve Requirements Breakdown -->
+  <div style="max-width:740px;margin:0 auto var(--space-2xl);padding:0 var(--space-md);text-align:center;">
+    <svg viewBox="0 0 600 80" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:600px;" font-family="Roboto, sans-serif" role="img" aria-label="GENIUS Act Section 4 Reserve Asset Types">
+      <!-- Section label -->
+      <text x="300" y="14" text-anchor="middle" font-size="13" font-weight="600" fill="var(--text)">&sect; 4 Qualifying Reserve Assets</text>
+      <!-- Stacked horizontal bar -->
+      <rect x="10" y="24" width="140" height="30" rx="4" ry="4" fill="var(--accent)" opacity="0.85"/>
+      <text x="80" y="44" text-anchor="middle" font-size="11" font-weight="600" fill="var(--bg)">Cash &amp; Deposits</text>
+      <rect x="152" y="24" width="140" height="30" rx="4" ry="4" fill="var(--blue-bright)" opacity="0.85"/>
+      <text x="222" y="44" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">T-Bills (&le;93d)</text>
+      <rect x="294" y="24" width="150" height="30" rx="4" ry="4" fill="var(--accent-2)" opacity="0.85"/>
+      <text x="369" y="44" text-anchor="middle" font-size="11" font-weight="600" fill="var(--bg)">Overnight Repos</text>
+      <rect x="446" y="24" width="144" height="30" rx="4" ry="4" fill="var(--gold)" opacity="0.85"/>
+      <text x="518" y="44" text-anchor="middle" font-size="11" font-weight="600" fill="var(--bg)">Gov't MMFs</text>
+      <!-- Bracket line below -->
+      <line x1="10" y1="62" x2="590" y2="62" stroke="var(--muted)" stroke-width="1"/>
+      <text x="300" y="76" text-anchor="middle" font-size="11" fill="var(--muted)">100% reserve requirement &mdash; no rehypothecation permitted</text>
+    </svg>
+    <p style="font-size:0.78rem;color:var(--muted);text-align:center;">Fig. 2. Four qualifying asset categories under GENIUS Act &sect; 4. Bar widths are illustrative, not proportional.</p>
+  </div>
+
+  <!-- Mobile TOC toggle -->
+  <button class="toc-mobile-toggle" id="tocToggle" aria-label="Table of contents">&#9776;</button>
+  <div class="toc-mobile-overlay" id="tocOverlay"></div>
+
+  <!-- Page layout -->
+  <div class="page-layout">
+    <aside class="toc-sidebar" id="tocSidebar">
+      <p class="toc-heading">Sections</p>
+      <ul class="toc-list" id="tocList"></ul>
+      <div class="toc-tools">
+        <button onclick="openAbout()">&#9432; About the GENIUS Act</button>
+        <a href="genius.md" download="GENIUS-Act.md">&#11015; Download statute text</a>
+        <a href="https://github.com/Oranburg/NH-RSA-301-B" target="_blank" rel="noopener noreferrer">&#128279; GitHub repository</a>
+        <a href="https://github.com/Oranburg/NH-RSA-301-B/issues" target="_blank" rel="noopener noreferrer">&#9998; Report issue</a>
+      </div>
+    </aside>
+
+    <div class="content-area">
+      <article class="statute-content" id="statuteContent">
+        <div class="loading">
+          <div class="loading-spinner"></div>
+          <p>Loading statute text&hellip;</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- About modal -->
+  <div class="modal-overlay" id="aboutModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>About the GENIUS Act</h2>
+        <button class="modal-close" onclick="closeAbout()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>The statute</h3>
+        <p><strong>The GENIUS Act</strong> (Guiding and Establishing National Innovation for U.S. Stablecoins Act), <strong>Pub. L. 119-27</strong>, is the first comprehensive federal law governing payment stablecoins in the United States. Signed into law on July 18, 2025, and derived from Senate Bill S. 1582 (139 Stat. 419), it establishes a tiered licensing regime requiring all payment stablecoin issuers to obtain federal or state approval.</p>
+        <p>The Act prohibits any person other than a <em>permitted payment stablecoin issuer</em> from issuing a payment stablecoin in the United States, and mandates that issuers maintain reserves equal to 100% of outstanding stablecoins in high-quality liquid assets such as Treasury bills, overnight repos, and Federal Reserve deposits.</p>
+
+        <h3>Key provisions</h3>
+        <ul>
+          <li><strong>&sect; 3</strong> &mdash; Prohibits unauthorized issuance of payment stablecoins; criminal penalties up to $1M per violation.</li>
+          <li><strong>&sect; 4</strong> &mdash; Sets reserve, disclosure, audit, and BSA compliance requirements for permitted issuers.</li>
+          <li><strong>&sect; 5</strong> &mdash; Approval of insured depository institution subsidiaries and Federal qualified issuers.</li>
+          <li><strong>&sect; 6</strong> &mdash; Supervision and enforcement.</li>
+          <li><strong>&sect; 7</strong> &mdash; State qualified payment stablecoin issuers.</li>
+          <li><strong>&sect; 11</strong> &mdash; Payment stablecoin holders have senior claims over reserve assets in insolvency.</li>
+          <li><strong>&sect; 17</strong> &mdash; Clarifies that payment stablecoins are not securities or commodities.</li>
+          <li><strong>&sect; 18</strong> &mdash; Establishes reciprocity and conditions for foreign payment stablecoin issuers.</li>
+        </ul>
+
+        <h3>Intersection with state law</h3>
+        <p>The GENIUS Act creates a federal floor but preserves state authority over State qualified payment stablecoin issuers with outstanding issuance under $10 billion. States must have their regulatory regime certified as "substantially similar" to the federal framework by the <em>Stablecoin Certification Review Committee</em> chaired by the Secretary of the Treasury.</p>
+        <p>New Hampshire's HB 310 (NH Token Commission) and the stable token initiative bear directly on how the state may elect to participate in this regime. See <a href="stable-tokens.html">The GENIUS Dilemma</a>.</p>
+
+        <h3>Related work</h3>
+        <ul>
+          <li><a href="index.html">RSA 301-B &mdash; NH DAO Act</a> &mdash; NH's decentralized autonomous organization statute</li>
+          <li><a href="stable-tokens.html">The GENIUS Dilemma</a> &mdash; Federal&ndash;state interaction analysis</li>
+          <li><a href="https://nh-token-commission.org">NH Token Commission</a> &mdash; Commission to Study Stable Tokens (RSA 383:26)</li>
+          <li><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1582">S. 1582 on Congress.gov</a></li>
+        </ul>
+
+        <h3>How to contribute</h3>
+        <ul>
+          <li><strong>Report errors</strong> in the statutory text via <a href="https://github.com/Oranburg/NH-RSA-301-B/issues">GitHub Issues</a>.</li>
+          <li><strong>Propose features</strong> &mdash; annotations, cross-references, comparison tools.</li>
+          <li><strong>Fork and build</strong> &mdash; the display tool is a single HTML file + Markdown source. MIT licensed.</li>
+        </ul>
+
+        <p style="margin-top:1.5rem;">
+          <span class="version-badge">Pub. L. 119-27 &mdash; July 18, 2025</span>
+        </p>
+        <p style="font-size:0.9rem; color:var(--muted);">Maintained by <a href="https://oranburg.law">Seth C. Oranburg</a>, Professor of Law, UNH Franklin Pierce School of Law.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Defined-term tooltip -->
+  <div class="def-tooltip" id="defTooltip">
+    <div class="def-tooltip-header">
+      <span id="defTermName"></span>
+      <button class="def-tooltip-close" onclick="closeDefTooltip()">&times;</button>
+    </div>
+    <div class="def-tooltip-body">
+      <div id="defTermBody"></div>
+      <a class="def-goto" href="#section-2" onclick="closeDefTooltip()">View all definitions &rarr; &sect; 2. Definitions</a>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>
+      <a href="https://github.com/Oranburg/NH-RSA-301-B">Source</a>
+      <a href="stable-tokens.html">Stable Tokens</a>
+      <a href="index.html">RSA 301-B</a>
+      <a href="https://oranburg.law">oranburg.law</a>
+    </div>
+    <p style="margin-top:0.5rem;">Statutory text: public law of the United States. Display tool &copy; 2025 Seth C. Oranburg. MIT License.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script>
+    // ========== Theme ==========
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    // ========== Banner ==========
+    function dismissBanner() {
+      document.getElementById('projectBanner').classList.add('hidden');
+      sessionStorage.setItem('genius-banner-dismissed', '1');
+    }
+    (function() {
+      if (sessionStorage.getItem('genius-banner-dismissed') === '1') {
+        document.getElementById('projectBanner').classList.add('hidden');
+      }
+    })();
+
+    // ========== Crosslink Banner ==========
+    function dismissCrosslink() {
+      document.getElementById('crosslinkBanner').classList.add('hidden');
+      sessionStorage.setItem('genius-crosslink-dismissed', '1');
+    }
+    (function() {
+      if (sessionStorage.getItem('genius-crosslink-dismissed') === '1') {
+        document.getElementById('crosslinkBanner').classList.add('hidden');
+      }
+    })();
+
+    // ========== About Modal ==========
+    function openAbout() {
+      document.getElementById('aboutModal').classList.add('visible');
+    }
+    function closeAbout() {
+      document.getElementById('aboutModal').classList.remove('visible');
+    }
+    document.getElementById('aboutModal').addEventListener('click', function(e) {
+      if (e.target === this) closeAbout();
+    });
+
+    // ========== Mobile TOC ==========
+    var tocToggle = document.getElementById('tocToggle');
+    var tocSidebar = document.getElementById('tocSidebar');
+    var tocOverlay = document.getElementById('tocOverlay');
+    tocToggle.addEventListener('click', function() {
+      tocSidebar.classList.toggle('open');
+      tocOverlay.classList.toggle('visible');
+    });
+    tocOverlay.addEventListener('click', function() {
+      tocSidebar.classList.remove('open');
+      tocOverlay.classList.remove('visible');
+    });
+
+    // ========== Fetch genius.md ==========
+    fetch('genius.md')
+      .then(function(r) { return r.ok ? r.text() : Promise.reject('md'); })
+      .then(function(md) {
+        marked.use({ breaks: false, gfm: true });
+        var html = marked.parse(md);
+        document.getElementById('statuteContent').innerHTML = html;
+        buildTOC();
+        injectReserveCards();
+        setupScrollSpy();
+        setupProgressBar();
+        addSectionAnchors();
+        linkInternalRefs();
+        annotateDefinedTerms();
+      })
+      .catch(function() {
+        document.getElementById('statuteContent').innerHTML =
+          '<p style="color:var(--accent-2);text-align:center;padding:2rem;">Error loading statute text. Please try refreshing.</p>';
+      });
+
+    // ========== Inject Reserve Composition Cards ==========
+    function injectReserveCards() {
+      var content = document.getElementById('statuteContent');
+      var headings = content.querySelectorAll('h2');
+      var sec4 = null;
+      headings.forEach(function(h) {
+        if (/Section\s+4\b/i.test(h.textContent)) sec4 = h;
+      });
+      if (!sec4) return;
+      // Find the first paragraph after the section-4 heading
+      var nextEl = sec4.nextElementSibling;
+      if (!nextEl) return;
+      var card = document.createElement('div');
+      card.className = 'reserve-grid';
+      card.innerHTML =
+        '<div class="reserve-card">' +
+          '<p class="reserve-card-title">Cash &amp; Deposits</p>' +
+          '<p class="reserve-card-desc">U.S. coins and currency; demand deposits at Federal Reserve Banks or insured depository institutions</p>' +
+        '</div>' +
+        '<div class="reserve-card">' +
+          '<p class="reserve-card-title">Treasury Bills</p>' +
+          '<p class="reserve-card-desc">Short-term U.S. Treasury bills with remaining maturity of 93 days or less</p>' +
+        '</div>' +
+        '<div class="reserve-card">' +
+          '<p class="reserve-card-title">Repurchase Agreements</p>' +
+          '<p class="reserve-card-desc">Overnight repurchase agreements fully collateralized by U.S. Treasuries</p>' +
+        '</div>' +
+        '<div class="reserve-card">' +
+          '<p class="reserve-card-title">Gov&rsquo;t Money Market Funds</p>' +
+          '<p class="reserve-card-desc">Government money market funds invested solely in qualifying reserve assets</p>' +
+        '</div>';
+      // Insert after the first paragraph following section 4 heading
+      nextEl.parentNode.insertBefore(card, nextEl.nextSibling);
+    }
+
+    // ========== Build TOC ==========
+    function buildTOC() {
+      var content = document.getElementById('statuteContent');
+      var headings = content.querySelectorAll('h2');
+      var tocList = document.getElementById('tocList');
+      tocList.innerHTML = '';
+      headings.forEach(function(heading) {
+        var text = heading.textContent;
+        // Match "Section N." pattern to extract section number and title
+        var match = text.match(/Section\s+(\d+)\.\s*(.*)/i);
+        var id, displayText;
+        if (match) {
+          id = 'section-' + match[1];
+          displayText = '\u00a7 ' + match[1] + '. ' + match[2].trim();
+        } else {
+          // Fallback: slugify the heading text
+          id = 'section-' + text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          displayText = text;
+        }
+        heading.setAttribute('id', id);
+
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + id;
+        a.textContent = displayText;
+        a.setAttribute('data-target', id);
+        a.addEventListener('click', function() {
+          tocSidebar.classList.remove('open');
+          tocOverlay.classList.remove('visible');
+        });
+        li.appendChild(a);
+        tocList.appendChild(li);
+      });
+    }
+
+    // ========== Section anchor click → copy URL (shift+click) or plain click ==========
+    function addSectionAnchors() {
+      var headings = document.querySelectorAll('.statute-content h2');
+      headings.forEach(function(h) {
+        h.addEventListener('click', function(e) {
+          var url = window.location.origin + window.location.pathname + '#' + h.id;
+          navigator.clipboard.writeText(url).then(function() {
+            showToast('Link copied: ' + h.id);
+          }).catch(function() {
+            showToast('Copy: ' + url);
+          });
+        });
+      });
+    }
+
+    // ========== Internal Cross-Reference Links ==========
+    function linkInternalRefs() {
+      var content = document.getElementById('statuteContent');
+      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      var textNodes = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+      // Match "section(s) N" or "§ N" where N is 1-20 (GENIUS Act range),
+      // but NOT when followed by " of " that doesn't continue with "this Act".
+      // The negative lookahead (?!\s+of\s+(?!this\s+Act)) prevents linking external
+      // statute references like "section 3 of the Federal Deposit Insurance Act"
+      // while still linking internal references like "section 3 of this Act".
+      var refRegex = /(?:\bsections?\s+(\d+)(?:\([^)]*\))*|§\s*(\d+)(?:\([^)]*\))*)(?!\s+of\s+(?!this\s+Act))/gi;
+
+      textNodes.forEach(function(node) {
+        var parent = node.parentElement;
+        if (!parent) return;
+        var tag = parent.tagName;
+        if (tag === 'A' || tag === 'H1' || tag === 'H2' || tag === 'H3') return;
+
+        var text = node.textContent;
+        refRegex.lastIndex = 0;
+        if (!refRegex.test(text)) return;
+        refRegex.lastIndex = 0;
+
+        var frag = document.createDocumentFragment();
+        var lastIndex = 0;
+        var match;
+        while ((match = refRegex.exec(text)) !== null) {
+          var secNum = match[1] || match[2];
+          var num = parseInt(secNum, 10);
+          // Only link to GENIUS Act sections 1–20
+          if (num < 1 || num > 20) {
+            if (match.index > lastIndex) {
+              frag.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
+            }
+            frag.appendChild(document.createTextNode(match[0]));
+            lastIndex = refRegex.lastIndex;
+            continue;
+          }
+          if (match.index > lastIndex) {
+            frag.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
+          }
+          var a = document.createElement('a');
+          a.href = '#section-' + num;
+          a.className = 'xref-internal';
+          a.textContent = match[0];
+          a.title = 'Jump to \u00a7 ' + num + ' of the GENIUS Act';
+          frag.appendChild(a);
+          lastIndex = refRegex.lastIndex;
+        }
+        if (lastIndex < text.length) {
+          frag.appendChild(document.createTextNode(text.substring(lastIndex)));
+        }
+        node.parentNode.replaceChild(frag, node);
+      });
+    }
+
+    // ========== Scroll Spy ==========
+    function setupScrollSpy() {
+      var tocLinks = document.querySelectorAll('.toc-list a');
+      var headings = [];
+      tocLinks.forEach(function(link) {
+        var el = document.getElementById(link.getAttribute('data-target'));
+        if (el) headings.push({ el: el, link: link });
+      });
+      var currentActive = null;
+      function onScroll() {
+        var scrollY = window.scrollY + 100;
+        var active = null;
+        for (var i = headings.length - 1; i >= 0; i--) {
+          if (headings[i].el.offsetTop <= scrollY) { active = headings[i]; break; }
+        }
+        if (active && active !== currentActive) {
+          if (currentActive) currentActive.link.classList.remove('active');
+          active.link.classList.add('active');
+          currentActive = active;
+          var sidebar = document.getElementById('tocSidebar');
+          var linkTop = active.link.offsetTop;
+          if (linkTop < sidebar.scrollTop || linkTop > sidebar.scrollTop + sidebar.clientHeight - 40) {
+            sidebar.scrollTop = linkTop - sidebar.clientHeight / 3;
+          }
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    // ========== Progress Bar ==========
+    function setupProgressBar() {
+      var bar = document.getElementById('progressBar');
+      function update() {
+        var pct = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (pct > 0 ? Math.min(window.scrollY / pct * 100, 100) : 0) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    }
+
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('visible');
+      setTimeout(function() { toast.classList.remove('visible'); }, 3000);
+    }
+
+    // ========== Defined-Term Glossary (GENIUS Act § 2) ==========
+    var defined_terms = {
+      "payment stablecoin": "A digital asset that is, or is designed to be, used as a means of payment or settlement; whose issuer is obligated to convert, redeem, or repurchase for a fixed amount of monetary value; and which represents stable value relative to that amount. GENIUS Act, Pub. L. 119-27, § 2(22).",
+      "permitted payment stablecoin issuer": "A person formed in the United States that is a subsidiary of an insured depository institution approved under § 5, a Federal qualified payment stablecoin issuer, or a State qualified payment stablecoin issuer. GENIUS Act, Pub. L. 119-27, § 2(23).",
+      "digital asset": "Any digital representation of value that is recorded on a cryptographically secured distributed ledger. Defined in GENIUS Act § 2(6).",
+      "distributed ledger": "Technology in which data is shared across a network to create a public digital ledger of verified transactions among network participants, linked by cryptography. Defined in GENIUS Act § 2(8).",
+      "digital asset service provider": "A person that engages in the business of exchanging, transferring, or custodying digital assets. Excludes a distributed ledger protocol, a self-custodial software interface, and a validator. GENIUS Act, Pub. L. 119-27, § 2(7).",
+      "Federal qualified payment stablecoin issuer": "A nonbank entity or uninsured national bank approved by the Comptroller (OCC) to issue payment stablecoins. Defined in GENIUS Act § 2(11).",
+      "State qualified payment stablecoin issuer": "An entity approved under a state-level regulatory regime certified as substantially similar to the federal framework. Defined in GENIUS Act § 2(30).",
+      "foreign payment stablecoin issuer": "An issuer organized under foreign or territorial law that is not a permitted payment stablecoin issuer. Defined in GENIUS Act § 2(12).",
+      "insured depository institution": "A federally insured bank, savings institution, or credit union as defined in the Federal Deposit Insurance Act. Defined in GENIUS Act § 2(15).",
+      "Bank Secrecy Act": "A set of federal statutes requiring financial institutions to maintain records and file reports to help the government detect and prevent money laundering. The term under GENIUS Act encompasses 12 U.S.C. § 1829b, 12 U.S.C. §§ 1951 et seq., and 31 U.S.C. subchapter II of chapter 53. Defined in GENIUS Act § 2(2).",
+      "Stablecoin Certification Review Committee": "An interagency committee chaired by the Treasury Secretary with Fed, OCC, FDIC, and NCUA members, responsible for certifying state regulatory regimes as substantially similar to the federal framework. Defined in GENIUS Act § 2(27).",
+      "primary federal payment stablecoin regulator": "With respect to subsidiaries of insured depository institutions, the appropriate Federal banking agency; with respect to insured credit unions, the NCUA; with respect to Federal qualified issuers, the Comptroller (OCC). GENIUS Act, Pub. L. 119-27, § 2(25).",
+      "primary Federal payment stablecoin regulator": "With respect to subsidiaries of insured depository institutions, the appropriate Federal banking agency; with respect to insured credit unions, the NCUA; with respect to Federal qualified issuers, the Comptroller (OCC). GENIUS Act, Pub. L. 119-27, § 2(25).",
+      "reserve assets": "The high-quality liquid assets that a permitted payment stablecoin issuer must hold equal to 100% of outstanding payment stablecoins — limited to U.S. coins and currency, demand deposits at insured banks, Treasury bills with ≤93-day maturity, overnight repos backed by Treasuries, and central bank reserve deposits. Defined in GENIUS Act § 4.",
+      "algorithmic stablecoin": "A stablecoin that maintains its peg through algorithmic mechanisms rather than asset reserves. The GENIUS Act does not use this term; instead, its reserve requirements in § 4 effectively preclude algorithmic models because issuers must maintain reserves in qualifying assets. Derived from GENIUS Act, § 4(a).",
+      "payment stablecoin regulator": "The federal or state agency responsible for licensing and supervising a permitted payment stablecoin issuer. See GENIUS Act §§ 5–7."
+    };
+
+    // ========== Annotate Defined Terms ==========
+    function annotateDefinedTerms() {
+      var content = document.getElementById('statuteContent');
+      var paragraphs = content.querySelectorAll('p');
+
+      // Sort terms by length descending so longer phrases match first
+      var termKeys = Object.keys(defined_terms).sort(function(a, b) {
+        return b.length - a.length;
+      });
+
+      // Build a single regex matching all terms (case-insensitive, word-boundary)
+      var escapedTerms = termKeys.map(function(t) {
+        return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      });
+      var termRegex = new RegExp('\\b(' + escapedTerms.join('|') + ')\\b', 'gi');
+
+      paragraphs.forEach(function(p) {
+        // Skip paragraphs inside the definitions section (section-2)
+        var inDefSection = false;
+        var el = p;
+        while (el && el !== content) {
+          if (el.previousElementSibling && el.previousElementSibling.id === 'section-2') {
+            inDefSection = true; break;
+          }
+          el = el.parentElement;
+        }
+
+        // Walk text nodes only (preserve existing HTML structure)
+        var walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, null, false);
+        var textNodes = [];
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+        textNodes.forEach(function(node) {
+          // Skip if already inside a defined-term span or a heading
+          if (node.parentElement.classList && node.parentElement.classList.contains('defined-term')) return;
+          if (node.parentElement.tagName === 'H1' || node.parentElement.tagName === 'H2') return;
+
+          var text = node.textContent;
+          if (!termRegex.test(text)) return;
+          termRegex.lastIndex = 0; // reset
+
+          var frag = document.createDocumentFragment();
+          var lastIndex = 0;
+          var match;
+          termRegex.lastIndex = 0;
+
+          while ((match = termRegex.exec(text)) !== null) {
+            // Add text before match
+            if (match.index > lastIndex) {
+              frag.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
+            }
+            // Create the defined-term span
+            var span = document.createElement('span');
+            span.className = 'defined-term';
+            span.setAttribute('tabindex', '0');
+            span.setAttribute('role', 'button');
+            span.setAttribute('aria-label', 'Definition: ' + match[0]);
+            span.setAttribute('data-term', match[0].toLowerCase());
+            span.textContent = match[0];
+            frag.appendChild(span);
+            lastIndex = termRegex.lastIndex;
+          }
+          // Add remaining text
+          if (lastIndex < text.length) {
+            frag.appendChild(document.createTextNode(text.substring(lastIndex)));
+          }
+          node.parentNode.replaceChild(frag, node);
+        });
+      });
+
+      // Add event listeners
+      content.addEventListener('click', function(e) {
+        var term = e.target.closest('.defined-term');
+        if (term) showDefTooltip(term);
+      });
+      content.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          var term = e.target.closest('.defined-term');
+          if (term) { e.preventDefault(); showDefTooltip(term); }
+        }
+      });
+    }
+
+    // ========== Show/Close Definition Tooltip ==========
+    function showDefTooltip(el) {
+      var termKey = el.getAttribute('data-term');
+      // Look up case-insensitively
+      var def = defined_terms[termKey];
+      if (!def) {
+        // Try to find a key that matches case-insensitively
+        var keys = Object.keys(defined_terms);
+        for (var i = 0; i < keys.length; i++) {
+          if (keys[i].toLowerCase() === termKey) { def = defined_terms[keys[i]]; break; }
+        }
+      }
+      if (!def) return;
+
+      document.getElementById('defTermName').innerHTML =
+        '<span>' + el.textContent + '</span> <small>GENIUS Act &sect; 2</small>';
+      document.getElementById('defTermBody').textContent = def;
+
+      var tooltip = document.getElementById('defTooltip');
+      tooltip.classList.add('visible');
+
+      // Position near the element
+      var rect = el.getBoundingClientRect();
+      var top = rect.bottom + 8;
+      var left = rect.left;
+
+      // Keep within viewport
+      if (top + 200 > window.innerHeight) top = rect.top - 220;
+      if (top < 8) top = 8;
+      if (left + 420 > window.innerWidth) left = window.innerWidth - 430;
+      if (left < 8) left = 8;
+
+      tooltip.style.top = top + 'px';
+      tooltip.style.left = left + 'px';
+    }
+
+    function closeDefTooltip() {
+      document.getElementById('defTooltip').classList.remove('visible');
+    }
+
+    // Close tooltips on outside click
+    document.addEventListener('click', function(e) {
+      var tooltip = document.getElementById('defTooltip');
+      if (tooltip.classList.contains('visible') &&
+          !tooltip.contains(e.target) &&
+          !e.target.classList.contains('defined-term')) {
+        closeDefTooltip();
+      }
+    });
+
+    // Close modal/tooltip on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeDefTooltip();
+        closeAbout();
+      }
+    });
+  </script>
+</body>
+</html>

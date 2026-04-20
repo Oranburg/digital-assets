@@ -1,0 +1,18 @@
+{
+  "id": "51-percent-attack",
+  "term": "51% Attack",
+  "layer": 1,
+  "tags": ["security", "consensus"],
+  "parent": "consensus",
+  "related": ["bft", "proof-of-work", "liveness-attack"],
+  "definitions": {
+    "technical": "An attack in which an adversary controlling more than half of a proof-of-work network's hash rate (or equivalent resource in other consensus models) can unilaterally determine the canonical chain, enabling double-spending and transaction censorship. The 51% threshold applies specifically to Nakamoto-style longest-chain consensus; BFT systems have a lower tolerance threshold of one-third.",
+    "lay": "When a single entity gains control of more than half the computing power on a blockchain, it can rewrite recent transactions and spend the same coins twice. This is the fundamental security assumption of proof-of-work blockchains: as long as no one controls the majority, the system is safe.",
+    "parenthetical": "(an attack where a single entity controlling majority network resources can rewrite transaction history)"
+  },
+  "statutes": [],
+  "see_also": ["/analysis/decentralization/"],
+  "visualization": null,
+  "sources": ["nh-token-glossary"],
+  "verification": { "status": "verified" }
+}

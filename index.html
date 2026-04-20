@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Assets</title>
+    <meta name="description" content="An exploratory legal and technical learning web covering blockchain protocol, digital asset infrastructure, and governance regulation. Glossary, state DAO laws, federal stablecoin regulation, and interactive analysis tools.">
+    <meta name="author" content="Seth C. Oranburg">
+    <link rel="canonical" href="https://oranburg.law/digital-assets/">
+
+    <meta property="og:title" content="Digital Assets">
+    <meta property="og:description" content="Exploratory learning web: blockchain glossary, state DAO laws, GENIUS Act, and interactive analysis tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oranburg.law/digital-assets/">
+    <meta property="og:site_name" content="Digital Assets">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script>
+      (function(){
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dark') {
+            document.documentElement.setAttribute('data-theme', t);
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch(e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

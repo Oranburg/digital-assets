@@ -1,0 +1,18 @@
+{
+  "id": "genius-act",
+  "term": "GENIUS Act",
+  "layer": 3,
+  "tags": ["regulation", "stablecoin", "federal"],
+  "parent": null,
+  "related": ["payment-stablecoin", "occ", "cftc", "reserve-requirement", "clarity-act"],
+  "definitions": {
+    "technical": "The Guiding and Establishing National Innovation for U.S. Stablecoins Act of 2025, Pub. L. No. 119-27, 139 Stat. 419. Creates a comprehensive federal prudential framework for payment stablecoin issuers, mandating 1:1 reserves in high-quality liquid assets (Section 4(a)(1)(A)), monthly attestations (Section 4(a)(3)), and priority for stablecoin holders in insolvency (Section 11). Issuers above $10 billion must obtain federal licenses. The Act's commodity exclusion (Section 17(f)) creates a classification cliff: a stablecoin that loses permitted status may fall under CFTC jurisdiction.",
+    "lay": "The first comprehensive federal law regulating stablecoins in the United States, signed in 2025. It requires stablecoin issuers to hold one dollar in reserve for every token they issue, get regular audits, and protect token holders if the company fails. Large issuers must be supervised by federal banking regulators.",
+    "parenthetical": "(the 2025 federal law establishing reserve, audit, and licensing requirements for payment stablecoin issuers)"
+  },
+  "statutes": ["genius-act"],
+  "see_also": ["/laws/federal/", "/analysis/stable-tokens/"],
+  "visualization": null,
+  "sources": ["occ-glossary", "nh-token-glossary"],
+  "verification": { "status": "verified" }
+}

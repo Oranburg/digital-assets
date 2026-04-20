@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registry Requirements | NH DAO Law Explorer</title>
+  <meta name="description" content="Interactive checklist of the 11 registry requirements a DAO must satisfy to be listed on the New Hampshire DAO registry under RSA 301-B:15. Includes statutory text, practical guidance, comparative analysis across five states, and the ongoing 'at all times' compliance problem.">
+  <meta name="author" content="Seth C. Oranburg">
+  <meta name="keywords" content="DAO registry, RSA 301-B, New Hampshire, registry requirements, permissionless blockchain, open source, quality assurance, bylaws, dispute resolution, decentralization, DAO compliance, UNH-IOL, filing fee, checklist">
+  <link rel="canonical" href="https://oranburg.law/NH-RSA-301-B/registry.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Registry Requirements Checklist | NH DAO Law Explorer">
+  <meta property="og:description" content="Interactive checklist of the 11 requirements for listing a DAO on the New Hampshire registry under RSA 301-B:15. Statutory text, practical guidance, and comparative analysis across five states.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oranburg.law/NH-RSA-301-B/registry.html">
+  <meta property="og:site_name" content="NH DAO Law Explorer">
+  <meta property="article:author" content="Seth C. Oranburg">
+  <meta property="article:published_time" content="2026-04-18">
+  <meta property="article:section" content="Law">
+  <meta property="article:tag" content="DAO registry">
+  <meta property="article:tag" content="RSA 301-B">
+  <meta property="article:tag" content="compliance checklist">
+  <meta property="article:tag" content="blockchain governance">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Registry Requirements | NH DAO Law Explorer">
+  <meta name="twitter:description" content="Interactive checklist of the 11 requirements for New Hampshire DAO registry listing under RSA 301-B:15. Statutory text, guidance, and state comparison.">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Registry Requirements Checklist",
+    "headline": "Registry Requirements for New Hampshire DAOs",
+    "description": "Interactive checklist of the 11 registry requirements a DAO must satisfy under RSA 301-B:15, with statutory text, practical guidance, and comparative analysis across five states.",
+    "url": "https://oranburg.law/NH-RSA-301-B/registry.html",
+    "datePublished": "2026-04-18",
+    "author": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law",
+      "jobTitle": "Professor of Law",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "University of New Hampshire Franklin Pierce School of Law"
+      },
+      "sameAs": [
+        "https://github.com/Oranburg",
+        "https://orcid.org/0000-0002-5698-7962"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "NH DAO Law Explorer",
+      "url": "https://oranburg.law/NH-RSA-301-B/"
+    },
+    "about": {
+      "@type": "LegislationObject",
+      "name": "RSA 301-B:15",
+      "legislationIdentifier": "RSA 301-B:15",
+      "legislationJurisdiction": "US-NH"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', theme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    /* ===== Design Tokens (shared with index.html) ===== */
+    :root, [data-theme="dark"] {
+      --blue-deep:    #0A3255;
+      --blue-bright:  #2459A9;
+      --blue-light:   #6DACDE;
+      --gold:         #C4972F;
+      --gold-light:   #E8C560;
+      --granite:      #6B7B8D;
+      --white-mtn:    #E8ECF0;
+
+      --bg:           #000000;
+      --bg-secondary: #0A3255;
+      --bg-soft:      #0D3D68;
+      --text:         #FFFFFF;
+      --muted:        #9CA3AF;
+      --border:       #1E5080;
+      --accent:       #6DACDE;
+      --accent-2:     #E8C560;
+
+      --font-headline: 'Oswald', sans-serif;
+      --font-body:     'Roboto', sans-serif;
+      --font-accent:   'Crimson Text', serif;
+      --font-mono:     'Roboto Mono', 'Consolas', 'Courier New', monospace;
+
+      --max-width:   1100px;
+      --radius-sm:   4px;
+      --radius-md:   8px;
+
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.5rem;
+      --space-xl:  2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+    }
+
+    [data-theme="light"] {
+      --bg:           #FFFFFF;
+      --bg-secondary: #F8F9FA;
+      --bg-soft:      #E9ECEF;
+      --text:         #000000;
+      --muted:        #555555;
+      --border:       #D0D8E4;
+      --accent:       #2459A9;
+      --accent-2:     #C4972F;
+    }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-2); }
+
+    /* ===== Progress Bar ===== */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      z-index: 1000; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ===== Top Nav ===== */
+    .top-nav {
+      background-color: var(--blue-deep);
+      padding: 0.6rem var(--space-md);
+      position: sticky; top: 0; z-index: 200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .top-nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+    }
+    .top-nav a {
+      color: #FFFFFF; font-family: var(--font-body); font-size: 0.82rem;
+      font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .top-nav a:hover { color: var(--accent-2); }
+    .top-nav a.nav-active { color: var(--accent-2); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
+    .nav-pages { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+    .top-nav a.nav-current {
+      color: var(--accent-2); font-weight: 700;
+    }
+    .nav-title { font-family: var(--font-headline); font-size: 0.95rem; font-weight: 600; color: var(--accent-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0; }
+    .nav-links {
+      display: flex; align-items: center; gap: var(--space-md);
+    }
+    .theme-toggle {
+      background: none; border: none; cursor: pointer; color: #FFFFFF;
+      padding: 0.25rem; display: flex; align-items: center; transition: color 0.2s;
+    }
+    .theme-toggle:hover { color: var(--accent-2); }
+    [data-theme="dark"] .icon-sun  { display: inline; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: inline; }
+
+    /* ===== Page Layout ===== */
+    .page-layout {
+      display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 52px);
+    }
+
+    /* ===== Sidebar ===== */
+    .toc-sidebar {
+      width: 260px; min-width: 260px; position: sticky; top: 52px;
+      height: calc(100vh - 52px); overflow-y: auto;
+      padding: var(--space-lg) var(--space-md);
+      border-right: 1px solid var(--border); background: var(--bg);
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .toc-sidebar::-webkit-scrollbar { width: 4px; }
+    .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .toc-heading {
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-sm); padding: 0;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.35rem 0.5rem; font-size: 0.83rem; line-height: 1.35;
+      color: var(--muted); border-left: 2px solid transparent;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; transition: all 0.2s;
+    }
+    .toc-list a:hover { color: var(--text); background: var(--bg-soft); }
+    .toc-list a.active {
+      color: var(--accent); border-left-color: var(--accent);
+      background: var(--bg-soft); font-weight: 600;
+    }
+    .toc-sub {
+      font-size: 0.78rem; padding-left: 1rem;
+    }
+    .toc-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: var(--space-md) 0;
+    }
+    .toc-stat-badge {
+      display: inline-block; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.2rem 0.5rem;
+      font-size: 0.75rem; color: var(--muted); margin: 0.2rem 0;
+    }
+
+    /* ===== Content Area ===== */
+    .content-area {
+      flex: 1; min-width: 0; padding: var(--space-2xl) var(--space-xl);
+    }
+    .page-content {
+      max-width: 740px; margin: 0 auto;
+    }
+
+    /* ===== Typography ===== */
+    .page-content h1 {
+      font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700;
+      line-height: 1.15; margin: 0 0 var(--space-md);
+      color: var(--text); border-bottom: 2px solid var(--accent);
+      padding-bottom: var(--space-sm);
+    }
+    .page-content h2 {
+      font-family: var(--font-headline); font-size: 1.5rem; font-weight: 600;
+      line-height: 1.2; margin: var(--space-3xl) 0 var(--space-md); color: var(--text);
+      border-bottom: 1px solid var(--border); padding-bottom: var(--space-xs);
+      scroll-margin-top: 70px;
+    }
+    .page-content h3 {
+      font-family: var(--font-headline); font-size: 1.2rem; font-weight: 600;
+      margin: var(--space-2xl) 0 var(--space-sm); color: var(--text);
+      scroll-margin-top: 70px;
+    }
+    .page-content h4 {
+      font-family: var(--font-headline); font-size: 1rem; font-weight: 500;
+      margin: var(--space-lg) 0 var(--space-xs); color: var(--accent-2);
+    }
+    .page-content p {
+      font-family: var(--font-accent); font-size: 1.1rem; line-height: 1.85;
+      margin: 0 0 var(--space-md); text-align: justify; hyphens: auto;
+    }
+    .page-content ul, .page-content ol {
+      font-family: var(--font-accent); font-size: 1.05rem;
+      margin: 0 0 var(--space-md); padding-left: var(--space-xl);
+    }
+    .page-content li { margin-bottom: var(--space-xs); }
+    .page-content strong { font-weight: 700; }
+    .page-content em { font-style: italic; }
+
+    /* ===== Hero ===== */
+    .hero {
+      text-align: center; padding: var(--space-xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--border); margin-bottom: var(--space-2xl);
+    }
+    .hero h1 {
+      border-bottom: none; font-size: 2.6rem; margin-bottom: var(--space-md);
+    }
+    .hero .subtitle {
+      font-family: var(--font-accent); font-size: 1.2rem; color: var(--muted);
+      max-width: 560px; margin: 0 auto var(--space-lg); text-align: center; hyphens: none;
+    }
+    .hero-breadcrumb {
+      font-size: 0.85rem; color: var(--muted); margin-bottom: var(--space-md);
+    }
+
+    /* ===== Statute Box ===== */
+    .statute-box {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-left: 4px solid var(--accent); border-radius: var(--radius-md);
+      padding: var(--space-lg); margin: var(--space-lg) 0;
+    }
+    .statute-box-label {
+      font-family: var(--font-headline); font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent);
+      margin: 0 0 var(--space-sm);
+    }
+    .statute-box blockquote {
+      font-family: var(--font-accent); font-size: 1rem; line-height: 1.75;
+      color: var(--white-mtn); margin: 0; padding: 0;
+      font-style: italic;
+    }
+
+    /* ===== Call-out ===== */
+    .callout {
+      border-left: 4px solid var(--gold); background: rgba(196,151,47,0.08);
+      padding: var(--space-md) var(--space-lg); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: var(--space-lg) 0;
+    }
+    .callout p {
+      font-family: var(--font-accent) !important; font-size: 1rem !important;
+      margin: 0 !important; text-align: left !important;
+    }
+    .callout-info { border-left-color: var(--accent); background: rgba(109,172,222,0.08); }
+
+    /* ===== Comparison Table ===== */
+    .comparison-table-wrapper { overflow-x: auto; margin: var(--space-lg) 0; }
+    .comparison-table {
+      width: 100%; border-collapse: collapse; font-size: 0.88rem;
+      min-width: 600px;
+    }
+    .comparison-table th {
+      background: var(--bg-secondary); text-align: left;
+      font-family: var(--font-headline); font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted);
+      padding: 0.6rem 0.8rem; border-bottom: 2px solid var(--border);
+    }
+    .comparison-table td {
+      padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border);
+      vertical-align: top; line-height: 1.4;
+    }
+    .comparison-table tr:hover td { background: var(--bg-soft); }
+    .jur-badge {
+      display: inline-block; padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm); font-size: 0.78rem;
+      font-weight: 700; font-family: var(--font-headline);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .jur-nh { background: #1a3d6e; color: var(--blue-light); }
+    .jur-wy { background: #2d4a1e; color: #86efac; }
+    .jur-ut { background: #4a1e1e; color: #fca5a5; }
+    .jur-tn { background: #3a2a10; color: #fcd34d; }
+    .jur-vt { background: #1e3a2a; color: #6ee7b7; }
+
+    /* ===== Prong Cards (reused for steps) ===== */
+    .prong-card {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-md);
+    }
+    .prong-label {
+      font-family: var(--font-headline); font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: var(--accent); color: #000;
+      display: inline-block; padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm); margin-bottom: var(--space-sm);
+    }
+    .prong-card h4 {
+      font-family: var(--font-headline); font-size: 1rem; font-weight: 600;
+      color: var(--text); margin: 0 0 var(--space-xs);
+    }
+    .prong-card p {
+      font-family: var(--font-body) !important; font-size: 0.88rem !important;
+      line-height: 1.5 !important; margin: 0 !important;
+      text-align: left !important; color: var(--muted);
+    }
+
+    /* ===== Expandable Details ===== */
+    details.math-detail {
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      margin: var(--space-md) 0; overflow: hidden;
+    }
+    details.math-detail summary {
+      padding: var(--space-sm) var(--space-md);
+      background: var(--bg-secondary); cursor: pointer;
+      font-family: var(--font-headline); font-size: 0.9rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent);
+      list-style: none; display: flex; align-items: center; gap: 0.5rem;
+      user-select: none;
+    }
+    details.math-detail summary::-webkit-details-marker { display: none; }
+    details.math-detail summary::before {
+      content: '\25B6'; font-size: 0.7rem; transition: transform 0.2s; flex-shrink: 0;
+    }
+    details[open].math-detail summary::before { transform: rotate(90deg); }
+    details.math-detail .detail-body {
+      padding: var(--space-md) var(--space-lg); font-family: var(--font-accent);
+      font-size: 1rem; line-height: 1.8;
+    }
+    details.math-detail .detail-body p { margin: 0 0 var(--space-sm); }
+
+    /* ===== Defined Terms ===== */
+    .defined-term {
+      cursor: help;
+      border-bottom: 1px dotted var(--accent-2);
+      transition: background 0.2s;
+    }
+    .defined-term:hover { background: rgba(232, 197, 96, 0.15); }
+    .def-tooltip {
+      display: none; position: fixed; z-index: 800;
+      background: var(--bg-secondary); border: 1px solid var(--accent-2);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 440px; width: 90vw; overflow: hidden;
+    }
+    .def-tooltip.visible { display: block; }
+    .def-tooltip-header {
+      background: var(--blue-deep); color: var(--accent-2); padding: 0.5rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .def-tooltip-header small {
+      font-family: var(--font-body); font-size: 0.72rem; font-weight: 400;
+      color: var(--muted); text-transform: none; letter-spacing: 0;
+    }
+    .def-tooltip-close {
+      background: none; border: none; color: var(--accent-2); font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .def-tooltip-body {
+      padding: 0.75rem; font-family: var(--font-accent); font-size: 0.82rem;
+      line-height: 1.6; color: var(--text); max-height: 300px; overflow-y: auto;
+    }
+    .def-tooltip-source {
+      font-family: var(--font-body); font-size: 0.75rem; font-style: italic;
+      color: var(--muted); margin-top: 0.5rem; border-top: 1px solid var(--border);
+      padding-top: 0.4rem;
+    }
+
+    /* ===== NH Status Badge ===== */
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.25rem 0.7rem; border-radius: 999px;
+      font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .status-pass { background: rgba(74,222,128,0.15); color: #4ade80; border: 1px solid #4ade80; }
+    .status-fail { background: rgba(248,113,113,0.15); color: #f87171; border: 1px solid #f87171; }
+    .status-na   { background: var(--bg-soft); color: var(--muted); border: 1px solid var(--border); }
+
+    /* ===== Progress Summary (sticky) ===== */
+    .progress-summary {
+      position: sticky; top: 52px; z-index: 100;
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-sm) var(--space-lg);
+      margin: 0 0 var(--space-xl);
+      display: flex; align-items: center; gap: var(--space-md); flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .progress-summary-text {
+      font-family: var(--font-body); font-size: 0.88rem; color: var(--muted);
+    }
+    .progress-summary-text strong { color: var(--text); }
+    .progress-mini-bar {
+      flex: 1; min-width: 120px; height: 8px;
+      background: var(--bg); border-radius: 4px; overflow: hidden;
+      display: flex;
+    }
+    .progress-mini-pass {
+      height: 100%; background: #4ade80; transition: width 0.3s;
+    }
+    .progress-mini-fail {
+      height: 100%; background: #f87171; transition: width 0.3s;
+    }
+    .progress-mini-na {
+      height: 100%; background: var(--border); transition: width 0.3s;
+    }
+
+    /* ===== Requirement Cards ===== */
+    details.req-card {
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      margin: var(--space-md) 0; overflow: hidden;
+      border-left: 4px solid var(--border);
+      transition: border-left-color 0.3s;
+    }
+    details.req-card.pass { border-left-color: #4ade80; }
+    details.req-card.fail { border-left-color: #f87171; }
+
+    details.req-card summary {
+      padding: var(--space-sm) var(--space-md);
+      background: var(--bg-secondary); cursor: pointer;
+      list-style: none; display: flex; align-items: center; gap: var(--space-sm);
+      user-select: none; flex-wrap: wrap;
+    }
+    details.req-card summary::-webkit-details-marker { display: none; }
+    details.req-card summary::before {
+      content: '\25B6'; font-size: 0.7rem; transition: transform 0.2s; flex-shrink: 0;
+      color: var(--accent);
+    }
+    details[open].req-card summary::before { transform: rotate(90deg); }
+
+    .req-badge {
+      font-family: var(--font-headline); font-size: 0.82rem; font-weight: 700;
+      background: var(--accent); color: #000;
+      padding: 0.15rem 0.5rem; border-radius: var(--radius-sm);
+      text-transform: lowercase; letter-spacing: 0.02em;
+      flex-shrink: 0;
+    }
+    .req-title {
+      font-family: var(--font-headline); font-size: 0.82rem; font-weight: 600;
+      color: var(--text); flex: 1; min-width: 120px;
+    }
+    .req-toggle {
+      display: flex; gap: 2px; flex-shrink: 0;
+    }
+    .req-toggle button {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      color: var(--muted); font-family: var(--font-body); font-size: 0.78rem;
+      padding: 0.25rem 0.6rem; cursor: pointer; transition: all 0.2s;
+    }
+    .req-toggle button:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+    .req-toggle button:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+    .req-toggle button.active-pass {
+      background: rgba(74,222,128,0.2); color: #4ade80; border-color: #4ade80; font-weight: 600;
+    }
+    .req-toggle button.active-fail {
+      background: rgba(248,113,113,0.2); color: #f87171; border-color: #f87171; font-weight: 600;
+    }
+    .req-toggle button.active-na {
+      background: var(--bg-soft); color: var(--text); border-color: var(--accent); font-weight: 600;
+    }
+    .req-toggle button:hover { color: var(--text); background: var(--bg-soft); }
+
+    .req-pills {
+      display: flex; gap: 4px; flex-shrink: 0;
+    }
+    .req-pill {
+      display: inline-block; padding: 0.1rem 0.45rem;
+      border-radius: var(--radius-sm); font-size: 0.7rem;
+      font-weight: 700; font-family: var(--font-headline);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+
+    .req-body {
+      padding: var(--space-md) var(--space-lg); font-family: var(--font-accent);
+      font-size: 1rem; line-height: 1.8;
+    }
+    .req-body h4 {
+      font-family: var(--font-headline); font-size: 0.9rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--accent-2); margin: var(--space-md) 0 var(--space-xs);
+    }
+    .req-body h4:first-child { margin-top: 0; }
+    .req-body p {
+      font-family: var(--font-accent); font-size: 0.82rem; line-height: 1.7;
+      margin: 0 0 var(--space-sm); text-align: left;
+    }
+    .req-body .cross-ref {
+      font-family: var(--font-body); font-size: 0.82rem; color: var(--muted);
+      margin-top: var(--space-sm);
+    }
+
+    /* ===== Step List ===== */
+    .step-list {
+      list-style: none; padding: 0; margin: var(--space-lg) 0;
+      counter-reset: step-counter;
+    }
+    .step-list li {
+      counter-increment: step-counter;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-md) var(--space-md) var(--space-md) 3.5rem;
+      margin-bottom: var(--space-sm);
+      position: relative;
+      font-family: var(--font-accent); font-size: 1rem; line-height: 1.7;
+    }
+    .step-list li::before {
+      content: counter(step-counter);
+      position: absolute; left: var(--space-md); top: var(--space-md);
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700;
+      background: var(--accent); color: #000;
+      width: 1.8rem; height: 1.8rem; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+
+    /* ===== Comparison cell colors ===== */
+    .cmp-required { color: #4ade80; font-weight: 600; }
+    .cmp-formation { color: #fcd34d; font-weight: 500; }
+    .cmp-optional  { color: var(--muted); font-style: italic; }
+    .cmp-none      { color: var(--muted); }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      border-top: 1px solid var(--border); padding: var(--space-xl) var(--space-md);
+      text-align: center; font-size: 0.85rem; color: var(--muted);
+    }
+    .site-footer a { color: var(--accent); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .toc-sidebar { display: none; }
+      .content-area { padding: var(--space-lg); }
+      .progress-summary { top: 44px; }
+    }
+    @media (max-width: 600px) {
+      .page-content h1 { font-size: 1.6rem; }
+      .page-content h2 { font-size: 1.25rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .req-toggle button { font-size: 0.72rem; padding: 0.2rem 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+        <div class="top-nav-inner">
+      <span class="nav-title">NH DAO Law</span>
+      <div class="nav-pages">
+        <a href="index.html">Statute</a>
+        <a href="decentralization.html">Decentralization</a>
+        <a href="registry.html" class="nav-active">Registry</a>
+        <a href="comparison.html">Compare</a>
+        <a href="genius.html">GENIUS</a>
+        <a href="stable-tokens.html">Stable Tokens</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:var(--space-sm);">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Layout -->
+  <div class="page-layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc-sidebar" id="tocSidebar">
+      <p class="toc-heading">On This Page</p>
+      <ul class="toc-list">
+        <li><a href="#overview" data-target="overview">Overview</a></li>
+        <li><a href="#requirements" data-target="requirements">The 11 Requirements</a></li>
+        <li><a href="#tech-infra" data-target="tech-infra" class="toc-sub">&#8594; Technical Infrastructure (a&ndash;e)</a></li>
+        <li><a href="#gov-trans" data-target="gov-trans" class="toc-sub">&#8594; Governance &amp; Transparency (f&ndash;i)</a></li>
+        <li><a href="#decen-reqs" data-target="decen-reqs" class="toc-sub">&#8594; Decentralization (j&ndash;k)</a></li>
+        <li><a href="#at-all-times" data-target="at-all-times">The &ldquo;At All Times&rdquo; Problem</a></li>
+        <li><a href="#registration" data-target="registration">Registration Process</a></li>
+        <li><a href="#resources" data-target="resources">Resources</a></li>
+      </ul>
+      <hr class="toc-divider">
+      <p class="toc-heading" style="margin-top:0;">Quick Reference</p>
+      <div class="toc-stat-badge">11 requirements</div><br>
+      <div class="toc-stat-badge">$100 filing fee</div><br>
+      <div class="toc-stat-badge">&sect; 301-B:15</div>
+      <hr class="toc-divider">
+      <p style="font-size:0.78rem; color:var(--muted); margin:0;">Part of the<br><strong>NH DAO Law Explorer</strong><br>series on registry compliance.</p>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content-area">
+      <article class="page-content">
+
+        <!-- Hero -->
+        <div class="hero">
+          <p class="hero-breadcrumb">
+            <a href="index.html">RSA 301-B</a> &rsaquo; Registry Requirements
+          </p>
+          <h1>Registry Requirements</h1>
+          <p class="subtitle">How to Register a DAO in New Hampshire</p>
+        </div>
+
+        <!-- Progress Summary -->
+        <div class="progress-summary" id="progressSummary">
+          <span class="progress-summary-text">
+            <strong id="ps-assessed">0</strong> of 11 assessed &middot;
+            <strong id="ps-pass" style="color:#4ade80;">0</strong> passing &middot;
+            <strong id="ps-fail" style="color:#f87171;">0</strong> failing
+          </span>
+          <div class="progress-mini-bar">
+            <div class="progress-mini-pass" id="pmb-pass" style="width:0%;"></div>
+            <div class="progress-mini-fail" id="pmb-fail" style="width:0%;"></div>
+            <div class="progress-mini-na" id="pmb-na" style="width:100%;"></div>
+          </div>
+        </div>
+
+        <!-- ============================
+             SECTION 1: OVERVIEW
+             ============================ -->
+        <h2 id="overview">Overview</h2>
+
+        <p>RSA 301-B:15 establishes eleven listing requirements that every DAO must satisfy in order to be placed on the New Hampshire DAO registry. These requirements cover the DAO&rsquo;s technical infrastructure, governance and transparency mechanisms, and decentralization structure.</p>
+
+        <p>Critically, these requirements must be satisfied both at the time of application <em>and</em> &ldquo;at all times&rdquo; afterward. New Hampshire is the only state with ongoing compliance obligations for registered DAOs. The registry administrator &mdash; currently the University of New Hampshire Interoperability Laboratory (UNH-IOL) &mdash; monitors compliance on an ongoing basis.</p>
+
+        <p>Use the interactive checklist below to assess your DAO against each requirement. Your selections are saved locally and persist between sessions.</p>
+
+        <!-- ============================
+             SECTION 2: INTERACTIVE CHECKLIST
+             ============================ -->
+        <h2 id="requirements">The 11 Requirements</h2>
+
+        <h3 id="tech-infra">Technical Infrastructure (a&ndash;e)</h3>
+        <p>These requirements establish what the DAO&rsquo;s technology must provide: a permissionless deployment, public visibility, open-source code, quality assurance, and a user-facing interface.</p>
+
+        <!-- Requirement (a) -->
+        <details class="req-card" id="req-a">
+          <summary>
+            <span class="req-badge">(a)</span>
+            <span class="req-title">Permissionless Blockchain</span>
+            <div class="req-toggle" data-req="a">
+              <button data-state="pass" onclick="setReqState('a','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('a','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('a','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(a)</p>
+              <blockquote>&ldquo;The DAO shall be deployed on a permissionless blockchain.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>Your DAO&rsquo;s smart contracts must run on a public blockchain where anyone can validate transactions. Private or permissioned chains do not qualify.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Identify the blockchain (e.g., Ethereum, Solana, Avalanche) and confirm it meets the &sect;&nbsp;301-B:5(XXX) definition of a permissionless blockchain.</p>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(XXX)</a> (definition of &ldquo;permissionless blockchain&rdquo;)</p>
+          </div>
+        </details>
+
+        <!-- Requirement (b) -->
+        <details class="req-card" id="req-b">
+          <summary>
+            <span class="req-badge">(b)</span>
+            <span class="req-title">Public Address</span>
+            <div class="req-toggle" data-req="b">
+              <button data-state="pass" onclick="setReqState('b','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('b','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('b','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(b)</p>
+              <blockquote>&ldquo;The DAO shall provide a unique public address by which any person can review and monitor the DAO&rsquo;s activities.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The DAO must have a verifiable on-chain identity &mdash; a contract address or equivalent &mdash; that anyone can inspect.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Provide the smart contract address(es) deployed on the permissionless blockchain.</p>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(XXXIII)</a> (definition of &ldquo;public address&rdquo;)</p>
+          </div>
+        </details>
+
+        <!-- Requirement (c) -->
+        <details class="req-card" id="req-c">
+          <summary>
+            <span class="req-badge">(c)</span>
+            <span class="req-title">Open-Source Code</span>
+            <div class="req-toggle" data-req="c">
+              <button data-state="pass" onclick="setReqState('c','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('c','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('c','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(c)</p>
+              <blockquote>&ldquo;The software code establishing and maintaining the DAO shall be in open-source format in a public forum to allow anyone to review it.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The DAO&rsquo;s smart contract source code must be publicly available under an open-source license as defined by the Open Source Initiative.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Publish verified source code to a public repository (e.g., GitHub) or verify contract source on a block explorer (e.g., Etherscan).</p>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(XXVIII)</a> (definition of &ldquo;open-source&rdquo;)</p>
+          </div>
+        </details>
+
+        <!-- Requirement (d) -->
+        <details class="req-card" id="req-d">
+          <summary>
+            <span class="req-badge">(d)</span>
+            <span class="req-title">Quality Assurance Testing</span>
+            <div class="req-toggle" data-req="d">
+              <button data-state="pass" onclick="setReqState('d','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('d','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('d','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(d)</p>
+              <blockquote>&ldquo;The software code establishing and maintaining the DAO shall have undergone quality assurance testing.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The code must have been security-reviewed according to industry standards. The registry administrator may develop its own testing standards.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Obtain and publish a third-party security audit report. The registry administrator (UNH-IOL) may specify additional standards per &sect;&nbsp;301-B:5(XL).</p>
+            <div class="callout" style="margin-top:var(--space-sm);">
+              <p><strong>Commission note.</strong> The April 18&ndash;19, 2026 Design Sprint at UNH-IOL is developing the registry&rsquo;s QA testing standards.</p>
+            </div>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(XL)</a> (definition of &ldquo;quality assurance testing&rdquo;)</p>
+          </div>
+        </details>
+
+        <!-- Requirement (e) -->
+        <details class="req-card" id="req-e">
+          <summary>
+            <span class="req-badge">(e)</span>
+            <span class="req-title">Graphical User Interface</span>
+            <div class="req-toggle" data-req="e">
+              <button data-state="pass" onclick="setReqState('e','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('e','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('e','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(e)</p>
+              <blockquote>&ldquo;There shall be at least one GUI by which any person can read the value of the key variables of the DAO&rsquo;s smart contracts and monitor all transactions originating from, or addressed to, any of the DAO&rsquo;s smart contracts.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>There must be a web interface or app where anyone &mdash; not just developers &mdash; can inspect the DAO&rsquo;s on-chain state and transactions.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Provide a URL to a publicly accessible interface displaying smart contract state. Block explorers alone may not satisfy this if they do not show &ldquo;key variables.&rdquo;</p>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(XVI)</a> (definition of &ldquo;GUI&rdquo;)</p>
+          </div>
+        </details>
+
+        <h3 id="gov-trans">Governance &amp; Transparency (f&ndash;i)</h3>
+        <p>These requirements address how the DAO governs itself, communicates with the public, and resolves disputes &mdash; both internally and with third parties.</p>
+
+        <!-- Requirement (f) -->
+        <details class="req-card" id="req-f">
+          <summary>
+            <span class="req-badge">(f)</span>
+            <span class="req-title">Public Bylaws</span>
+            <div class="req-toggle" data-req="f">
+              <button data-state="pass" onclick="setReqState('f','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('f','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('f','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+              <span class="req-pill jur-wy">WY</span>
+              <span class="req-pill jur-tn">TN</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(f)</p>
+              <blockquote>&ldquo;The DAO shall have bylaws that satisfy the RSA 301-B:16 and may be publicly accessed using a GUI or public forum.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The DAO must have written governance rules that are (1) publicly accessible, (2) written in plain language a layperson can understand, (3) accurately reflecting the smart contract rules, and (4) providing material disclosures. Where bylaws and smart contract code conflict, the code governs.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Publish bylaws at a public URL or on-chain. Ensure they satisfy all five subsections of &sect;&nbsp;301-B:16.</p>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-16">&sect;&nbsp;301-B:16</a> (full bylaws requirements)<br></p>
+          </div>
+        </details>
+
+        <!-- Requirement (g) -->
+        <details class="req-card" id="req-g">
+          <summary>
+            <span class="req-badge">(g)</span>
+            <span class="req-title">Public Communications</span>
+            <div class="req-toggle" data-req="g">
+              <button data-state="pass" onclick="setReqState('g','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('g','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('g','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(g)</p>
+              <blockquote>&ldquo;The DAO shall refer to or provide a communications mechanism accessible by the public that allows a layperson to contact the DAO, and all participants and administrators of the DAO shall be able to access the contents of this mechanism.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>There must be a way for anyone &mdash; including non-members &mdash; to contact the DAO, and all participants and administrators must be able to see those communications.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Provide a public forum, email address, or contact mechanism. All DAO members must have access to its contents.</p>
+          </div>
+        </details>
+
+        <!-- Requirement (h) -->
+        <details class="req-card" id="req-h">
+          <summary>
+            <span class="req-badge">(h)</span>
+            <span class="req-title">Internal Dispute Resolution</span>
+            <div class="req-toggle" data-req="h">
+              <button data-state="pass" onclick="setReqState('h','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('h','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('h','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(h)</p>
+              <blockquote>&ldquo;The DAO shall refer to or provide a dispute resolution mechanism to resolve any disputes among the DAO&rsquo;s participants and administrators.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The DAO must have a mechanism (on-chain arbitration, mediation, or similar) for resolving disputes between members and administrators. Awards are treated as international arbitral awards.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Specify the dispute resolution mechanism in the bylaws or smart contracts. May use an on-chain arbitration protocol (e.g., Kleros, Aragon Court).</p>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(XIII)</a> (definition of &ldquo;dispute resolution mechanism&rdquo;)</p>
+          </div>
+        </details>
+
+        <!-- Requirement (i) -->
+        <details class="req-card" id="req-i">
+          <summary>
+            <span class="req-badge">(i)</span>
+            <span class="req-title">Third-Party Dispute Resolution</span>
+            <div class="req-toggle" data-req="i">
+              <button data-state="pass" onclick="setReqState('i','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('i','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('i','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(i)</p>
+              <blockquote>&ldquo;The DAO shall refer to or provide a dispute resolution mechanism to resolve any disputes with third parties that, by their nature, are capable of being settled by alternative dispute resolution.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The DAO must also have a mechanism for resolving disputes with people <em>outside</em> the DAO &mdash; customers, vendors, counterparties &mdash; where ADR is feasible.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Specify a third-party dispute resolution mechanism in the bylaws. This is separate from requirement (h).</p>
+            <div class="callout" style="margin-top:var(--space-sm);">
+              <p><strong>Unique to New Hampshire.</strong> This dual dispute-resolution requirement (internal + external) is unique to New Hampshire. No other state DAO statute requires a mechanism for resolving disputes with third parties.</p>
+            </div>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(XIII)</a> (definition of &ldquo;dispute resolution mechanism&rdquo;)</p>
+          </div>
+        </details>
+
+        <h3 id="decen-reqs">Decentralization (j&ndash;k)</h3>
+        <p>The hardest requirements &mdash; ongoing structural tests that the DAO must satisfy continuously, not just at registration.</p>
+
+        <!-- Requirement (j) -->
+        <details class="req-card" id="req-j">
+          <summary>
+            <span class="req-badge">(j)</span>
+            <span class="req-title">Decentralized Network (Ongoing)</span>
+            <div class="req-toggle" data-req="j">
+              <button data-state="pass" onclick="setReqState('j','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('j','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('j','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(j)</p>
+              <blockquote>&ldquo;The DAO shall be a decentralized network at all times.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The DAO must continuously satisfy the three-prong test in &sect;&nbsp;301-B:5(IX): no unilateral control (12-month lookback), no 20%+ ownership or voting concentration (12-month lookback), and no material code changes by insiders without governance approval (3-month lookback).</p>
+            <h4>How to Demonstrate</h4>
+            <p>Publish token distribution data, validator/node distribution, and governance participation metrics sufficient for ongoing monitoring per &sect;&nbsp;301-B:15(III). See the <a href="decentralization.html">interactive calculator and mathematical analysis</a>.</p>
+            <div class="callout" style="margin-top:var(--space-sm);">
+              <p><strong>The strictest requirement.</strong> This is the requirement that makes NH&rsquo;s framework uniquely strict. Utah requires decentralization at formation only. NH requires it &ldquo;at all times.&rdquo; See <a href="decentralization.html">Measuring Decentralization</a> for the mathematical tools.</p>
+            </div>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(IX)</a> (three-prong definition); <a href="decentralization.html">decentralization.html</a> (full analysis)<br></p>
+          </div>
+        </details>
+
+        <!-- Requirement (k) -->
+        <details class="req-card" id="req-k">
+          <summary>
+            <span class="req-badge">(k)</span>
+            <span class="req-title">Decentralized Governance (Ongoing)</span>
+            <div class="req-toggle" data-req="k">
+              <button data-state="pass" onclick="setReqState('k','pass',event)">&#10003; Pass</button>
+              <button data-state="fail" onclick="setReqState('k','fail',event)">&#10007; Fail</button>
+              <button data-state="na" onclick="setReqState('k','na',event)">&mdash; N/A</button>
+            </div>
+            <div class="req-pills">
+              <span class="req-pill jur-nh">NH</span>
+              <span class="req-pill jur-ut">UT</span>
+            </div>
+          </summary>
+          <div class="req-body">
+            <div class="statute-box" style="margin-top:0;">
+              <p class="statute-box-label">RSA 301-B:15(I)(k)</p>
+              <blockquote>&ldquo;The DAO shall have a decentralized governance system at all times.&rdquo;</blockquote>
+            </div>
+            <h4>What This Means</h4>
+            <p>The governance mechanism must permit genuine consensus without any person or group having unilateral control over rules or outcomes. This must hold continuously, not just at registration.</p>
+            <h4>How to Demonstrate</h4>
+            <p>Document the governance mechanism. Show that no person or coordinated group can unilaterally alter consensus rules or determine outcomes.</p>
+            <p class="cross-ref">Cross-reference: <a href="index.html#sec-5">&sect;&nbsp;301-B:5(X)</a> (definition of &ldquo;decentralized governance system&rdquo;); <a href="decentralization.html">decentralization.html</a> (full analysis)<br></p>
+          </div>
+        </details>
+
+        
+
+
+        
+        <div class="callout callout-info">
+          <p><strong>Considering other jurisdictions?</strong> See <a href="comparison.html">How State DAO Statutes Compare</a> for a side-by-side analysis of requirements across New Hampshire, Wyoming, Utah, Tennessee, and Vermont.</p>
+        </div>
+
+        <!-- ============================
+             SECTION 4: AT ALL TIMES
+             ============================ -->
+        <h2 id="at-all-times">The &ldquo;At All Times&rdquo; Problem</h2>
+
+        <p>Section 301-B:15(III) mandates that DAOs publish monitoring data sufficient for the registry administrator to verify ongoing compliance. This means the eleven requirements above are not one-time gates: they create a <em>continuous compliance obligation</em>. A DAO that passes all eleven requirements on Monday can fail on Tuesday if its token distribution shifts or its governance mechanisms change.</p>
+
+        <p>The rolling lookback windows compound this challenge. The decentralization test in &sect;&nbsp;301-B:5(IX) uses a 12-month lookback for ownership and control prongs and a 3-month lookback for the source code prong. Compliance is therefore a moving window: a large token sale, a delegation event, or a single code commit by an affiliated person can change the result. The Commission discussed monitoring challenges at its December 10, 2025 meeting, recognizing that the registry administrator will need both automated on-chain monitoring and manual off-chain investigation capabilities.</p>
+
+        <p>The Nakamoto coefficient and Gini coefficient provide the operational tools for this ongoing assessment. A DAO that monitors its own metrics proactively &mdash; and publishes them transparently &mdash; is better positioned than one that waits for the registry administrator to identify a problem. See <a href="decentralization.html">Measuring Decentralization</a> for the interactive calculator and mathematical framework.</p>
+
+
+        <!-- ============================
+             SECTION 5: REGISTRATION PROCESS
+             ============================ -->
+        <h2 id="registration">Registration Process</h2>
+
+        <p>The path from formation to registry listing involves the following steps:</p>
+
+        <ol class="step-list">
+          <li>Authorized person delivers notice to the Secretary of State (&sect;&nbsp;301-B:12).</li>
+          <li>Notice must include the DAO name (per &sect;&nbsp;301-B:13 naming requirements) and a registered agent (per &sect;&nbsp;301-B:9).</li>
+          <li>Pay the $100 filing fee (&sect;&nbsp;301-B:12(III)).</li>
+          <li>Secretary of State verifies name availability and completeness of the filing.</li>
+          <li>Secretary issues a Legal Entity Identifier (LEI) number.</li>
+          <li>Registry administrator lists the DAO on the blockchain-based registry (&sect;&nbsp;301-B:14).</li>
+        </ol>
+
+        <div class="callout">
+          <p><strong>Stablecoin payments accepted.</strong> The Secretary of State&rsquo;s office has announced it will accept stablecoin payments (USDC or Tether) for registration fees &mdash; New Hampshire&rsquo;s first acceptance of digital assets at the state level.</p>
+        </div>
+
+
+        <!-- ============================
+             SECTION 6: RESOURCES
+             ============================ -->
+        <h2 id="resources">Resources and Further Reading</h2>
+
+        <p>This page is part of the <strong>NH DAO Law Explorer</strong> project, which provides open, interactive tools for understanding DAO legislation across jurisdictions.</p>
+
+        <h4>Primary Sources</h4>
+        <ul>
+          <li><a href="index.html">N.H. Rev. Stat. Ann. ch. 301-B</a> &mdash; Full statutory text with interactive annotations (this repository)</li>
+          <li><a href="decentralization.html">Measuring Decentralization</a> &mdash; Mathematical analysis, interactive calculator, and state comparison</li>
+          <li><a href="https://www.sos.nh.gov/" target="_blank" rel="noopener noreferrer">New Hampshire Secretary of State</a> &mdash; Official state filings and registry</li>
+          <li><a href="https://gc.nh.gov/bill_status/billinfo.aspx?id=377&inflect=2" target="_blank" rel="noopener noreferrer">HB 645 &mdash; Bill Status and Legislative History</a></li>
+        </ul>
+
+        <h4>Related Projects</h4>
+        <ul>
+          <li><a href="https://nh-token-commission.org" target="_blank" rel="noopener noreferrer">NH Token Commission</a> &mdash; Commission to Study Stable Tokens (RSA 383:26, HB 310)</li>
+          <li><a href="https://www.iol.unh.edu/" target="_blank" rel="noopener noreferrer">UNH InterOperability Laboratory</a> &mdash; NH DAO Registry Administrator</li>
+          <li><a href="https://github.com/Oranburg/NH-RSA-301-B" target="_blank" rel="noopener noreferrer">GitHub Repository</a> &mdash; Source, issues, and contributions</li>
+        </ul>
+
+        <p style="margin-top:var(--space-2xl); font-size:0.88rem; color:var(--muted);">
+          Maintained by <a href="https://oranburg.law">Seth C. Oranburg</a>, Professor of Law, UNH Franklin Pierce School of Law.
+          Statutory text is public law. Educational analysis and display tool &copy; 2026 Seth C. Oranburg. MIT License.
+        </p>
+
+      </article>
+    </div><!-- /.content-area -->
+  </div><!-- /.page-layout -->
+
+  <!-- Defined-term tooltip -->
+  <div class="def-tooltip" id="defTooltip">
+    <div class="def-tooltip-header">
+      <span id="defTermName"></span>
+      <button class="def-tooltip-close" onclick="closeDefTooltip()">&times;</button>
+    </div>
+    <div class="def-tooltip-body">
+      <div id="defTermBody"></div>
+      <div class="def-tooltip-source" id="defTermSource"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>
+      <a href="index.html">RSA 301-B Statute</a> &nbsp;&bull;&nbsp;
+      <a href="decentralization.html">Decentralization</a> &nbsp;&bull;&nbsp;
+      <a href="registry.html">Registry</a> &nbsp;&bull;&nbsp;
+      <a href="https://github.com/Oranburg/NH-RSA-301-B">GitHub</a> &nbsp;&bull;&nbsp;
+      <a href="https://nh-token-commission.org">Commission</a> &nbsp;&bull;&nbsp;
+      <a href="https://oranburg.law">oranburg.law</a>
+    </div>
+    <p style="margin-top:0.5rem;">Statutory text: public law of the State of New Hampshire. Analysis &copy; 2026 Seth C. Oranburg. MIT License.</p>
+  </footer>
+
+  <script>
+    /* ===== Theme ===== */
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    /* ===== Progress Bar ===== */
+    (function() {
+      var bar = document.getElementById('progressBar');
+      function update() {
+        var pct = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (pct > 0 ? Math.min(window.scrollY / pct * 100, 100) : 0) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    })();
+
+    /* ===== Sidebar Scroll Spy ===== */
+    (function() {
+      var links = document.querySelectorAll('.toc-list a[data-target]');
+      var sections = [];
+      links.forEach(function(a) {
+        var el = document.getElementById(a.getAttribute('data-target'));
+        if (el) sections.push({ el: el, link: a });
+      });
+      var current = null;
+      function onScroll() {
+        var scrollY = window.scrollY + 90;
+        var active = null;
+        for (var i = sections.length - 1; i >= 0; i--) {
+          if (sections[i].el.offsetTop <= scrollY) { active = sections[i]; break; }
+        }
+        if (active && active !== current) {
+          if (current) current.link.classList.remove('active');
+          active.link.classList.add('active');
+          current = active;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* ===== Requirement State Management ===== */
+    var reqKeys = ['a','b','c','d','e','f','g','h','i','j','k'];
+
+    function getReqState(key) {
+      try { return localStorage.getItem('nh-dao-req-' + key) || null; } catch(e) { return null; }
+    }
+
+    function setReqState(key, state, event) {
+      if (event) { event.stopPropagation(); event.preventDefault(); }
+      var currentState = getReqState(key);
+      // Toggle off if clicking the same state
+      if (currentState === state) {
+        try { localStorage.removeItem('nh-dao-req-' + key); } catch(e) {}
+      } else {
+        try { localStorage.setItem('nh-dao-req-' + key, state); } catch(e) {}
+      }
+      applyReqState(key);
+      updateProgress();
+    }
+
+    function applyReqState(key) {
+      var state = getReqState(key);
+      var card = document.getElementById('req-' + key);
+      if (!card) return;
+      card.classList.remove('pass', 'fail');
+      if (state === 'pass') card.classList.add('pass');
+      if (state === 'fail') card.classList.add('fail');
+
+      var btns = card.querySelectorAll('.req-toggle button');
+      btns.forEach(function(btn) {
+        btn.classList.remove('active-pass', 'active-fail', 'active-na');
+        var btnState = btn.getAttribute('data-state');
+        if (btnState === state) {
+          if (state === 'pass') btn.classList.add('active-pass');
+          else if (state === 'fail') btn.classList.add('active-fail');
+          else if (state === 'na') btn.classList.add('active-na');
+        }
+      });
+    }
+
+    function updateProgress() {
+      var assessed = 0, passing = 0, failing = 0;
+      reqKeys.forEach(function(key) {
+        var s = getReqState(key);
+        if (s === 'pass') { assessed++; passing++; }
+        else if (s === 'fail') { assessed++; failing++; }
+      });
+      var notAssessed = 11 - assessed;
+
+      document.getElementById('ps-assessed').textContent = assessed;
+      document.getElementById('ps-pass').textContent = passing;
+      document.getElementById('ps-fail').textContent = failing;
+
+      var total = 11;
+      document.getElementById('pmb-pass').style.width = (passing / total * 100) + '%';
+      document.getElementById('pmb-fail').style.width = (failing / total * 100) + '%';
+      document.getElementById('pmb-na').style.width = (notAssessed / total * 100) + '%';
+    }
+
+    // Initialize states on load
+    reqKeys.forEach(function(key) { applyReqState(key); });
+    updateProgress();
+
+    /* ===== Defined-Term Glossary ===== */
+    var defined_terms = {
+      "decentralized network": { def: "A blockchain system where no person had unilateral authority to control functionality, no person owned 20% or more of related digital assets, and no issuer directed 20% or more of voting power, each over a 12-month lookback period.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX)" },
+      "decentralized governance system": { def: "A rules-based system permitting users to form consensus or reach agreement in the development, management, or administration of a blockchain system. Excludes systems where any person or group can unilaterally alter consensus rules or determine final outcomes.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(X)" },
+      "decentralized autonomous organization": { def: "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(VIII)" },
+      "dao": { def: "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(VIII)" },
+      "permissionless blockchain": { def: "A blockchain system that allows any person to transact and produce blocks in accordance with the blockchain protocol, whereby the validity of the block is not determined by the identity of the producer.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXX)" },
+      "smart contract": { def: "Software code deployed in a blockchain system that consists of predefined and deterministic instructions and conditions executed in a decentralized manner. Execution produces a change in the blockchain state.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XLI)" },
+      "digital asset": { def: "Any fungible digital representation of value that can be exclusively possessed and transferred, person to person, without necessary reliance on an intermediary, and is recorded on a blockchain system.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XII)" },
+      "blockchain": { def: "Any technology where data is shared across a network to create a public ledger of verified transactions, linked using cryptography to maintain integrity, and distributed among participants in an automated fashion; and composed of source code that is publicly available.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(III)" },
+      "blockchain system": { def: "Any blockchain or blockchain protocol.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(V)" },
+      "token": { def: "A record on a permissionless blockchain, typically representing an asset, participation right, or other entitlement.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XLII)" },
+      "participant": { def: "Unless the bylaws provide otherwise, any person who is entitled under the bylaws to exercise governance rights in a DAO.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXIX)" },
+      "administrator": { def: "A person, irrespective of title, appointed in a manner specified in the bylaws to make discretionary decisions on behalf of the New Hampshire DAO with regard to specific, predefined operations.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(I)" },
+      "registry administrator": { def: "The person, including the University of New Hampshire Interoperability Laboratory, or any other entity authorized by the secretary of state to administer the New Hampshire DAO registry.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXXVI)" },
+      "on-chain": { def: "Any action or transaction that is recorded and verified on a blockchain according to a blockchain protocol\u2019s consensus mechanism.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXVI)" },
+      "off-chain": { def: "Any action or transaction that is not on-chain.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXV)" },
+      "new hampshire dao": { def: "A decentralized autonomous organization that is listed on the New Hampshire DAO registry.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXIII)" },
+      "related digital asset": { def: "A digital asset intrinsically linked to a blockchain system, including where its value is generated by programmatic functioning, represents voting rights, or is issued through programmatic functioning of the blockchain system.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXXIX)" },
+      "limited liability": { def: "The principle that participants and administrators of a New Hampshire DAO are not personally obligated for debts or liabilities of the DAO solely by reason of their role. The DAO meets its liabilities through its on-chain and off-chain assets.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:11(I)" },
+      "legal personality": { def: "The capacity of an entity to exist as a separate legal person distinct from its developers, participants, administrators, and legal representatives, with the ability to sue, be sued, own property, and enter contracts.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:7(I); \u00a7 301-B:10(I)" },
+      "nakamoto coefficient": { def: "The minimum number of entities required to control over half of a network\u2019s critical resources.", source: "Cong et al., Decentralized Governance in Blockchain-Based Organizations, Oxford Rev. Econ. Pol\u2019y 36(2) (2020)" },
+      "gini coefficient": { def: "A measure of distributional inequality ranging from 0.0 (perfect equality) to 1.0 (total concentration; one actor controls all).", source: "Standard statistical measure; applied to DAO governance in Fritsch, M\u00fcller & Wattenhofer (2022)" },
+      "voting power": { def: "The capacity to influence governance decisions in a DAO, typically exercised through token-weighted voting or delegation. RSA 301-B:5(IX)(b)(2) prohibits any issuer or affiliated person from directing 20% or more of outstanding voting power.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX)(b)(2)" },
+      "bright-line": { def: "A clearly defined legal rule that provides certainty by establishing a specific threshold (such as 20% ownership) rather than requiring case-by-case analysis. Contrasted with a \u2018standard,\u2019 which requires judgment about whether conduct is reasonable.", source: "Legal usage; applied to DAO decentralization in RSA 301-B:5(IX)(b)" }
+    };
+
+    /* ===== Annotate Defined Terms ===== */
+    function annotateDefinedTerms() {
+      var content = document.querySelector('.page-content');
+      if (!content) return;
+      var termKeys = Object.keys(defined_terms).sort(function(a, b) { return b.length - a.length; });
+      var escaped = termKeys.map(function(t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
+      var re = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+
+      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+
+      nodes.forEach(function(node) {
+        if (node.parentElement.classList && node.parentElement.classList.contains('defined-term')) return;
+        var tag = node.parentElement.tagName;
+        if (tag === 'H1' || tag === 'H2' || tag === 'H3' || tag === 'SCRIPT' || tag === 'STYLE' || tag === 'A' || tag === 'BUTTON') return;
+        var text = node.textContent;
+        if (!re.test(text)) return;
+        re.lastIndex = 0;
+        var frag = document.createDocumentFragment();
+        var last = 0, m;
+        re.lastIndex = 0;
+        while ((m = re.exec(text)) !== null) {
+          if (m.index > last) frag.appendChild(document.createTextNode(text.substring(last, m.index)));
+          var span = document.createElement('span');
+          span.className = 'defined-term';
+          span.setAttribute('tabindex', '0');
+          span.setAttribute('role', 'button');
+          span.setAttribute('aria-label', 'Definition: ' + m[0]);
+          span.setAttribute('data-term', m[0].toLowerCase());
+          span.textContent = m[0];
+          frag.appendChild(span);
+          last = re.lastIndex;
+        }
+        if (last < text.length) frag.appendChild(document.createTextNode(text.substring(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+
+      content.addEventListener('click', function(e) {
+        var t = e.target.closest('.defined-term');
+        if (t) showDefTooltip(t);
+      });
+    }
+
+    function showDefTooltip(el) {
+      var key = el.getAttribute('data-term');
+      var entry = defined_terms[key];
+      if (!entry) return;
+      document.getElementById('defTermName').innerHTML = '<span>' + el.textContent + '</span>';
+      document.getElementById('defTermBody').textContent = entry.def;
+      document.getElementById('defTermSource').textContent = 'Source: ' + entry.source;
+      var tooltip = document.getElementById('defTooltip');
+      tooltip.classList.add('visible');
+      var rect = el.getBoundingClientRect();
+      var top = rect.bottom + 8;
+      var left = rect.left;
+      if (top + 200 > window.innerHeight) top = Math.max(8, rect.top - 220);
+      if (left + 440 > window.innerWidth) left = window.innerWidth - 450;
+      if (left < 8) left = 8;
+      tooltip.style.top = top + 'px';
+      tooltip.style.left = left + 'px';
+    }
+    function closeDefTooltip() { document.getElementById('defTooltip').classList.remove('visible'); }
+    document.addEventListener('click', function(e) {
+      var tt = document.getElementById('defTooltip');
+      if (tt.classList.contains('visible') && !tt.contains(e.target) && !e.target.classList.contains('defined-term')) closeDefTooltip();
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDefTooltip(); });
+
+    // Run after page loads
+    annotateDefinedTerms();
+  </script>
+</body>
+</html>

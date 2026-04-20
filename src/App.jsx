@@ -1,0 +1,28 @@
+import { Routes, Route } from 'react-router-dom'
+import Nav from './components/Nav'
+import MapPage from './pages/MapPage'
+import GlossaryIndex from './pages/GlossaryIndex'
+import TermPage from './pages/TermPage'
+import LayerView from './pages/LayerView'
+import StateLaws from './pages/StateLaws'
+import FederalLaws from './pages/FederalLaws'
+import Analysis from './pages/Analysis'
+
+export default function App() {
+  return (
+    <>
+      <Nav />
+      <main>
+        <Routes>
+          <Route path="/" element={<MapPage />} />
+          <Route path="/glossary" element={<GlossaryIndex />} />
+          <Route path="/glossary/:termId" element={<TermPage />} />
+          <Route path="/layers/:layerId" element={<LayerView />} />
+          <Route path="/laws/states" element={<StateLaws />} />
+          <Route path="/laws/federal" element={<FederalLaws />} />
+          <Route path="/analysis" element={<Analysis />} />
+        </Routes>
+      </main>
+    </>
+  )
+}

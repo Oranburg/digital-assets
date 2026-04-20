@@ -1,0 +1,957 @@
+{
+  "meta": {
+    "generated": "2026-04-18T19:27:52.605045+00:00",
+    "source_corpus": "LawJ statutory-corpus",
+    "version": "1.0.0"
+  },
+  "sections": {
+    "1": {
+      "id": "nh-dao-301b:s1",
+      "number": "§ 301-B:1",
+      "title": "Short Title",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "short title",
+        "citation"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "2": {
+      "id": "nh-dao-301b:s2",
+      "number": "§ 301-B:2",
+      "title": "Purpose of This Act",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "purpose",
+        "legislative intent",
+        "entity formation"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "3": {
+      "id": "nh-dao-301b:s3",
+      "number": "§ 301-B:3",
+      "title": "Policy of This Act",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "freedom of contract",
+        "code is law",
+        "policy"
+      ],
+      "comparables": [],
+      "commission_mentions": [
+        {
+          "date": "2025-11-12",
+          "context": "Prof. Oranburg presented on GENIUS Act and CLARITY Act implications for NH; Ian Huyett presented on blockchain-based asset protection trusts; Digital Chamber presented state regulatory approaches",
+          "presenters": [
+            "Seth Oranburg (GENIUS Act / CLARITY Act)",
+            "Ian Huyett (blockchain-based APTs)",
+            "Anastasia Dellaccio & Jonathan Schmalfeld (Digital Chamber)"
+          ]
+        }
+      ]
+    },
+    "4": {
+      "id": "nh-dao-301b:s4",
+      "number": "§ 301-B:4",
+      "title": "Organization; Purposes",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "organization",
+        "lawful activity"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "5": {
+      "id": "nh-dao-301b:s5",
+      "number": "§ 301-B:5",
+      "title": "Definitions",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 14,
+          "text": "RSA 301-B:14",
+          "context": "he registry established and administered in accordance with RSA 301-B:14. XXV. \"Off-chain\" means any action or transaction that is"
+        },
+        {
+          "target_section": 9,
+          "text": "RSA 301-B:9",
+          "context": "person appointed by a New Hampshire DAO in accordance with RSA 301-B:9. XXXVIII. \"Registered e-mail address\" means with respect t"
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "definitions"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-102",
+          "section_title": "Definitions",
+          "note": "Wyoming defines fewer terms; NH adds decentralized network, decentralized governance system, and failure event"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-102",
+          "section_title": "Definitions",
+          "note": "Utah closely mirrors NH definitions but omits GUI, public signaling, and contentious fork"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "6": {
+      "id": "nh-dao-301b:s6",
+      "number": "§ 301-B:6",
+      "title": "Governing Law",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "governing law",
+        "internal affairs"
+      ],
+      "comparables": [],
+      "commission_mentions": [
+        {
+          "date": "2025-11-12",
+          "context": "Prof. Oranburg presented on GENIUS Act and CLARITY Act implications for NH; Ian Huyett presented on blockchain-based asset protection trusts; Digital Chamber presented state regulatory approaches",
+          "presenters": [
+            "Seth Oranburg (GENIUS Act / CLARITY Act)",
+            "Ian Huyett (blockchain-based APTs)",
+            "Anastasia Dellaccio & Jonathan Schmalfeld (Digital Chamber)"
+          ]
+        }
+      ]
+    },
+    "7": {
+      "id": "nh-dao-301b:s7",
+      "number": "§ 301-B:7",
+      "title": "Legal Existence of New Hampshire DAOs",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 12,
+          "text": "RSA 301-B:12",
+          "context": "l the filing of a deregistration instruction as provided in RSA 301-B:12, the persons who, under the bylaws of the New Hampshire DAO"
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "legal personality",
+        "separate entity",
+        "perpetual existence",
+        "dissolution"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-104",
+          "section_title": "Legal status",
+          "note": "Both grant separate legal personality; Utah requires DAO LLC formation under its LLC Act"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "8": {
+      "id": "nh-dao-301b:s8",
+      "number": "§ 301-B:8",
+      "title": "Legal Proceedings",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "legal proceedings",
+        "service of process",
+        "jurisdiction"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "9": {
+      "id": "nh-dao-301b:s9",
+      "number": "§ 301-B:9",
+      "title": "Registered Agent in New Hampshire",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 19,
+          "text": "RSA 301-B:19",
+          "context": "egal representative of the New Hampshire DAO as provided by RSA 301-B:19."
+        }
+      ],
+      "external_refs": [
+        "RSA 292",
+        "RSA 293-A",
+        "RSA 294-A",
+        "RSA 304-A",
+        "RSA 304-D"
+      ],
+      "concepts": [
+        "registered agent",
+        "registered office"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "10": {
+      "id": "nh-dao-301b:s10",
+      "number": "§ 301-B:10",
+      "title": "Powers",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 22,
+          "text": "RSA 301-B:22",
+          "context": "DAO; or (c) In a proceeding by the attorney general under RSA 301-B:22 to deregister the New Hampshire DAO. IV. In a participant"
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "powers",
+        "ultra vires"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "11": {
+      "id": "nh-dao-301b:s11",
+      "number": "§ 301-B:11",
+      "title": "Liability of Participants and Administrators to Third Parties",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "limited liability",
+        "on-chain contributions",
+        "personal liability"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-109",
+          "section_title": "Liability",
+          "note": "Wyoming provides similar limited liability but through its LLC Act supplement framework"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-304",
+          "section_title": "Liability of members",
+          "note": "Utah parallels NH: members not liable solely by reason of membership"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "12": {
+      "id": "nh-dao-301b:s12",
+      "number": "§ 301-B:12",
+      "title": "Notice of Registration",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 13,
+          "text": "RSA 301-B:13",
+          "context": "Hampshire DAO, which shall comply with the requirements of RSA 301-B:13; and (b) The name and address of the registered agent for"
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "registration",
+        "filing",
+        "LEI",
+        "secretary of state"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-105",
+          "section_title": "Formation",
+          "note": "Wyoming files articles of organization with Secretary of State; NH uses notice of registration + LEI"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-201",
+          "section_title": "Formation",
+          "note": "Utah files certificate of organization with Division of Corporations; NH delegates to registry administrator"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "13": {
+      "id": "nh-dao-301b:s13",
+      "number": "§ 301-B:13",
+      "title": "Name Requirements",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [
+        "RSA 21",
+        "RSA 292",
+        "RSA 293-A",
+        "RSA 293-B",
+        "RSA 294-A",
+        "RSA 304-A",
+        "RSA 304-B",
+        "RSA 305-A",
+        "RSA 349",
+        "RSA 383-C",
+        "RSA 383-D",
+        "RSA 383-E",
+        "RSA 53-E",
+        "RSA 652"
+      ],
+      "concepts": [
+        "name requirements",
+        "distinguishability"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "14": {
+      "id": "nh-dao-301b:s14",
+      "number": "§ 301-B:14",
+      "title": "Registry of New Hampshire DAOs",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 15,
+          "text": "RSA 301-B:15",
+          "context": "s that have satisfied the listing requirements set forth in RSA 301-B:15. The registry shall be referred to as the New Hampshire DAO"
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "registry",
+        "blockchain-based registry",
+        "registry administrator",
+        "UNH-IOL"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-105",
+          "section_title": "Formation",
+          "note": "Wyoming uses standard state filing; NH uniquely requires a blockchain-based registry administered by UNH-IOL"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-201",
+          "section_title": "Formation",
+          "note": "Utah uses standard state filing; NH’s registry must itself be a blockchain system (§ 301-B:14(VI))"
+        }
+      ],
+      "commission_mentions": [
+        {
+          "date": "2025-10-15",
+          "context": "Registry design discussed with Wyoming STC and GBBC; Plume Network presented on RWA tokenization infrastructure",
+          "presenters": [
+            "Diana Bario Zales (GBBC)",
+            "Anthony Apollo (Wyoming STC)",
+            "Salman Banaei & Rich Minice (Plume Network)",
+            "Seth Oranburg (preview)"
+          ]
+        },
+        {
+          "date": "2025-12-10",
+          "context": "Continued discussion on registry implementation and bylaws requirements",
+          "presenters": []
+        }
+      ]
+    },
+    "15": {
+      "id": "nh-dao-301b:s15",
+      "number": "§ 301-B:15",
+      "title": "Registry Listing Requirements",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 16,
+          "text": "RSA 301-B:16",
+          "context": "contracts. (f) The DAO shall have bylaws that satisfy the RSA 301-B:16 and may be publicly accessed using a GUI or public forum."
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "listing requirements",
+        "permissionless blockchain",
+        "open source",
+        "QA testing",
+        "decentralized governance"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-106",
+          "section_title": "Formation requirements",
+          "note": "Wyoming requires fewer conditions; NH has 11 listing requirements including decentralized governance at all times"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-201",
+          "section_title": "Formation requirements",
+          "note": "Utah has lighter requirements; NH uniquely mandates QA testing and public GUI"
+        },
+        {
+          "jurisdiction": "Vermont",
+          "citation": "11 V.S.A. § 4173",
+          "section_title": "BBLLC",
+          "note": "Vermont allows blockchain governance within existing LLC framework; NH creates an entirely new entity type with specific listing requirements"
+        }
+      ],
+      "commission_mentions": [
+        {
+          "date": "2025-10-15",
+          "context": "Registry design discussed with Wyoming STC and GBBC; Plume Network presented on RWA tokenization infrastructure",
+          "presenters": [
+            "Diana Bario Zales (GBBC)",
+            "Anthony Apollo (Wyoming STC)",
+            "Salman Banaei & Rich Minice (Plume Network)",
+            "Seth Oranburg (preview)"
+          ]
+        },
+        {
+          "date": "2025-12-10",
+          "context": "Continued discussion on registry implementation and bylaws requirements",
+          "presenters": []
+        }
+      ]
+    },
+    "16": {
+      "id": "nh-dao-301b:s16",
+      "number": "§ 301-B:16",
+      "title": "Bylaws",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "bylaws",
+        "governance rules",
+        "code supremacy"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-108",
+          "section_title": "Operating agreement",
+          "note": "Wyoming uses ‘operating agreement’ per LLC tradition; NH uses ‘bylaws’ with code-supremacy clause"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-203",
+          "section_title": "DAO agreement",
+          "note": "Utah allows smart contract as the operating agreement; NH requires bylaws to reflect but not replace smart contract terms"
+        }
+      ],
+      "commission_mentions": [
+        {
+          "date": "2025-12-10",
+          "context": "Continued discussion on registry implementation and bylaws requirements",
+          "presenters": []
+        }
+      ]
+    },
+    "17": {
+      "id": "nh-dao-301b:s17",
+      "number": "§ 301-B:17",
+      "title": "Participants; Governance; Capital; Rights and Obligations of Participants",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "participants",
+        "governance rights",
+        "voting",
+        "capital"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-301",
+          "section_title": "Members",
+          "note": "Both allow token-based governance rights; Utah explicitly addresses transferability of membership interests"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "18": {
+      "id": "nh-dao-301b:s18",
+      "number": "§ 301-B:18",
+      "title": "Administrators",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "administrators",
+        "board of directors",
+        "appointment"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-109",
+          "section_title": "Management",
+          "note": "Wyoming defaults to algorithmic management; NH allows but does not require administrators"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-305",
+          "section_title": "Management",
+          "note": "Utah distinguishes member-managed from manager-managed; NH vests all powers in participants absent administrator appointment"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "19": {
+      "id": "nh-dao-301b:s19",
+      "number": "§ 301-B:19",
+      "title": "Legal Representatives",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 9,
+          "text": "RSA 301-B:9",
+          "context": "uding the New Hampshire legal representative as required by RSA 301-B:9. The scope of authority delegated to legal representatives"
+        },
+        {
+          "target_section": 9,
+          "text": "RSA 301-B:9",
+          "context": "egistered agent of the New Hampshire DAO in accordance with RSA 301-B:9."
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "legal representatives",
+        "off-chain tasks"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "20": {
+      "id": "nh-dao-301b:s20",
+      "number": "§ 301-B:20",
+      "title": "No Implicit Fiduciary Status",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "fiduciary duty",
+        "no implied fiduciary"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-110",
+          "section_title": "Standards of conduct",
+          "note": "Wyoming applies LLC fiduciary duties by default; NH eliminates implied fiduciary duties entirely unless expressly assumed"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-307",
+          "section_title": "Standards of conduct",
+          "note": "Utah applies modified business judgment rule; NH’s no-fiduciary default is more permissive"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "21": {
+      "id": "nh-dao-301b:s21",
+      "number": "§ 301-B:21",
+      "title": "Defense of Reliance on Records of the New Hampshire DAO",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "reliance defense",
+        "good faith"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "22": {
+      "id": "nh-dao-301b:s22",
+      "number": "§ 301-B:22",
+      "title": "Exculpations",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "exculpation",
+        "liability limitation",
+        "good faith floor"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "23": {
+      "id": "nh-dao-301b:s23",
+      "number": "§ 301-B:23",
+      "title": "Indemnification",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "indemnification"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "24": {
+      "id": "nh-dao-301b:s24",
+      "number": "§ 301-B:24",
+      "title": "Judicial Deregistration Upon Application by Attorney General",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "deregistration",
+        "attorney general",
+        "fraud"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "25": {
+      "id": "nh-dao-301b:s25",
+      "number": "§ 301-B:25",
+      "title": "Contentious Forks in the Underlying Blockchain",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "contentious fork",
+        "hard fork",
+        "majority chain",
+        "minority chain"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-403",
+          "section_title": "Forks",
+          "note": "Both address hard forks; NH provides more detailed rules for majority/minority chain selection and entity splitting"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "26": {
+      "id": "nh-dao-301b:s26",
+      "number": "§ 301-B:26",
+      "title": "DAO Restructuring",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 13,
+          "text": "RSA 301-B:13",
+          "context": "re DAO continues to satisfy all the listing requirements of RSA 301-B:13. (b) In the event of migration, where the New Hampshire DA"
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "restructuring",
+        "migration",
+        "universal succession"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-114",
+          "section_title": "Dissolution",
+          "note": "Wyoming provides for voluntary dissolution; NH addresses restructuring and universal succession with continued legal personality"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-404",
+          "section_title": "Restructuring",
+          "note": "Utah parallels NH on restructuring with continued legal personality if listing requirements maintained"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "27": {
+      "id": "nh-dao-301b:s27",
+      "number": "§ 301-B:27",
+      "title": "Failure Event",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "failure event",
+        "bug",
+        "exploit",
+        "bad faith",
+        "gross negligence"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-405",
+          "section_title": "Failure events",
+          "note": "Both preserve limited liability during failure events; both impose liability for bad faith or gross negligence in deployment"
+        }
+      ],
+      "commission_mentions": []
+    },
+    "28": {
+      "id": "nh-dao-301b:s28",
+      "number": "§ 301-B:28",
+      "title": "Application of General Business Organization Law",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [
+        "RSA 304-C"
+      ],
+      "concepts": [
+        "fallback law",
+        "RSA 304-C",
+        "LLC Act"
+      ],
+      "comparables": [
+        {
+          "jurisdiction": "Wyoming",
+          "citation": "Wyo. Stat. § 17-31-103",
+          "section_title": "Applicability of LLC Act",
+          "note": "Both use their respective LLC Acts as fallback law; Wyoming’s is a supplement to its LLC Act, NH’s is a standalone chapter"
+        },
+        {
+          "jurisdiction": "Utah",
+          "citation": "Utah Code Ann. § 48-5-102",
+          "section_title": "Applicability",
+          "note": "Utah’s DAO Act is part of its LLC code; NH’s is a separate chapter with RSA 304-C as gap-filler"
+        },
+        {
+          "jurisdiction": "Vermont",
+          "citation": "11 V.S.A. § 4173",
+          "section_title": "BBLLC",
+          "note": "Vermont integrates blockchain provisions directly into its LLC Act; NH and Wyoming create distinct statutory regimes"
+        }
+      ],
+      "commission_mentions": [
+        {
+          "date": "2025-11-12",
+          "context": "Prof. Oranburg presented on GENIUS Act and CLARITY Act implications for NH; Ian Huyett presented on blockchain-based asset protection trusts; Digital Chamber presented state regulatory approaches",
+          "presenters": [
+            "Seth Oranburg (GENIUS Act / CLARITY Act)",
+            "Ian Huyett (blockchain-based APTs)",
+            "Anastasia Dellaccio & Jonathan Schmalfeld (Digital Chamber)"
+          ]
+        }
+      ]
+    },
+    "29": {
+      "id": "nh-dao-301b:s29",
+      "number": "§ 301-B:29",
+      "title": "Application of Other Laws",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "other laws",
+        "securities",
+        "banking",
+        "taxation"
+      ],
+      "comparables": [],
+      "commission_mentions": [
+        {
+          "date": "2025-11-12",
+          "context": "Prof. Oranburg presented on GENIUS Act and CLARITY Act implications for NH; Ian Huyett presented on blockchain-based asset protection trusts; Digital Chamber presented state regulatory approaches",
+          "presenters": [
+            "Seth Oranburg (GENIUS Act / CLARITY Act)",
+            "Ian Huyett (blockchain-based APTs)",
+            "Anastasia Dellaccio & Jonathan Schmalfeld (Digital Chamber)"
+          ]
+        }
+      ]
+    },
+    "30": {
+      "id": "nh-dao-301b:s30",
+      "number": "§ 301-B:30",
+      "title": "Reserved Power of State of New Hampshire to Alter or Repeal Act",
+      "effective_date": "2025-07-01",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [],
+      "external_refs": [],
+      "concepts": [
+        "reserved power",
+        "amendment"
+      ],
+      "comparables": [],
+      "commission_mentions": []
+    },
+    "31": {
+      "id": "nh-dao-301b:s31",
+      "number": "§ 301-B:31",
+      "title": "Secretary of State; Duties",
+      "effective_date": "2024-07-26",
+      "bill_number": "HB 645-FN (2024, ch. 263)",
+      "internal_refs": [
+        {
+          "target_section": 5,
+          "text": "RSA 301-B:5",
+          "context": "de the services of the registry administrator as defined in RSA 301-B:5, XXXVI."
+        }
+      ],
+      "external_refs": [],
+      "concepts": [
+        "secretary of state duties",
+        "fee schedule",
+        "RFP",
+        "registry administrator"
+      ],
+      "comparables": [],
+      "commission_mentions": [
+        {
+          "date": "2025-10-15",
+          "context": "Registry design discussed with Wyoming STC and GBBC; Plume Network presented on RWA tokenization infrastructure",
+          "presenters": [
+            "Diana Bario Zales (GBBC)",
+            "Anthony Apollo (Wyoming STC)",
+            "Salman Banaei & Rich Minice (Plume Network)",
+            "Seth Oranburg (preview)"
+          ]
+        },
+        {
+          "date": "2025-12-10",
+          "context": "Continued discussion on registry implementation and bylaws requirements",
+          "presenters": []
+        }
+      ]
+    }
+  },
+  "statutes": {
+    "wyoming": {
+      "id": "wyoming-dao-2021",
+      "title": "Wyoming Decentralized Autonomous Organization Supplement",
+      "citation": "Wyo. Stat. § 17-31-101 et seq.",
+      "section_count": 16
+    },
+    "utah": {
+      "id": "utah-dao-2023",
+      "title": "Utah Decentralized Autonomous Organization Act",
+      "citation": "Utah Code Ann. § 48-5-101 et seq.",
+      "section_count": 26
+    },
+    "vermont": {
+      "id": "vermont-bbllc-2018",
+      "title": "Vermont Blockchain-Based Limited Liability Companies (BBLLC)",
+      "citation": "11 V.S.A. § 4173",
+      "section_count": 1
+    }
+  },
+  "commission": {
+    "name": "NH Commission to Study Stable Tokens",
+    "statute": "RSA 383:26",
+    "website": "https://nh-token-commission.org",
+    "meetings": [
+      {
+        "date": "2025-09-17",
+        "type": "organizational",
+        "presenters": [],
+        "dao_sections_discussed": []
+      },
+      {
+        "date": "2025-10-15",
+        "type": "regular",
+        "presenters": [
+          "Diana Bario Zales (GBBC)",
+          "Anthony Apollo (Wyoming STC)",
+          "Salman Banaei & Rich Minice (Plume Network)",
+          "Seth Oranburg (preview)"
+        ],
+        "dao_sections_discussed": [
+          14,
+          15,
+          31
+        ]
+      },
+      {
+        "date": "2025-11-12",
+        "type": "regular",
+        "presenters": [
+          "Seth Oranburg (GENIUS Act / CLARITY Act)",
+          "Ian Huyett (blockchain-based APTs)",
+          "Anastasia Dellaccio & Jonathan Schmalfeld (Digital Chamber)"
+        ],
+        "dao_sections_discussed": [
+          3,
+          6,
+          28,
+          29
+        ]
+      },
+      {
+        "date": "2025-12-10",
+        "type": "regular",
+        "presenters": [],
+        "dao_sections_discussed": [
+          14,
+          15,
+          16,
+          31
+        ]
+      },
+      {
+        "date": "2026-01-14",
+        "type": "regular",
+        "presenters": [],
+        "dao_sections_discussed": []
+      },
+      {
+        "date": "2026-02-10",
+        "type": "regular",
+        "presenters": [],
+        "dao_sections_discussed": []
+      },
+      {
+        "date": "2026-03-10",
+        "type": "regular",
+        "presenters": [],
+        "dao_sections_discussed": []
+      },
+      {
+        "date": "2026-04-06",
+        "type": "regular",
+        "presenters": [],
+        "dao_sections_discussed": []
+      }
+    ]
+  }
+}

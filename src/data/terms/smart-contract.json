@@ -1,0 +1,18 @@
+{
+  "id": "smart-contract",
+  "term": "Smart Contract",
+  "layer": 1,
+  "tags": ["protocol", "code"],
+  "parent": "blockchain",
+  "related": ["dao", "defi", "evm"],
+  "definitions": {
+    "technical": "A deterministic, self-executing program deployed to a blockchain that encodes conditional logic ('if X then Y') and executes automatically when triggered by a transaction or external event. Once deployed, a smart contract's bytecode is immutable (unless designed with upgrade patterns). Smart contracts form the foundation of DeFi protocols, DAO governance, and tokenized asset management. Van Loon v. Dep't of Treasury, 122 F.4th 549 (5th Cir. 2024), held that immutable smart contracts are not 'property' subject to OFAC sanctions.",
+    "lay": "A computer program stored on a blockchain that automatically executes actions when preset conditions are met, without needing a middleman. For example, a smart contract could automatically release payment when goods are delivered, or distribute voting rights to token holders. Once deployed, the code runs exactly as written and cannot be changed.",
+    "parenthetical": "(a self-executing blockchain program that automatically enforces agreed-upon terms when conditions are met)"
+  },
+  "statutes": ["nh-rsa-301-b"],
+  "see_also": [],
+  "visualization": null,
+  "sources": ["nh-token-glossary"],
+  "verification": { "status": "verified" }
+}

@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measuring Decentralization | NH DAO Law Explorer</title>
+  <meta name="description" content="How to calculate whether a DAO meets New Hampshire's statutory decentralization requirements under RSA 301-B. Covers the Nakamoto coefficient, Gini coefficient, the 20% bright-line threshold, interactive calculator, and a comparison of DAO statutes across New Hampshire, Wyoming, Utah, Tennessee, and Vermont.">
+  <meta name="author" content="Seth C. Oranburg">
+  <meta name="keywords" content="decentralization, Nakamoto coefficient, Gini coefficient, DAO, RSA 301-B, New Hampshire, blockchain governance, decentralized network, 20 percent threshold, Wyoming DAO, Utah DAO, Tennessee DAO, HHI, Herfindahl-Hirschman Index, Lorenz curve, governance concentration, antitrust, GENIUS Act, smart contract">
+  <link rel="canonical" href="https://oranburg.law/NH-RSA-301-B/decentralization.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Measuring Decentralization in DAO Law: Nakamoto Coefficient, Gini, and the 20% Test">
+  <meta property="og:description" content="Interactive tools and legal analysis for calculating DAO decentralization under New Hampshire's RSA 301-B. Includes a calculator for Nakamoto coefficient, Gini coefficient, and NH compliance, plus comparison across five state jurisdictions.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oranburg.law/NH-RSA-301-B/decentralization.html">
+  <meta property="og:site_name" content="NH DAO Law Explorer">
+  <meta property="article:author" content="Seth C. Oranburg">
+  <meta property="article:published_time" content="2026-04-18">
+  <meta property="article:section" content="Law">
+  <meta property="article:tag" content="Nakamoto coefficient">
+  <meta property="article:tag" content="Gini coefficient">
+  <meta property="article:tag" content="DAO decentralization">
+  <meta property="article:tag" content="blockchain governance">
+  <meta property="article:tag" content="antitrust">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Measuring Decentralization in DAO Law">
+  <meta name="twitter:description" content="Interactive calculator for Nakamoto coefficient, Gini coefficient, and NH's 20% test. Comparative analysis across 5 state DAO statutes.">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Measuring Decentralization in DAO Law",
+    "headline": "Understanding Decentralization in DAO Law",
+    "description": "Legal and mathematical analysis of how to measure DAO decentralization under New Hampshire RSA 301-B, including the Nakamoto coefficient, Gini coefficient, and a comparison of five state DAO statutes.",
+    "url": "https://oranburg.law/NH-RSA-301-B/decentralization.html",
+    "datePublished": "2026-04-18",
+    "author": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law",
+      "jobTitle": "Professor of Law",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "University of New Hampshire Franklin Pierce School of Law"
+      },
+      "sameAs": [
+        "https://github.com/Oranburg",
+        "https://orcid.org/0000-0002-5698-7962"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "NH DAO Law Explorer",
+      "url": "https://oranburg.law/NH-RSA-301-B/"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Nakamoto coefficient" },
+      { "@type": "Thing", "name": "Gini coefficient" },
+      { "@type": "Thing", "name": "Decentralized Autonomous Organization" },
+      { "@type": "Thing", "name": "Blockchain governance measurement" }
+    ],
+    "citation": [
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Market Power and Governance Power: New Tools for Antitrust Enforcement in the Decentralized Gig Economy",
+        "author": { "@type": "Person", "name": "Seth C. Oranburg" },
+        "datePublished": "2025-11-11",
+        "publisher": { "@type": "Organization", "name": "Competition Policy International" }
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Analyzing Voting Power in Decentralized Governance: Who Controls DAOs?",
+        "author": [
+          { "@type": "Person", "name": "Robin Fritsch" },
+          { "@type": "Person", "name": "Marino M\u00fcller" },
+          { "@type": "Person", "name": "Roger Wattenhofer" }
+        ],
+        "datePublished": "2022-04-03"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', theme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    /* ===== Design Tokens (shared with index.html) ===== */
+    :root, [data-theme="dark"] {
+      --blue-deep:    #0A3255;
+      --blue-bright:  #2459A9;
+      --blue-light:   #6DACDE;
+      --gold:         #C4972F;
+      --gold-light:   #E8C560;
+      --granite:      #6B7B8D;
+      --white-mtn:    #E8ECF0;
+
+      --bg:           #000000;
+      --bg-secondary: #0A3255;
+      --bg-soft:      #0D3D68;
+      --text:         #FFFFFF;
+      --muted:        #9CA3AF;
+      --border:       #1E5080;
+      --accent:       #6DACDE;
+      --accent-2:     #E8C560;
+
+      --font-headline: 'Oswald', sans-serif;
+      --font-body:     'Roboto', sans-serif;
+      --font-accent:   'Crimson Text', serif;
+      --font-mono:     'Roboto Mono', 'Consolas', 'Courier New', monospace;
+
+      --max-width:   1100px;
+      --radius-sm:   4px;
+      --radius-md:   8px;
+
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.5rem;
+      --space-xl:  2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+    }
+
+    [data-theme="light"] {
+      --bg:           #FFFFFF;
+      --bg-secondary: #F8F9FA;
+      --bg-soft:      #E9ECEF;
+      --text:         #000000;
+      --muted:        #555555;
+      --border:       #D0D8E4;
+      --accent:       #2459A9;
+      --accent-2:     #C4972F;
+    }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-2); }
+
+    /* ===== Progress Bar ===== */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      z-index: 1000; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ===== Top Nav ===== */
+    .top-nav {
+      background-color: var(--blue-deep);
+      padding: 0.6rem var(--space-md);
+      position: sticky; top: 0; z-index: 200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .top-nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+    }
+    .top-nav a {
+      color: #FFFFFF; font-family: var(--font-body); font-size: 0.82rem;
+      font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .top-nav a:hover { color: var(--accent-2); }
+    .top-nav a.nav-active { color: var(--accent-2); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
+    .nav-pages { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+    .nav-title { font-family: var(--font-headline); font-size: 0.95rem; font-weight: 600; color: var(--accent-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 0; }
+    .theme-toggle {
+      background: none; border: none; cursor: pointer; color: #FFFFFF;
+      padding: 0.25rem; display: flex; align-items: center; transition: color 0.2s;
+    }
+    .theme-toggle:hover { color: var(--accent-2); }
+    [data-theme="dark"] .icon-sun  { display: inline; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: inline; }
+
+    /* ===== Page Layout ===== */
+    .page-layout {
+      display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 52px);
+    }
+
+    /* ===== Sidebar ===== */
+    .toc-sidebar {
+      width: 260px; min-width: 260px; position: sticky; top: 52px;
+      height: calc(100vh - 52px); overflow-y: auto;
+      padding: var(--space-lg) var(--space-md);
+      border-right: 1px solid var(--border); background: var(--bg);
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .toc-sidebar::-webkit-scrollbar { width: 4px; }
+    .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .toc-heading {
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-sm); padding: 0;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.35rem 0.5rem; font-size: 0.83rem; line-height: 1.35;
+      color: var(--muted); border-left: 2px solid transparent;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; transition: all 0.2s;
+    }
+    .toc-list a:hover { color: var(--text); background: var(--bg-soft); }
+    .toc-list a.active {
+      color: var(--accent); border-left-color: var(--accent);
+      background: var(--bg-soft); font-weight: 600;
+    }
+    .toc-sub {
+      font-size: 0.78rem; padding-left: 1rem;
+    }
+    .toc-divider {
+      border: none; border-top: 1px solid var(--border);
+      margin: var(--space-md) 0;
+    }
+    .toc-stat-badge {
+      display: inline-block; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.2rem 0.5rem;
+      font-size: 0.75rem; color: var(--muted); margin: 0.2rem 0;
+    }
+
+    /* ===== Content Area ===== */
+    .content-area {
+      flex: 1; min-width: 0; padding: var(--space-2xl) var(--space-xl);
+    }
+    .page-content {
+      max-width: 740px; margin: 0 auto;
+    }
+
+    /* ===== Typography ===== */
+    .page-content h1 {
+      font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700;
+      line-height: 1.15; margin: 0 0 var(--space-md);
+      color: var(--text); border-bottom: 2px solid var(--accent);
+      padding-bottom: var(--space-sm);
+    }
+    .page-content h2 {
+      font-family: var(--font-headline); font-size: 1.5rem; font-weight: 600;
+      line-height: 1.2; margin: var(--space-3xl) 0 var(--space-md); color: var(--text);
+      border-bottom: 1px solid var(--border); padding-bottom: var(--space-xs);
+      scroll-margin-top: 70px;
+    }
+    .page-content h3 {
+      font-family: var(--font-headline); font-size: 1.2rem; font-weight: 600;
+      margin: var(--space-2xl) 0 var(--space-sm); color: var(--text);
+      scroll-margin-top: 70px;
+    }
+    .page-content h4 {
+      font-family: var(--font-headline); font-size: 1rem; font-weight: 500;
+      margin: var(--space-lg) 0 var(--space-xs); color: var(--accent-2);
+    }
+    .page-content p {
+      font-family: var(--font-accent); font-size: 1.1rem; line-height: 1.85;
+      margin: 0 0 var(--space-md); text-align: justify; hyphens: auto;
+    }
+    .page-content ul, .page-content ol {
+      font-family: var(--font-accent); font-size: 1.05rem;
+      margin: 0 0 var(--space-md); padding-left: var(--space-xl);
+    }
+    .page-content li { margin-bottom: var(--space-xs); }
+    .page-content strong { font-weight: 700; }
+    .page-content em { font-style: italic; }
+
+    /* ===== Hero ===== */
+    .hero {
+      text-align: center; padding: var(--space-xl) 0 var(--space-2xl);
+      border-bottom: 1px solid var(--border); margin-bottom: var(--space-2xl);
+    }
+    .hero h1 {
+      border-bottom: none; font-size: 2.6rem; margin-bottom: var(--space-md);
+    }
+    .hero .subtitle {
+      font-family: var(--font-accent); font-size: 1.2rem; color: var(--muted);
+      max-width: 560px; margin: 0 auto var(--space-lg); text-align: center; hyphens: none;
+    }
+    .hero-breadcrumb {
+      font-size: 0.85rem; color: var(--muted); margin-bottom: var(--space-md);
+    }
+
+    /* ===== Value Cards ===== */
+    .value-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md); margin: var(--space-xl) 0;
+    }
+    .value-card {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-md);
+    }
+    .value-card-icon {
+      font-size: 1.6rem; margin-bottom: var(--space-xs);
+    }
+    .value-card-title {
+      font-family: var(--font-headline); font-size: 0.82rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--accent-2); margin: 0 0 var(--space-xs);
+    }
+    .value-card p {
+      font-size: 0.9rem !important; line-height: 1.5 !important;
+      margin: 0 !important; text-align: left !important; hyphens: none !important;
+      color: var(--muted);
+    }
+
+    /* ===== Statute Box ===== */
+    .statute-box {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-left: 4px solid var(--accent); border-radius: var(--radius-md);
+      padding: var(--space-lg); margin: var(--space-lg) 0;
+    }
+    .statute-box-label {
+      font-family: var(--font-headline); font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent);
+      margin: 0 0 var(--space-sm);
+    }
+    .statute-box blockquote {
+      font-family: var(--font-accent); font-size: 1rem; line-height: 1.75;
+      color: var(--white-mtn); margin: 0; padding: 0;
+      font-style: italic;
+    }
+
+    /* ===== Prong Cards ===== */
+    .prong-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-md); margin: var(--space-lg) 0;
+    }
+    .prong-card {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-md);
+    }
+    .prong-label {
+      font-family: var(--font-headline); font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: var(--accent); color: #000;
+      display: inline-block; padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm); margin-bottom: var(--space-sm);
+    }
+    .prong-card h4 {
+      font-family: var(--font-headline); font-size: 1rem; font-weight: 600;
+      color: var(--text); margin: 0 0 var(--space-xs);
+    }
+    .prong-card p {
+      font-family: var(--font-body) !important; font-size: 0.88rem !important;
+      line-height: 1.5 !important; margin: 0 !important;
+      text-align: left !important; color: var(--muted);
+    }
+    .prong-lookback {
+      display: inline-block; font-size: 0.78rem; color: var(--accent-2);
+      margin-top: var(--space-sm); font-weight: 500;
+    }
+
+    /* ===== Math Sections ===== */
+    .math-block {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); margin: var(--space-lg) 0; overflow: hidden;
+    }
+    .math-block-header {
+      background: var(--bg-secondary); padding: var(--space-sm) var(--space-md);
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-2);
+    }
+    .math-block-body { padding: var(--space-md) var(--space-lg); }
+
+    .formula {
+      font-family: var(--font-mono); font-size: 1.05rem; line-height: 2.2;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: var(--space-md) var(--space-lg);
+      margin: var(--space-md) 0; overflow-x: auto; white-space: nowrap;
+      color: var(--gold-light);
+    }
+    .formula sub { font-size: 0.7em; }
+    .formula sup { font-size: 0.7em; }
+
+    /* ===== Expandable Details ===== */
+    details.math-detail {
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      margin: var(--space-md) 0; overflow: hidden;
+    }
+    details.math-detail summary {
+      padding: var(--space-sm) var(--space-md);
+      background: var(--bg-secondary); cursor: pointer;
+      font-family: var(--font-headline); font-size: 0.9rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent);
+      list-style: none; display: flex; align-items: center; gap: 0.5rem;
+      user-select: none;
+    }
+    details.math-detail summary::-webkit-details-marker { display: none; }
+    details.math-detail summary::before {
+      content: '▶'; font-size: 0.7rem; transition: transform 0.2s; flex-shrink: 0;
+    }
+    details[open].math-detail summary::before { transform: rotate(90deg); }
+    details.math-detail .detail-body {
+      padding: var(--space-md) var(--space-lg); font-family: var(--font-accent);
+      font-size: 1rem; line-height: 1.8;
+    }
+    details.math-detail .detail-body p { margin: 0 0 var(--space-sm); }
+
+    /* ===== Call-out ===== */
+    .callout {
+      border-left: 4px solid var(--gold); background: rgba(196,151,47,0.08);
+      padding: var(--space-md) var(--space-lg); border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: var(--space-lg) 0;
+    }
+    .callout p {
+      font-family: var(--font-accent) !important; font-size: 1rem !important;
+      margin: 0 !important; text-align: left !important;
+    }
+    .callout-info { border-left-color: var(--accent); background: rgba(109,172,222,0.08); }
+
+    /* ===== Calculator ===== */
+    .calc-wrapper {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-xl); margin: var(--space-xl) 0;
+    }
+    .calc-title {
+      font-family: var(--font-headline); font-size: 1.3rem; font-weight: 600;
+      color: var(--accent-2); margin: 0 0 var(--space-sm);
+    }
+    .calc-subtitle {
+      font-size: 0.9rem; color: var(--muted); margin: 0 0 var(--space-lg);
+    }
+    .calc-input-row { display: flex; gap: var(--space-sm); flex-wrap: wrap; align-items: flex-end; }
+    .calc-field { flex: 1; min-width: 200px; }
+    .calc-field label {
+      display: block; font-size: 0.85rem; font-weight: 500; color: var(--muted);
+      margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .calc-field textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: var(--space-sm) var(--space-md);
+      font-family: var(--font-mono); font-size: 0.9rem; color: var(--text);
+      resize: vertical; min-height: 60px;
+    }
+    .calc-field textarea:focus { outline: none; border-color: var(--accent); }
+    .btn-row { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-sm); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem; border-radius: var(--radius-sm);
+      font-family: var(--font-body); font-size: 0.85rem; font-weight: 500;
+      cursor: pointer; border: 1px solid; transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent); color: #000; border-color: var(--accent);
+    }
+    .btn-primary:hover { background: var(--accent-2); border-color: var(--accent-2); }
+    .btn-secondary {
+      background: transparent; color: var(--muted); border-color: var(--border);
+    }
+    .btn-secondary:hover { color: var(--text); background: var(--bg-soft); }
+
+    /* ===== Metric Cards ===== */
+    .metric-row {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: var(--space-md); margin: var(--space-xl) 0 var(--space-lg);
+    }
+    .metric-card {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-md); text-align: center;
+    }
+    .metric-card-label {
+      font-family: var(--font-headline); font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--muted); margin-bottom: var(--space-xs);
+    }
+    .metric-card-value {
+      font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700;
+      color: var(--gold-light); line-height: 1; margin-bottom: var(--space-xs);
+    }
+    .metric-card-value.pass { color: #4ade80; }
+    .metric-card-value.fail { color: #f87171; }
+    .metric-card-desc {
+      font-size: 0.78rem; color: var(--muted); line-height: 1.3;
+    }
+
+    /* ===== Charts ===== */
+    .charts-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg); margin: var(--space-lg) 0;
+    }
+    @media (max-width: 600px) {
+      .charts-row { grid-template-columns: 1fr; }
+    }
+    .chart-box {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-md); overflow: hidden;
+    }
+    .chart-box h4 {
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
+      margin: 0 0 var(--space-sm);
+    }
+    .chart-placeholder {
+      display: flex; align-items: center; justify-content: center;
+      height: 180px; color: var(--muted); font-size: 0.85rem;
+      border: 1px dashed var(--border); border-radius: var(--radius-sm);
+    }
+    .chart-box svg { width: 100%; height: auto; }
+
+    /* ===== Distribution table ===== */
+    .dist-table {
+      width: 100%; border-collapse: collapse; font-size: 0.85rem;
+      margin: var(--space-sm) 0;
+    }
+    .dist-table th {
+      text-align: left; font-family: var(--font-headline); font-size: 0.78rem;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+      border-bottom: 1px solid var(--border); padding: 0.3rem 0.5rem;
+    }
+    .dist-table td { padding: 0.25rem 0.5rem; }
+    .dist-table tr.nakamoto-set td { color: var(--gold-light); font-weight: 600; }
+    .dist-bar-cell { width: 120px; }
+    .dist-bar-bg {
+      background: var(--bg); border-radius: 2px; height: 8px; overflow: hidden;
+    }
+    .dist-bar-fill {
+      height: 100%; border-radius: 2px;
+      background: var(--blue-bright); transition: width 0.4s;
+    }
+    .dist-bar-fill.nc-set { background: var(--gold); }
+
+    /* ===== NH Status Badge ===== */
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.25rem 0.7rem; border-radius: 999px;
+      font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .status-pass { background: rgba(74,222,128,0.15); color: #4ade80; border: 1px solid #4ade80; }
+    .status-fail { background: rgba(248,113,113,0.15); color: #f87171; border: 1px solid #f87171; }
+    .status-na   { background: var(--bg-soft); color: var(--muted); border: 1px solid var(--border); }
+
+    /* ===== Aggregation Problem ===== */
+    .agg-scenario {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-md); margin: var(--space-md) 0;
+      display: flex; gap: var(--space-md); align-items: flex-start;
+    }
+    .agg-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .agg-body h4 {
+      font-family: var(--font-headline); font-size: 0.82rem; color: var(--text);
+      margin: 0 0 var(--space-xs);
+    }
+    .agg-body p {
+      font-family: var(--font-body) !important; font-size: 0.88rem !important;
+      line-height: 1.5 !important; color: var(--muted); margin: 0 !important;
+      text-align: left !important;
+    }
+
+    /* ===== Comparison Table ===== */
+    .comparison-table-wrapper { overflow-x: auto; margin: var(--space-lg) 0; }
+    .comparison-table {
+      width: 100%; border-collapse: collapse; font-size: 0.88rem;
+      min-width: 600px;
+    }
+    .comparison-table th {
+      background: var(--bg-secondary); text-align: left;
+      font-family: var(--font-headline); font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted);
+      padding: 0.6rem 0.8rem; border-bottom: 2px solid var(--border);
+    }
+    .comparison-table td {
+      padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border);
+      vertical-align: top; line-height: 1.4;
+    }
+    .comparison-table tr:hover td { background: var(--bg-soft); }
+    .jur-badge {
+      display: inline-block; padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-sm); font-size: 0.78rem;
+      font-weight: 700; font-family: var(--font-headline);
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .jur-nh { background: #1a3d6e; color: var(--blue-light); }
+    .jur-wy { background: #2d4a1e; color: #86efac; }
+    .jur-ut { background: #4a1e1e; color: #fca5a5; }
+    .jur-tn { background: #3a2a10; color: #fcd34d; }
+    .jur-vt { background: #1e3a2a; color: #6ee7b7; }
+    .jur-us { background: #1e1e4a; color: #a5b4fc; }
+    .threshold-pill {
+      display: inline-block; background: rgba(196,151,47,0.15);
+      color: var(--gold-light); border: 1px solid rgba(196,151,47,0.4);
+      border-radius: 999px; padding: 0.1rem 0.6rem; font-size: 0.78rem; font-weight: 600;
+    }
+    .threshold-none {
+      display: inline-block; color: var(--muted); font-style: italic; font-size: 0.85rem;
+    }
+
+    /* ===== HHI Collapsible Section ===== */
+    details.hhi-section {
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      margin: var(--space-2xl) 0; overflow: hidden;
+    }
+    details.hhi-section summary {
+      padding: var(--space-md) var(--space-lg);
+      background: var(--bg-secondary); cursor: pointer;
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      color: var(--accent-2); display: flex; align-items: center; gap: 0.75rem;
+      list-style: none; user-select: none;
+    }
+    details.hhi-section summary::-webkit-details-marker { display: none; }
+    details.hhi-section summary::before {
+      content: '▶'; font-size: 0.75rem; transition: transform 0.2s; flex-shrink: 0;
+    }
+    details[open].hhi-section summary::before { transform: rotate(90deg); }
+    details.hhi-section .hhi-body {
+      padding: var(--space-xl); border-top: 1px solid var(--border);
+    }
+
+    /* ===== Defined Terms ===== */
+    .defined-term {
+      cursor: help;
+      border-bottom: 1px dotted var(--accent-2);
+      transition: background 0.2s;
+    }
+    .defined-term:hover { background: rgba(232, 197, 96, 0.15); }
+    .def-tooltip {
+      display: none; position: fixed; z-index: 800;
+      background: var(--bg-secondary); border: 1px solid var(--accent-2);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 440px; width: 90vw; overflow: hidden;
+    }
+    .def-tooltip.visible { display: block; }
+    .def-tooltip-header {
+      background: var(--blue-deep); color: var(--accent-2); padding: 0.5rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .def-tooltip-header small {
+      font-family: var(--font-body); font-size: 0.72rem; font-weight: 400;
+      color: var(--muted); text-transform: none; letter-spacing: 0;
+    }
+    .def-tooltip-close {
+      background: none; border: none; color: var(--accent-2); font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .def-tooltip-body {
+      padding: 0.75rem; font-family: var(--font-accent); font-size: 0.82rem;
+      line-height: 1.6; color: var(--text); max-height: 300px; overflow-y: auto;
+    }
+    .def-tooltip-source {
+      font-family: var(--font-body); font-size: 0.75rem; font-style: italic;
+      color: var(--muted); margin-top: 0.5rem; border-top: 1px solid var(--border);
+      padding-top: 0.4rem;
+    }
+
+    /* ===== Governance Chart ===== */
+    .gov-chart-tool {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-lg); margin: var(--space-xl) 0;
+    }
+    .gov-chart-header {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--accent); margin: 0 0 var(--space-sm);
+    }
+    .gov-chart-toggle {
+      display: flex; gap: var(--space-sm); margin-bottom: var(--space-md);
+    }
+    .gov-chart-toggle button {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); color: var(--text);
+      font-family: var(--font-body); font-size: 0.85rem; padding: 0.35rem 0.75rem;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .gov-chart-toggle button:hover, .gov-chart-toggle button.active {
+      background: var(--accent); color: #000; border-color: var(--accent);
+    }
+    .gov-chart-caption {
+      font-family: var(--font-body); font-size: 0.82rem; color: var(--muted);
+      text-align: center; margin-top: var(--space-sm);
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      border-top: 1px solid var(--border); padding: var(--space-xl) var(--space-md);
+      text-align: center; font-size: 0.85rem; color: var(--muted);
+    }
+    .site-footer a { color: var(--accent); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .toc-sidebar { display: none; }
+      .content-area { padding: var(--space-lg); }
+    }
+    @media (max-width: 600px) {
+      .page-content h1 { font-size: 1.6rem; }
+      .page-content h2 { font-size: 1.25rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .calc-wrapper { padding: var(--space-lg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+        <div class="top-nav-inner">
+      <span class="nav-title">NH DAO Law</span>
+      <div class="nav-pages">
+        <a href="index.html">Statute</a>
+        <a href="decentralization.html" class="nav-active">Decentralization</a>
+        <a href="registry.html">Registry</a>
+        <a href="comparison.html">Compare</a>
+        <a href="genius.html">GENIUS</a>
+        <a href="stable-tokens.html">Stable Tokens</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:var(--space-sm);">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Layout -->
+  <div class="page-layout">
+
+    <!-- Sidebar TOC -->
+    <aside class="toc-sidebar" id="tocSidebar">
+      <p class="toc-heading">On This Page</p>
+      <ul class="toc-list">
+        <li><a href="#why-matters" data-target="why-matters">Why Decentralization Matters</a></li>
+        <li><a href="#nh-definition" data-target="nh-definition">New Hampshire's Definition</a></li>
+        <li><a href="#nc" data-target="nc" class="toc-sub">&#8594; Prong A &amp; B: No Unilateral Control</a></li>
+        <li><a href="#prong-c" data-target="prong-c" class="toc-sub">&#8594; Prong C: Source Code</a></li>
+        <li><a href="#math" data-target="math">Mathematical Measures</a></li>
+        <li><a href="#nakamoto" data-target="nakamoto" class="toc-sub">&#8594; Nakamoto Coefficient</a></li>
+        <li><a href="#gini" data-target="gini" class="toc-sub">&#8594; Gini Coefficient</a></li>
+        <li><a href="#connecting" data-target="connecting" class="toc-sub">&#8594; Connecting the Measures</a></li>
+        <li><a href="#calculator" data-target="calculator">Interactive Calculator</a></li>
+        <li><a href="#aggregation" data-target="aggregation">The Aggregation Problem</a></li>
+        <li><a href="#comparison" data-target="comparison">Comparing Jurisdictions</a></li>
+        <li><a href="#resources" data-target="resources">Resources</a></li>
+      </ul>
+      <hr class="toc-divider">
+      <p class="toc-heading" style="margin-top:0;">Quick Reference</p>
+      <a href="#nh-definition" class="toc-stat-badge" style="display:inline-block;text-decoration:none;cursor:pointer;">NH threshold: 20%</a><br>
+      <a href="index.html#sec-5" class="toc-stat-badge" style="display:inline-block;text-decoration:none;cursor:pointer;">&sect; 301-B:5 IX</a><br>
+      <a href="index.html#sec-15" class="toc-stat-badge" style="display:inline-block;text-decoration:none;cursor:pointer;">&sect; 301-B:15(j)&ndash;(k)</a>
+      <hr class="toc-divider">
+      <p style="font-size:0.78rem; color:var(--muted); margin:0;">Part of the<br><strong>NH DAO Law Explorer</strong><br>series on decentralization.</p>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content-area">
+      <article class="page-content">
+
+        <!-- Hero -->
+        <div class="hero">
+          <p class="hero-breadcrumb">
+            <a href="index.html">RSA 301-B</a> &rsaquo; Measuring Decentralization
+          </p>
+          <h1>Understanding Decentralization<br>in DAO Law</h1>
+          <p class="subtitle">What decentralization means, why it matters, how it is measured mathematically, and how New Hampshire and other jurisdictions define it in law.</p>
+        </div>
+
+        <!-- ============================
+             SECTION 1: WHY IT MATTERS
+             ============================ -->
+        <h2 id="why-matters">Why Decentralization Matters</h2>
+
+        <p>Decentralized autonomous organizations take their name from a structural property. But decentralization is not valuable in itself. It matters because of what happens when you have it &mdash; and what goes wrong when you don&rsquo;t. The consequences fall into three categories: what decentralization does to the network, what it unlocks in law, and why it benefits people beyond the network&rsquo;s own participants.</p>
+
+        <h3>Technical Consequences</h3>
+
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="value-card-icon">&#128274;</div>
+            <p class="value-card-title">Network Security</p>
+            <p>Without decentralization, a party controlling more than half the network&rsquo;s decision-making power can rewrite transaction history, double-spend assets, or halt the network. Distributing power makes such attacks increasingly expensive and logistically improbable. <em>See</em> Srinivasan &amp; Lee (2017).</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon">&#127759;</div>
+            <p class="value-card-title">Systemic Resilience</p>
+            <p>Without decentralization, the network has a single point of failure. If that actor exits, is compromised, or is sanctioned, the system goes down. Distributed architecture ensures the network survives the loss of any individual participant.</p>
+          </div>
+        </div>
+
+        <h3>Legal Consequences</h3>
+
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="value-card-icon">&#9878;</div>
+            <p class="value-card-title">Securities Law Classification</p>
+            <p>Without sufficient decentralization, a digital asset is likely an &ldquo;investment contract&rdquo; under <em>SEC v. W.J. Howey Co.</em>, 328 U.S. 293 (1946), because purchasers rely on the &ldquo;efforts of others.&rdquo; As SEC Director Hinman observed in 2018, a &ldquo;sufficiently decentralized&rdquo; network may cause an asset to exit securities classification. The proposed CLARITY Act would formalize this: decentralization is the mechanism by which tokens graduate from security to commodity status. <em>See</em> Oranburg, <em>Replacing Howey with CLARITY</em> (2025).</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon">&#128220;</div>
+            <p class="value-card-title">Legal Entity Recognition</p>
+            <p>Without decentralization structured around a human governance floor, a DAO cannot obtain legal personality, limited liability, or standing to sue. It defaults to an unincorporated association or general partnership, exposing every token holder to personal liability. The <em>Ooki DAO</em> and <em>Sarcuni</em> cases illustrate the consequences. State DAO statutes condition legal recognition on both decentralization and minimum human governance. <em>See</em> Oranburg, <em>Human in the Decentralized Loop</em> (forthcoming).</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon">&#9878;&#65039;</div>
+            <p class="value-card-title">Antitrust Defense</p>
+            <p>Without genuine decentralization, a DAO with market power looks like a cartel or monopoly to antitrust enforcers. With it, dispersed governance provides structural rebuttal evidence &mdash; within the meaning of the 2023 DOJ/FTC Merger Guidelines &sect;&nbsp;3 &mdash; that anticompetitive coordination is structurally implausible. <em>See</em> Oranburg, <em>Market Power and Governance Power</em>, Competition Policy International (2025).</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon">&#128209;</div>
+            <p class="value-card-title">Legal Certainty</p>
+            <p>The New Hampshire legislature stated its purpose directly: &ldquo;the state&rsquo;s economy and its citizens will benefit from, and the development of business and investment in New Hampshire will be facilitated by, making available a unique legal entity form&rdquo; for DAOs. Statutory recognition of decentralized organizations &ldquo;will introduce greater certainty for treatment&hellip; under state law.&rdquo; RSA 301-B:2.</p>
+          </div>
+        </div>
+
+        <h3>Economic and Social Consequences</h3>
+
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="value-card-icon">&#128101;</div>
+            <p class="value-card-title">Governance Legitimacy</p>
+            <p>Concentrated governance breeds suspicion about whether the system serves its community or merely its controlling faction. Broadly distributed decision-making power is more likely to be perceived as legitimate, sustaining participation and investment. When participants lose confidence in governance, they exit. <em>See</em> Oranburg, <em>Governance as Club Good</em> (forthcoming).</p>
+          </div>
+          <div class="value-card">
+            <div class="value-card-icon">&#128736;</div>
+            <p class="value-card-title">Worker Protection</p>
+            <p>In gig economy platforms, concentrated governance enables algorithmic wage-setting, exclusionary gating, and monopsony power over workers. Decentralized governance &mdash; high Nakamoto coefficient, low Gini &mdash; structurally prevents these harms by distributing control. A truly decentralized gig DAO provides workers a factual basis for collective organization without triggering per se antitrust liability. <em>See</em> Oranburg, <em>Market Power and Governance Power</em> (2025).</p>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <p><strong>A note on circularity.</strong> When lawmakers ask whether a DAO is &ldquo;meaningfully&rdquo; decentralized, the answer cannot be &ldquo;because the statute calls it that.&rdquo; The value of decentralization rests on these consequences &mdash; security, legal classification, entity recognition, competition defense, governance legitimacy, and worker protection. A legal definition of decentralization should track these consequences, not merely create a formal category.</p>
+        </div>
+
+        <!-- ============================
+             SECTION 2: NH DEFINITION
+             ============================ -->
+        <h2 id="nh-definition">New Hampshire&#8217;s Three-Part Statutory Test</h2>
+
+        <p>New Hampshire provides one of the most detailed statutory definitions of what it means for a blockchain network to be &#8220;decentralized.&#8221; The definition appears in <a href="index.html#sec-5">&#167;&nbsp;301-B:5&nbsp;IX</a> and establishes that a <strong>&#8220;decentralized network&#8221;</strong> must satisfy three independent prongs — each looking at a different dimension of power and covering a different lookback period.</p>
+
+        <p>Under <a href="index.html#sec-15">&#167;&nbsp;301-B:15(j)&#8211;(k)</a>, every registered New Hampshire DAO must be a &#8220;decentralized network&#8221; with a &#8220;decentralized governance system&#8221; <em>at all times</em> — making these ongoing compliance requirements, not one-time qualifications.</p>
+
+        <div class="prong-grid">
+          <div class="prong-card">
+            <span class="prong-label">Prong A</span>
+            <h4>No Unilateral Control</h4>
+            <p>During the previous <strong>12 months</strong>, no person (other than the DAO itself) may have had unilateral authority to: (1)&nbsp;control or materially alter the blockchain system&#8217;s functionality; or (2)&nbsp;restrict any person from using digital assets, deploying software, participating in governance, or operating a node or validator.</p>
+            <span class="prong-lookback">&#128337; 12-month lookback</span>
+          </div>
+          <div class="prong-card">
+            <span class="prong-label">Prong B</span>
+            <h4>Token Concentration Limit — the 20% Threshold</h4>
+            <p>During the previous <strong>12 months</strong>, no person may have (1)&nbsp;directly or indirectly <em>beneficially owned</em> 20% or more of freely transferable related digital assets; or (2)&nbsp;had unilateral authority to direct the voting of 20% or more of outstanding voting power in the governance system.</p>
+            <span class="prong-lookback">&#128337; 12-month lookback</span>
+          </div>
+          <div class="prong-card" id="prong-c">
+            <span class="prong-label">Prong C</span>
+            <h4>Source Code Independence</h4>
+            <p>During the previous <strong>3 months</strong>, the digital asset issuer, any affiliated person, or any related person must not have implemented or contributed intellectual property that materially alters the blockchain system — unless (1)&nbsp;it addressed vulnerabilities or cybersecurity risks, or (2)&nbsp;it was adopted through decentralized governance consensus.</p>
+            <span class="prong-lookback">&#128337; 3-month lookback</span>
+          </div>
+        </div>
+
+        <div class="statute-box">
+          <p class="statute-box-label">RSA 301-B:5 IX(b)(1) — The 20% Bright Line</p>
+          <blockquote>&#8220;No person, excluding the subject DAO itself, directly or indirectly beneficially owned, in the aggregate, 20 percent or more of the total amount of units of a related digital asset that — (A)&nbsp;Can be created, issued, or distributed in such blockchain system; and (B)&nbsp;Were freely transferrable or otherwise used or available to be used for the purposes of such blockchain network.&#8221;</blockquote>
+        </div>
+
+        <p>Prong B is the statute&#8217;s most directly quantifiable test. The 20% threshold means that no single beneficial owner may hold one-fifth or more of the network&#8217;s freely transferable tokens. This is a <em>bright-line rule</em>: it does not require a case-by-case analysis of whether someone actually exercised control — holding that percentage share is itself the disqualifying fact.</p>
+
+        <p>By comparison, Prong A is qualitative: it asks whether someone <em>had the authority</em> to exercise unilateral control, regardless of their token percentage. And Prong C is behavioral: it asks whether certain actors actually <em>contributed code</em> that materially changed how the system works.</p>
+
+        <div class="callout">
+          <p><strong>What 20% implies for decentralization measures.</strong> If no single holder may own 20% or more, the minimum Nakamoto coefficient consistent with the statute is 3 — you need at least three of the largest holders working together to exceed 50% of tokens. In practice, because the statute requires <em>no</em> person to hold &#8805;&nbsp;20%, a compliant network with five equal holders at 19.9% each would have NC&nbsp;=&nbsp;3, while a compliant network with 100 tiny holders could have NC well above 50. The threshold sets a floor on concentration, not a ceiling on decentralization.</p>
+        </div>
+
+        <!-- ============================
+             SECTION 3: MATHEMATICS
+             ============================ -->
+        <h2 id="math">Mathematical Measures of Decentralization</h2>
+
+        <p>A statutory bright-line like 20% is only one way to characterize concentration. Two widely used mathematical measures — the <strong>Nakamoto coefficient</strong> and the <strong>Gini coefficient</strong> — offer complementary views of the same distribution. Each captures something the other misses, and both belong in any rigorous analysis of whether a network is genuinely decentralized.</p>
+
+        <!-- ============================
+             3.1 NAKAMOTO COEFFICIENT
+             ============================ -->
+        <h3 id="nakamoto">The Nakamoto Coefficient</h3>
+
+        <p>Introduced by Balaji Srinivasan and Leland Lee in 2017, the Nakamoto coefficient directly addresses the <em>attack threshold</em> question: how few independent entities would need to collude to seize majority control?</p>
+
+        <div class="math-block">
+          <div class="math-block-header">Definition</div>
+          <div class="math-block-body">
+            <p>Let <em>s</em><sub>1</sub> &#8805; <em>s</em><sub>2</sub> &#8805; &#8230; &#8805; <em>s<sub>n</sub></em> be the holdings of <em>n</em> entities, sorted in <strong>descending</strong> order. The Nakamoto coefficient is:</p>
+            <div class="formula">
+              N&nbsp;=&nbsp;min{&nbsp;k&nbsp;&isin;&nbsp;&#8484;<sup>+</sup>&nbsp;:&nbsp;&Sigma;<sub>i=1</sub><sup>k</sup>&nbsp;s<sub>i</sub>&nbsp;&gt;&nbsp;(1/2)&nbsp;&times;&nbsp;&Sigma;<sub>i=1</sub><sup>n</sup>&nbsp;s<sub>i</sub>&nbsp;}
+            </div>
+            <p>In words: <em>N</em> is the smallest number of top holders whose combined holdings strictly exceed half the total supply.</p>
+          </div>
+        </div>
+
+        <details class="math-detail">
+          <summary>Step-by-step example calculation</summary>
+          <div class="detail-body">
+            <p>Suppose five entities hold the following token percentages: <strong>25%, 20%, 20%, 20%, 15%</strong>. The total is 100%.</p>
+            <p>Sort descending: 25, 20, 20, 20, 15.</p>
+            <ul>
+              <li>After entity 1: cumulative = 25% &nbsp;&lt;&nbsp; 50%.</li>
+              <li>After entity 2: cumulative = 45% &nbsp;&lt;&nbsp; 50%.</li>
+              <li>After entity 3: cumulative = 65% &nbsp;&gt;&nbsp; 50%. &#10003;</li>
+            </ul>
+            <p>Therefore <strong>N = 3</strong>. Three entities, acting together, hold 65% — enough for majority control. Any smaller coalition falls short.</p>
+            <p>Notice that the largest single holder (25%) fails the NH 20% test, so this example network would not qualify as a &#8220;decentralized network&#8221; under RSA&nbsp;301-B:5&nbsp;IX(b)(1). The calculator below lets you explore how changing the distribution affects both the Nakamoto coefficient and the NH compliance status simultaneously.</p>
+          </div>
+        </details>
+
+        <details class="math-detail">
+          <summary>Why 50%? A note on the threshold choice</summary>
+          <div class="detail-body">
+            <p>The 50% threshold used in the Nakamoto coefficient definition corresponds to a simple majority — the point at which a coalition can outvote the entire rest of the network. This is the threshold relevant for Nakamoto-style proof-of-work consensus (the &#8220;51% attack&#8221;).</p>
+            <p>In Byzantine-fault-tolerant (BFT) consensus systems — which many modern DAO governance mechanisms use — the relevant threshold is one-third: a coalition controlling more than 1/3 of votes can halt the network (liveness attack), and a coalition controlling more than 2/3 can compromise safety. The Nakamoto coefficient can be calculated at any threshold; the choice of 50% is conventional.</p>
+            <p>The NH statute&#8217;s 20% single-holder limit implies that the minimum NC at the 50% threshold is 3 — at least three separate holders must collaborate to control the majority. At the 1/3 threshold, the minimum NC is 2 under the statute (two holders of 19.99% each barely exceed 1/3).</p>
+          </div>
+        </details>
+
+        <p>The Nakamoto coefficient is an <em>attack-oriented</em> measure: it tells you how organized and coordinated an adversary would need to be. A higher NC is better. An NC of 1 means the network is effectively centralized. An NC in the dozens or hundreds provides meaningful security against collusion.</p>
+
+        <!-- ============================
+             3.2 GINI COEFFICIENT
+             ============================ -->
+        <h3 id="gini">The Gini Coefficient</h3>
+
+        <p>Originally developed by Italian statistician Corrado Gini (1912) to measure income inequality across a population, the Gini coefficient has been adapted to measure how unequally token holdings are distributed across a DAO&#8217;s participants.</p>
+
+        <p>While the Nakamoto coefficient focuses on the top of the distribution (&#8220;how few large holders can seize control?&#8221;), the Gini coefficient characterizes the <em>entire distribution&#8217;s shape</em> — how skewed are holdings overall?</p>
+
+        <div class="math-block">
+          <div class="math-block-header">The Lorenz Curve</div>
+          <div class="math-block-body">
+            <p>The Gini coefficient is defined in terms of the <strong>Lorenz curve</strong>. To construct it:</p>
+            <ol>
+              <li>Sort all holders by their holdings from smallest to largest.</li>
+              <li>Plot the fraction of holders (x-axis) against the cumulative fraction of total holdings they collectively own (y-axis).</li>
+              <li>The resulting curve always starts at (0, 0) and ends at (1, 1). Under perfect equality, every x% of holders would own exactly x% of tokens — so the curve would be a straight diagonal line.</li>
+              <li>In practice, the bottom 50% of holders own less than 50% of tokens, so the curve bows below the diagonal.</li>
+            </ol>
+            <p>The Gini coefficient is defined as <strong>twice the area between the equality diagonal and the actual Lorenz curve</strong>.</p>
+          </div>
+        </div>
+
+        <div class="math-block">
+          <div class="math-block-header">Formula</div>
+          <div class="math-block-body">
+            <p>Let <em>y</em><sub>1</sub> &#8804; <em>y</em><sub>2</sub> &#8804; &#8230; &#8804; <em>y<sub>n</sub></em> be the holdings of <em>n</em> entities, sorted in <strong>ascending</strong> order. Let <em>T</em> = &Sigma;&nbsp;<em>y<sub>i</sub></em> be the total supply. Then:</p>
+            <div class="formula">
+              G&nbsp;=&nbsp;(1&nbsp;/&nbsp;(n&nbsp;&times;&nbsp;T))&nbsp;&times;&nbsp;&Sigma;<sub>i=1</sub><sup>n</sup>&nbsp;(2i&nbsp;&minus;&nbsp;n&nbsp;&minus;&nbsp;1)&nbsp;&times;&nbsp;y<sub>i</sub>
+            </div>
+            <p>The coefficient <em>G</em> lies between 0 (perfect equality: all holders own the same share) and 1 (perfect inequality: one entity owns everything).</p>
+          </div>
+        </div>
+
+        <details class="math-detail">
+          <summary>Step-by-step example calculation</summary>
+          <div class="detail-body">
+            <p>Consider three holders with percentages <strong>10%, 30%, 60%</strong> (n = 3, T = 100).</p>
+            <p>Sorted ascending: y<sub>1</sub> = 10, y<sub>2</sub> = 30, y<sub>3</sub> = 60.</p>
+            <p>Apply the formula term by term:</p>
+            <ul>
+              <li>i = 1: (2&times;1 &minus; 3 &minus; 1) &times; 10 = &minus;2 &times; 10 = &minus;20</li>
+              <li>i = 2: (2&times;2 &minus; 3 &minus; 1) &times; 30 = 0 &times; 30 = 0</li>
+              <li>i = 3: (2&times;3 &minus; 3 &minus; 1) &times; 60 = 2 &times; 60 = 120</li>
+            </ul>
+            <p>Sum = &minus;20 + 0 + 120 = 100.</p>
+            <p>G = 100 / (3 &times; 100) = 100 / 300 &asymp; <strong>0.333</strong>.</p>
+            <p>A Gini of 0.333 indicates moderate-to-high inequality in this three-holder example. By comparison, for equal holders (33.3%, 33.3%, 33.3%), the sum of (2i&minus;n&minus;1)&times;y<sub>i</sub> equals zero and G = 0.</p>
+          </div>
+        </details>
+
+        <details class="math-detail">
+          <summary>Verifying the formula at the extremes</summary>
+          <div class="detail-body">
+            <p><strong>Perfect equality (G = 0):</strong> If y<sub>i</sub> = c for all i (everyone holds the same amount), then &Sigma;(2i&minus;n&minus;1)&times;c = c&times;&Sigma;(2i&minus;n&minus;1). Because &Sigma;<sub>i=1</sub><sup>n</sup>(2i&minus;n&minus;1) = 2&times;(n(n+1)/2) &minus; n&times;n &minus; n = n(n+1) &minus; n&sup2; &minus; n = 0, the numerator is 0 and G = 0. &#10003;</p>
+            <p><strong>Perfect inequality (G &rarr; 1 as n grows):</strong> If one entity holds everything (y<sub>n</sub> = T, all others zero), only the last term survives: (2n&minus;n&minus;1)&times;T = (n&minus;1)&times;T. Then G = (n&minus;1)&times;T / (n&times;T) = (n&minus;1)/n &rarr; 1 as n&rarr;&infin;. &#10003;</p>
+          </div>
+        </details>
+
+        <!-- ============================
+             3.3 CONNECTING
+             ============================ -->
+        <h3 id="connecting">Connecting the Measures</h3>
+
+        <p>The Nakamoto coefficient and Gini coefficient are complementary lenses, not substitutes:</p>
+
+        <table class="comparison-table" style="min-width:0; margin:var(--space-lg) 0;">
+          <thead>
+            <tr>
+              <th>Measure</th>
+              <th>What it asks</th>
+              <th>Sensitive to</th>
+              <th>Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Nakamoto coefficient (N)</strong></td>
+              <td>How many top holders could seize majority control?</td>
+              <td>Top of the distribution</td>
+              <td>1 (most concentrated) &rarr; n (perfectly equal)</td>
+            </tr>
+            <tr>
+              <td><strong>Gini coefficient (G)</strong></td>
+              <td>How unequal is the overall distribution?</td>
+              <td>Entire distribution</td>
+              <td>0 (perfectly equal) &rarr; 1 (monopoly)</td>
+            </tr>
+            <tr>
+              <td><strong>NH 20% test</strong></td>
+              <td>Does any single beneficial owner hold &#8805;&nbsp;20%?</td>
+              <td>The single largest holder</td>
+              <td>Pass / Fail</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>A network can have a respectable Nakamoto coefficient (say, 5) while still having a very high Gini (0.85) if there are five similarly large holders and thousands of tiny ones. The use of the interactive calculator below will help illustrate how different distributions score differently across all three measures simultaneously.</p>
+
+        <p>To ground these abstractions in reality, the chart below plots the only verified empirical measurements available for major DAOs.</p>
+
+        <!-- Governance concentration chart (injected by JS) -->
+        <div id="gov-chart-anchor"></div>
+
+        <!-- ============================
+             SECTION 4: CALCULATOR
+             ============================ -->
+        <h2 id="calculator">Interactive Calculator</h2>
+
+        <p>Enter any token distribution to compute the Nakamoto coefficient, the Gini coefficient, and the result of New Hampshire&#8217;s Prong B test (the 20% bright-line). Values are normalized automatically — you can enter raw token counts or percentages.</p>
+
+        <div class="calc-wrapper">
+          <p class="calc-title">Decentralization Metric Calculator</p>
+          <p class="calc-subtitle">Enter token holdings as comma-separated numbers (any units — they are normalized to percentages).</p>
+
+          <div class="calc-input-row">
+            <div class="calc-field">
+              <label for="holdings-input">Token holdings</label>
+              <textarea id="holdings-input" rows="2" placeholder="e.g. 25, 20, 20, 20, 15"></textarea>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" onclick="calculate()">&#8594; Calculate</button>
+            <button class="btn btn-secondary" onclick="loadPreset('fail5')">5 Equal at 20% (fails NH)</button>
+            <button class="btn btn-secondary" onclick="loadPreset('pass6')">6 Equal at 16.7% (passes)</button>
+            <button class="btn btn-secondary" onclick="loadPreset('unequal6')">6 Unequal (barely passes)</button>
+            <button class="btn btn-secondary" onclick="loadPreset('long')">Long Tail (20 holders)</button>
+            <button class="btn btn-secondary" onclick="loadPreset('dominant')">One Dominant Holder (fails)</button>
+          </div>
+
+          <!-- Metric Output -->
+          <div class="metric-row" id="metric-row" style="display:none;">
+            <div class="metric-card">
+              <div class="metric-card-label">Nakamoto Coefficient</div>
+              <div class="metric-card-value" id="nc-val">—</div>
+              <div class="metric-card-desc">Min. holders needed<br>for majority control</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Gini Coefficient</div>
+              <div class="metric-card-value" id="gini-val">—</div>
+              <div class="metric-card-desc">0 = equal &nbsp;|&nbsp; 1 = monopoly</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">NH Prong B (20% Test)</div>
+              <div class="metric-card-value" id="nh-val">—</div>
+              <div class="metric-card-desc">Largest single holder</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">NH Status</div>
+              <div id="nh-status-badge" style="margin:0.3rem 0;"></div>
+              <div class="metric-card-desc" id="nh-status-desc"></div>
+            </div>
+          </div>
+
+          <!-- Charts -->
+          <div class="charts-row" id="charts-row" style="display:none;">
+            <div class="chart-box">
+              <h4>Distribution &amp; Nakamoto Set</h4>
+              <div id="bar-chart"></div>
+              <p style="font-size:0.75rem; color:var(--muted); margin:var(--space-xs) 0 0;">&#9632; Gold bars = minimum set needed for majority control (Nakamoto set)</p>
+            </div>
+            <div class="chart-box">
+              <h4>Lorenz Curve &amp; Gini Area</h4>
+              <div id="lorenz-chart"></div>
+              <p style="font-size:0.75rem; color:var(--muted); margin:var(--space-xs) 0 0;">Shaded area = 2&times; Gini coefficient. Dashed line = perfect equality.</p>
+            </div>
+          </div>
+
+          <!-- Distribution table -->
+          <div id="dist-table-wrapper" style="display:none; margin-top:var(--space-md);">
+            <details class="math-detail">
+              <summary>View full distribution table</summary>
+              <div class="detail-body" style="padding:var(--space-sm);">
+                <div id="dist-table-container"></div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- ============================
+             SECTION 5: AGGREGATION
+             ============================ -->
+        <h2 id="aggregation">The Aggregation Problem: When Ownership Doesn&#8217;t Equal Control</h2>
+
+        <p>All three measures above — the Nakamoto coefficient, the Gini coefficient, and the NH 20% test — work with observable token balances at specific wallet addresses. But there is a fundamental challenge: the same underlying entity can hold tokens across many distinct wallet addresses, or can exercise control over tokens held nominally by others.</p>
+
+        <p>Identifying six wallet addresses, none holding more than 19%, does not establish that those six wallets are controlled by six independent actors. They might all belong to the same person, company, or affiliated group — satisfying the letter of the statute while violating its spirit.</p>
+
+        <div class="agg-scenario">
+          <div class="agg-icon">&#128260;</div>
+          <div class="agg-body">
+            <h4>Wallet Fragmentation</h4>
+            <p>A single entity fragments its holdings across dozens of self-controlled wallets to keep each below 20%. Observable on-chain data shows many small holders; the true picture is a single dominant actor. This is addressable in principle by blockchain analytics that cluster addresses using behavioral heuristics, but is hard to prove conclusively.</p>
+          </div>
+        </div>
+
+        <div class="agg-scenario">
+          <div class="agg-icon">&#127970;</div>
+          <div class="agg-body">
+            <h4>Layered Corporate Ownership</h4>
+            <p>Entity A owns entities B, C, and D. Each of B, C, D holds 18% of the DAO&#8217;s tokens. On-chain, these are three separate addresses. Legally, A beneficially owns 54% — far exceeding the 20% threshold. The NH statute addresses this with the phrase &#8220;directly or indirectly beneficially owned,&#8221; but tracing beneficial ownership through corporate structures can be difficult and requires off-chain investigation.</p>
+          </div>
+        </div>
+
+        <div class="agg-scenario">
+          <div class="agg-icon">&#129309;</div>
+          <div class="agg-body">
+            <h4>Coordinated Voting Without Common Ownership</h4>
+            <p>Separate entities that are legally independent can agree (formally or informally) to vote their tokens in concert. This is coordination, not common ownership — and it is precisely the pattern that blockchain governance has historically struggled to police. The NH statute&#8217;s governance test (no single actor may direct 20% of voting power) partially addresses this, but proving coordination without a written agreement is difficult.</p>
+          </div>
+        </div>
+
+        <div class="callout callout-info">
+          <p><strong>What this means for the 20% rule.</strong> The statute&#8217;s use of &#8220;directly or <em>indirectly</em> beneficially owned, <em>in the aggregate</em>&#8221; is a deliberate attempt to capture aggregated holdings. This is sophisticated drafting. But legal requirements and computational verifiability are different things. Any quantitative decentralization analysis should be understood as measuring <em>observable holdings</em> — a necessary but not sufficient condition for genuine decentralization. Robust compliance programs will combine on-chain data analysis with off-chain governance monitoring and beneficial ownership investigation.</p>
+        </div>
+
+        <!-- ============================
+             SECTION 6: COMPARISON
+             ============================ -->
+        <h2 id="comparison">How Different Jurisdictions Define Decentralization</h2>
+
+        <p>This page is the first in a series examining how different legal frameworks approach the concept of decentralization. New Hampshire is distinguished by offering the most numerically specific definition. Other states that have enacted DAO legislation rely primarily on qualitative or functional descriptions.</p>
+
+        <div class="callout">
+          <p><strong>Note on sources.</strong> The statutory descriptions below are based on enacted text as available. Readers should verify citations against current official state code compilations. Future pages in this series will provide deeper analysis of each jurisdiction.</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Jurisdiction</th>
+                <th>Law</th>
+                <th>Key Decentralization Standard</th>
+                <th>Numerical Threshold?</th>
+                <th>Approach</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="jur-badge jur-nh">NH</span> New Hampshire</td>
+                <td><a href="index.html#sec-5">RSA ch. 301-B (2024)</a></td>
+                <td>&#167;&nbsp;301-B:5&nbsp;IX: Three-part test — no unilateral control, no&nbsp;&#8805;&nbsp;20% concentration, no unilateral code changes. Required &#8220;at all times&#8221; per &#167;&nbsp;301-B:15(j).</td>
+                <td><span class="threshold-pill">20% (assets &amp; votes)</span></td>
+                <td>Quantitative bright-line + qualitative control tests</td>
+              </tr>
+              <tr>
+                <td><span class="jur-badge jur-wy">WY</span> Wyoming</td>
+                <td>W.S. &#167;&nbsp;17-31-101 <em>et seq.</em> (2021)</td>
+                <td>DAO LLCs may be &#8220;algorithmically managed&#8221; or &#8220;member managed.&#8221; Decentralization is reflected in the blockchain governance structure but is not defined with a percentage threshold. The law focuses on enabling smart-contract governance rather than testing for decentralization.</td>
+                <td><span class="threshold-none">None specified</span></td>
+                <td>Functional / structural (smart-contract governance)</td>
+              </tr>
+              <tr>
+                <td><span class="jur-badge jur-ut">UT</span> Utah</td>
+                <td>Utah Code &#167;&nbsp;48-5-101 <em>et seq.</em> (2023)</td>
+                <td>Creates the DAO LLC entity type, organized under the LLC Act. Definitions in &#167;&nbsp;48-5-102 reference decentralization conceptually but do not specify a numerical concentration threshold. Closer to Wyoming&#8217;s functional approach than to New Hampshire&#8217;s bright-line rule.</td>
+                <td><span class="threshold-none">None specified</span></td>
+                <td>Functional / structural</td>
+              </tr>
+              <tr>
+                <td><span class="jur-badge jur-tn">TN</span> Tennessee</td>
+                <td>Tenn. Code Ann. &#167;&nbsp;48-250-101 <em>et seq.</em> (2023)</td>
+                <td>Creates a distinct DAO entity type. Uses &#8220;decentralized&#8221; as a descriptor of the organizational form but does not define a concentration threshold. Governance through smart contracts is recognized without specific decentralization metrics.</td>
+                <td><span class="threshold-none">None specified</span></td>
+                <td>Descriptive / organizational form</td>
+              </tr>
+              <tr>
+                <td><span class="jur-badge jur-vt">VT</span> Vermont</td>
+                <td>11 V.S.A. ch.&nbsp;25 — BBLLC (2018)</td>
+                <td>Vermont&#8217;s Blockchain-Based LLC (BBLLC) was a precursor concept that allows an LLC to incorporate blockchain-based governance. It is not a DAO-specific statute and does not impose decentralization requirements.</td>
+                <td><span class="threshold-none">N/A</span></td>
+                <td>Enabling / permissive (LLC overlay)</td>
+              </tr>
+              <tr>
+                <td><span class="jur-badge jur-us">US</span> Federal (proposed)</td>
+                <td>GENIUS Act; CLARITY Act (proposed)</td>
+                <td>Federal proposals reference &#8220;sufficiently decentralized&#8221; as a concept relevant to whether a digital asset is a security or a commodity, but define the term through multi-factor qualitative tests rather than percentage thresholds. This series will analyze federal proposals in a dedicated installment.</td>
+                <td><span class="threshold-none">Multi-factor test</span></td>
+                <td>Securities law exemption standard</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The contrast is striking: New Hampshire is currently the only state DAO statute that offers a specific numerical threshold (20%) for token concentration. Other states rely on functional descriptions of blockchain governance structures. Each approach carries distinct trade-offs: numerical thresholds provide certainty and measurability but can be gamed through fragmentation; qualitative tests are more flexible but harder to comply with and harder to enforce.</p>
+
+        <p>This series will continue with deeper analyses of each jurisdiction, showing how the same mathematical tools applied here to New Hampshire can be used to interrogate any quantitative standard that emerges in law.</p>
+
+        <!-- ============================
+             HHI SIDEBAR (COLLAPSIBLE)
+             ============================ -->
+        <details class="hhi-section">
+          <summary>&#128202; Antitrust Perspective: The Herfindahl-Hirschman Index</summary>
+          <div class="hhi-body page-content" style="max-width:none; padding:0;">
+
+            <p>The Herfindahl-Hirschman Index (HHI) is the standard metric used by the U.S. Department of Justice and the Federal Trade Commission to assess market concentration in antitrust analysis. It has been proposed as a tool for evaluating token concentration in blockchain networks, drawing an analogy between token-holders and market participants.</p>
+
+            <div class="math-block">
+              <div class="math-block-header">HHI Formula</div>
+              <div class="math-block-body">
+                <p>Let <em>p<sub>i</sub></em> = (<em>s<sub>i</sub></em> / <em>T</em>) &times; 100 be entity i&#8217;s percentage market share (0&#8211;100). Then:</p>
+                <div class="formula">
+                  HHI&nbsp;=&nbsp;&Sigma;<sub>i=1</sub><sup>n</sup>&nbsp;p<sub>i</sub><sup>2</sup>
+                </div>
+                <p>Range: near 0 (many equal participants) to 10,000 (monopoly). The DOJ guidelines classify markets as: unconcentrated (&lt;&nbsp;1,500), moderately concentrated (1,500&#8211;2,500), and highly concentrated (&gt;&nbsp;2,500).</p>
+              </div>
+            </div>
+
+            <h4>Worked Example</h4>
+            <p>Consider a five-holder distribution at 19%, 19%, 19%, 19%, 24%:</p>
+            <ul>
+              <li>p<sub>1</sub> = 24, p<sub>2</sub>&#8211;p<sub>5</sub> = 19 each</li>
+              <li>HHI = 24&#178; + 4&times;19&#178; = 576 + 4&times;361 = 576 + 1,444 = <strong>2,020</strong></li>
+            </ul>
+            <p>This falls in the &#8220;moderately concentrated&#8221; range. Note that this distribution also fails the NH statute (24% &gt; 20%), so HHI analysis and the NH bright-line test are picking up the same issue through different lenses.</p>
+
+            <h4>HHI and the 20% Threshold</h4>
+            <p>If one entity holds exactly 20% of tokens, its HHI contribution alone is 20&#178;&nbsp;=&nbsp;400. A network with five entities at exactly 20% each would have HHI&nbsp;=&nbsp;5&times;400&nbsp;=&nbsp;2,000 — right in the moderately-concentrated range. A network that just barely passes the NH test (each holder at 19.99%) with five equal holders would have HHI&nbsp;&asymp;&nbsp;2,000 as well. This suggests that the NH threshold and antitrust concentration guidelines are calibrated at similar levels of concern.</p>
+
+            <h4>Limitations of HHI in the DAO Context</h4>
+            <p>HHI was designed for product market competition analysis, where market shares are assumed to be stable and where the relevant actors are firms competing for sales. Token holdings in a DAO are different in important ways:</p>
+            <ul>
+              <li>Token holdings can be highly volatile and change rapidly.</li>
+              <li>The relationship between token holding and decision-making power depends on the specific governance mechanism.</li>
+              <li>Unlike markets where concentration is presumptively bad, some degree of token concentration may be necessary for governance efficiency.</li>
+            </ul>
+            <p>These limitations suggest HHI is most useful as a supplementary measure rather than the primary analytical tool for DAO decentralization. This is why it appears here in an expandable section rather than as the centerpiece of the analysis. For deeper discussion of the antitrust analogy and its implications for DAO law, see the work cited in the resources section below.</p>
+
+          </div>
+        </details>
+
+        <!-- ============================
+             SECTION 7: RESOURCES
+             ============================ -->
+        <h2 id="resources">Resources and Further Reading</h2>
+
+        <p>This page is part of the <strong>NH DAO Law Explorer</strong> project, which provides open, interactive tools for understanding DAO legislation across jurisdictions. Future installments will apply the same analytical framework to Wyoming, Utah, Tennessee, Vermont, and federal proposals.</p>
+
+        <h4>Primary Sources</h4>
+        <ul>
+          <li><a href="index.html">N.H. Rev. Stat. Ann. ch. 301-B</a> — Full statutory text with interactive annotations (this repository)</li>
+          <li><a href="https://www.sos.nh.gov/" target="_blank" rel="noopener noreferrer">New Hampshire Secretary of State</a> — Official state filings and registry</li>
+          <li><a href="https://gc.nh.gov/bill_status/billinfo.aspx?id=377&inflect=2" target="_blank" rel="noopener noreferrer">HB 645 — Bill Status and Legislative History</a></li>
+        </ul>
+
+        <h4>Scholarship</h4>
+        <ul>
+          <li>Oranburg, S.C. (2025). <em>Market Power and Governance Power: New Tools for Antitrust Enforcement in the Decentralized Gig Economy.</em> Competition Policy International. — Proposes the dual-metric framework (HHI + Nakamoto/Gini) and the four-quadrant organizational typology.</li>
+          <li>Oranburg, S.C. (2024). <em>Antitrust Law for Blockchain Technology.</em> 49 J. Corp. L. 379. — Precursor analysis of decentralized-distributed network structure.</li>
+          <li>Fritsch, R., M&uuml;ller, M. &amp; Wattenhofer, R. (2022). <em>Analyzing Voting Power in Decentralized Governance: Who Controls DAOs?</em> arXiv:2204.01176. — Empirical measurements: Compound Gini 0.987, NMC 8; Uniswap Gini 0.995, NMC 11.</li>
+          <li>Cong, L.W. et al. (2020). <em>Decentralized Governance in Blockchain-Based Organizations.</em> Oxford Review of Economic Policy 36(2). — Introduces the Nakamoto coefficient as a governance metric.</li>
+        </ul>
+
+        <h4>Mathematical Foundations</h4>
+        <ul>
+          <li>Srinivasan, B. and Lee, L. (2017). <em>Quantifying Decentralization.</em> — The original formulation of the Nakamoto coefficient across multiple blockchain subsystems.</li>
+          <li>Gini, C. (1912). <em>Variabilit&#224; e mutabilit&#224;.</em> — The foundational work on the inequality coefficient.</li>
+        </ul>
+
+        <h4>Related Projects</h4>
+        <ul>
+          <li><a href="https://nh-token-commission.org" target="_blank" rel="noopener noreferrer">NH Token Commission</a> — Commission to Study Stable Tokens (RSA 383:26, HB 310)</li>
+          <li><a href="https://www.iol.unh.edu/" target="_blank" rel="noopener noreferrer">UNH InterOperability Laboratory</a> — NH DAO Registry Administrator</li>
+          <li><a href="https://github.com/Oranburg/NH-RSA-301-B" target="_blank" rel="noopener noreferrer">GitHub Repository</a> — Source, issues, and contributions</li>
+        </ul>
+
+        <p style="margin-top:var(--space-2xl); font-size:0.88rem; color:var(--muted);">
+          Maintained by <a href="https://oranburg.law">Seth C. Oranburg</a>, Professor of Law, UNH Franklin Pierce School of Law.
+          Statutory text is public law. Educational analysis and display tool &copy; 2026 Seth C. Oranburg. MIT License.
+        </p>
+
+      </article>
+    </div><!-- /.content-area -->
+  </div><!-- /.page-layout -->
+
+  <!-- Defined-term tooltip -->
+  <div class="def-tooltip" id="defTooltip">
+    <div class="def-tooltip-header">
+      <span id="defTermName"></span>
+      <button class="def-tooltip-close" onclick="closeDefTooltip()">&times;</button>
+    </div>
+    <div class="def-tooltip-body">
+      <div id="defTermBody"></div>
+      <div class="def-tooltip-source" id="defTermSource"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>
+      <a href="index.html">RSA 301-B Statute</a> &nbsp;&bull;&nbsp;
+      <a href="https://github.com/Oranburg/NH-RSA-301-B">GitHub</a> &nbsp;&bull;&nbsp;
+      <a href="https://nh-token-commission.org">Commission</a> &nbsp;&bull;&nbsp;
+      <a href="https://oranburg.law">oranburg.law</a>
+    </div>
+    <p style="margin-top:0.5rem;">Statutory text: public law of the State of New Hampshire. Analysis &copy; 2026 Seth C. Oranburg. MIT License.</p>
+  </footer>
+
+  <script>
+    /* ===== Theme ===== */
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    /* ===== Progress Bar ===== */
+    (function() {
+      var bar = document.getElementById('progressBar');
+      function update() {
+        var pct = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (pct > 0 ? Math.min(window.scrollY / pct * 100, 100) : 0) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    })();
+
+    /* ===== Sidebar Scroll Spy ===== */
+    (function() {
+      var links = document.querySelectorAll('.toc-list a[data-target]');
+      var sections = [];
+      links.forEach(function(a) {
+        var el = document.getElementById(a.getAttribute('data-target'));
+        if (el) sections.push({ el: el, link: a });
+      });
+      var current = null;
+      function onScroll() {
+        var scrollY = window.scrollY + 90;
+        var active = null;
+        for (var i = sections.length - 1; i >= 0; i--) {
+          if (sections[i].el.offsetTop <= scrollY) { active = sections[i]; break; }
+        }
+        if (active && active !== current) {
+          if (current) current.link.classList.remove('active');
+          active.link.classList.add('active');
+          current = active;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* ===== Presets ===== */
+    // Presets designed to teach the 20% threshold boundary
+    var presets = {
+      // Fails NH: each holder at exactly 20% (>= 20% is the threshold)
+      'fail5':    '20, 20, 20, 20, 20',
+      // Passes NH: 6 equal holders, each at ~16.7%. Compare NMC and Gini to fail5.
+      'pass6':    '16.67, 16.67, 16.67, 16.67, 16.67, 16.67',
+      // Barely passes NH: 6 holders, none at 20%, but very unequal.
+      // Compare Gini to pass6 -- nearly the same NMC but much higher Gini.
+      'unequal6': '19.9, 19.9, 19.5, 18, 15, 7.7',
+      // Long tail: realistic distribution with many small holders. Passes NH.
+      'long':     '18, 15, 12, 10, 8, 7, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1, 1, 1, 1',
+      // Dominant holder: one entity at 60%. Obviously fails NH.
+      'dominant': '60, 10, 10, 10, 10'
+    };
+    function loadPreset(key) {
+      document.getElementById('holdings-input').value = presets[key];
+      calculate();
+    }
+
+    /* ===== Core Calculation ===== */
+    function calculate() {
+      var raw = document.getElementById('holdings-input').value
+        .split(',').map(function(s) { return parseFloat(s.trim()); })
+        .filter(function(n) { return !isNaN(n) && n > 0; });
+
+      if (raw.length < 2) {
+        alert('Please enter at least two positive values, comma-separated.');
+        return;
+      }
+
+      var total = raw.reduce(function(a, b) { return a + b; }, 0);
+      var pcts = raw.map(function(h) { return (h / total) * 100; });
+
+      /* Nakamoto Coefficient */
+      var sortedDesc = pcts.slice().sort(function(a, b) { return b - a; });
+      var cumSum = 0, nc = 0;
+      for (var i = 0; i < sortedDesc.length; i++) {
+        cumSum += sortedDesc[i];
+        nc++;
+        if (cumSum > 50) break;
+      }
+
+      /* Gini Coefficient */
+      var sortedAsc = pcts.slice().sort(function(a, b) { return a - b; });
+      var n = sortedAsc.length;
+      var T = sortedAsc.reduce(function(a, b) { return a + b; }, 0);
+      var giniNum = 0;
+      for (var j = 0; j < n; j++) {
+        giniNum += (2 * (j + 1) - n - 1) * sortedAsc[j];
+      }
+      var gini = giniNum / (n * T);
+      if (gini < 0) gini = 0;
+      if (gini > 1) gini = 1;
+
+      /* NH Prong B */
+      var maxHolder = sortedDesc[0];
+      var nhPass = maxHolder < 20;
+
+      /* Display */
+      document.getElementById('nc-val').textContent = nc;
+      document.getElementById('gini-val').textContent = gini.toFixed(3);
+      document.getElementById('nh-val').textContent = maxHolder.toFixed(1) + '%';
+
+      var badge = document.getElementById('nh-status-badge');
+      var desc = document.getElementById('nh-status-desc');
+      if (nhPass) {
+        badge.innerHTML = '<span class="status-badge status-pass">&#10003; Passes</span>';
+        desc.textContent = 'No holder exceeds 20%';
+        document.getElementById('nh-val').className = 'metric-card-value pass';
+      } else {
+        badge.innerHTML = '<span class="status-badge status-fail">&#10007; Fails</span>';
+        desc.textContent = 'Largest holder exceeds 20%';
+        document.getElementById('nh-val').className = 'metric-card-value fail';
+      }
+
+      document.getElementById('metric-row').style.display = '';
+      document.getElementById('charts-row').style.display = '';
+      document.getElementById('dist-table-wrapper').style.display = '';
+
+      drawBarChart(sortedDesc, nc);
+      drawLorenzCurve(sortedAsc, gini);
+      buildDistTable(sortedDesc, nc);
+    }
+
+    /* ===== Bar Chart ===== */
+    function drawBarChart(sortedDesc, nc) {
+      var n = sortedDesc.length;
+      var maxVal = sortedDesc[0];
+      var W = 400, H = 220, PL = 38, PR = 10, PT = 12, PB = 28;
+      var plotW = W - PL - PR;
+      var plotH = H - PT - PB;
+
+      var barW = Math.max(2, Math.floor(plotW / n) - 1);
+      var gap = Math.max(1, Math.floor(plotW / n) - barW);
+
+      var bars = '';
+      var labels = '';
+      for (var i = 0; i < n; i++) {
+        var bh = (sortedDesc[i] / maxVal) * plotH;
+        var bx = PL + i * (barW + gap);
+        var by = PT + plotH - bh;
+        var fill = i < nc ? 'var(--gold)' : 'var(--blue-bright)';
+        bars += '<rect x="' + bx + '" y="' + by + '" width="' + barW + '" height="' + bh.toFixed(1) + '" fill="' + fill + '" rx="1"/>';
+        if (n <= 20 && barW >= 14) {
+          labels += '<text x="' + (bx + barW / 2) + '" y="' + (H - PB + 12) + '" text-anchor="middle" font-size="12" fill="var(--muted)">' + (i + 1) + '</text>';
+        }
+      }
+
+      /* Y-axis */
+      var axis = '';
+      var ticks = [0, 25, 50, 75, 100];
+      ticks.forEach(function(t) {
+        if (t > maxVal * 1.1) return;
+        var ty = PT + plotH - (t / maxVal) * plotH;
+        axis += '<line x1="' + (PL - 3) + '" y1="' + ty + '" x2="' + (W - PR) + '" y2="' + ty + '" stroke="var(--border)" stroke-width="0.5"/>';
+        axis += '<text x="' + (PL - 5) + '" y="' + (ty + 4) + '" text-anchor="end" font-size="12" fill="var(--muted)">' + t + '%</text>';
+      });
+
+      /* 50% line */
+      var y50 = PT + plotH - (50 / maxVal) * plotH;
+      var line50 = maxVal >= 50 ? '<line x1="' + PL + '" y1="' + y50 + '" x2="' + (W - PR) + '" y2="' + y50 + '" stroke="var(--gold-light)" stroke-width="1" stroke-dasharray="4"/><text x="' + (W - PR - 2) + '" y="' + (y50 - 3) + '" text-anchor="end" font-size="12" fill="var(--gold-light)">50%</text>' : '';
+
+      var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">'
+        + axis + line50 + bars + labels
+        + '<line x1="' + PL + '" y1="' + PT + '" x2="' + PL + '" y2="' + (PT + plotH) + '" stroke="var(--border)" stroke-width="1"/>'
+        + '<line x1="' + PL + '" y1="' + (PT + plotH) + '" x2="' + (W - PR) + '" y2="' + (PT + plotH) + '" stroke="var(--border)" stroke-width="1"/>'
+        + '<text x="' + (PL + plotW / 2) + '" y="' + (H - 2) + '" text-anchor="middle" font-size="12" fill="var(--muted)">Holder rank (largest first)</text>'
+        + '</svg>';
+
+      document.getElementById('bar-chart').innerHTML = svg;
+    }
+
+    /* ===== Lorenz Curve ===== */
+    function drawLorenzCurve(sortedAsc, gini) {
+      var n = sortedAsc.length;
+      var T = sortedAsc.reduce(function(a, b) { return a + b; }, 0);
+      var W = 400, H = 300, PL = 42, PR = 10, PT = 12, PB = 32;
+      var plotW = W - PL - PR;
+      var plotH = H - PT - PB;
+
+      /* Lorenz curve points */
+      var points = [{ x: 0, y: 0 }];
+      var cumY = 0;
+      for (var i = 0; i < n; i++) {
+        cumY += sortedAsc[i];
+        points.push({ x: (i + 1) / n, y: cumY / T });
+      }
+
+      function toSVG(p) {
+        return { x: PL + p.x * plotW, y: PT + (1 - p.y) * plotH };
+      }
+
+      var svgPts = points.map(toSVG);
+
+      /* Lorenz path */
+      var lorenzPath = svgPts.map(function(p, idx) {
+        return (idx === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1);
+      }).join(' ');
+
+      /* Area fill (between Lorenz and diagonal) */
+      var diagStart = toSVG({ x: 0, y: 0 });
+      var diagEnd   = toSVG({ x: 1, y: 1 });
+      var areaPath = lorenzPath + ' L' + diagEnd.x + ',' + diagEnd.y
+        + ' L' + diagStart.x + ',' + diagStart.y + ' Z';
+
+      /* Axis ticks */
+      var axis = '';
+      [0, 0.25, 0.5, 0.75, 1].forEach(function(t) {
+        var ty = PT + (1 - t) * plotH;
+        axis += '<line x1="' + (PL - 3) + '" y1="' + ty + '" x2="' + (W - PR) + '" y2="' + ty + '" stroke="var(--border)" stroke-width="0.5"/>';
+        axis += '<text x="' + (PL - 5) + '" y="' + (ty + 4) + '" text-anchor="end" font-size="12" fill="var(--muted)">' + (t * 100).toFixed(0) + '%</text>';
+        var tx = PL + t * plotW;
+        axis += '<text x="' + tx + '" y="' + (PT + plotH + 12) + '" text-anchor="middle" font-size="12" fill="var(--muted)">' + (t * 100).toFixed(0) + '%</text>';
+      });
+
+      /* Gini label */
+      var gLabel = '<text x="' + (PL + plotW * 0.3) + '" y="' + (PT + plotH * 0.5) + '" text-anchor="middle" font-size="11" fill="var(--gold-light)">G = ' + gini.toFixed(3) + '</text>';
+
+      var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">'
+        + axis
+        + '<path d="' + areaPath + '" fill="rgba(196,151,47,0.18)" stroke="none"/>'
+        + '<line x1="' + toSVG({ x: 0, y: 0 }).x + '" y1="' + toSVG({ x: 0, y: 0 }).y + '" x2="' + toSVG({ x: 1, y: 1 }).x + '" y2="' + toSVG({ x: 1, y: 1 }).y + '" stroke="var(--muted)" stroke-width="1" stroke-dasharray="5,3"/>'
+        + '<path d="' + lorenzPath + '" stroke="var(--accent)" stroke-width="2" fill="none"/>'
+        + '<line x1="' + PL + '" y1="' + PT + '" x2="' + PL + '" y2="' + (PT + plotH) + '" stroke="var(--border)" stroke-width="1"/>'
+        + '<line x1="' + PL + '" y1="' + (PT + plotH) + '" x2="' + (W - PR) + '" y2="' + (PT + plotH) + '" stroke="var(--border)" stroke-width="1"/>'
+        + '<text x="' + (PL + plotW / 2) + '" y="' + (H - 2) + '" text-anchor="middle" font-size="12" fill="var(--muted)">Cumulative share of holders (smallest first)</text>'
+        + '<text x="12" y="' + (PT + plotH / 2) + '" text-anchor="middle" font-size="12" fill="var(--muted)" transform="rotate(-90 12,' + (PT + plotH / 2) + ')">Cumulative share of tokens</text>'
+        + gLabel
+        + '</svg>';
+
+      document.getElementById('lorenz-chart').innerHTML = svg;
+    }
+
+    /* ===== Distribution Table ===== */
+    function buildDistTable(sortedDesc, nc) {
+      var n = sortedDesc.length;
+      var total = sortedDesc.reduce(function(a, b) { return a + b; }, 0);
+      var cumSum = 0;
+
+      var html = '<table class="dist-table"><thead><tr>'
+        + '<th>#</th><th>Share (%)</th><th>Cumulative (%)</th><th style="width:120px;">Distribution</th>'
+        + '</tr></thead><tbody>';
+
+      for (var i = 0; i < n; i++) {
+        cumSum += sortedDesc[i];
+        var isNC = i < nc;
+        var fillClass = isNC ? 'nc-set' : '';
+        var pct = sortedDesc[i].toFixed(2);
+        var barW = Math.min(100, sortedDesc[i]).toFixed(1);
+        html += '<tr class="' + (isNC ? 'nakamoto-set' : '') + '">'
+          + '<td>' + (i + 1) + '</td>'
+          + '<td>' + pct + '%</td>'
+          + '<td>' + cumSum.toFixed(1) + '%' + (isNC && i === nc - 1 ? ' &#9650;' : '') + '</td>'
+          + '<td class="dist-bar-cell"><div class="dist-bar-bg"><div class="dist-bar-fill ' + fillClass + '" style="width:' + barW + '%;"></div></div></td>'
+          + '</tr>';
+      }
+      html += '</tbody></table>';
+      document.getElementById('dist-table-container').innerHTML = html;
+    }
+
+    /* ===== Defined-Term Glossary (all from cited sources) ===== */
+    var defined_terms = {
+      // Economic/antitrust metrics (DOJ/FTC, scholarship)
+      "herfindahl-hirschman index": { def: "A numerical measure of market concentration that aggregates the squares of firms\u2019 market shares. Markets with post-merger HHI above 1,800 are classified as \u2018highly concentrated.\u2019", source: "DOJ & FTC, 2023 Merger Guidelines \u00a7 II.A" },
+      "hhi": { def: "A numerical measure of market concentration that aggregates the squares of firms\u2019 market shares. Markets with post-merger HHI above 1,800 are classified as \u2018highly concentrated.\u2019", source: "DOJ & FTC, 2023 Merger Guidelines \u00a7 II.A" },
+      "nakamoto coefficient": { def: "The minimum number of entities required to control over half of a network\u2019s critical resources.", source: "Cong et al., Decentralized Governance in Blockchain-Based Organizations, Oxford Rev. Econ. Pol\u2019y 36(2) (2020)" },
+      "gini coefficient": { def: "A measure of distributional inequality ranging from 0.0 (perfect equality) to 1.0 (total concentration; one actor controls all).", source: "Standard statistical measure; applied to DAO governance in Fritsch, M\u00fcller & Wattenhofer (2022)" },
+      "lorenz curve": { def: "A graphical representation of distributional inequality, plotting the cumulative share of holders against the cumulative share of resources. The Gini coefficient is derived from the area between the Lorenz curve and the line of perfect equality.", source: "Lorenz (1905)" },
+      "market concentration": { def: "The degree to which market share is concentrated among a small number of firms, quantified by the Herfindahl-Hirschman Index. A market with HHI above 1,800 is \u2018highly concentrated\u2019 under the 2023 Merger Guidelines.", source: "DOJ & FTC, 2023 Merger Guidelines \u00a7 II.A" },
+      "single entity doctrine": { def: "The antitrust principle that a parent and its wholly owned subsidiary \u2018have a complete unity of interest\u2019 and cannot conspire under Sherman Act \u00a7 1. \u2018Substance, not form, determines whether an arrangement is concerted action.\u2019", source: "Copperweld Corp. v. Independence Tube Corp., 467 U.S. 752, 771 (1984); American Needle v. NFL, 560 U.S. 183 (2010)" },
+      "voting power": { def: "The capacity to influence governance decisions in a DAO, typically exercised through token-weighted voting or delegation. RSA 301-B:5(IX)(b)(2) prohibits any issuer or affiliated person from directing 20% or more of outstanding voting power.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX)(b)(2)" },
+      "bright-line": { def: "A clearly defined legal rule that provides certainty by establishing a specific threshold (such as 20% ownership) rather than requiring case-by-case analysis. Contrasted with a \u2018standard,\u2019 which requires judgment about whether conduct is reasonable.", source: "Legal usage; applied to DAO decentralization in RSA 301-B:5(IX)(b)" },
+      // Securities law (Howey, GENIUS Act)
+      "investment contract": { def: "A contract, transaction, or scheme whereby a person invests money in a common enterprise and is led to expect profits solely from the efforts of the promoter or a third party. The foundational test for whether an instrument is a \u2018security\u2019 under federal law.", source: "SEC v. W.J. Howey Co., 328 U.S. 293, 298\u2013299 (1946)" },
+      "payment stablecoin": { def: "A digital asset used as a means of payment or settlement, whose issuer is obligated to redeem it for a fixed amount of monetary value, and which must maintain stable value. Not classified as a security or commodity under federal law.", source: "GENIUS Act, Pub. L. 119-27, \u00a7 2(22)" },
+      // NH RSA 301-B:5 definitions
+      "decentralized network": { def: "A blockchain system where no person had unilateral authority to control functionality, no person owned 20% or more of related digital assets, and no issuer directed 20% or more of voting power, each over a 12-month lookback period.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX)" },
+      "decentralized governance system": { def: "A rules-based system permitting users to form consensus or reach agreement in the development, management, or administration of a blockchain system. Excludes systems where any person or group can unilaterally alter consensus rules or determine final outcomes.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(X)" },
+      "decentralized autonomous organization": { def: "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(VIII)" },
+      "dao": { def: "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(VIII)" },
+      "permissionless blockchain": { def: "A blockchain system that allows any person to transact and produce blocks in accordance with the blockchain protocol, whereby the validity of the block is not determined by the identity of the producer.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXX)" },
+      "smart contract": { def: "Software code deployed in a blockchain system that consists of predefined and deterministic instructions and conditions executed in a decentralized manner. Execution produces a change in the blockchain state.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XLI)" },
+      "digital asset": { def: "Any fungible digital representation of value that can be exclusively possessed and transferred, person to person, without necessary reliance on an intermediary, and is recorded on a blockchain system.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XII)" },
+      "blockchain": { def: "Any technology where data is shared across a network to create a public ledger of verified transactions, linked using cryptography to maintain integrity, and distributed among participants in an automated fashion; and composed of source code that is publicly available.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(III)" },
+      "blockchain system": { def: "Any blockchain or blockchain protocol.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(V)" },
+      "token": { def: "A record on a permissionless blockchain, typically representing an asset, participation right, or other entitlement.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XLII)" },
+      "participant": { def: "Unless the bylaws provide otherwise, any person who is entitled under the bylaws to exercise governance rights in a DAO.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXIX)" },
+      "administrator": { def: "A person, irrespective of title, appointed in a manner specified in the bylaws to make discretionary decisions on behalf of the New Hampshire DAO with regard to specific, predefined operations.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(I)" },
+      "registry administrator": { def: "The person, including the University of New Hampshire Interoperability Laboratory, or any other entity authorized by the secretary of state to administer the New Hampshire DAO registry.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXXVI)" },
+      "on-chain": { def: "Any action or transaction that is recorded and verified on a blockchain according to a blockchain protocol\u2019s consensus mechanism.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXVI)" },
+      "off-chain": { def: "Any action or transaction that is not on-chain.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXV)" },
+      "new hampshire dao": { def: "A decentralized autonomous organization that is listed on the New Hampshire DAO registry.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXIII)" },
+      "related digital asset": { def: "A digital asset intrinsically linked to a blockchain system, including where its value is generated by programmatic functioning, represents voting rights, or is issued through programmatic functioning of the blockchain system.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:5(XXXIX)" },
+      // Legal concepts
+      "limited liability": { def: "The principle that participants and administrators of a New Hampshire DAO are not personally obligated for debts or liabilities of the DAO solely by reason of their role. The DAO meets its liabilities through its on-chain and off-chain assets.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:11(I)" },
+      "legal personality": { def: "The capacity of an entity to exist as a separate legal person distinct from its developers, participants, administrators, and legal representatives, with the ability to sue, be sued, own property, and enter contracts.", source: "N.H. Rev. Stat. Ann. \u00a7 301-B:7(I); \u00a7 301-B:10(I)" }
+    };
+
+    /* ===== Annotate Defined Terms ===== */
+    function annotateDefinedTerms() {
+      var content = document.querySelector('.page-content');
+      if (!content) return;
+      var termKeys = Object.keys(defined_terms).sort(function(a, b) { return b.length - a.length; });
+      var escaped = termKeys.map(function(t) { return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); });
+      var re = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+
+      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+
+      nodes.forEach(function(node) {
+        if (node.parentElement.classList && node.parentElement.classList.contains('defined-term')) return;
+        var tag = node.parentElement.tagName;
+        if (tag === 'H1' || tag === 'H2' || tag === 'H3' || tag === 'SCRIPT' || tag === 'STYLE' || tag === 'A') return;
+        var text = node.textContent;
+        if (!re.test(text)) return;
+        re.lastIndex = 0;
+        var frag = document.createDocumentFragment();
+        var last = 0, m;
+        re.lastIndex = 0;
+        while ((m = re.exec(text)) !== null) {
+          if (m.index > last) frag.appendChild(document.createTextNode(text.substring(last, m.index)));
+          var span = document.createElement('span');
+          span.className = 'defined-term';
+          span.setAttribute('tabindex', '0');
+          span.setAttribute('role', 'button');
+          span.setAttribute('aria-label', 'Definition: ' + m[0]);
+          span.setAttribute('data-term', m[0].toLowerCase());
+          span.textContent = m[0];
+          frag.appendChild(span);
+          last = re.lastIndex;
+        }
+        if (last < text.length) frag.appendChild(document.createTextNode(text.substring(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+
+      content.addEventListener('click', function(e) {
+        var t = e.target.closest('.defined-term');
+        if (t) showDefTooltip(t);
+      });
+    }
+
+    function showDefTooltip(el) {
+      var key = el.getAttribute('data-term');
+      var entry = defined_terms[key];
+      if (!entry) return;
+      document.getElementById('defTermName').innerHTML = '<span>' + el.textContent + '</span>';
+      document.getElementById('defTermBody').textContent = entry.def;
+      document.getElementById('defTermSource').textContent = 'Source: ' + entry.source;
+      var tooltip = document.getElementById('defTooltip');
+      tooltip.classList.add('visible');
+      var rect = el.getBoundingClientRect();
+      var top = rect.bottom + 8;
+      var left = rect.left;
+      if (top + 200 > window.innerHeight) top = Math.max(8, rect.top - 220);
+      if (left + 440 > window.innerWidth) left = window.innerWidth - 450;
+      if (left < 8) left = 8;
+      tooltip.style.top = top + 'px';
+      tooltip.style.left = left + 'px';
+    }
+    function closeDefTooltip() { document.getElementById('defTooltip').classList.remove('visible'); }
+    document.addEventListener('click', function(e) {
+      var tt = document.getElementById('defTooltip');
+      if (tt.classList.contains('visible') && !tt.contains(e.target) && !e.target.classList.contains('defined-term')) closeDefTooltip();
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDefTooltip(); });
+
+    /* ===== Governance Concentration Chart (verified data only) ===== */
+    function injectGovChart() {
+      var anchor = document.getElementById('gov-chart-anchor');
+      if (!anchor) return;
+
+      // ALL verified measurements from published sources
+      // Multiple measurements per DAO show how methodology and time affect results
+      var measurements = [
+        { dao: 'Compound', metric: 'Gini (delegates)',      value: 0.987, source: 'Fritsch et al. (2022) tbl. 2', date: 'Mar 2022', level: 'delegates' },
+        { dao: 'Compound', metric: 'Gini (voted delegates)', value: 0.964, source: 'Fritsch et al. (2022) tbl. 2', date: 'Mar 2022', level: 'delegates who voted' },
+        { dao: 'Compound', metric: 'NMC (delegates)',        value: 8,     source: 'Fritsch et al. (2022) tbl. 2', date: 'Mar 2022', level: 'delegates' },
+        { dao: 'Compound', metric: 'NMC (avg voters)',       value: 3.18,  source: 'Messias et al. (2025)',        date: '2020\u20132024', level: 'voters' },
+        { dao: 'Uniswap', metric: 'Gini (delegates)',       value: 0.995, source: 'Fritsch et al. (2022) tbl. 2', date: 'Mar 2022', level: 'delegates' },
+        { dao: 'Uniswap', metric: 'Gini (voted delegates)', value: 0.971, source: 'Fritsch et al. (2022) tbl. 2', date: 'Mar 2022', level: 'delegates who voted' },
+        { dao: 'Uniswap', metric: 'Gini (on-chain voting)', value: 0.938, source: 'Chao (n.d.)',                  date: 'n.d.',       level: 'on-chain votes' },
+        { dao: 'Uniswap', metric: 'NMC (delegates)',        value: 11,    source: 'Fritsch et al. (2022) tbl. 2', date: 'Mar 2022', level: 'delegates' },
+        { dao: 'Uniswap', metric: 'NMC (avg voters)',       value: 4.7,   source: 'Messias et al. (2025)',        date: '2021\u20132024', level: 'voters' },
+        { dao: 'Braintrust', metric: 'Gini (estimated)',    value: '0.85\u20130.92', source: 'Oranburg (CPI 2025) fn. 53', date: 'Nov 2025', level: 'token holders', estimated: true },
+        { dao: 'Braintrust', metric: 'NMC (estimated)',     value: '10\u201312',    source: 'Oranburg (CPI 2025) fn. 53', date: 'Nov 2025', level: 'token holders', estimated: true }
+      ];
+      var el = document.createElement('div');
+      el.className = 'gov-chart-tool';
+
+      // Build a table showing ALL measurements
+      var html = '<div class="gov-chart-header">Verified DAO Governance Measurements</div>';
+      html += '<p style="font-size:0.85rem;color:var(--muted);margin:0 0 var(--space-md);">Multiple measurements per DAO reveal how methodology (delegates vs. voters), measurement level (all delegates vs. those who voted), and time period affect the result. This is the complete inventory of published, peer-reviewed or publicly documented measurements available in the literature.</p>';
+
+      html += '<div class="comparison-table-wrapper"><table class="comparison-table" style="min-width:500px;">';
+      html += '<thead><tr><th>DAO</th><th>Metric</th><th>Value</th><th>Level</th><th>Date</th><th>Source</th></tr></thead><tbody>';
+
+      var lastDao = '';
+      measurements.forEach(function(m) {
+        var rowClass = m.estimated ? ' style="opacity:0.7;font-style:italic;"' : '';
+        var daoCell = m.dao !== lastDao ? m.dao : '';
+        lastDao = m.dao;
+        var valStr = typeof m.value === 'number' ? (m.value < 1 ? m.value.toFixed(3) : m.value.toFixed(2)) : m.value;
+        if (m.estimated) valStr += ' *';
+        html += '<tr' + rowClass + '><td><strong>' + daoCell + '</strong></td><td>' + m.metric + '</td><td style="font-family:var(--font-mono);color:var(--accent-2);">' + valStr + '</td><td style="font-size:0.78rem;">' + m.level + '</td><td style="font-size:0.78rem;">' + m.date + '</td><td style="font-size:0.75rem;">' + m.source + '</td></tr>';
+      });
+      html += '</tbody></table></div>';
+
+      html += '<div style="font-size:0.75rem;color:var(--muted);margin-top:var(--space-sm);">';
+      html += '* Estimated (not directly measured). All other values from peer-reviewed or publicly documented research.<br>';
+      html += '<strong>Key insight:</strong> Compound\u2019s NMC is 8 when counting all delegates (Fritsch 2022) but only 3.18 when counting actual voters (Messias 2025). The same DAO looks very different depending on what you measure. Uniswap\u2019s Gini is 0.995 at the delegate level (Fritsch 2022) but 0.938 for on-chain voting (Chao). Methodology matters as much as the number.';
+      html += '</div>';
+
+      el.innerHTML = html;
+      anchor.appendChild(el);
+
+    }
+
+    // Run after page loads
+    annotateDefinedTerms();
+    injectGovChart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "id": "depeg",
+  "term": "Depeg",
+  "layer": 2,
+  "tags": ["risk", "stablecoin", "market"],
+  "parent": "stablecoin",
+  "related": ["reserve-requirement", "usdc", "genius-act", "cascading-liquidations"],
+  "definitions": {
+    "technical": "A deviation of a stablecoin's market price from its target peg, typically measured as a sustained trading discount (or premium) exceeding 0.5% on two or more major exchanges. Depegging can trigger automated liquidation cascades in DeFi protocols that use the stablecoin as collateral, as smart contracts execute margin calls at distressed prices. The March 2023 USDC depeg (to $0.87) following SVB's failure demonstrated that reserve-composition compliance does not prevent depegging when reserve liquidity is impaired by third-party receivership.",
+    "lay": "When a stablecoin loses its dollar peg and starts trading below $1.00. During the SVB crisis in March 2023, USDC dropped to $0.87 because $3.3 billion of its reserves were frozen at the failed bank. Depegging can trigger a chain reaction across the crypto ecosystem as automated lending systems rush to sell the devalued stablecoin.",
+    "parenthetical": "(the loss of a stablecoin's target dollar value, as when USDC fell to $0.87 during the SVB crisis)"
+  },
+  "statutes": ["genius-act"],
+  "see_also": ["/analysis/stable-tokens/"],
+  "visualization": null,
+  "sources": ["occ-glossary", "nh-token-glossary"],
+  "verification": { "status": "verified" }
+}

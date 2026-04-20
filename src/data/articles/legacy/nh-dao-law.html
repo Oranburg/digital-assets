@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSA 301-B | New Hampshire Decentralized Autonomous Organizations</title>
+  <meta name="description" content="Full text of N.H. Rev. Stat. Ann. ch. 301-B, the New Hampshire Decentralized Autonomous Organization Act (HB 645, 2024, ch. 263). Interactive statute reader with defined-term tooltips, cross-references, comparable provisions from Wyoming, Utah, Tennessee, and Vermont, and commission meeting context. Enacted July 1, 2025.">
+  <meta name="author" content="Seth C. Oranburg">
+  <meta name="keywords" content="RSA 301-B, New Hampshire, DAO, decentralized autonomous organization, blockchain, HB 645, statutory text, DAO registry, UNH InterOperability Laboratory, smart contract, permissionless blockchain, digital asset, governance">
+  <link rel="canonical" href="https://oranburg.law/NH-RSA-301-B/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RSA 301-B: New Hampshire DAO Act — Full Statutory Text">
+  <meta property="og:description" content="Interactive reader for N.H. Rev. Stat. Ann. ch. 301-B, the first state DAO statute with a 20% decentralization threshold and blockchain-based registry requirement. Enacted 2024, effective July 1, 2025.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oranburg.law/NH-RSA-301-B/">
+  <meta property="og:site_name" content="NH DAO Law Explorer">
+  <meta property="article:author" content="Seth C. Oranburg">
+  <meta property="article:published_time" content="2026-04-18">
+  <meta property="article:section" content="Law">
+  <meta property="article:tag" content="DAO">
+  <meta property="article:tag" content="blockchain law">
+  <meta property="article:tag" content="New Hampshire">
+  <meta property="article:tag" content="decentralized autonomous organization">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RSA 301-B: New Hampshire DAO Act — Full Text">
+  <meta name="twitter:description" content="Interactive reader for NH's DAO statute with defined-term tooltips, cross-references to Wyoming/Utah/Tennessee/Vermont, and commission context.">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegislationObject",
+    "name": "New Hampshire Decentralized Autonomous Organization Act",
+    "alternateName": "RSA 301-B",
+    "legislationIdentifier": "N.H. Rev. Stat. Ann. ch. 301-B",
+    "legislationDate": "2024-07-26",
+    "legislationDateVersion": "2025-07-01",
+    "legislationLegalForce": "InForce",
+    "legislationType": "Statute",
+    "jurisdiction": {
+      "@type": "AdministrativeArea",
+      "name": "New Hampshire",
+      "sameAs": "https://www.wikidata.org/wiki/Q759"
+    },
+    "legislationPassedBy": {
+      "@type": "LegislativeBody",
+      "name": "New Hampshire General Court"
+    },
+    "description": "Establishes decentralized autonomous organizations (DAOs) as legal entities in New Hampshire with legal personality, limited liability, and a blockchain-based registry administered by the UNH InterOperability Laboratory.",
+    "url": "https://oranburg.law/NH-RSA-301-B/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "NH DAO Law Explorer",
+      "url": "https://oranburg.law/NH-RSA-301-B/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law",
+      "jobTitle": "Professor of Law",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "University of New Hampshire Franklin Pierce School of Law"
+      }
+    },
+    "about": [
+      { "@type": "Thing", "name": "Decentralized Autonomous Organization" },
+      { "@type": "Thing", "name": "Blockchain governance" },
+      { "@type": "Thing", "name": "DAO registry" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', theme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    /* ---------- Design Tokens ---------- */
+    :root, [data-theme="dark"] {
+      --blue-deep:    #0A3255;
+      --blue-bright:  #2459A9;
+      --blue-light:   #6DACDE;
+      --gold:         #C4972F;
+      --gold-light:   #E8C560;
+      --granite:      #6B7B8D;
+      --white-mtn:    #E8ECF0;
+
+      --bg:           #000000;
+      --bg-secondary: #0A3255;
+      --bg-soft:      #0D3D68;
+      --text:         #FFFFFF;
+      --muted:        #9CA3AF;
+      --border:       #1E5080;
+      --accent:       #6DACDE;
+      --accent-2:     #E8C560;
+
+      --font-headline: 'Oswald', sans-serif;
+      --font-body:     'Roboto', sans-serif;
+      --font-accent:   'Crimson Text', serif;
+      --font-mono:     'Roboto Mono', 'Consolas', 'Courier New', monospace;
+
+      --max-width:     1100px;
+      --radius-sm:     4px;
+      --radius-md:     8px;
+
+      --space-xs:  0.25rem;
+      --space-sm:  0.5rem;
+      --space-md:  1rem;
+      --space-lg:  1.5rem;
+      --space-xl:  2rem;
+      --space-2xl: 3rem;
+      --space-3xl: 4rem;
+    }
+
+    [data-theme="light"] {
+      --bg:           #FFFFFF;
+      --bg-secondary: #F8F9FA;
+      --bg-soft:      #E9ECEF;
+      --text:         #000000;
+      --muted:        #555555;
+      --border:       #D0D8E4;
+      --accent:       #2459A9;
+      --accent-2:     #C4972F;
+    }
+
+    /* ---------- Reset & Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-2); }
+
+    /* ---------- Progress Bar ---------- */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      z-index: 1000; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ---------- Top Nav ---------- */
+    .top-nav {
+      background-color: var(--blue-deep);
+      padding: 0.6rem var(--space-md);
+      position: sticky; top: 0; z-index: 200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .top-nav-inner {
+      max-width: var(--max-width); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-md);
+    }
+    .top-nav a {
+      color: #FFFFFF; font-family: var(--font-body); font-size: 0.82rem;
+      font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .top-nav a:hover { color: var(--accent-2); }
+    .top-nav a.nav-active { color: var(--accent-2); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
+    .nav-title {
+      font-family: var(--font-headline); font-size: 0.95rem; font-weight: 600;
+      color: var(--accent-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      flex-shrink: 0;
+    }
+    .nav-pages { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+    .theme-toggle {
+      background: none; border: none; cursor: pointer; color: #FFFFFF;
+      padding: 0.25rem; display: flex; align-items: center; transition: color 0.2s;
+    }
+    .theme-toggle:hover { color: var(--accent-2); }
+    [data-theme="dark"] .icon-sun  { display: inline; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: inline; }
+
+    /* ---------- Project Banner ---------- */
+    .project-banner {
+      background: var(--bg-secondary); border-bottom: 1px solid var(--border);
+      padding: var(--space-lg) var(--space-md);
+    }
+    .project-banner-inner {
+      max-width: 740px; margin: 0 auto;
+      display: flex; align-items: flex-start; gap: var(--space-lg);
+    }
+    .banner-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+    .banner-text { flex: 1; }
+    .banner-text h2 {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      color: var(--accent-2); margin: 0 0 var(--space-xs);
+    }
+    .banner-text p {
+      font-size: 0.95rem; line-height: 1.6; color: var(--muted); margin: 0 0 var(--space-sm);
+    }
+    .banner-text p:last-child { margin-bottom: 0; }
+    .banner-actions {
+      display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md);
+    }
+    .banner-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.45rem 0.9rem; border-radius: var(--radius-sm);
+      font-family: var(--font-body); font-size: 0.85rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.03em;
+      cursor: pointer; border: 1px solid var(--border); transition: all 0.2s;
+      background: transparent; color: var(--accent); text-decoration: none;
+    }
+    .banner-btn:hover { background: var(--bg-soft); color: var(--text); }
+    .banner-btn-primary { background: var(--accent); color: #000; border-color: var(--accent); }
+    .banner-btn-primary:hover { background: var(--accent-2); color: #000; }
+    .banner-dismiss {
+      background: none; border: none; color: var(--muted); font-size: 1.4rem;
+      cursor: pointer; padding: 0; line-height: 1; flex-shrink: 0;
+    }
+    .banner-dismiss:hover { color: var(--text); }
+    .project-banner.hidden { display: none; }
+
+    /* ---------- Layout ---------- */
+    .page-layout {
+      display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 52px);
+    }
+
+    /* ---------- Sidebar / TOC ---------- */
+    .toc-sidebar {
+      width: 280px; min-width: 280px; position: sticky; top: 52px;
+      height: calc(100vh - 52px); overflow-y: auto;
+      padding: var(--space-lg) var(--space-md);
+      border-right: 1px solid var(--border); background: var(--bg);
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .toc-sidebar::-webkit-scrollbar { width: 4px; }
+    .toc-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .toc-heading {
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-sm); padding: 0;
+    }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { margin: 0; }
+    .toc-list a {
+      display: block; padding: 0.35rem 0.5rem; font-size: 0.85rem; line-height: 1.35;
+      color: var(--muted); border-left: 2px solid transparent;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0; transition: all 0.2s;
+    }
+    .toc-list a:hover { color: var(--text); background: var(--bg-soft); }
+    .toc-list a.active {
+      color: var(--accent); border-left-color: var(--accent);
+      background: var(--bg-soft); font-weight: 600;
+    }
+
+    .toc-tools {
+      margin-top: var(--space-xl); padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+    .toc-tools a, .toc-tools button {
+      display: block; width: 100%; text-align: left;
+      padding: 0.4rem 0.5rem; font-size: 0.82rem; color: var(--muted);
+      background: none; border: none; cursor: pointer;
+      font-family: var(--font-body); transition: color 0.2s;
+    }
+    .toc-tools a:hover, .toc-tools button:hover { color: var(--accent); }
+
+    /* ---------- Mobile TOC Toggle ---------- */
+    .toc-mobile-toggle {
+      display: none; position: fixed; bottom: var(--space-lg); right: var(--space-lg);
+      z-index: 300; background: var(--blue-deep); color: #FFFFFF; border: none;
+      border-radius: 50%; width: 52px; height: 52px; font-size: 1.3rem;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); transition: transform 0.2s;
+    }
+    .toc-mobile-toggle:hover { transform: scale(1.1); }
+    .toc-mobile-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 250;
+    }
+
+    /* ---------- Content Area ---------- */
+    .content-area { flex: 1; min-width: 0; padding: var(--space-2xl) var(--space-xl); }
+    .statute-content {
+      max-width: 740px; margin: 0 auto;
+      font-family: var(--font-accent); font-size: 1.125rem; line-height: 1.85;
+    }
+    .statute-content h1 {
+      font-family: var(--font-headline); font-size: 2.2rem; font-weight: 700;
+      line-height: 1.15; margin: var(--space-3xl) 0 var(--space-lg);
+      color: var(--text); border-bottom: 2px solid var(--accent); padding-bottom: var(--space-sm);
+    }
+    .statute-content h1:first-child {
+      margin-top: 0; font-size: 2.4rem; text-align: center; border-bottom: none; padding-bottom: 0;
+    }
+    .statute-content h2 {
+      font-family: var(--font-headline); font-size: 1.5rem; font-weight: 600;
+      line-height: 1.2; margin: var(--space-3xl) 0 var(--space-md); color: var(--text);
+      border-bottom: 1px solid var(--border); padding-bottom: var(--space-xs);
+    }
+    .statute-content h3 {
+      font-family: var(--font-headline); font-size: 1.25rem; font-weight: 500;
+      margin: var(--space-2xl) 0 var(--space-sm); color: var(--text);
+    }
+    .statute-content p { margin: 0 0 var(--space-md); text-align: justify; hyphens: auto; }
+    .statute-content strong { font-weight: 700; color: var(--text); }
+    .statute-content em { font-style: italic; }
+    .statute-content hr {
+      border: none; border-top: 1px solid var(--border);
+      margin: var(--space-2xl) auto; max-width: 200px;
+    }
+    .statute-content ul, .statute-content ol { margin: 0 0 var(--space-md); padding-left: var(--space-xl); }
+    .statute-content li { margin-bottom: var(--space-xs); }
+    .statute-content h1:first-child + p {
+      text-align: center; font-size: 1.1rem; color: var(--muted); margin-bottom: var(--space-2xl);
+    }
+
+    /* ---------- Section anchor links ---------- */
+    .statute-content h2 { position: relative; cursor: pointer; }
+    .statute-content h2:hover::after {
+      content: '#'; position: absolute; left: -1.2em;
+      color: var(--muted); font-weight: 300; font-size: 0.8em;
+    }
+
+    /* ---------- About Modal ---------- */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+      z-index: 600; justify-content: center; align-items: center; padding: var(--space-md);
+    }
+    .modal-overlay.visible { display: flex; }
+    .modal-box {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: var(--radius-md); max-width: 640px; width: 100%;
+      max-height: 85vh; overflow-y: auto; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .modal-header {
+      background: var(--blue-deep); color: #fff; padding: 1rem 1.25rem;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0;
+    }
+    .modal-header h2 {
+      font-family: var(--font-headline); font-size: 1.1rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; margin: 0;
+    }
+    .modal-close {
+      background: none; border: none; color: #fff; font-size: 1.5rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .modal-body {
+      padding: 1.25rem; font-family: var(--font-accent); font-size: 1.05rem;
+      line-height: 1.75; color: var(--text);
+    }
+    .modal-body h3 {
+      font-family: var(--font-headline); font-size: 1.15rem; font-weight: 600;
+      margin: 1.5rem 0 0.5rem; color: var(--accent-2);
+    }
+    .modal-body h3:first-child { margin-top: 0; }
+    .modal-body p { margin: 0 0 0.75rem; }
+    .modal-body ul { padding-left: 1.25rem; margin: 0 0 0.75rem; }
+    .modal-body li { margin-bottom: 0.3rem; }
+    .modal-body .version-badge {
+      display: inline-block; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 0.2rem 0.6rem;
+      font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);
+    }
+
+    /* ---------- Defined Terms ---------- */
+    .defined-term {
+      cursor: help;
+      border-bottom: 1px dotted var(--accent-2);
+      transition: background 0.2s;
+    }
+    .defined-term:hover {
+      background: rgba(232, 197, 96, 0.15);
+    }
+    .def-tooltip {
+      display: none; position: fixed; z-index: 800;
+      background: var(--bg-secondary); border: 1px solid var(--accent-2);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 420px; width: 90vw; overflow: hidden;
+    }
+    .def-tooltip.visible { display: block; }
+    .def-tooltip-header {
+      background: var(--blue-deep); color: var(--accent-2); padding: 0.5rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .def-tooltip-header small {
+      font-family: var(--font-body); font-size: 0.75rem; font-weight: 400;
+      color: var(--muted); text-transform: none; letter-spacing: 0;
+    }
+    .def-tooltip-close {
+      background: none; border: none; color: var(--accent-2); font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .def-tooltip-close:hover { color: #fff; }
+    .def-tooltip-body {
+      padding: 0.75rem; font-family: var(--font-accent); font-size: 0.95rem;
+      line-height: 1.6; color: var(--text); max-height: 300px; overflow-y: auto;
+    }
+    .def-tooltip-body .def-goto {
+      display: inline-block; margin-top: 0.5rem;
+      font-family: var(--font-body); font-size: 0.8rem; color: var(--accent);
+    }
+    .def-tooltip-body .def-goto:hover { color: var(--accent-2); }
+
+    /* ---------- Internal Cross-References ---------- */
+    .xref-internal {
+      color: var(--accent); border-bottom: 1px dashed var(--accent);
+      cursor: pointer; transition: color 0.2s;
+    }
+    .xref-internal:hover { color: var(--accent-2); border-bottom-color: var(--accent-2); }
+
+    /* ---------- Section Metadata Panel ---------- */
+    .section-panel {
+      display: none; position: fixed; z-index: 800;
+      background: var(--bg-secondary); border: 1px solid var(--accent);
+      border-radius: var(--radius-md); box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      max-width: 520px; width: 90vw; overflow: hidden;
+    }
+    .section-panel.visible { display: block; }
+    .section-panel-header {
+      background: var(--blue-deep); color: #fff; padding: 0.6rem 0.75rem;
+      font-family: var(--font-headline); font-size: 0.9rem; font-weight: 600;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .section-panel-close {
+      background: none; border: none; color: #fff; font-size: 1.2rem;
+      cursor: pointer; padding: 0; line-height: 1;
+    }
+    .section-panel-close:hover { color: var(--accent-2); }
+    .section-panel-body {
+      padding: 0.75rem; font-family: var(--font-body); font-size: 0.88rem;
+      line-height: 1.55; color: var(--text); max-height: 400px; overflow-y: auto;
+    }
+    .section-panel-body h4 {
+      font-family: var(--font-headline); font-size: 0.82rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-2);
+      margin: 0.8rem 0 0.3rem; padding: 0;
+    }
+    .section-panel-body h4:first-child { margin-top: 0; }
+    .section-panel-body .meta-line {
+      font-size: 0.82rem; color: var(--muted); margin: 0.15rem 0;
+    }
+    .concept-pill {
+      display: inline-block; font-size: 0.72rem; padding: 0.1rem 0.45rem;
+      border-radius: 10px; border: 1px solid var(--border); color: var(--accent);
+      margin: 0.15rem 0.2rem 0.15rem 0; font-family: var(--font-mono);
+    }
+    .comparable-row {
+      display: flex; gap: 0.5rem; align-items: baseline;
+      padding: 0.25rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+    .comparable-row:last-child { border-bottom: none; }
+    .comparable-jur {
+      font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;
+      min-width: 28px; text-align: center; padding: 0.1rem 0.3rem;
+      border-radius: 3px; flex-shrink: 0;
+    }
+    .jur-wy { background: #8B6914; color: #fff; }
+    .jur-ut { background: #BE3A34; color: #fff; }
+    .jur-vt { background: #2E6B3E; color: #fff; }
+    .comparable-note { color: var(--muted); font-size: 0.78rem; }
+    .commission-item {
+      font-size: 0.82rem; padding: 0.2rem 0;
+    }
+    .commission-item .comm-date {
+      font-family: var(--font-mono); color: var(--accent); font-size: 0.78rem;
+    }
+
+    /* ---------- Comparable Badges on Headings ---------- */
+    .comparable-badges { display: inline-flex; gap: 0.25rem; margin-left: 0.5rem; vertical-align: middle; }
+    .comp-badge {
+      display: inline-block; font-size: 0.6rem; padding: 0.08rem 0.35rem;
+      border-radius: 3px; font-family: var(--font-mono); font-weight: 700;
+      cursor: pointer; vertical-align: middle; letter-spacing: 0.02em;
+    }
+
+    /* ---------- Sidebar Commission Context ---------- */
+    .toc-commission {
+      margin-top: var(--space-md); padding-top: var(--space-md);
+      border-top: 1px solid var(--border);
+    }
+    .toc-commission-heading {
+      font-family: var(--font-headline); font-size: 0.78rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--muted); margin: 0 0 var(--space-xs);
+    }
+    .toc-commission a {
+      display: block; padding: 0.25rem 0.5rem; font-size: 0.78rem;
+      color: var(--muted); transition: color 0.2s;
+    }
+    .toc-commission a:hover { color: var(--accent); }
+    .toc-commission .comm-badge {
+      font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent);
+    }
+
+    @media (max-width: 900px) {
+      .section-panel {
+        position: fixed; bottom: 0; left: 0; right: 0; top: auto;
+        max-width: 100%; width: 100%; border-radius: var(--radius-md) var(--radius-md) 0 0;
+        max-height: 60vh;
+      }
+    }
+
+    /* ---------- Cross-Link Banner ---------- */
+    .crosslink {
+      background: linear-gradient(135deg, var(--blue-deep), #1a4a7a);
+      padding: 0.45rem var(--space-md); text-align: center;
+      font-family: var(--font-body); font-size: 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .crosslink a { color: var(--accent-2); font-weight: 500; }
+    .crosslink a:hover { color: #fff; }
+    .crosslink.hidden { display: none; }
+
+    /* ---------- Toast ---------- */
+    .toast {
+      position: fixed; bottom: var(--space-xl); left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--bg-secondary); border: 1px solid var(--accent);
+      border-radius: var(--radius-md); padding: 0.65rem 1.25rem;
+      font-family: var(--font-body); font-size: 0.9rem; color: var(--accent);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3); z-index: 700;
+      opacity: 0; transition: all 0.3s ease; pointer-events: none;
+    }
+    .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--bg-secondary); padding: var(--space-xl) var(--space-md);
+      text-align: center; color: var(--muted); font-size: 0.85rem;
+    }
+    .site-footer a { color: var(--accent); margin: 0 0.5rem; }
+
+    /* ---------- Loading ---------- */
+    .loading {
+      text-align: center; padding: var(--space-3xl); color: var(--muted);
+      font-family: var(--font-body); font-size: 1.1rem;
+    }
+    .loading-spinner {
+      display: inline-block; width: 28px; height: 28px;
+      border: 3px solid var(--border); border-top-color: var(--accent);
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: var(--space-md);
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .toc-sidebar {
+        position: fixed; left: -320px; top: 0; height: 100vh; z-index: 300;
+        width: 300px; min-width: 300px; transition: left 0.3s ease;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.3); padding-top: calc(52px + var(--space-lg));
+      }
+      .toc-sidebar.open { left: 0; }
+      .toc-mobile-toggle { display: flex; align-items: center; justify-content: center; }
+      .toc-mobile-overlay.visible { display: block; }
+      .content-area { padding: var(--space-xl) var(--space-md); }
+      .statute-content h1:first-child { font-size: 1.8rem; }
+      .project-banner-inner { flex-direction: column; }
+      .banner-icon { display: none; }
+    }
+    @media (max-width: 600px) {
+      .content-area { padding: var(--space-md) var(--space-sm); }
+      .statute-content { font-size: 1.05rem; }
+      .statute-content h1 { font-size: 1.8rem; }
+      .statute-content h2 { font-size: 1.25rem; }
+      .nav-title { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Top navigation -->
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <span class="nav-title">NH DAO Law</span>
+      <div class="nav-pages">
+        <a href="index.html" class="nav-active">Statute</a>
+        <a href="decentralization.html">Decentralization</a>
+        <a href="registry.html">Registry</a>
+        <a href="comparison.html">Compare</a>
+        <a href="genius.html">GENIUS</a>
+        <a href="stable-tokens.html">Stable Tokens</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:var(--space-sm);">
+
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cross-link banner -->
+  <div class="crosslink" id="crosslinkBanner">
+    See also: <a href="decentralization.html">Measuring Decentralization</a> &mdash; why it matters, how to calculate it, and how states compare &sect; 301-B:15(j)&ndash;(k) &bull; <a href="genius.html">GENIUS Act Full Text</a> &bull; <a href="stable-tokens.html">The GENIUS Dilemma &amp; Stable Tokens</a>
+  </div>
+
+  <!-- Project banner -->
+  <div class="project-banner" id="projectBanner">
+    <div class="project-banner-inner">
+      <div class="banner-icon">&#9878;</div>
+      <div class="banner-text">
+        <h2>Open Statute Project</h2>
+        <p>This is the full text of <strong>N.H. Rev. Stat. Ann. ch. 301-B</strong>, New Hampshire's Decentralized Autonomous Organization Act, enacted by HB 645 (2024, ch. 263). The statute establishes DAOs as legal entities in New Hampshire with the <strong>UNH InterOperability Laboratory</strong> designated as the registry administrator.</p>
+        <p><strong>Interactive.</strong> Hover over any <span class="defined-term" style="cursor:default;">defined term</span> to see its statutory definition from &sect; 301-B:5. <strong>Collaborate</strong> via GitHub to suggest annotations, report errors, or propose tools for the DAO registry implementation.</p>
+        <div class="banner-actions">
+          <button class="banner-btn banner-btn-primary" onclick="openAbout()">About This Project</button>
+          <a class="banner-btn" href="rsa-301b.md" download="RSA-301-B.md">&#11015; Download Markdown</a>
+          <a class="banner-btn" href="https://github.com/Oranburg/NH-RSA-301-B/issues">&#9998; Open Issue</a>
+        </div>
+      </div>
+      <button class="banner-dismiss" onclick="dismissBanner()" title="Dismiss">&times;</button>
+    </div>
+  </div>
+
+  <!-- Mobile TOC toggle -->
+  <button class="toc-mobile-toggle" id="tocToggle" aria-label="Table of contents">&#9776;</button>
+  <div class="toc-mobile-overlay" id="tocOverlay"></div>
+
+  <!-- Page layout -->
+  <div class="page-layout">
+    <aside class="toc-sidebar" id="tocSidebar">
+      <p class="toc-heading">Sections</p>
+      <ul class="toc-list" id="tocList"></ul>
+      <div class="toc-tools">
+        <button onclick="openAbout()">&#9432; About this project</button>
+        <a href="rsa-301b.md" download="RSA-301-B.md">&#11015; Download statute text</a>
+        <a href="https://github.com/Oranburg/NH-RSA-301-B" target="_blank" rel="noopener noreferrer">&#128279; GitHub repository</a>
+        <a href="https://github.com/Oranburg/NH-RSA-301-B/issues" target="_blank" rel="noopener noreferrer">&#9998; Report issue</a>
+      </div>
+    </aside>
+
+    <div class="content-area">
+      <article class="statute-content" id="statuteContent">
+        <div class="loading">
+          <div class="loading-spinner"></div>
+          <p>Loading statute text...</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- About modal -->
+  <div class="modal-overlay" id="aboutModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>About This Project</h2>
+        <button class="modal-close" onclick="closeAbout()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>The statute</h3>
+        <p><strong>RSA 301-B</strong> establishes decentralized autonomous organizations (DAOs) as recognized legal entities in New Hampshire. Enacted through HB 645 (2024, ch. 263), sponsored by Rep. Keith Ammon and signed by Governor Sununu on July 26, 2024, the statute provides DAOs with legal personality, limited liability protections, and a registration framework.</p>
+        <p>The statute designates the <strong>University of New Hampshire InterOperability Laboratory</strong> (UNH-IOL) as the registry administrator and requires that the registry itself be established as a blockchain system (&#167; 301-B:14(VI)).</p>
+
+        <h3>The registry implementation</h3>
+        <p>The <a href="https://www.iol.unh.edu/events">NH DAO Registry Design Sprint</a> (April 18&ndash;19, 2026) at UNH-IOL brings together legislators, state officials, and industry participants to architect the registry's technical implementation under RSA 301-B.</p>
+        <p>This site supports that effort by making the statutory text publicly accessible, navigable, and open to collaborative annotation.</p>
+
+        <h3>Related work</h3>
+        <ul>
+          <li><a href="https://nh-token-commission.org">NH Token Commission</a> &mdash; Commission to Study Stable Tokens (RSA 383:26, HB 310)</li>
+          <li><a href="https://law.justia.com/codes/new-hampshire/title-xxvii/chapter-301-b/">Justia &mdash; RSA 301-B</a></li>
+          <li><a href="https://gc.nh.gov/bill_status/billinfo.aspx?id=377&inflect=2">HB 645 bill status</a></li>
+        </ul>
+
+        <h3>How to contribute</h3>
+        <ul>
+          <li><strong>Report errors</strong> in the statutory text via <a href="https://github.com/Oranburg/NH-RSA-301-B/issues">GitHub Issues</a>.</li>
+          <li><strong>Propose features</strong> &mdash; annotations, cross-references, comparison tools, registry integration.</li>
+          <li><strong>Fork and build</strong> &mdash; the display tool is a single HTML file + Markdown source. MIT licensed.</li>
+        </ul>
+
+        <p style="margin-top:1.5rem;">
+          <span class="version-badge">v1.0.0 &mdash; April 2026</span>
+        </p>
+        <p style="font-size:0.9rem; color:var(--muted);">Maintained by <a href="https://oranburg.law">Seth C. Oranburg</a>, Professor of Law, UNH Franklin Pierce School of Law. Built for the NH DAO Registry Design Sprint.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section metadata panel -->
+  <div class="section-panel" id="sectionPanel">
+    <div class="section-panel-header">
+      <span id="sectionPanelTitle"></span>
+      <button class="section-panel-close" onclick="closeSectionPanel()">&times;</button>
+    </div>
+    <div class="section-panel-body" id="sectionPanelBody"></div>
+  </div>
+
+  <!-- Defined-term tooltip -->
+  <div class="def-tooltip" id="defTooltip">
+    <div class="def-tooltip-header">
+      <span id="defTermName"></span>
+      <button class="def-tooltip-close" onclick="closeDefTooltip()">&times;</button>
+    </div>
+    <div class="def-tooltip-body">
+      <div id="defTermBody"></div>
+      <a class="def-goto" href="#sec-5" onclick="closeDefTooltip()">View all definitions &rarr; &sect; 301-B:5</a>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>
+      <a href="https://github.com/Oranburg/NH-RSA-301-B">Source</a>
+      <a href="https://nh-token-commission.org">Commission</a>
+      <a href="https://oranburg.law">oranburg.law</a>
+    </div>
+    <p style="margin-top:0.5rem;">Statutory text: public law of the State of New Hampshire. Display tool &copy; 2026 Seth C. Oranburg. MIT License.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script>
+    // ========== Theme ==========
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    }
+
+    // ========== Banner ==========
+    function dismissBanner() {
+      document.getElementById('projectBanner').classList.add('hidden');
+      sessionStorage.setItem('rsa301b-banner-dismissed', '1');
+    }
+    (function() {
+      if (sessionStorage.getItem('rsa301b-banner-dismissed') === '1') {
+        document.getElementById('projectBanner').classList.add('hidden');
+      }
+    })();
+
+    // ========== About Modal ==========
+    function openAbout() {
+      document.getElementById('aboutModal').classList.add('visible');
+    }
+    function closeAbout() {
+      document.getElementById('aboutModal').classList.remove('visible');
+    }
+    document.getElementById('aboutModal').addEventListener('click', function(e) {
+      if (e.target === this) closeAbout();
+    });
+
+    // ========== Mobile TOC ==========
+    var tocToggle = document.getElementById('tocToggle');
+    var tocSidebar = document.getElementById('tocSidebar');
+    var tocOverlay = document.getElementById('tocOverlay');
+    tocToggle.addEventListener('click', function() {
+      tocSidebar.classList.toggle('open');
+      tocOverlay.classList.toggle('visible');
+    });
+    tocOverlay.addEventListener('click', function() {
+      tocSidebar.classList.remove('open');
+      tocOverlay.classList.remove('visible');
+    });
+
+    // ========== Fetch Markdown + Enrichment ==========
+    var _enrichment = null;
+
+    Promise.all([
+      fetch('rsa-301b.md').then(function(r) { return r.ok ? r.text() : Promise.reject('md'); }),
+      fetch('enrichment.json').then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; })
+    ]).then(function(results) {
+      var md = results[0];
+      _enrichment = results[1];
+
+      md = md.replace(/^---[\s\S]*?---\s*/, '');
+      marked.use({ breaks: false, gfm: true });
+      var html = marked.parse(md);
+      document.getElementById('statuteContent').innerHTML = html;
+      buildTOC();
+      setupScrollSpy();
+      setupProgressBar();
+      addSectionAnchors();
+      linkInternalRefs();
+      annotateDefinedTerms();
+      if (_enrichment) {
+        addComparableBadges();
+        addCommissionSidebar();
+      }
+    }).catch(function(err) {
+      document.getElementById('statuteContent').innerHTML =
+        '<p style="color:var(--accent-2);text-align:center;padding:2rem;">Error loading statute text. Please try refreshing.</p>';
+    });
+
+    // ========== Build TOC ==========
+    function buildTOC() {
+      var content = document.getElementById('statuteContent');
+      var headings = content.querySelectorAll('h2');
+      var tocList = document.getElementById('tocList');
+      tocList.innerHTML = '';
+      headings.forEach(function(heading, index) {
+        // Use section number as id
+        var text = heading.textContent;
+        var match = text.match(/301-B:(\d+)/);
+        var id = match ? 'sec-' + match[1] : 'section-' + index;
+        heading.setAttribute('id', id);
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + id;
+        // Shorten for sidebar: "301-B:5 Definitions" format
+        a.textContent = text;
+        a.setAttribute('data-target', id);
+        a.addEventListener('click', function() {
+          tocSidebar.classList.remove('open');
+          tocOverlay.classList.remove('visible');
+        });
+        li.appendChild(a);
+        tocList.appendChild(li);
+      });
+    }
+
+    // ========== Section anchor click → metadata panel (shift+click → copy URL) ==========
+    function addSectionAnchors() {
+      var headings = document.querySelectorAll('.statute-content h2');
+      headings.forEach(function(h) {
+        h.addEventListener('click', function(e) {
+          if (e.shiftKey) {
+            // Shift+click: copy URL (original behavior)
+            var url = window.location.origin + window.location.pathname + '#' + h.id;
+            navigator.clipboard.writeText(url).then(function() {
+              showToast('Link copied: ' + h.id);
+            }).catch(function() {
+              showToast('Copy: ' + url);
+            });
+          } else if (_enrichment) {
+            openSectionPanel(h);
+          }
+        });
+      });
+    }
+
+    // ========== Internal Cross-Reference Links ==========
+    function linkInternalRefs() {
+      var content = document.getElementById('statuteContent');
+      var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+      var textNodes = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+      var refRegex = /RSA\s+301-B:(\d+)/g;
+      textNodes.forEach(function(node) {
+        if (node.parentElement.tagName === 'A' || node.parentElement.tagName === 'H2' || node.parentElement.tagName === 'H1') return;
+        var text = node.textContent;
+        if (!refRegex.test(text)) return;
+        refRegex.lastIndex = 0;
+
+        var frag = document.createDocumentFragment();
+        var lastIndex = 0;
+        var match;
+        refRegex.lastIndex = 0;
+        while ((match = refRegex.exec(text)) !== null) {
+          if (match.index > lastIndex) {
+            frag.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
+          }
+          var a = document.createElement('a');
+          a.href = '#sec-' + match[1];
+          a.className = 'xref-internal';
+          a.textContent = match[0];
+          a.title = 'Jump to \u00a7 301-B:' + match[1];
+          frag.appendChild(a);
+          lastIndex = refRegex.lastIndex;
+        }
+        if (lastIndex < text.length) {
+          frag.appendChild(document.createTextNode(text.substring(lastIndex)));
+        }
+        node.parentNode.replaceChild(frag, node);
+      });
+    }
+
+    // ========== Section Metadata Panel ==========
+    function openSectionPanel(heading) {
+      var secNum = heading.id.replace('sec-', '');
+      var data = _enrichment && _enrichment.sections ? _enrichment.sections[secNum] : null;
+      if (!data) return;
+
+      document.getElementById('sectionPanelTitle').textContent = data.number + ' ' + data.title;
+
+      var html = '';
+
+      // Meta
+      html += '<h4>Statute Info</h4>';
+      html += '<p class="meta-line">Effective: ' + data.effective_date + '</p>';
+      html += '<p class="meta-line">Bill: ' + data.bill_number + '</p>';
+
+      // Concepts
+      if (data.concepts.length > 0) {
+        html += '<h4>Key Concepts</h4><div>';
+        data.concepts.forEach(function(c) {
+          html += '<span class="concept-pill">' + c + '</span>';
+        });
+        html += '</div>';
+      }
+
+      // Internal refs
+      if (data.internal_refs.length > 0) {
+        html += '<h4>References to Other Sections</h4>';
+        data.internal_refs.forEach(function(ref) {
+          html += '<p class="meta-line"><a class="xref-internal" href="#sec-' + ref.target_section + '" onclick="closeSectionPanel()">\u00a7 301-B:' + ref.target_section + '</a>';
+          var secData = _enrichment.sections[String(ref.target_section)];
+          if (secData) html += ' &mdash; ' + secData.title;
+          html += '</p>';
+        });
+      }
+
+      // External refs
+      if (data.external_refs.length > 0) {
+        html += '<h4>External References</h4>';
+        html += '<p class="meta-line">' + data.external_refs.join(', ') + '</p>';
+      }
+
+      // Comparables
+      if (data.comparables.length > 0) {
+        html += '<h4>Comparable Provisions</h4>';
+        data.comparables.forEach(function(comp) {
+          var jurClass = comp.jurisdiction === 'Wyoming' ? 'jur-wy' : comp.jurisdiction === 'Utah' ? 'jur-ut' : 'jur-vt';
+          var jurCode = comp.jurisdiction === 'Wyoming' ? 'WY' : comp.jurisdiction === 'Utah' ? 'UT' : 'VT';
+          html += '<div class="comparable-row">';
+          html += '<span class="comparable-jur ' + jurClass + '">' + jurCode + '</span>';
+          html += '<div><strong>' + comp.citation + '</strong>';
+          if (comp.note) html += '<br><span class="comparable-note">' + comp.note + '</span>';
+          html += '</div></div>';
+        });
+      }
+
+      // Commission mentions
+      if (data.commission_mentions.length > 0) {
+        html += '<h4>Commission Discussion</h4>';
+        data.commission_mentions.forEach(function(cm) {
+          html += '<div class="commission-item">';
+          html += '<span class="comm-date">' + cm.date + '</span> &mdash; ';
+          html += cm.context;
+          html += '</div>';
+        });
+      }
+
+      document.getElementById('sectionPanelBody').innerHTML = html;
+
+      var panel = document.getElementById('sectionPanel');
+      panel.classList.add('visible');
+
+      // Position near heading (desktop) or bottom sheet (mobile handled by CSS)
+      if (window.innerWidth > 900) {
+        var rect = heading.getBoundingClientRect();
+        var top = rect.bottom + 8;
+        var left = rect.left;
+        if (top + 300 > window.innerHeight) top = Math.max(8, rect.top - 320);
+        if (left + 520 > window.innerWidth) left = window.innerWidth - 530;
+        if (left < 8) left = 8;
+        panel.style.top = top + 'px';
+        panel.style.left = left + 'px';
+      } else {
+        panel.style.top = '';
+        panel.style.left = '';
+      }
+    }
+
+    function closeSectionPanel() {
+      document.getElementById('sectionPanel').classList.remove('visible');
+    }
+
+    // ========== Comparable Badges on Headings ==========
+    function addComparableBadges() {
+      if (!_enrichment || !_enrichment.sections) return;
+      var headings = document.querySelectorAll('.statute-content h2');
+      headings.forEach(function(h) {
+        var secNum = h.id.replace('sec-', '');
+        var data = _enrichment.sections[secNum];
+        if (!data || !data.comparables || data.comparables.length === 0) return;
+
+        var badges = document.createElement('span');
+        badges.className = 'comparable-badges';
+        var jurisdictions = {};
+        data.comparables.forEach(function(c) { jurisdictions[c.jurisdiction] = true; });
+
+        if (jurisdictions['Wyoming']) {
+          var b = document.createElement('span');
+          b.className = 'comp-badge jur-wy';
+          b.textContent = 'WY';
+          b.title = 'Comparable provision in Wyoming';
+          b.onclick = function(e) { e.stopPropagation(); openSectionPanel(h); };
+          badges.appendChild(b);
+        }
+        if (jurisdictions['Utah']) {
+          var b = document.createElement('span');
+          b.className = 'comp-badge jur-ut';
+          b.textContent = 'UT';
+          b.title = 'Comparable provision in Utah';
+          b.onclick = function(e) { e.stopPropagation(); openSectionPanel(h); };
+          badges.appendChild(b);
+        }
+        if (jurisdictions['Vermont']) {
+          var b = document.createElement('span');
+          b.className = 'comp-badge jur-vt';
+          b.textContent = 'VT';
+          b.title = 'Comparable provision in Vermont';
+          b.onclick = function(e) { e.stopPropagation(); openSectionPanel(h); };
+          badges.appendChild(b);
+        }
+        h.appendChild(badges);
+      });
+    }
+
+    // ========== Commission Context in Sidebar ==========
+    function addCommissionSidebar() {
+      if (!_enrichment || !_enrichment.commission) return;
+      var meetings = _enrichment.commission.meetings.filter(function(m) {
+        return m.dao_sections_discussed && m.dao_sections_discussed.length > 0;
+      });
+      if (meetings.length === 0) return;
+
+      var container = document.createElement('div');
+      container.className = 'toc-commission';
+      var heading = document.createElement('p');
+      heading.className = 'toc-commission-heading';
+      heading.textContent = 'Commission Meetings';
+      container.appendChild(heading);
+
+      meetings.forEach(function(m) {
+        var a = document.createElement('a');
+        a.href = _enrichment.commission.website + '/Meetings/' + m.date + '+Regular+Meeting';
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        var sections = m.dao_sections_discussed.map(function(s) { return '\u00a7' + s; }).join(', ');
+        a.innerHTML = '<span class="comm-badge">' + m.date + '</span> ' + sections;
+        container.appendChild(a);
+      });
+
+      var sidebar = document.getElementById('tocSidebar');
+      var tools = sidebar.querySelector('.toc-tools');
+      sidebar.insertBefore(container, tools);
+    }
+
+    // ========== Scroll Spy ==========
+    function setupScrollSpy() {
+      var tocLinks = document.querySelectorAll('.toc-list a');
+      var headings = [];
+      tocLinks.forEach(function(link) {
+        var el = document.getElementById(link.getAttribute('data-target'));
+        if (el) headings.push({ el: el, link: link });
+      });
+      var currentActive = null;
+      function onScroll() {
+        var scrollY = window.scrollY + 100;
+        var active = null;
+        for (var i = headings.length - 1; i >= 0; i--) {
+          if (headings[i].el.offsetTop <= scrollY) { active = headings[i]; break; }
+        }
+        if (active && active !== currentActive) {
+          if (currentActive) currentActive.link.classList.remove('active');
+          active.link.classList.add('active');
+          currentActive = active;
+          var sidebar = document.getElementById('tocSidebar');
+          var linkTop = active.link.offsetTop;
+          if (linkTop < sidebar.scrollTop || linkTop > sidebar.scrollTop + sidebar.clientHeight - 40) {
+            sidebar.scrollTop = linkTop - sidebar.clientHeight / 3;
+          }
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    // ========== Progress Bar ==========
+    function setupProgressBar() {
+      var bar = document.getElementById('progressBar');
+      function update() {
+        var pct = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (pct > 0 ? Math.min(window.scrollY / pct * 100, 100) : 0) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    }
+
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('visible');
+      setTimeout(function() { toast.classList.remove('visible'); }, 3000);
+    }
+
+    // ========== Defined-Term Glossary (from RSA 301-B:5) ==========
+    var defined_terms = {
+      "administrator": "A person, irrespective of title, that is appointed in a manner specified in the bylaws to make discretionary decisions, either individually or collectively with other administrators, on behalf of the New Hampshire DAO with regard to specific, predefined operations of the New Hampshire DAO.",
+      "blockchain": "Any technology where data is shared across a network to create a public ledger of verified transactions, linked using cryptography to maintain integrity, and distributed among participants in an automated fashion; and composed of source code that is publicly available.",
+      "blockchain protocol": "Any executable software deployed to a blockchain composed of source code that is publicly available and accessible, including a smart contract or any network of smart contracts.",
+      "blockchain system": "Any blockchain or blockchain protocol.",
+      "bylaws": "The rules and regulations that govern the methods, mechanisms and procedures followed by a DAO and by which developers, participants and administrators interact and make decisions.",
+      "contentious fork": "A hard fork that results in 2 divergent and potentially competing blockchains.",
+      "decentralized autonomous organization": "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.",
+      "DAO": "An enterprise defined in accordance with a smart contract or network of smart contracts deployed on a permissionless blockchain that implements a coordinated project or undertaking among participants.",
+      "decentralized network": "A blockchain system in which no person had unilateral authority to control or materially alter functionality, restrict use, or held 20% or more of related digital assets during the previous 12-month period.",
+      "decentralized governance system": "A rules-based system permitting persons using the blockchain system to form consensus or reach agreement in the development, management, or administration of such blockchain system.",
+      "developer": "A person involved in the development or maintenance of the DAO, whether through the contribution of software code, design, business, legal, or ancillary support.",
+      "digital asset": "Any fungible digital representation of value that can be exclusively possessed and transferred, person to person, without necessary reliance on an intermediary, and is recorded on a blockchain system.",
+      "dispute resolution mechanism": "An on-chain alternative dispute resolution system, such as arbitration, expert determination, or an on-chain alternative court system. Any award, decision, or judgment shall be accorded the same status as an international arbitral award.",
+      "failure event": "A DAO encountering a technical bug or exploit which renders the DAO non-operational or fundamentally changes the expected operation of the DAO.",
+      "GUI": "A graphical user interface, publicly accessible by all DAO members and participants, through which users interact with computer software via visual indicator representations.",
+      "hard fork": "A blockchain software upgrade that is not compatible with previous versions of the blockchain software, and therefore requires all users to upgrade.",
+      "legal representative": "A person who is appointed and authorized by a New Hampshire DAO in a manner specified in the bylaws to perform functions, activities and operations on behalf of the New Hampshire DAO in off-chain interactions.",
+      "majority chain": "The version of the chain accepted by more than 50 percent of the blockchain\u2019s validators following a hard fork.",
+      "minority chain": "The version of the chain that is not the majority chain following a hard fork.",
+      "New Hampshire DAO": "A decentralized autonomous organization that is listed on the New Hampshire DAO registry.",
+      "New Hampshire DAO registry": "The registry established and administered in accordance with RSA 301-B:14.",
+      "off-chain": "Any action or transaction that is not on-chain.",
+      "on-chain": "Any action or transaction that is recorded and verified on a blockchain according to a blockchain protocol\u2019s consensus mechanism.",
+      "on-chain contribution": "Any token segregated and locked in one of the DAO\u2019s smart contracts for the purpose of member buy-in to the DAO and the provision of withdrawable capital.",
+      "open-source format": "Software that is within the open-source definition as established and maintained by the Open Source Initiative.",
+      "participant": "Unless the bylaws provide otherwise, any person who is entitled under the bylaws to exercise governance rights in a DAO.",
+      "permissionless blockchain": "A blockchain system that allows any person to transact and produce blocks in accordance with the blockchain protocol, whereby the validity of the block is not determined by the identity of the producer.",
+      "proposal": "A suggestion for actions to be taken by the DAO, to be decided on in accordance with the bylaws of the DAO.",
+      "public address": "A unique, durable identifier that person(s) can transact with on a permissionless blockchain.",
+      "public forum": "A freely accessible online environment that is commonly used for the exercise of speech and public debate.",
+      "public signaling": "A declaration authorized by way of proposal by the DAO in a public forum.",
+      "registry administrator": "The person, including the University of New Hampshire Interoperability Laboratory, or any other entity authorized by the secretary of state to administer the New Hampshire DAO registry.",
+      "registered agent": "The person appointed by a New Hampshire DAO in accordance with RSA 301-B:9.",
+      "related digital asset": "A digital asset that is intrinsically linked to a blockchain system, including where its value is generated by programmatic functioning, represents voting rights, or is issued through programmatic functioning of the blockchain system.",
+      "quality assurance testing": "Software code of the DAO has undergone security review according to industry standards including standards that may be designed, developed and tested by the registry administrator.",
+      "smart contract": "Software code deployed in a blockchain system that consists of a set of predefined and deterministic instructions and conditions that may be executed in a decentralized manner. Execution produces a change in the blockchain state.",
+      "token": "A record on a permissionless blockchain, typically representing an asset, participation right, or other entitlement.",
+      "transaction": "A new entry in a permissionless blockchain, often but not exclusively, recording a change in ownership of an asset or participation in a DAO."
+    };
+
+    // ========== Annotate Defined Terms ==========
+    function annotateDefinedTerms() {
+      var content = document.getElementById('statuteContent');
+      // Skip the definitions section itself (sec-5) to avoid recursive marking
+      var paragraphs = content.querySelectorAll('p');
+
+      // Sort terms by length descending so longer phrases match first
+      var termKeys = Object.keys(defined_terms).sort(function(a, b) {
+        return b.length - a.length;
+      });
+
+      // Build a single regex matching all terms (case-insensitive, word-boundary)
+      var escapedTerms = termKeys.map(function(t) {
+        return t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      });
+      var termRegex = new RegExp('\\b(' + escapedTerms.join('|') + ')\\b', 'gi');
+
+      paragraphs.forEach(function(p) {
+        // Skip paragraphs inside the definitions section
+        var inDefSection = false;
+        var el = p;
+        while (el && el !== content) {
+          if (el.previousElementSibling && el.previousElementSibling.id === 'sec-5') {
+            // We're in the section right after sec-5 heading, which IS the definitions
+            inDefSection = true; break;
+          }
+          el = el.parentElement;
+        }
+
+        // Walk text nodes only (preserve existing HTML structure)
+        var walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, null, false);
+        var textNodes = [];
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+        textNodes.forEach(function(node) {
+          // Skip if already inside a defined-term span or a heading
+          if (node.parentElement.classList && node.parentElement.classList.contains('defined-term')) return;
+          if (node.parentElement.tagName === 'H1' || node.parentElement.tagName === 'H2') return;
+
+          var text = node.textContent;
+          if (!termRegex.test(text)) return;
+          termRegex.lastIndex = 0; // reset
+
+          var frag = document.createDocumentFragment();
+          var lastIndex = 0;
+          var match;
+          termRegex.lastIndex = 0;
+
+          while ((match = termRegex.exec(text)) !== null) {
+            // Add text before match
+            if (match.index > lastIndex) {
+              frag.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
+            }
+            // Create the defined-term span
+            var span = document.createElement('span');
+            span.className = 'defined-term';
+            span.setAttribute('tabindex', '0');
+            span.setAttribute('role', 'button');
+            span.setAttribute('aria-label', 'Definition: ' + match[0]);
+            span.setAttribute('data-term', match[0].toLowerCase());
+            span.textContent = match[0];
+            frag.appendChild(span);
+            lastIndex = termRegex.lastIndex;
+          }
+          // Add remaining text
+          if (lastIndex < text.length) {
+            frag.appendChild(document.createTextNode(text.substring(lastIndex)));
+          }
+          node.parentNode.replaceChild(frag, node);
+        });
+      });
+
+      // Add event listeners
+      content.addEventListener('click', function(e) {
+        var term = e.target.closest('.defined-term');
+        if (term) showDefTooltip(term);
+      });
+      content.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          var term = e.target.closest('.defined-term');
+          if (term) { e.preventDefault(); showDefTooltip(term); }
+        }
+      });
+    }
+
+    // ========== Show/Close Definition Tooltip ==========
+    function showDefTooltip(el) {
+      var termKey = el.getAttribute('data-term');
+      var def = defined_terms[termKey];
+      if (!def) return;
+
+      document.getElementById('defTermName').innerHTML =
+        '<span>' + el.textContent + '</span> <small>&sect; 301-B:5</small>';
+      document.getElementById('defTermBody').textContent = def;
+
+      var tooltip = document.getElementById('defTooltip');
+      tooltip.classList.add('visible');
+
+      // Position near the element
+      var rect = el.getBoundingClientRect();
+      var top = rect.bottom + 8;
+      var left = rect.left;
+
+      // Keep within viewport
+      if (top + 200 > window.innerHeight) top = rect.top - 220;
+      if (top < 8) top = 8;
+      if (left + 420 > window.innerWidth) left = window.innerWidth - 430;
+      if (left < 8) left = 8;
+
+      tooltip.style.top = top + 'px';
+      tooltip.style.left = left + 'px';
+    }
+
+    function closeDefTooltip() {
+      document.getElementById('defTooltip').classList.remove('visible');
+    }
+
+    // Close tooltips/panels on outside click
+    document.addEventListener('click', function(e) {
+      var tooltip = document.getElementById('defTooltip');
+      if (tooltip.classList.contains('visible') &&
+          !tooltip.contains(e.target) &&
+          !e.target.classList.contains('defined-term')) {
+        closeDefTooltip();
+      }
+      var panel = document.getElementById('sectionPanel');
+      if (panel.classList.contains('visible') &&
+          !panel.contains(e.target) &&
+          e.target.tagName !== 'H2' &&
+          !e.target.classList.contains('comp-badge')) {
+        closeSectionPanel();
+      }
+    });
+
+    // Close modal/tooltip/panel on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeDefTooltip();
+        closeSectionPanel();
+        closeAbout();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The GENIUS Dilemma: Stable Tokens &amp; NH DAO Law | NH DAO Law Explorer</title>
+  <meta name="description" content="Scholarly analysis of how the GENIUS Act (Pub. L. 119-27) intersects with New Hampshire's DAO Act (RSA 301-B) and the NH Commission to Study Stable Tokens (RSA 383:26). Covers payment stablecoin definitions, three regulatory pathways, the DAO dilemma, pathway classifier, global comparison, and NH-specific implications.">
+  <meta name="author" content="Seth C. Oranburg">
+  <meta name="keywords" content="GENIUS Act, stable token, stablecoin, RSA 301-B, DAO, New Hampshire, payment stablecoin, PPSI, TerraUSD, RSA 383:26, MiCA, OCC, Federal Reserve, stablecoin regulation, crypto law, decentralized autonomous organization">
+  <link rel="canonical" href="https://oranburg.law/NH-RSA-301-B/stable-tokens.html">
+
+  <meta property="og:title" content="The GENIUS Dilemma: Stable Tokens &amp; NH DAO Law">
+  <meta property="og:description" content="How the GENIUS Act (Pub. L. 119-27) intersects with New Hampshire's DAO Act (RSA 301-B) and the NH Commission to Study Stable Tokens.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://oranburg.law/NH-RSA-301-B/stable-tokens.html">
+  <meta property="og:site_name" content="NH DAO Law Explorer">
+  <meta property="article:author" content="Seth C. Oranburg">
+  <meta property="article:published_time" content="2026-04-19">
+  <meta property="article:section" content="Law">
+  <meta property="article:tag" content="GENIUS Act">
+  <meta property="article:tag" content="stablecoin">
+  <meta property="article:tag" content="DAO">
+  <meta property="article:tag" content="New Hampshire">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The GENIUS Dilemma: Stable Tokens &amp; NH DAO Law">
+  <meta name="twitter:description" content="How the GENIUS Act intersects with New Hampshire RSA 301-B and the NH Commission to Study Stable Tokens.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "The GENIUS Dilemma: Stable Tokens and New Hampshire DAO Law",
+    "headline": "The GENIUS Dilemma: Stable Tokens &amp; NH DAO Law",
+    "description": "Scholarly analysis of how the GENIUS Act (Pub. L. 119-27) intersects with New Hampshire RSA 301-B and RSA 383:26.",
+    "url": "https://oranburg.law/NH-RSA-301-B/stable-tokens.html",
+    "datePublished": "2026-04-19",
+    "author": {
+      "@type": "Person",
+      "name": "Seth C. Oranburg",
+      "url": "https://oranburg.law",
+      "jobTitle": "Professor of Law",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "University of New Hampshire Franklin Pierce School of Law"
+      },
+      "sameAs": ["https://github.com/Oranburg","https://orcid.org/0000-0002-5698-7962"]
+    },
+    "publisher": {"@type":"Person","name":"Seth C. Oranburg","url":"https://oranburg.law"},
+    "isPartOf": {"@type":"WebSite","name":"NH DAO Law Explorer","url":"https://oranburg.law/NH-RSA-301-B/"},
+    "citation": {
+      "@type": "ScholarlyArticle",
+      "name": "The Genius of the GENIUS Act: How America Innovated Stablecoin Regulation",
+      "author": {"@type":"Person","name":"Seth C. Oranburg"},
+      "datePublished": "2026-04-19",
+      "publisher": {"@type":"Organization","name":"Stanford Journal of Blockchain Law & Policy"}
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <script>
+    (function(){
+      try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}else{document.documentElement.setAttribute('data-theme','dark');}}catch(e){document.documentElement.setAttribute('data-theme','dark');}
+    })();
+  </script>
+
+  <style>
+    /* ===== Design Tokens ===== */
+    :root,[data-theme="dark"]{
+      --blue-deep:#0A3255;--blue-bright:#2459A9;--blue-light:#6DACDE;
+      --gold:#C4972F;--gold-light:#E8C560;--granite:#6B7B8D;--white-mtn:#E8ECF0;
+      --bg:#000000;--bg-secondary:#0A3255;--bg-soft:#0D3D68;
+      --text:#FFFFFF;--muted:#9CA3AF;--border:#1E5080;
+      --accent:#6DACDE;--accent-2:#E8C560;
+      --font-headline:'Oswald',sans-serif;--font-body:'Roboto',sans-serif;
+      --font-accent:'Crimson Text',serif;--font-mono:'Roboto Mono','Consolas','Courier New',monospace;
+      --max-width:1100px;--radius-sm:4px;--radius-md:8px;
+      --space-xs:.25rem;--space-sm:.5rem;--space-md:1rem;--space-lg:1.5rem;
+      --space-xl:2rem;--space-2xl:3rem;--space-3xl:4rem;
+    }
+    [data-theme="light"]{
+      --bg:#FFFFFF;--bg-secondary:#F8F9FA;--bg-soft:#E9ECEF;
+      --text:#000000;--muted:#555555;--border:#D0D8E4;--accent:#2459A9;--accent-2:#C4972F;
+    }
+
+    *,*::before,*::after{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{margin:0;font-family:var(--font-body);font-size:1rem;line-height:1.7;color:var(--text);background:var(--bg);}
+    a{color:var(--accent);text-decoration:none;transition:color .2s;}
+    a:hover{color:var(--accent-2);}
+    h1,h2,h3,h4{font-family:var(--font-headline);font-weight:600;margin-top:var(--space-2xl);margin-bottom:var(--space-md);line-height:1.2;}
+    h1{font-size:2.4rem;}h2{font-size:1.7rem;border-bottom:2px solid var(--border);padding-bottom:.4rem;}
+    h3{font-size:1.25rem;}h4{font-size:1.05rem;}
+    p{margin:0 0 var(--space-md);}
+    ul,ol{padding-left:1.5rem;margin:0 0 var(--space-md);}
+    li{margin-bottom:.3rem;}
+    code{font-family:var(--font-mono);font-size:.88em;background:var(--bg-soft);padding:.1em .3em;border-radius:var(--radius-sm);}
+    blockquote{margin:var(--space-xl) 0;padding:var(--space-lg) var(--space-xl);border-left:4px solid var(--gold);background:var(--bg-secondary);border-radius:0 var(--radius-md) var(--radius-md) 0;font-family:var(--font-accent);font-size:1.15rem;font-style:italic;line-height:1.6;}
+    blockquote cite{display:block;margin-top:var(--space-sm);font-size:.85rem;font-style:normal;color:var(--muted);}
+    details{margin:var(--space-md) 0;border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;}
+    summary{cursor:pointer;padding:var(--space-md) var(--space-lg);font-family:var(--font-headline);font-size:1rem;font-weight:600;letter-spacing:.04em;background:var(--bg-soft);list-style:none;display:flex;align-items:center;justify-content:space-between;user-select:none;}
+    summary::-webkit-details-marker{display:none;}
+    summary::after{content:'›';font-size:1.4rem;transition:transform .25s;display:inline-block;}
+    details[open]>summary::after{transform:rotate(90deg);}
+    details .details-body{padding:var(--space-lg);background:var(--bg);}
+    table{width:100%;border-collapse:collapse;font-size:.9rem;margin:var(--space-lg) 0;}
+    th{background:var(--bg-secondary);color:var(--text);font-family:var(--font-headline);font-weight:600;letter-spacing:.05em;text-align:left;padding:.6rem .75rem;border:1px solid var(--border);}
+    td{padding:.55rem .75rem;border:1px solid var(--border);vertical-align:top;line-height:1.5;}
+    tr:nth-child(even) td{background:rgba(10,50,85,.25);}
+    [data-theme="light"] tr:nth-child(even) td{background:rgba(200,215,235,.25);}
+
+    /* Progress Bar */
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2));z-index:1000;width:0%;transition:width .1s linear;}
+
+    /* Top Nav */
+    .top-nav{background-color:var(--blue-deep);padding:.6rem var(--space-md);position:sticky;top:0;z-index:200;box-shadow:0 2px 5px rgba(0,0,0,.3);}
+    .top-nav-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-md);}
+    .top-nav a{color:#FFF;font-family:var(--font-body);font-size:.82rem;font-weight:500;letter-spacing:.03em;text-transform:uppercase;}
+    .top-nav a:hover{color:var(--accent-2);}
+    .top-nav a.nav-active{color:var(--accent-2);border-bottom:2px solid var(--accent-2);padding-bottom:2px;}
+    .nav-pages{display:flex;align-items:center;gap:var(--space-sm);flex-wrap:wrap;}
+    .nav-title{font-family:var(--font-headline);font-size:.95rem;font-weight:600;color:var(--accent-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:0;}
+    .theme-toggle{background:none;border:none;cursor:pointer;color:#FFF;padding:.25rem;display:flex;align-items:center;transition:color .2s;}
+    .theme-toggle:hover{color:var(--accent-2);}
+    [data-theme="dark"] .icon-sun{display:inline;}[data-theme="dark"] .icon-moon{display:none;}
+    [data-theme="light"] .icon-sun{display:none;}[data-theme="light"] .icon-moon{display:inline;}
+
+    /* Cross-link Banner */
+    .crosslink-banner{background:var(--bg-secondary);border-bottom:1px solid var(--border);padding:.55rem var(--space-md);text-align:center;font-size:.87rem;color:var(--muted);}
+    .crosslink-banner a{font-weight:600;}
+
+    /* Page Layout */
+    .page-layout{max-width:calc(var(--max-width)+260px);margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:var(--space-2xl);padding:var(--space-2xl) var(--space-lg);}
+
+    /* Sidebar TOC */
+    .toc-sidebar{position:sticky;top:4rem;height:calc(100vh - 5rem);overflow-y:auto;padding-right:var(--space-sm);}
+    .toc-sidebar::-webkit-scrollbar{width:4px;}
+    .toc-sidebar::-webkit-scrollbar-track{background:transparent;}
+    .toc-sidebar::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+    .toc-heading{font-family:var(--font-headline);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 var(--space-sm);}
+    .toc-list{list-style:none;margin:0;padding:0;}
+    .toc-list li{margin:0;}
+    .toc-list a{display:block;padding:.3rem .6rem;font-size:.82rem;color:var(--muted);border-radius:var(--radius-sm);transition:all .15s;border-left:2px solid transparent;}
+    .toc-list a:hover{color:var(--text);background:var(--bg-soft);}
+    .toc-list a.active{color:var(--accent);border-left-color:var(--accent);background:rgba(109,172,222,.08);}
+    .toc-sub{padding-left:1.4rem !important;font-size:.78rem !important;}
+    .toc-divider{border:none;border-top:1px solid var(--border);margin:var(--space-md) 0;}
+    .toc-stat-badge{display:inline-block;background:var(--bg-soft);color:var(--accent);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.2rem .5rem;font-size:.75rem;font-family:var(--font-mono);}
+
+    /* Content Area */
+    .content-area{min-width:0;}
+    .page-content{max-width:780px;}
+
+    /* Hero */
+    .hero{padding:var(--space-2xl) 0 var(--space-xl);border-bottom:1px solid var(--border);margin-bottom:var(--space-2xl);}
+    .hero-breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:var(--space-md);}
+    .hero h1{font-size:2.6rem;margin:0 0 var(--space-lg);background:linear-gradient(135deg,var(--text) 60%,var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    [data-theme="light"] .hero h1{background:none;-webkit-text-fill-color:var(--text);}
+    .subtitle{font-family:var(--font-accent);font-size:1.2rem;color:var(--muted);margin-bottom:var(--space-lg);line-height:1.5;}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:var(--space-xl);}
+    .hero-tag{background:var(--bg-soft);border:1px solid var(--border);color:var(--accent);font-size:.8rem;padding:.25rem .65rem;border-radius:12px;font-family:var(--font-mono);}
+
+    /* Stat Cards */
+    .stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--space-md);margin:var(--space-lg) 0;}
+    .stat-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);text-align:center;}
+    .stat-card .stat-value{font-family:var(--font-headline);font-size:1.9rem;font-weight:700;color:var(--accent-2);line-height:1;}
+    .stat-card .stat-label{font-size:.8rem;color:var(--muted);margin-top:.3rem;}
+
+    /* Alert Boxes */
+    .alert{border-radius:var(--radius-md);padding:var(--space-md) var(--space-lg);margin:var(--space-lg) 0;border-left:4px solid;}
+    .alert-danger{background:rgba(180,30,30,.12);border-color:#c0392b;color:var(--text);}
+    .alert-warning{background:rgba(196,151,47,.1);border-color:var(--gold);color:var(--text);}
+    .alert-info{background:rgba(36,89,169,.15);border-color:var(--blue-bright);color:var(--text);}
+    .alert-success{background:rgba(30,130,76,.12);border-color:#27ae60;color:var(--text);}
+    .alert strong{display:block;font-family:var(--font-headline);font-size:1.05rem;margin-bottom:.3rem;letter-spacing:.04em;}
+
+    /* Provision Cards */
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--space-md);margin:var(--space-xl) 0;}
+    .card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);}
+    .card-badge{display:inline-block;background:var(--blue-bright);color:#FFF;font-family:var(--font-mono);font-size:.75rem;padding:.2rem .55rem;border-radius:var(--radius-sm);margin-bottom:.5rem;}
+    .card h4{margin:0 0 .4rem;font-size:1rem;}
+    .card p{margin:0;font-size:.88rem;color:var(--muted);}
+
+    /* Pathway Cards */
+    .pathway-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-lg);margin:var(--space-xl) 0;}
+    .pathway-card{border:2px solid var(--border);border-radius:var(--radius-md);padding:var(--space-xl) var(--space-lg);text-align:center;}
+    .pathway-card.federal{border-color:var(--blue-bright);}
+    .pathway-card.state-q{border-color:var(--gold);}
+    .pathway-card.shadow{border-color:#27ae60;}
+    .pathway-card .pathway-letter{font-family:var(--font-headline);font-size:2.5rem;font-weight:700;margin-bottom:.3rem;}
+    .pathway-card.federal .pathway-letter{color:var(--blue-bright);}
+    .pathway-card.state-q .pathway-letter{color:var(--gold);}
+    .pathway-card.shadow .pathway-letter{color:#27ae60;}
+    .pathway-card h4{margin:.3rem 0 .5rem;font-size:1.05rem;}
+    .pathway-card p{font-size:.85rem;color:var(--muted);text-align:left;margin:0;}
+
+    .stat-value-year{font-size:.9rem;font-family:var(--font-headline);font-weight:700;}
+
+    /* History Timeline (vertical) */
+    .history-timeline{position:relative;padding-left:2.2rem;margin:var(--space-xl) 0;}
+    .history-timeline::before{content:'';position:absolute;left:.65rem;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(180deg,var(--blue-bright),var(--gold),#27ae60);}
+    .ht-item{position:relative;margin-bottom:var(--space-lg);padding-left:.8rem;}
+    .ht-item::before{content:'';position:absolute;left:-2.15rem;top:.35rem;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--blue-bright);z-index:1;}
+    .ht-item.ht-danger::before{border-color:#c0392b;}
+    .ht-item.ht-warning::before{border-color:var(--gold);}
+    .ht-item.ht-success::before{border-color:#27ae60;}
+    .ht-date{font-family:var(--font-mono);font-size:.78rem;color:var(--accent-2);font-weight:700;}
+    .ht-label{font-size:.88rem;color:var(--text);line-height:1.4;}
+
+    /* Prong/Pathway Cards (from decentralization.html) */
+    .prong-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-md);margin:var(--space-lg) 0;}
+    .prong-card{background:var(--bg-soft);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-md);}
+    .prong-label{font-family:var(--font-headline);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:inline-block;padding:.15rem .5rem;border-radius:var(--radius-sm);margin-bottom:var(--space-sm);}
+    .prong-label-host{background:rgba(36,89,169,.2);color:var(--blue-light);}
+    .prong-label-regulate{background:rgba(196,151,47,.15);color:var(--gold-light);}
+    .prong-label-issue{background:rgba(30,130,76,.15);color:#27ae60;}
+    .prong-card h4{font-family:var(--font-headline);font-size:1rem;font-weight:600;color:var(--text);margin:0 0 var(--space-xs);}
+    .prong-card p{font-family:var(--font-body)!important;font-size:.88rem!important;line-height:1.5!important;margin:0!important;text-align:left!important;color:var(--muted);}
+
+    /* Bar Chart */
+    .bar-chart{margin:var(--space-xl) 0;}
+    .bar-row{display:flex;align-items:center;gap:var(--space-md);margin-bottom:.55rem;}
+    .bar-label{width:200px;flex-shrink:0;font-size:.88rem;text-align:right;color:var(--text);}
+    .bar-track{flex:1;background:var(--bg-soft);border-radius:2px;height:22px;overflow:hidden;}
+    .bar-fill{height:100%;border-radius:2px;display:flex;align-items:center;padding:0 .5rem;font-size:.78rem;font-weight:600;transition:width .6s ease;}
+    .bar-yes{background:linear-gradient(90deg,var(--blue-bright),var(--blue-light));color:#FFF;}
+    .bar-no{background:rgba(180,30,30,.5);color:#ffaaaa;}
+    .bar-status{width:42px;flex-shrink:0;font-size:.82rem;font-weight:700;}
+    .bar-status.yes{color:#27ae60;}
+    .bar-status.no{color:#c0392b;}
+
+    /* Timeline */
+    .timeline{position:relative;padding-left:2.5rem;margin:var(--space-xl) 0;}
+    .timeline::before{content:'';position:absolute;left:.75rem;top:0;bottom:0;width:2px;background:var(--border);}
+    .timeline-item{position:relative;margin-bottom:var(--space-2xl);}
+    .timeline-dot{position:absolute;left:-2.4rem;top:.2rem;width:18px;height:18px;border-radius:50%;background:var(--blue-bright);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--blue-bright);}
+    .timeline-date{font-family:var(--font-mono);font-size:.82rem;color:var(--accent-2);font-weight:700;margin-bottom:.2rem;}
+    .timeline-title{font-family:var(--font-headline);font-size:1.05rem;font-weight:600;margin-bottom:.3rem;}
+    .timeline-body{font-size:.9rem;color:var(--muted);}
+
+    /* Pathway Classifier */
+    .classifier{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-xl);margin:var(--space-xl) 0;}
+    .classifier-title{font-family:var(--font-headline);font-size:1.3rem;font-weight:600;margin-bottom:var(--space-lg);text-align:center;}
+    .progress-dots{display:flex;justify-content:center;gap:.5rem;margin-bottom:var(--space-xl);}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--bg-soft);border:2px solid var(--border);transition:all .3s;}
+    .dot.active{background:var(--accent);border-color:var(--accent);}
+    .dot.done{background:var(--gold);border-color:var(--gold);}
+    .step{display:none;}
+    .step.active{display:block;}
+    .step-q{font-family:var(--font-headline);font-size:1.15rem;font-weight:600;margin-bottom:var(--space-lg);text-align:center;}
+    .step-buttons{display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;}
+    .btn{padding:.65rem 1.6rem;border-radius:var(--radius-md);font-family:var(--font-headline);font-size:1rem;font-weight:600;letter-spacing:.04em;cursor:pointer;border:none;transition:all .2s;}
+    .btn-yes{background:var(--blue-bright);color:#FFF;}
+    .btn-yes:hover{background:var(--blue-light);color:var(--bg);}
+    .btn-no{background:var(--bg-soft);color:var(--text);border:1px solid var(--border);}
+    .btn-no:hover{background:var(--border);color:var(--text);}
+    .btn-reset{background:none;color:var(--muted);border:1px solid var(--border);font-size:.85rem;padding:.4rem 1rem;margin-top:var(--space-xl);display:block;margin-left:auto;margin-right:auto;}
+    .btn-reset:hover{color:var(--text);border-color:var(--accent);}
+    .result-box{border-radius:var(--radius-md);padding:var(--space-xl);text-align:center;}
+    .result-box.federal{background:rgba(36,89,169,.2);border:2px solid var(--blue-bright);}
+    .result-box.state-q{background:rgba(196,151,47,.12);border:2px solid var(--gold);}
+    .result-box.shadow{background:rgba(30,130,76,.12);border:2px solid #27ae60;}
+    .result-box.securities{background:rgba(109,172,222,.1);border:2px solid var(--accent);}
+    .result-box.commodities{background:rgba(232,197,96,.1);border:2px solid var(--accent-2);}
+    .result-title{font-family:var(--font-headline);font-size:1.5rem;font-weight:700;margin-bottom:.5rem;}
+    .result-desc{font-size:.92rem;color:var(--muted);}
+
+    /* Defined-term underline */
+    .defined-term{border-bottom:1.5px dashed var(--accent);cursor:pointer;transition:border-color .2s;}
+    .defined-term:hover{border-color:var(--accent-2);}
+
+    /* Tooltip */
+    .term-tooltip{position:fixed;z-index:9999;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-md);max-width:300px;box-shadow:0 8px 30px rgba(0,0,0,.4);display:none;}
+    .term-tooltip.visible{display:block;}
+    .tooltip-term{font-family:var(--font-headline);font-size:.9rem;font-weight:700;color:var(--accent-2);margin-bottom:.3rem;letter-spacing:.04em;}
+    .tooltip-def{font-size:.84rem;line-height:1.5;color:var(--text);margin-bottom:var(--space-sm);}
+    .tooltip-source{font-size:.76rem;color:var(--muted);font-style:italic;border-top:1px solid var(--border);padding-top:.4rem;margin-top:.4rem;}
+    .tooltip-link{display:inline-block;margin-top:.3rem;font-size:.78rem;color:var(--accent);}
+
+    /* NH Section Intersection Cards */
+    .nh-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:var(--space-md);margin:var(--space-xl) 0;}
+    .nh-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-lg);}
+    .nh-card h4{margin:0 0 .4rem;font-size:.95rem;color:var(--accent-2);}
+    .nh-card .nh-cite{font-size:.78rem;color:var(--muted);font-family:var(--font-mono);margin-bottom:.4rem;}
+    .nh-card p{margin:0;font-size:.84rem;color:var(--muted);}
+
+    /* Responsive */
+    @media(max-width:820px){
+      .page-layout{grid-template-columns:1fr;padding:var(--space-lg);}
+      .toc-sidebar{display:none;}
+      .hero h1{font-size:1.9rem;}
+      .stat-cards{grid-template-columns:repeat(2,1fr);}
+      .card-grid,.pathway-grid,.nh-cards{grid-template-columns:1fr;}
+      .bar-label{width:140px;font-size:.8rem;}
+      table{font-size:.78rem;}
+      .top-nav .nav-title{display:none;}
+    }
+    @media(max-width:500px){
+      .stat-cards{grid-template-columns:1fr 1fr;}
+      .step-buttons{flex-direction:column;align-items:center;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- Tooltip element -->
+<div class="term-tooltip" id="termTooltip" role="tooltip" aria-live="polite">
+  <div class="tooltip-term" id="tooltipTerm"></div>
+  <div class="tooltip-def" id="tooltipDef"></div>
+  <div class="tooltip-source" id="tooltipSource"></div>
+  <a class="tooltip-link" id="tooltipLink" href="#" target="_blank" rel="noopener" style="display:none;"></a>
+</div>
+
+<!-- Navigation -->
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <span class="nav-title">NH DAO Law</span>
+    <div class="nav-pages">
+      <a href="index.html">Statute</a>
+      <a href="decentralization.html">Decentralization</a>
+      <a href="registry.html">Registry</a>
+      <a href="comparison.html">Compare</a>
+      <a href="genius.html">GENIUS</a>
+      <a href="stable-tokens.html" class="nav-active">Stable Tokens</a>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Cross-link Banner -->
+<div class="crosslink-banner">
+  Read the full statute: <a href="genius.html">GENIUS Act &ndash; Pub. L. 119-27</a> &bull; <a href="index.html">NH RSA 301-B DAO Act</a>
+</div>
+
+<!-- Page Layout -->
+<div class="page-layout">
+
+  <!-- Sidebar TOC -->
+  <aside class="toc-sidebar" id="tocSidebar">
+    <p class="toc-heading">On This Page</p>
+    <ul class="toc-list">
+      <li><a href="#collapse" data-target="collapse">The Collapse</a></li>
+      <li><a href="#what-is" data-target="what-is">What Is a Stable Token?</a></li>
+      <li><a href="#architecture" data-target="architecture">GENIUS Architecture</a></li>
+      <li><a href="#person-loophole" data-target="person-loophole">The &ldquo;Person&rdquo; Loophole</a></li>
+      <li><a href="#pathways" data-target="pathways">Three Pathways</a></li>
+      <li><a href="#dao-dilemma" data-target="dao-dilemma">The DAO Dilemma</a></li>
+      <li><a href="#classifier" data-target="classifier">Pathway Classifier</a></li>
+      <li><a href="#timeline" data-target="timeline">Timeline</a></li>
+      <li><a href="#global" data-target="global">Global Comparison</a></li>
+      <li><a href="#nh-angle" data-target="nh-angle">New Hampshire&rsquo;s Angle</a></li>
+      <li><a href="#resources" data-target="resources">Resources</a></li>
+    </ul>
+    <hr class="toc-divider">
+    <p class="toc-heading" style="margin-top:0;">Key Dates</p>
+    <div class="toc-stat-badge">Jul 18 2025</div><br>
+    <div class="toc-stat-badge">GENIUS enacted</div><br>
+    <div class="toc-stat-badge">100% reserve</div>
+    <hr class="toc-divider">
+    <p style="font-size:.78rem;color:var(--muted);margin:0;">Part of the<br><strong>NH DAO Law Explorer</strong><br>series on stablecoins &amp; DAOs.</p>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="content-area">
+    <article class="page-content">
+
+      <!-- ===== SECTION 0: HERO ===== -->
+      <div class="hero">
+        <p class="hero-breadcrumb">
+          <a href="index.html">RSA 301-B</a> &rsaquo; <a href="genius.html">GENIUS Act</a> &rsaquo; Stable Tokens
+        </p>
+        <h1>The GENIUS Dilemma:<br>Stable Tokens &amp; NH DAO Law</h1>
+        <p class="subtitle">How the Guiding and Establishing National Innovation for U.S. Stablecoins Act (Pub.&thinsp;L.&thinsp;119-27) intersects with New Hampshire&rsquo;s DAO Act (RSA 301-B) and its Commission to Study Stable Tokens (RSA 383:26) &ndash; and why the tension between decentralization and central-bank-style reserve requirements may define the next chapter of DAO law.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">Pub. L. 119-27</span>
+          <span class="hero-tag">RSA 301-B</span>
+          <span class="hero-tag">RSA 383:26</span>
+          <span class="hero-tag">Payment Stablecoin</span>
+          <span class="hero-tag">PPSI</span>
+          <span class="hero-tag">Seth C. Oranburg</span>
+        </div>
+        <div class="stat-cards">
+          <div class="stat-card">
+            <div class="stat-value">$260B</div>
+            <div class="stat-label">Global stablecoin market cap at GENIUS enactment</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">$50B</div>
+            <div class="stat-label">TerraUSD (UST) collapse losses, May 2022</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value stat-value-date">Jul 18<br><span class="stat-value-year">2025</span></div>
+            <div class="stat-label">GENIUS Act enacted (Pub. L. 119-27)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Reserve requirement for payment stablecoins &sect;&thinsp;4</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SECTION 1: COLLAPSE ===== -->
+      <h2 id="collapse">The Collapse That Changed Everything</h2>
+
+      <p>On May 7, 2022, <span class="defined-term" data-term="terrausd">TerraUSD (UST)</span> began a death spiral. Within seventy-two hours, the <span class="defined-term" data-term="algorithmic-stablecoin">algorithmic stablecoin</span>&rsquo;s peg shattered. By May 12 it traded below $0.10. The Luna Foundation Guard&rsquo;s $3.5 billion Bitcoin reserve evaporated. Roughly $50 billion in combined market capitalization disappeared. Retail investors on five continents suffered losses. The collapse was not the first stablecoin failure, but it was the largest, and it made Congressional inaction politically untenable.</p>
+
+      <h3>Pre-GENIUS Regulatory Fragmentation</h3>
+
+      <p>Before the GENIUS Act, the U.S. stablecoin regulatory environment was a patchwork quilt. The SEC asserted that many stablecoins were <span class="defined-term" data-term="investment-contract">investment contracts</span> under the <span class="defined-term" data-term="howey-test">Howey test</span>. The CFTC argued certain stablecoins were commodity interests. FinCEN treated stablecoin issuers as money services businesses subject to the <span class="defined-term" data-term="bsa">Bank Secrecy Act</span>. State money-transmitter licensing regimes applied in most jurisdictions. The result: 171 crypto enforcement actions between 2019 and 2024, duplicative compliance costs, and a chilling effect on U.S.-based innovation.</p>
+
+      <ul>
+        <li><strong>SEC position:</strong> Stablecoins can be securities if marketed as yield-bearing investments; antifraud provisions of Exchange Act apply.</li>
+        <li><strong>CFTC position:</strong> Commodity interests; jurisdiction over derivatives but uncertain over spot markets.</li>
+        <li><strong>FinCEN:</strong> Money services business registration; AML/KYC under BSA; SAR filing obligations.</li>
+        <li><strong>OCC (2020-21 interpretive letters):</strong> National banks may hold stablecoin reserves; issuance authority unclear.</li>
+        <li><strong>State regimes:</strong> New York BitLicense, Wyoming SPDI, NH banking division oversight &ndash; 50 different answers.</li>
+      </ul>
+
+      <h3>Regulatory History at a Glance</h3>
+      <div class="history-timeline">
+        <div class="ht-item ht-danger">
+          <div class="ht-date">May 2022</div>
+          <div class="ht-label">TerraUSD collapse &ndash; $50B in losses</div>
+        </div>
+        <div class="ht-item ht-warning">
+          <div class="ht-date">2023</div>
+          <div class="ht-label">SEC enforcement wave &ndash; stablecoin actions accelerate</div>
+        </div>
+        <div class="ht-item">
+          <div class="ht-date">2024</div>
+          <div class="ht-label">GENIUS Act introduced (S. 1582)</div>
+        </div>
+        <div class="ht-item ht-success">
+          <div class="ht-date">Jul 18, 2025</div>
+          <div class="ht-label">GENIUS Act signed into law (Pub. L. 119-27)</div>
+        </div>
+        <div class="ht-item ht-success">
+          <div class="ht-date">Jul 15, 2025</div>
+          <div class="ht-label">NH Stable Token Commission created (HB 310)</div>
+        </div>
+        <div class="ht-item">
+          <div class="ht-date">Apr 18, 2026</div>
+          <div class="ht-label">NH DAO Registry Design Sprint</div>
+        </div>
+      </div>
+
+      <!-- Regulatory Timeline SVG -->
+      <div style="text-align:center;margin:var(--space-xl) 0;">
+        <svg viewBox="0 0 480 340" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:520px;" font-family="Roboto, sans-serif" role="img" aria-label="Stablecoin Regulatory Timeline 2022-2026">
+          <!-- Vertical timeline line -->
+          <line x1="160" y1="20" x2="160" y2="320" stroke="var(--accent)" stroke-width="2.5"/>
+          <!-- 2022: TerraUSD -->
+          <circle cx="160" cy="40" r="8" fill="var(--accent-2)" stroke="var(--bg)" stroke-width="2"/>
+          <text x="140" y="44" text-anchor="end" font-size="13" font-weight="700" fill="var(--accent-2)">2022</text>
+          <text x="180" y="38" font-size="13" font-weight="600" fill="var(--text)">TerraUSD collapse</text>
+          <text x="180" y="54" font-size="11" fill="var(--muted)">$50B in losses</text>
+          <!-- 2023-24: SEC enforcement -->
+          <circle cx="160" cy="110" r="8" fill="var(--accent-2)" stroke="var(--bg)" stroke-width="2"/>
+          <text x="140" y="114" text-anchor="end" font-size="13" font-weight="700" fill="var(--accent-2)">2023-24</text>
+          <text x="180" y="108" font-size="13" font-weight="600" fill="var(--text)">SEC enforcement actions</text>
+          <text x="180" y="124" font-size="11" fill="var(--muted)">171 crypto enforcement actions</text>
+          <!-- 2025-07-15: NH HB 310 -->
+          <circle cx="160" cy="180" r="8" fill="var(--accent-2)" stroke="var(--bg)" stroke-width="2"/>
+          <text x="140" y="184" text-anchor="end" font-size="13" font-weight="700" fill="var(--accent-2)">Jul 15</text>
+          <text x="180" y="178" font-size="13" font-weight="600" fill="var(--text)">NH HB 310</text>
+          <text x="180" y="194" font-size="11" fill="var(--muted)">Stable Token Commission created</text>
+          <!-- 2025-07-18: GENIUS Act signed -->
+          <circle cx="160" cy="230" r="8" fill="var(--accent-2)" stroke="var(--bg)" stroke-width="2"/>
+          <text x="140" y="234" text-anchor="end" font-size="13" font-weight="700" fill="var(--accent-2)">Jul 18</text>
+          <text x="180" y="228" font-size="13" font-weight="600" fill="var(--text)">GENIUS Act signed</text>
+          <text x="180" y="244" font-size="11" fill="var(--muted)">Pub. L. 119-27 enacted</text>
+          <!-- Year label for 2025 group -->
+          <text x="90" y="206" font-size="11" fill="var(--muted)">2025</text>
+          <!-- 2026-04-18: NH DAO Registry Sprint -->
+          <circle cx="160" cy="300" r="8" fill="var(--accent-2)" stroke="var(--bg)" stroke-width="2"/>
+          <text x="140" y="304" text-anchor="end" font-size="13" font-weight="700" fill="var(--accent-2)">2026</text>
+          <text x="180" y="298" font-size="13" font-weight="600" fill="var(--text)">NH DAO Registry</text>
+          <text x="180" y="314" font-size="11" fill="var(--muted)">Design Sprint (Apr 18)</text>
+        </svg>
+        <p style="font-size:0.78rem;color:var(--muted);text-align:center;">Fig. 1. Key milestones in stablecoin regulation from the TerraUSD collapse to the NH DAO Registry sprint.</p>
+      </div>
+
+      <blockquote>
+        &ldquo;The <span class="defined-term" data-term="genius-act">GENIUS Act</span> reflects a congressional determination that the ambiguity surrounding stablecoin regulation was itself a systemic risk &ndash; one that the collapse of TerraUSD had made undeniable. By creating a single federal floor and a defined state option, Congress chose <span class="defined-term" data-term="prudential">prudential</span> regulation over continued reliance on enforcement as a substitute for rulemaking.&rdquo;
+        <cite> &ndash; Seth C. Oranburg, <em>The Genius of the GENIUS Act</em>, Stanford J. Blockchain L. &amp; Pol&rsquo;y (2026)</cite>
+      </blockquote>
+
+      <!-- ===== SECTION 2: WHAT IS A STABLE TOKEN ===== -->
+      <h2 id="what-is">What Is a Stable Token?</h2>
+
+      <p>Three overlapping concepts govern the GENIUS Act&rsquo;s scope. Understanding their relationships is essential before any compliance analysis:</p>
+
+      <dl style="margin:var(--space-lg) 0;">
+        <dt style="font-family:var(--font-headline);font-weight:700;color:var(--accent-2);margin-bottom:.2rem;">Stablecoin (colloquial)</dt>
+        <dd style="margin-left:1.5rem;margin-bottom:var(--space-md);">Any digital asset designed to maintain a stable value relative to a reference asset (typically USD). Includes algorithmic stablecoins, commodity-backed tokens, and fiat-backed instruments. <em>Not a defined legal term.</em></dd>
+
+        <dt style="font-family:var(--font-headline);font-weight:700;color:var(--accent-2);margin-bottom:.2rem;">Stable Token (NH law, RSA 383:26)</dt>
+        <dd style="margin-left:1.5rem;margin-bottom:var(--space-md);">New Hampshire&rsquo;s statutory term for a blockchain-based token issued or studied by the NH Commission, intended to maintain a stable value. Broader than a GENIUS Act payment stablecoin; may include tokens issued by governmental entities.</dd>
+
+        <dt style="font-family:var(--font-headline);font-weight:700;color:var(--accent-2);margin-bottom:.2rem;"><span class="defined-term" data-term="payment-stablecoin">Payment Stablecoin</span> (GENIUS Act &sect;&thinsp;2(22))</dt>
+        <dd style="margin-left:1.5rem;">A digital asset that: (1) is designed to be used as a means of payment or settlement; (2) the issuer represents will be convertible, redeemable, or repurchasable for a fixed amount of monetary value; and (3) is not a security under the Securities Act of 1933 (other than as expressly made applicable). <strong>Algorithmic stablecoins do not qualify.</strong> Reserve-backed tokens may qualify.</dd>
+      </dl>
+
+      <h3>GENIUS Act &sect;&thinsp;2(22): The Statutory Definition</h3>
+
+      <p>The Act defines a payment stablecoin as a digital asset that is &ndash; (A) used or designed to be used as a means of payment or settlement; (B) denominated in a national currency (not limited to United States dollars); (C) the issuer of which represents will be convertible, redeemable, or repurchasable for a fixed amount of monetary value; and (D) backed by permissible payment stablecoin reserves. The definition expressly excludes <span class="defined-term" data-term="algorithmic-stablecoin">algorithmic stablecoins</span> whose backing asset is another digital asset.</p>
+
+      <h3>Qualifying vs. Non-Qualifying Reserves (&sect;&thinsp;4)</h3>
+
+      <p>Not all reserve assets satisfy GENIUS&rsquo;s &sect;&thinsp;4 requirements. The statute draws a bright line between high-quality liquid assets and riskier instruments:</p>
+
+      <div class="bar-chart" aria-label="Reserve asset qualification chart">
+        <div class="bar-row">
+          <div class="bar-label">T-bills (&le;93 days)</div>
+          <div class="bar-track"><div class="bar-fill bar-yes" style="width:92%;">U.S. Treasury Bills</div></div>
+          <div class="bar-status yes">YES</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Federal Reserve deposits</div>
+          <div class="bar-track"><div class="bar-fill bar-yes" style="width:88%;">Fed Deposits</div></div>
+          <div class="bar-status yes">YES</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Cash (USD)</div>
+          <div class="bar-track"><div class="bar-fill bar-yes" style="width:95%;">Physical &amp; demand deposits</div></div>
+          <div class="bar-status yes">YES</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Overnight repos (Treasury)</div>
+          <div class="bar-track"><div class="bar-fill bar-yes" style="width:80%;">Overnight repurchase agreements</div></div>
+          <div class="bar-status yes">YES</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Gov&rsquo;t money market funds</div>
+          <div class="bar-track"><div class="bar-fill bar-yes" style="width:70%;">Gov&rsquo;t MMFs in qualifying assets</div></div>
+          <div class="bar-status yes">YES</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Corporate bonds</div>
+          <div class="bar-track"><div class="bar-fill bar-no" style="width:40%;">Corporate debt — NOT qualifying</div></div>
+          <div class="bar-status no">NO</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label">Other digital assets</div>
+          <div class="bar-track"><div class="bar-fill bar-no" style="width:28%;">Crypto collateral — NOT qualifying</div></div>
+          <div class="bar-status no">NO</div>
+        </div>
+      </div>
+
+      <p style="font-size:.83rem;color:var(--muted);">Source: GENIUS Act &sect;&thinsp;4(a). Bar width is illustrative of liquidity/safety, not a statutory percentage.</p>
+
+      <!-- ===== SECTION 3: ARCHITECTURE ===== -->
+      <h2 id="architecture">GENIUS Act Architecture</h2>
+
+      <h3>Legislative History</h3>
+
+      <p>The GENIUS Act did not emerge from a vacuum. Its conceptual lineage runs through two prior bills that failed to become law:</p>
+
+      <ol>
+        <li><strong>Token Taxonomy Act of 2019 (H.R. 2144)</strong> &ndash; proposed to exclude qualifying digital tokens from SEC securities regulation. Never enacted but established the conceptual distinction between payment tokens and investment tokens.</li>
+        <li><strong>CLARITY Act of 2025 (H.R. 3633)</strong> &ndash; companion to GENIUS in the 119th Congress; addressed broader digital asset classification. GENIUS was enacted first (July 18, 2025) while CLARITY remained pending.</li>
+      </ol>
+
+      <p>GENIUS passed the Senate 68&ndash;30 and the House 308&ndash;122, reflecting rare bipartisan consensus driven by the post-TerraUSD political environment and industry lobbying for regulatory clarity.</p>
+
+      <h3>Key Provisions</h3>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-badge">&sect;&sect; 2 &amp; 3</div>
+          <h4>PPSI Licensing</h4>
+          <p>Creates the <span class="defined-term" data-term="ppsi">Permitted Payment Stablecoin Issuer</span> (PPSI) category. Any entity issuing payment stablecoins must be a PPSI. Licensing routes: OCC (national), Federal Reserve (insured depository institutions), or approved state regulator for issuers &le;$10B.</p>
+        </div>
+        <div class="card">
+          <div class="card-badge">&sect; 4</div>
+          <h4>100% Reserves</h4>
+          <p>PPSIs must maintain permissible reserves equal to 100% of outstanding payment stablecoins. Prohibits <span class="defined-term" data-term="rehypothecation">rehypothecation</span> of reserves. Monthly public attestation by registered public accounting firm required.</p>
+        </div>
+        <div class="card">
+          <div class="card-badge">&sect; 17</div>
+          <h4>Securities Carve-Out</h4>
+          <p>Payment stablecoins are not securities under the Securities Act of 1933 (&sect;&thinsp;17). The GENIUS Act does not create a private right of action for redemption failures; enforcement is through the prudential regulators and the penalty provisions in &sect;&thinsp;3(f).</p>
+        </div>
+        <div class="card">
+          <div class="card-badge">&sect; 3(e)</div>
+          <h4>Extraterritorial Reach</h4>
+          <p>Foreign issuers offering payment stablecoins to U.S. persons must register with Treasury or comply with a Treasury-certified foreign regulatory regime &ldquo;substantially similar&rdquo; to GENIUS requirements.</p>
+        </div>
+        <div class="card">
+          <div class="card-badge">&sect; 8</div>
+          <h4>Anti-Money Laundering Protections</h4>
+          <p>PPSIs are explicitly &ldquo;financial institutions&rdquo; under the <span class="defined-term" data-term="bsa">Bank Secrecy Act</span>. Full <span class="defined-term" data-term="aml">AML/KYC</span> obligations apply: suspicious activity reports, customer identification, transaction monitoring, OFAC sanctions screening.</p>
+        </div>
+        <div class="card">
+          <div class="card-badge">&sect; 2(24)</div>
+          <h4>&ldquo;Person&rdquo; Definition</h4>
+          <p>Defines &ldquo;person&rdquo; as an individual, partnership, company, association, trust, or other <em>business entity</em>. The phrase &ldquo;business entity&rdquo; &ndash; versus the broader &ldquo;entity&rdquo; in earlier drafts &ndash; is the source of the governmental entity exclusion debate.</p>
+        </div>
+      </div>
+
+      <!-- ===== SECTION 4: PERSON LOOPHOLE ===== -->
+      <h2 id="person-loophole">The &ldquo;Person&rdquo; Loophole: States Outside GENIUS</h2>
+
+      <p>The most consequential and least-discussed textual change between the introduced bill (S. 1582) and the enacted law is in the definition of &ldquo;person&rdquo; in &sect;&thinsp;2(24). The introduced bill read &ldquo;or other <strong>entity</strong>&rdquo;; the enacted statute reads &ldquo;or other <strong>business entity</strong>.&rdquo; Two words added; a universe of regulatory questions created.</p>
+
+      <p>The practical implication: governmental entities &ndash; states, municipalities, state authorities, commissions &ndash; are arguably not &ldquo;persons&rdquo; under GENIUS. If they are not persons, they cannot be PPSIs, but they also may not be <em>required</em> to become PPSIs. A state government that issues its own stable token may be entirely outside the GENIUS regulatory framework.</p>
+
+      <div class="alert alert-warning">
+        <strong>Wyoming FRNT (Frontier Token)</strong>
+        Wyoming&rsquo;s FRNT initiative &ndash; a state-issued digital currency backed by Wyoming tax revenues &ndash; was being developed concurrently with the GENIUS Act. If Wyoming is not a &ldquo;person,&rdquo; FRNT may operate outside GENIUS reserve and licensing requirements. This creates potential for state arbitrage: states could issue competing stable tokens with looser standards than federally licensed PPSIs.
+      </div>
+
+      <div class="alert alert-warning">
+        <strong>North Dakota Roughrider</strong>
+        North Dakota introduced similar legislation for a state-backed digital dollar. Under the &sect;&thinsp;2(24) analysis, the state itself as issuer may not require PPSI licensing. However, private contractors administering the system would need separate analysis, and Treasury rulemaking could close this gap.
+      </div>
+
+      <details>
+        <summary>The Civil War Banking Analogy: Why This Pattern Repeats</summary>
+        <div class="details-body">
+          <p>American monetary history is rife with state-federal currency competition. During the Civil War, the National Bank Act of 1863 taxed state banknotes out of existence precisely because Congress feared a fragmented currency system would undermine the union&rsquo;s war finance. The modern echo: if states can issue stable tokens outside GENIUS, the federal government&rsquo;s ability to enforce a uniform reserve standard is weakened.</p>
+          <p>The constitutional dimension is significant. The Supremacy Clause would make GENIUS preemptive over state law where it conflicts &ndash; but only if GENIUS actually applies to the state actor. The &sect;&thinsp;2(24) &ldquo;business entity&rdquo; carve-out, if interpreted broadly, could replicate the pre-1863 fragmentation problem. Treasury rulemaking in the 12-month window post-enactment will be watched closely for clarification.</p>
+          <p>Cf. <em>Veazie Bank v. Fenno</em>, 75 U.S. (8 Wall.) 533 (1869) (upholding 10% tax on state banknotes as constitutional exercise of congressional currency power); <em>McCulloch v. Maryland</em>, 17 U.S. (4 Wheat.) 316 (1819) (implied powers include currency regulation).</p>
+        </div>
+      </details>
+
+      <!-- ===== SECTION 5: THREE PATHWAYS ===== -->
+      <h2 id="pathways">Three Regulatory Pathways</h2>
+
+      <p>Under the GENIUS Act, a payment stablecoin issuer has three possible regulatory homes. The choice of pathway determines oversight regime, capital requirements, applicable federal preemption, and enforcement exposure:</p>
+
+      <div class="pathway-grid">
+        <div class="pathway-card federal">
+          <div class="pathway-letter">A</div>
+          <h4>Federal Qualified Issuer</h4>
+          <p>Licensed by OCC (for non-bank entities), Federal Reserve (for insured depository institutions), or the FDIC. No size limit. Full federal prudential supervision. OCC or Fed examination authority. Preempts inconsistent state money-transmitter laws. Suitable for issuers above $10B or seeking national scale.</p>
+        </div>
+        <div class="pathway-card state-q">
+          <div class="pathway-letter">B</div>
+          <h4>State Qualified Issuer</h4>
+          <p>Licensed by a GENIUS-certified state regulator. Issuer must have &le;$10B in outstanding payment stablecoins. State must have a regulatory regime &ldquo;substantially similar&rdquo; to GENIUS (100% reserves, AML, redemption rights, etc.) certified by the Federal Reserve. GENIUS sets the federal floor; states add requirements on top.</p>
+        </div>
+        <div class="pathway-card shadow">
+          <div class="pathway-letter">C</div>
+          <h4>State Actor Shadow Pathway</h4>
+          <p>A governmental entity (state, commission, authority) that is not a &ldquo;business entity&rdquo; under &sect;&thinsp;2(24) may issue stable tokens entirely outside GENIUS. No reserve certification, no PPSI license, no BSA designation required by the Act &ndash; though state law and other federal law still apply. This pathway is legally uncertain pending Treasury rulemaking.</p>
+        </div>
+      </div>
+
+      <h3>Oranburg&rsquo;s Three State Pathways Under GENIUS</h3>
+      <p>States face three distinct strategies for engaging with GENIUS-regulated stablecoin markets:</p>
+      <div class="prong-grid">
+        <div class="prong-card">
+          <span class="prong-label prong-label-host">Path 1</span>
+          <h4>Host Federally Licensed Issuers</h4>
+          <p>The default path. A state provides a favorable business environment (trust company charters, regulatory sandboxes) so that federally licensed PPSIs locate operations in the state. No state certification required. NH can attract PPSI headquarters and reserve custodians through existing RSA 392 trust company law.</p>
+        </div>
+        <div class="prong-card">
+          <span class="prong-label prong-label-regulate">Path 2</span>
+          <h4>Become a Certified State Regulator</h4>
+          <p>A state seeks Federal Reserve certification under &sect;&thinsp;7 that its regulatory regime is &ldquo;substantially similar&rdquo; to GENIUS. Once certified, the state can license PPSIs with &le;$10B outstanding. Requires enacting 100% reserve, redemption, attestation, and AML rules. Treasury approval needed.</p>
+        </div>
+        <div class="prong-card">
+          <span class="prong-label prong-label-issue">Path 3</span>
+          <h4>Issue a State-Backed Token</h4>
+          <p>A state governmental entity (commission, authority, or agency) issues its own stable token. If the state is not a &ldquo;business entity&rdquo; under &sect;&thinsp;2(24), it may operate outside GENIUS. This path is legally unsettled and depends on Treasury rulemaking. Wyoming (FRNT) and NH (RSA 383:26 Commission) are potential pioneers.</p>
+        </div>
+      </div>
+
+      <!-- Three State Pathways SVG Diagram -->
+      <div style="text-align:center;margin:var(--space-xl) 0;">
+        <svg viewBox="0 0 600 260" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:600px;" font-family="Roboto, sans-serif" role="img" aria-label="Three State Pathways Under GENIUS Act">
+          <!-- Top: State Decision -->
+          <rect x="200" y="8" width="200" height="38" rx="8" ry="8" fill="var(--blue-deep)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="300" y="33" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">State Decision</text>
+          <!-- Vertical line down -->
+          <line x1="300" y1="46" x2="300" y2="70" stroke="var(--muted)" stroke-width="1.5"/>
+          <!-- Horizontal branch -->
+          <line x1="100" y1="70" x2="500" y2="70" stroke="var(--muted)" stroke-width="1.5"/>
+          <!-- Three vertical drops -->
+          <line x1="100" y1="70" x2="100" y2="92" stroke="var(--muted)" stroke-width="1.5"/>
+          <line x1="300" y1="70" x2="300" y2="92" stroke="var(--muted)" stroke-width="1.5"/>
+          <line x1="500" y1="70" x2="500" y2="92" stroke="var(--muted)" stroke-width="1.5"/>
+          <!-- Path 1: Host -->
+          <rect x="15" y="92" width="170" height="44" rx="6" ry="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="100" y="111" text-anchor="middle" font-size="13" font-weight="600" fill="var(--text)">Path 1: Host</text>
+          <text x="100" y="128" text-anchor="middle" font-size="11" fill="var(--muted)">Federally Licensed PPSIs</text>
+          <!-- Path 2: Regulate -->
+          <rect x="215" y="92" width="170" height="44" rx="6" ry="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="300" y="111" text-anchor="middle" font-size="13" font-weight="600" fill="var(--text)">Path 2: Regulate</text>
+          <text x="300" y="128" text-anchor="middle" font-size="11" fill="var(--muted)">State Certification</text>
+          <!-- Path 3: Issue -->
+          <rect x="415" y="92" width="170" height="44" rx="6" ry="6" fill="var(--bg-secondary)" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="500" y="111" text-anchor="middle" font-size="13" font-weight="600" fill="var(--text)">Path 3: Issue</text>
+          <text x="500" y="128" text-anchor="middle" font-size="11" fill="var(--muted)">State-Backed Token</text>
+          <!-- Detail lines -->
+          <line x1="100" y1="136" x2="100" y2="160" stroke="var(--muted)" stroke-width="1"/>
+          <line x1="300" y1="136" x2="300" y2="160" stroke="var(--muted)" stroke-width="1"/>
+          <line x1="500" y1="136" x2="500" y2="160" stroke="var(--muted)" stroke-width="1"/>
+          <!-- Status boxes -->
+          <rect x="25" y="160" width="150" height="36" rx="5" ry="5" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1"/>
+          <text x="100" y="176" text-anchor="middle" font-size="11" font-weight="600" fill="var(--accent)">Default path</text>
+          <text x="100" y="190" text-anchor="middle" font-size="10" fill="var(--muted)">No certification needed</text>
+          <rect x="225" y="160" width="150" height="36" rx="5" ry="5" fill="var(--bg-soft)" stroke="var(--accent-2)" stroke-width="1"/>
+          <text x="300" y="176" text-anchor="middle" font-size="11" font-weight="600" fill="var(--accent-2)">Treasury cert. required</text>
+          <text x="300" y="190" text-anchor="middle" font-size="10" fill="var(--muted)">&sect; 7 substantially similar</text>
+          <rect x="425" y="160" width="150" height="36" rx="5" ry="5" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1" stroke-dasharray="4 3"/>
+          <text x="500" y="176" text-anchor="middle" font-size="11" font-weight="600" fill="var(--muted)">Unsettled law</text>
+          <text x="500" y="190" text-anchor="middle" font-size="10" fill="var(--muted)">&sect; 2(24) carve-out</text>
+          <!-- Example states -->
+          <text x="100" y="218" text-anchor="middle" font-size="11" fill="var(--muted)">e.g., NH trust co. hosting</text>
+          <text x="300" y="218" text-anchor="middle" font-size="11" fill="var(--muted)">e.g., NH Banking Div.</text>
+          <text x="500" y="218" text-anchor="middle" font-size="11" fill="var(--muted)">e.g., WY FRNT, NH 383:26</text>
+        </svg>
+        <p style="font-size:0.78rem;color:var(--muted);text-align:center;">Fig. 2. Three state strategies for engaging with GENIUS-regulated stablecoin markets.</p>
+      </div>
+
+      <!-- ===== SECTION 6: DAO DILEMMA ===== -->
+      <h2 id="dao-dilemma">The DAO Dilemma</h2>
+
+      <p>The most acute tension for New Hampshire stakeholders is between RSA 301-B&rsquo;s decentralization requirements and the GENIUS Act&rsquo;s centralized, bank-like oversight model for payment stablecoin issuance.</p>
+
+      <p>Under <a href="index.html">RSA 301-B:5(IX)</a>, a <span class="defined-term" data-term="dao">DAO</span> qualifies as &ldquo;decentralized&rdquo; only if: (1) no single person controls 20% or more of the governance interest; (2) no person has unilateral control over the DAO&rsquo;s assets or operations; and (3) the source code is public. See <a href="decentralization.html">Measuring Decentralization</a> for mathematical analysis.</p>
+
+      <div class="alert alert-danger">
+        <strong>Core Tension: GENIUS vs. RSA 301-B</strong>
+        A PPSI must designate responsible officers, maintain a compliance program, respond to regulatory examinations, and hold reserves in accounts subject to regulatory access. These requirements presuppose centralized control &ndash; a compliance officer with authority to freeze assets, a board that can certify attestations, an executive who can satisfy examiner requests. A genuinely decentralized DAO with no person holding &gt;20% control cannot satisfy these requirements without undermining its statutory decentralization status under RSA 301-B:5(IX).
+      </div>
+
+      <p>Three structural options exist for a DAO that wishes to participate in the stablecoin market:</p>
+
+      <details>
+        <summary>Option A: Two-Entity Structure (DAO + PPSI Subsidiary)</summary>
+        <div class="details-body">
+          <p>The DAO maintains its decentralized governance structure while creating a wholly owned or majority-owned traditional entity (LLC, corporation, or trust company) to serve as the PPSI. The DAO governance controls the subsidiary through ownership, but the subsidiary itself has centralized compliance officers and satisfies GENIUS requirements.</p>
+          <p><strong>Risk:</strong> If the subsidiary is controlled by the DAO, and the DAO is a &ldquo;person&rdquo; under &sect;&thinsp;2(24), the DAO itself may be treated as the issuer, negating the structural separation. Additionally, RSA 301-B DAO status requires that no person have unilateral control &ndash; if the DAO&rsquo;s governance controls the PPSI, regulators may view the DAO as having unilateral control over the token issuance function.</p>
+          <p><strong>Analogy:</strong> Trust company holding company structures; Federal Reserve holding company framework (12 U.S.C. &sect; 1841 et seq.).</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Option B: State Actor Pathway via NH Commission (RSA 383:26)</summary>
+        <div class="details-body">
+          <p>RSA 383:26 creates a New Hampshire Commission to Study Stable Tokens. If NH&rsquo;s Commission issues stable tokens as a governmental entity, it may fall within the &sect;&thinsp;2(24) carve-out. The DAO could then contract with the Commission as a service provider &ndash; handling smart contract execution, wallet infrastructure, and network operations &ndash; without itself being the issuer.</p>
+          <p><strong>Advantage:</strong> The governmental issuer pathway preserves full DAO participation in the network without requiring the DAO to become a PPSI. The DAO earns fees for infrastructure services rather than issuing the token.</p>
+          <p><strong>Risk:</strong> Treasury rulemaking could define governmental entities as persons. The Commission&rsquo;s enabling statute (RSA 383:26) may need to be interpreted as authorizing token issuance, not just study. Constitutional questions about state currency competition with federal law remain.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Option C: Commodities Lane (CFTC Jurisdiction)</summary>
+        <div class="details-body">
+          <p>If a token does not qualify as a payment stablecoin under &sect;&thinsp;2(22) &ndash; for example, because it is pegged to a commodity basket rather than a national currency, or because it is used for settlement in commodity markets rather than general payment &ndash; it may fall under CFTC jurisdiction rather than GENIUS. CFTC oversight of spot commodity markets is currently limited, creating a potential gap that a DAO-issued token might occupy.</p>
+          <p><strong>CLARITY Act Caveat:</strong> The CLARITY Act, if enacted, would fill many of these gaps by defining digital commodity classification. Until CLARITY passes, the commodity lane remains a viable but uncertain alternative for DAO-issued tokens that can be structured outside the &sect;&thinsp;2(22) definition.</p>
+          <p><strong>Risk:</strong> Structuring transactions primarily to avoid regulatory definitions has led courts and regulators to look through formal labels. The substance-over-form doctrine would apply: if a token functions as a payment stablecoin, courts may treat it as one regardless of structural labels.</p>
+        </div>
+      </details>
+
+      <!-- ===== SECTION 7: CLASSIFIER ===== -->
+      <h2 id="classifier">Pathway Classifier Tool</h2>
+      <p>Answer four questions to determine which GENIUS Act regulatory pathway applies to your token issuance project. This tool is illustrative only &ndash; consult qualified legal counsel.</p>
+
+      <div class="classifier">
+        <div class="classifier-title">&#9654; GENIUS Pathway Classifier</div>
+
+        <div class="progress-dots">
+          <div class="dot active" id="dot0" title="Step 0"></div>
+          <div class="dot" id="dot1" title="Step 1"></div>
+          <div class="dot" id="dot2" title="Step 2"></div>
+          <div class="dot" id="dot3" title="Result"></div>
+        </div>
+
+        <!-- Step 0 -->
+        <div class="step active" id="step0">
+          <div class="step-q">Is your token a <span class="defined-term" data-term="payment-stablecoin">payment stablecoin</span> under GENIUS &sect;&thinsp;2(22)?<br><small style="font-weight:400;font-size:.85rem;color:var(--muted);">(pegged to a national currency, used for payment, not an algorithmic stablecoin)</small></div>
+          <div class="step-buttons">
+            <button class="btn btn-yes" onclick="classifierNext(1)">Yes &rarr;</button>
+            <button class="btn btn-no" onclick="classifierResult('other')">No</button>
+          </div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="step" id="step1">
+          <div class="step-q">Is the issuer a governmental entity (state, commission, authority) that may not be a &ldquo;business entity&rdquo; under GENIUS &sect;&thinsp;2(24)?</div>
+          <div class="step-buttons">
+            <button class="btn btn-yes" onclick="classifierResult('shadow')">Yes &rarr; Shadow Pathway</button>
+            <button class="btn btn-no" onclick="classifierNext(2)">No &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+          <div class="step-q">Will the issuer have more than $10 billion in outstanding payment stablecoins?</div>
+          <div class="step-buttons">
+            <button class="btn btn-yes" onclick="classifierResult('federal')">Yes &rarr; Federal Only</button>
+            <button class="btn btn-no" onclick="classifierResult('state-q')">No &rarr; State or Federal</button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="step" id="result-other">
+          <div class="result-box securities">
+            <div class="result-title">&#9678; Securities or Commodities Law</div>
+            <div class="result-desc">Your token is not a payment stablecoin under GENIUS. It may be a security subject to SEC jurisdiction (Howey test), a commodity subject to CFTC jurisdiction, or a utility token with uncertain classification. GENIUS does not govern your issuance. Consult securities and commodities counsel.</div>
+          </div>
+        </div>
+
+        <div class="step" id="result-shadow">
+          <div class="result-box shadow">
+            <div class="result-title">&#9650; Pathway C: State Actor Shadow</div>
+            <div class="result-desc">A governmental entity issuer may fall outside GENIUS&rsquo;s &ldquo;person&rdquo; definition (&sect;&thinsp;2(24)). No PPSI license may be required, but Treasury rulemaking could alter this analysis. State law (including RSA 383:26) governs. Private contractors supporting the issuance may still face BSA obligations. This pathway is legally uncertain &ndash; monitor Treasury rulemakings.</div>
+          </div>
+        </div>
+
+        <div class="step" id="result-federal">
+          <div class="result-box federal">
+            <div class="result-title">&#9679; Pathway A: Federal Qualified Issuer</div>
+            <div class="result-desc">You must obtain a federal PPSI license from the OCC (non-bank) or Federal Reserve (insured depository). Full prudential supervision applies. State money-transmitter licensing preempted. 100% reserve requirement, monthly attestations, BSA/AML compliance, and examinations required. No size cap &ndash; suitable for large issuers.</div>
+          </div>
+        </div>
+
+        <div class="step" id="result-state-q">
+          <div class="result-box state-q">
+            <div class="result-title">&#9651; Pathway B: State Qualified Issuer</div>
+            <div class="result-desc">You may obtain a state PPSI license if your state has a GENIUS-certified regime (Federal Reserve must certify &ldquo;substantially similar&rdquo; standards). Cap: $10B outstanding. You must maintain 100% permissible reserves, satisfy state AML requirements, and comply with GENIUS redemption rights. New Hampshire&rsquo;s banking division certification status is TBD (as of 2026).</div>
+          </div>
+        </div>
+
+        <button class="btn btn-reset" onclick="classifierReset()">&#8635; Start Over</button>
+      </div>
+
+      <!-- ===== SECTION 8: TIMELINE ===== -->
+      <h2 id="timeline">Implementation Timeline</h2>
+
+      <p>GENIUS establishes a phased implementation schedule designed to give existing issuers time to comply while preventing regulatory gaps. Key milestones:</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Day 0 &ndash; July 18, 2025</div>
+          <div class="timeline-title">GENIUS Act Enacted</div>
+          <div class="timeline-body">Pub. L. 119-27 signed into law. Immediate effective date for definitional provisions and prohibition on new algorithmic stablecoin issuance (&sect;&thinsp;8). Existing issuers begin provisional compliance period.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Days 0&ndash;270 (by April 14, 2026)</div>
+          <div class="timeline-title">Provisional Registration Window</div>
+          <div class="timeline-body">Existing payment stablecoin issuers may file provisional registration with the OCC, Federal Reserve, or relevant state regulator. Provisional status allows continued operation while full licensing applications are processed. Issuers must disclose reserve composition and outstanding token volume.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">&le;12 Months (by July 18, 2026)</div>
+          <div class="timeline-title">Treasury &amp; Federal Reserve Rulemaking + FSOC Annual Report</div>
+          <div class="timeline-body">Treasury must issue rules on: foreign issuer access (&sect;&thinsp;3(e)), the definition of &ldquo;substantially similar&rdquo; for state certification (&sect;&thinsp;7), and permitted reserve composition details. Fed must issue rules on holding-company structures. FSOC must publish its first annual report on systemic risks posed by payment stablecoins.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">360 Days After Final Rules</div>
+          <div class="timeline-title">State Issuer Transition Deadline</div>
+          <div class="timeline-body">State-licensed issuers in states without Federal Reserve certification must either: (A) obtain federal licensing, (B) relocate to a certified-state jurisdiction, or (C) cease payment stablecoin issuance. States have this window to achieve certification, creating urgency for NH&rsquo;s Banking Division to evaluate GENIUS compliance of existing NH law.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">3 Years After Final Rules</div>
+          <div class="timeline-title">Unlicensed Issuance Ban Fully Effective</div>
+          <div class="timeline-body">Any person (within &sect;&thinsp;2(24)&rsquo;s definition) issuing payment stablecoins without PPSI status faces civil and criminal liability (&sect;&thinsp;3(f)). Maximum civil penalty: $1,000,000 per violation plus disgorgement of profits. Criminal penalties include up to 5 years imprisonment for willful violations.</div>
+        </div>
+      </div>
+
+      <!-- ===== SECTION 9: GLOBAL COMPARISON ===== -->
+      <h2 id="global">Global Comparison</h2>
+
+      <p>The GENIUS Act joins a growing body of international stablecoin law. The following table compares GENIUS with the EU&rsquo;s <span class="defined-term" data-term="mica">Markets in Crypto-Assets Regulation (MiCA)</span> (Regulation 2023/1114) and Singapore&rsquo;s Payment Services Act (PSA) 2019 (as amended 2023):</p>
+
+      <div style="overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Criterion</th>
+              <th>GENIUS Act (U.S.)</th>
+              <th>EU MiCA</th>
+              <th>Singapore PSA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Reserve Requirement</strong></td>
+              <td>100% permissible reserves (T-bills, Fed deposits, cash, overnight repos)</td>
+              <td>At least 30% in insured deposits; balance in low-risk assets; no single asset class limit specified</td>
+              <td>Full backing in Singapore dollars or equivalent liquid assets; MAS approval required</td>
+            </tr>
+            <tr>
+              <td><strong>Redemption Right</strong></td>
+              <td>Mandatory at par, within 1 business day (&sect;&thinsp;5); enforcement through regulators</td>
+              <td>Mandatory at par upon request; up to 30-day window for large redemptions</td>
+              <td>Redemption at par required; timeframe set by MAS Notice on Digital Payment Tokens</td>
+            </tr>
+            <tr>
+              <td><strong>Private Enforcement</strong></td>
+              <td>No statutory private right of action; enforcement through prudential regulators and &sect;&thinsp;3(f) penalties</td>
+              <td>No private right of action; enforcement by national competent authorities</td>
+              <td>No private right of action; MAS enforcement only</td>
+            </tr>
+            <tr>
+              <td><strong>Securities Law Interaction</strong></td>
+              <td>Payment stablecoins are not securities; SEC carve-out (&sect;&thinsp;17)</td>
+              <td>EMTs/ARTs subject to MiCA, not MiFID II (separate regimes)</td>
+              <td>Digital payment tokens not capital markets products under Securities and Futures Act</td>
+            </tr>
+            <tr>
+              <td><strong>State/Regional Issuers</strong></td>
+              <td>Governmental entities possibly excluded per &sect;&thinsp;2(24) &ldquo;business entity&rdquo;</td>
+              <td>EU Member States are not issuers; no governmental carve-out per se</td>
+              <td>MAS can exempt Singapore government securities</td>
+            </tr>
+            <tr>
+              <td><strong>Algorithmic Stablecoins</strong></td>
+              <td>New issuances prohibited (&sect;&thinsp;8); existing ones face sunset</td>
+              <td>Prohibited if not asset-referenced; endogenous-collateral tokens banned</td>
+              <td>Not addressed expressly; falls under general digital payment token regime</td>
+            </tr>
+            <tr>
+              <td><strong>AML/KYC</strong></td>
+              <td>BSA designation; full FinCEN requirements (&sect;&thinsp;8)</td>
+              <td>AMLD6 compliance; national competent authority supervision</td>
+              <td>MAS Notice PSN02 on AML/CFT; travel rule compliance</td>
+            </tr>
+            <tr>
+              <td><strong>Systemic Oversight</strong></td>
+              <td>FSOC annual report; potential systemically important designation</td>
+              <td>EBA oversight of &ldquo;significant&rdquo; ARTs/EMTs; &euro;5B daily transaction threshold</td>
+              <td>MAS macroprudential powers; DPT service provider framework</td>
+            </tr>
+            <tr>
+              <td><strong>Foreign Issuer Access</strong></td>
+              <td>Treasury registration or certified-equivalent foreign regime (&sect;&thinsp;3(e))</td>
+              <td>Third-country issuers must establish EU entity or be equivalence-recognized</td>
+              <td>Must hold MAS license; no equivalence framework yet established</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- State Stablecoin Regulatory Comparison Grid SVG -->
+      <div style="text-align:center;margin:var(--space-xl) 0;">
+        <svg viewBox="0 0 600 280" preserveAspectRatio="xMidYMid meet" style="width:100%;max-width:600px;" font-family="Roboto, sans-serif" role="img" aria-label="State Stablecoin Regulatory Status Comparison Grid">
+          <!-- Title -->
+          <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="var(--text)">State Stablecoin Regulatory Status</text>
+          <!-- Column headers -->
+          <text x="160" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="var(--muted)">DAO Statute</text>
+          <text x="280" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="var(--muted)">Token Law</text>
+          <text x="400" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="var(--muted)">State Issuer</text>
+          <text x="520" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="var(--muted)">GENIUS Cert.</text>
+          <!-- Horizontal rule -->
+          <line x1="50" y1="58" x2="570" y2="58" stroke="var(--border)" stroke-width="1"/>
+          <!-- Row 1: New Hampshire -->
+          <text x="70" y="86" font-size="13" font-weight="700" fill="var(--text)">NH</text>
+          <circle cx="160" cy="82" r="10" fill="var(--accent)" opacity="0.9"/>
+          <text x="160" y="87" text-anchor="middle" font-size="11" font-weight="700" fill="var(--bg)">&#10003;</text>
+          <circle cx="280" cy="82" r="10" fill="var(--accent)" opacity="0.9"/>
+          <text x="280" y="87" text-anchor="middle" font-size="11" font-weight="700" fill="var(--bg)">&#10003;</text>
+          <circle cx="400" cy="82" r="10" fill="var(--accent-2)" opacity="0.8"/>
+          <text x="400" y="87" text-anchor="middle" font-size="10" font-weight="700" fill="var(--bg)">?</text>
+          <circle cx="520" cy="82" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="520" y="87" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <!-- Row 2: Wyoming -->
+          <text x="70" y="126" font-size="13" font-weight="700" fill="var(--text)">WY</text>
+          <circle cx="160" cy="122" r="10" fill="var(--accent)" opacity="0.9"/>
+          <text x="160" y="127" text-anchor="middle" font-size="11" font-weight="700" fill="var(--bg)">&#10003;</text>
+          <circle cx="280" cy="122" r="10" fill="var(--accent)" opacity="0.9"/>
+          <text x="280" y="127" text-anchor="middle" font-size="11" font-weight="700" fill="var(--bg)">&#10003;</text>
+          <circle cx="400" cy="122" r="10" fill="var(--accent)" opacity="0.9"/>
+          <text x="400" y="127" text-anchor="middle" font-size="11" font-weight="700" fill="var(--bg)">&#10003;</text>
+          <circle cx="520" cy="122" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="520" y="127" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <!-- Row 3: Vermont -->
+          <text x="70" y="166" font-size="13" font-weight="700" fill="var(--text)">VT</text>
+          <circle cx="160" cy="162" r="10" fill="var(--accent)" opacity="0.9"/>
+          <text x="160" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="var(--bg)">&#10003;</text>
+          <circle cx="280" cy="162" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="280" y="167" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <circle cx="400" cy="162" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="400" y="167" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <circle cx="520" cy="162" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="520" y="167" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <!-- Row 4: Utah -->
+          <text x="70" y="206" font-size="13" font-weight="700" fill="var(--text)">UT</text>
+          <circle cx="160" cy="202" r="10" fill="var(--accent)" opacity="0.9"/>
+          <text x="160" y="207" text-anchor="middle" font-size="11" font-weight="700" fill="var(--bg)">&#10003;</text>
+          <circle cx="280" cy="202" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="280" y="207" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <circle cx="400" cy="202" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="400" y="207" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <circle cx="520" cy="202" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="520" y="207" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <!-- Row 5: North Dakota -->
+          <text x="70" y="246" font-size="13" font-weight="700" fill="var(--text)">ND</text>
+          <circle cx="160" cy="242" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="160" y="247" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <circle cx="280" cy="242" r="10" fill="var(--accent-2)" opacity="0.8"/>
+          <text x="280" y="247" text-anchor="middle" font-size="10" font-weight="700" fill="var(--bg)">?</text>
+          <circle cx="400" cy="242" r="10" fill="var(--accent-2)" opacity="0.8"/>
+          <text x="400" y="247" text-anchor="middle" font-size="10" font-weight="700" fill="var(--bg)">?</text>
+          <circle cx="520" cy="242" r="10" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="520" y="247" text-anchor="middle" font-size="10" fill="var(--muted)">--</text>
+          <!-- Legend -->
+          <circle cx="140" cy="272" r="6" fill="var(--accent)" opacity="0.9"/>
+          <text x="152" y="276" font-size="10" fill="var(--muted)">Enacted</text>
+          <circle cx="220" cy="272" r="6" fill="var(--accent-2)" opacity="0.8"/>
+          <text x="232" y="276" font-size="10" fill="var(--muted)">Pending/Proposed</text>
+          <circle cx="350" cy="272" r="6" fill="var(--bg-soft)" stroke="var(--border)" stroke-width="1.5"/>
+          <text x="362" y="276" font-size="10" fill="var(--muted)">Not enacted</text>
+        </svg>
+        <p style="font-size:0.78rem;color:var(--muted);text-align:center;">Fig. 3. Comparative state stablecoin regulatory status. No state has yet achieved GENIUS Act certification.</p>
+      </div>
+
+      <details>
+        <summary>Why GENIUS Is Stricter Than MiCA on Reserves</summary>
+        <div class="details-body">
+          <p>MiCA requires that at least 30% of e-money token reserves be held in insured deposits at credit institutions (Article 36(1)(b) MiCA). The remaining 70% can be invested in a broader range of low-risk assets including sovereign bonds, money market funds, and similar instruments. MiCA also permits a reserve management framework where issuers invest in assets bearing some credit risk, provided the investment policy is disclosed and approved.</p>
+          <p>GENIUS, by contrast, permits a narrow set of categories: U.S. Treasury bills with maturity &le;93 days, Federal Reserve deposits, physical U.S. dollars or demand deposits, overnight repos collateralized by Treasury securities, and government money market funds invested solely in qualifying assets (&sect;&thinsp;4(a)(1)(A)(vi)). This list excludes non-government money market funds and corporate debt of any kind.</p>
+          <p>The congressional rationale, articulated in the Senate Banking Committee report, was that the TerraUSD collapse demonstrated that any yield-seeking in reserve management created run risk. By limiting reserves to the four most liquid, safest U.S.-government-related assets, Congress sought to make payment stablecoins function like <span class="defined-term" data-term="narrow-bank">narrow banks</span> &ndash; institutions that take deposits but invest only in safe government assets and pay no interest to depositors.</p>
+          <p>The tradeoff: GENIUS issuers cannot generate yield on reserves (other than from T-bill interest), potentially limiting their business model to transaction fees. MiCA issuers have more flexibility but face greater reserve risk.</p>
+        </div>
+      </details>
+
+      <!-- ===== SECTION 10: NH ANGLE ===== -->
+      <h2 id="nh-angle">New Hampshire&rsquo;s Angle</h2>
+
+      <p>New Hampshire sits at a unique intersection of all three regulatory regimes discussed in this analysis: it has the most developed state DAO statute (RSA 301-B), a legislative commission specifically studying stable tokens (RSA 383:26), and the University of New Hampshire Interoperability Laboratory (UNH-IOL) actively engaged in blockchain governance research. Four specific intersection points require attention:</p>
+
+      <div class="nh-cards">
+        <div class="nh-card">
+          <h4>DAO Stablecoin Issuance</h4>
+          <div class="nh-cite">RSA 301-B + GENIUS &sect;&sect; 2&ndash;4</div>
+          <p>A RSA 301-B DAO that wishes to issue a payment stablecoin must navigate the centralization-vs-decentralization tension. The two-entity structure (Option A) or the commodity lane (Option C) are most likely compatible with maintaining DAO status under RSA 301-B:5(IX).</p>
+        </div>
+        <div class="nh-card">
+          <h4>State-Issued NH Stable Token</h4>
+          <div class="nh-cite">RSA 383:26 + GENIUS &sect;&thinsp;2(24)</div>
+          <p>The NH Commission to Study Stable Tokens under RSA 383:26 is a governmental body. If it issues a stable token directly, the &sect;&thinsp;2(24) &ldquo;business entity&rdquo; analysis suggests it may operate outside GENIUS. Treasury rulemaking will clarify, but NH has a first-mover opportunity.</p>
+        </div>
+        <div class="nh-card">
+          <h4>State Qualified Issuer Certification</h4>
+          <div class="nh-cite">GENIUS &sect;&thinsp;7 + NH Banking Law</div>
+          <p>For private issuers &le;$10B, NH&rsquo;s Banking Division must seek Federal Reserve certification of NH&rsquo;s regulatory regime as &ldquo;substantially similar&rdquo; to GENIUS. NH would need to enact: 100% reserve requirement, mandatory redemption rights, monthly attestation rules, and BSA equivalency. Existing NH money-transmitter law may partially satisfy these requirements.</p>
+        </div>
+        <div class="nh-card">
+          <h4>Reserve Custody in NH</h4>
+          <div class="nh-cite">GENIUS &sect;&thinsp;4 + NH trust law</div>
+          <p>NH trust companies (chartered under RSA 392) may serve as permissible custodians for payment stablecoin reserves. This creates a potential NH competitive advantage: PPSIs licensed under Pathway A or B could custody reserves at NH-chartered trust companies, bringing fee income and regulatory activity to the state.</p>
+        </div>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>Cross-Reference: Registry &amp; UNH-IOL</strong>
+        The NH DAO Registry requirements (see <a href="registry.html">registry.html</a>) apply to any RSA 301-B DAO regardless of whether it issues stablecoins. A DAO seeking to participate in stablecoin issuance via Option A (two-entity) must still maintain its registry filings and decentralization attestations. The University of New Hampshire Interoperability Laboratory (UNH-IOL) maintains the definitive interpretation of RSA 301-B and has engaged with the NH Commission on RSA 383:26.
+      </div>
+
+      <details>
+        <summary>Deep Dive: GENIUS Securities Carve-Out and NH Enforcement</summary>
+        <div class="details-body">
+          <p>Before the GENIUS Act, a payment stablecoin holder who suffered losses due to issuer misrepresentations about reserve backing might have brought a claim under <span class="defined-term" data-term="rule10b5">Rule 10b-5</span> (17 C.F.R. &sect; 240.10b-5) if the stablecoin was treated as a security. Rule 10b-5 requires: (1) a material misrepresentation or omission; (2) scienter (knowingly or recklessly); (3) in connection with the purchase or sale of a security; (4) reliance; (5) economic loss; and (6) loss causation.</p>
+          <p>Under GENIUS &sect;&thinsp;17, payment stablecoins are no longer securities for Securities Act purposes. The Rule 10b-5 path is eliminated. The GENIUS Act does not create a private right of action to replace it. Instead, enforcement of reserve and redemption obligations runs through the prudential regulators (OCC, Federal Reserve, or certified state regulator), with penalties under &sect;&thinsp;3(f) of up to $1,000,000 per violation and up to 5 years imprisonment for willful violations.</p>
+          <p><strong>Practical implications for NH:</strong> NH&rsquo;s Consumer Protection Act (RSA 358-A) may provide a parallel state-law remedy for deceptive acts by stablecoin issuers, though the absence of a federal private right of action makes state consumer protection law more important for injured holders. The NH Banking Commission could enforce reserve requirements administratively, complementing federal regulatory action.</p>
+          <p>The shift from <span class="defined-term" data-term="ex-ante-post">ex post</span> securities enforcement to GENIUS&rsquo;s <span class="defined-term" data-term="ex-ante-post">ex ante</span> prudential model means that NH&rsquo;s Banking Division becomes a more important enforcement actor than it was when the SEC was the primary enforcer.</p>
+        </div>
+      </details>
+
+      <!-- ===== SECTION 11: RESOURCES ===== -->
+      <h2 id="resources">Resources</h2>
+
+      <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+
+        <div class="card">
+          <div class="card-badge">Primary Sources</div>
+          <h4>Statutes &amp; Official Text</h4>
+          <ul style="margin:0;padding-left:1.2rem;font-size:.85rem;color:var(--muted);">
+            <li><a href="genius.html">GENIUS Act Full Text (genius.html)</a></li>
+            <li><a href="index.html">NH RSA 301-B Full Text (index.html)</a></li>
+            <li><a href="registry.html">NH Registry Requirements (registry.html)</a></li>
+            <li><a href="comparison.html">How State DAO Statutes Compare (comparison.html)</a></li>
+            <li><a href="https://www.congress.gov/bill/119th-congress/senate-bill/1582" target="_blank" rel="noopener">Congress.gov S.1582</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-badge">Scholarship</div>
+          <h4>Academic Sources</h4>
+          <ul style="margin:0;padding-left:1.2rem;font-size:.85rem;color:var(--muted);">
+            <li><a href="https://oranburg.law" target="_blank" rel="noopener">Oranburg, <em>The Genius of the GENIUS Act</em>, Stanford JBLP (2026)</a></li>
+            <li><a href="https://news.bloomberglaw.com/securities-law/genius-act-stablecoin-regulation" target="_blank" rel="noopener">Bloomberg Law: GENIUS Act Analysis</a></li>
+            <li><a href="https://www.bis.org/publ/work1005.htm" target="_blank" rel="noopener">BIS Working Papers: Stablecoin Risk</a></li>
+            <li>Oranburg, <em>Market Power and Governance Power</em>, CPI (2025)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-badge">Regulatory Guidance</div>
+          <h4>Practice Resources</h4>
+          <ul style="margin:0;padding-left:1.2rem;font-size:.85rem;color:var(--muted);">
+            <li><a href="https://www.wilmerhale.com/insights/client-alerts/genius-act" target="_blank" rel="noopener">WilmerHale GENIUS Act Client Alert</a></li>
+            <li><a href="https://www.sidley.com/en/insights/newsupdates/2025/07/genius-act-signed-into-law" target="_blank" rel="noopener">Sidley Austin: GENIUS Act Signed</a></li>
+            <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114" target="_blank" rel="noopener">EU MiCA Regulation 2023/1114</a></li>
+            <li>OCC Interpretive Letter #1179 (stablecoin custody, 2021)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-badge">NH Materials</div>
+          <h4>New Hampshire Sources</h4>
+          <ul style="margin:0;padding-left:1.2rem;font-size:.85rem;color:var(--muted);">
+            <li><a href="https://www.gencourt.state.nh.us/rsa/html/XXXV/383/383-26.htm" target="_blank" rel="noopener">RSA 383:26 NH Commission on Stable Tokens</a></li>
+            <li><a href="decentralization.html">Measuring Decentralization (decentralization.html)</a></li>
+            <li><a href="https://www.iol.unh.edu/" target="_blank" rel="noopener">UNH Interoperability Laboratory (UNH-IOL)</a></li>
+            <li><a href="https://www.nhbankingdept.com/" target="_blank" rel="noopener">NH Banking Department</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </article>
+  </div><!-- /.content-area -->
+</div><!-- /.page-layout -->
+
+<!-- Footer -->
+<footer style="background:var(--bg-secondary);border-top:1px solid var(--border);padding:var(--space-2xl) var(--space-lg);margin-top:var(--space-3xl);">
+  <div style="max-width:var(--max-width);margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-xl);margin-bottom:var(--space-xl);">
+      <div>
+        <p style="font-family:var(--font-headline);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-sm);">NH DAO Law Explorer</p>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li><a href="index.html" style="font-size:.88rem;">RSA 301-B Full Text</a></li>
+          <li><a href="genius.html" style="font-size:.88rem;">GENIUS Act Full Text</a></li>
+          <li><a href="decentralization.html" style="font-size:.88rem;">Measuring Decentralization</a></li>
+          <li><a href="registry.html" style="font-size:.88rem;">Registry Requirements</a></li>
+          <li><a href="comparison.html" style="font-size:.88rem;">State DAO Comparison</a></li>
+          <li><a href="stable-tokens.html" style="font-size:.88rem;">Stable Tokens (this page)</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-family:var(--font-headline);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-sm);">Author</p>
+        <p style="font-size:.88rem;color:var(--muted);margin:0;">Seth C. Oranburg<br>Professor of Law<br>UNH Franklin Pierce School of Law<br><a href="https://oranburg.law" target="_blank" rel="noopener">oranburg.law</a></p>
+      </div>
+      <div>
+        <p style="font-family:var(--font-headline);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:var(--space-sm);">Project</p>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li><a href="https://github.com/Oranburg/NH-RSA-301-B" style="font-size:.88rem;" target="_blank" rel="noopener">GitHub Repository</a></li>
+          <li><a href="https://oranburg.law" style="font-size:.88rem;" target="_blank" rel="noopener">oranburg.law</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:var(--space-lg);text-align:center;">
+      <p style="font-size:.82rem;color:var(--muted);margin:0;">
+        &copy; 2026 Seth C. Oranburg. Released under the MIT License. Not legal advice.<br>
+        GENIUS Act text: Pub. L. 119-27. RSA 301-B: N.H. Rev. Stat. Ann. &sect;&sect; 301-B:1&ndash;301-B:19.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ===== Theme Toggle ===== */
+  function toggleTheme(){
+    var d=document.documentElement;
+    var cur=d.getAttribute('data-theme');
+    var next=cur==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  }
+
+  /* ===== Reading Progress Bar ===== */
+  window.addEventListener('scroll',function(){
+    var el=document.getElementById('progressBar');
+    if(!el)return;
+    var h=document.documentElement;
+    var pct=(h.scrollTop||document.body.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+    el.style.width=Math.min(pct,100)+'%';
+  },{passive:true});
+
+  /* ===== Sidebar TOC Scroll Spy ===== */
+  (function(){
+    var links=document.querySelectorAll('.toc-list a[data-target]');
+    var sections=[];
+    links.forEach(function(l){
+      var id=l.getAttribute('data-target');
+      var el=document.getElementById(id);
+      if(el) sections.push({el:el,link:l});
+    });
+    function spy(){
+      var scrollY=window.scrollY||window.pageYOffset;
+      var best=null;
+      sections.forEach(function(s){
+        if(s.el.offsetTop-120<=scrollY) best=s;
+      });
+      links.forEach(function(l){l.classList.remove('active');});
+      if(best) best.link.classList.add('active');
+    }
+    window.addEventListener('scroll',spy,{passive:true});
+    spy();
+  })();
+
+  /* ===== Pathway Classifier ===== */
+  var currentStep=0;
+  function classifierNext(n){
+    document.getElementById('step'+currentStep).classList.remove('active');
+    document.getElementById('dot'+currentStep).classList.remove('active');
+    document.getElementById('dot'+currentStep).classList.add('done');
+    currentStep=n;
+    document.getElementById('step'+currentStep).classList.add('active');
+    document.getElementById('dot'+Math.min(currentStep,3)).classList.add('active');
+  }
+  function classifierResult(r){
+    document.getElementById('step'+currentStep).classList.remove('active');
+    document.getElementById('dot'+currentStep).classList.remove('active');
+    document.getElementById('dot'+currentStep).classList.add('done');
+    document.getElementById('dot3').classList.add('active');
+    document.getElementById('result-'+r).classList.add('active');
+  }
+  function classifierReset(){
+    ['step0','step1','step2','result-other','result-shadow','result-federal','result-state-q'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el) el.classList.remove('active');
+    });
+    [0,1,2,3].forEach(function(i){
+      var d=document.getElementById('dot'+i);
+      if(d){d.classList.remove('active','done');}
+    });
+    document.getElementById('step0').classList.add('active');
+    document.getElementById('dot0').classList.add('active');
+    currentStep=0;
+  }
+
+  /* ===== Defined-Term Tooltips ===== */
+  var TERMS={
+    'terrausd':{name:'TerraUSD (UST)',def:'Algorithmic stablecoin issued by Terraform Labs that collapsed in May 2022, losing ~$50 billion in combined market capitalization within days. Its failure catalyzed the GENIUS Act.',source:'Congressional Record, 119th Cong. (2025); S. Rep. 119-12 at 3-5.'},
+    'algorithmic-stablecoin':{name:'Algorithmic Stablecoin',def:'A stablecoin that relies on algorithms and incentive mechanisms, rather than direct reserve assets, to maintain its peg. GENIUS \u00a7 8 prohibits new algorithmic stablecoin issuances by \u201cpersons\u201d under \u00a7 2(24).',source:'GENIUS Act \u00a7 8, Pub. L. 119-27 (2025).'},
+    'defi':{name:'Decentralized Finance (DeFi)',def:'Financial services built on smart-contract-based blockchain protocols, typically without intermediaries. Protocol-level DeFi activities may not involve a \u201cperson\u201d under GENIUS \u00a7 2(24).',source:'N.H. Rev. Stat. Ann. \u00a7 301-B:5 (defining blockchain system and smart contract).'},
+    'investment-contract':{name:'Investment Contract',def:'A contract, transaction, or scheme whereby a person invests money in a common enterprise and is led to expect profits solely from the efforts of others. The Howey test determines whether a digital asset is an investment contract.',source:'SEC v. W.J. Howey Co., 328 U.S. 293 (1946).'},
+    'howey-test':{name:'Howey Test',def:'Four-part test from SEC v. W.J. Howey Co. (1946): (1) investment of money; (2) in a common enterprise; (3) with an expectation of profits; (4) derived from the efforts of others. Applied by SEC to determine if digital assets are securities.',source:'SEC v. W.J. Howey Co., 328 U.S. 293, 301 (1946); SEC v. Ripple Labs, Inc., 682 F. Supp. 3d 308 (S.D.N.Y. 2023).',link:'https://supreme.justia.com/cases/federal/us/328/293/'},
+    'bsa':{name:'Bank Secrecy Act (BSA)',def:'31 U.S.C. \u00a7\u00a7 5311-5336. Federal law requiring financial institutions to maintain records and file reports aiding detection of money laundering. GENIUS \u00a7 8 designates PPSIs as \u201cfinancial institutions\u201d under the BSA.',source:'GENIUS Act \u00a7 8, Pub. L. 119-27 (2025); 31 U.S.C. \u00a7 5312(a)(2).'},
+    'payment-stablecoin':{name:'Payment Stablecoin',def:'GENIUS Act \u00a7 2(22): A digital asset denominated in a national currency, designed for payment or settlement, which the issuer represents will be redeemable at a fixed amount of monetary value, backed by permissible reserves. Algorithmic stablecoins expressly excluded.',source:'GENIUS Act \u00a7 2(22), Pub. L. 119-27 (2025).'},
+    'ppsi':{name:'Permitted Payment Stablecoin Issuer (PPSI)',def:'GENIUS Act \u00a7 2(23): Any person authorized to issue payment stablecoins under \u00a7 3 (federal license) or \u00a7 7 (state license). Must maintain 100% permissible reserves, comply with BSA, publish monthly attestations, and grant redemption rights.',source:'GENIUS Act \u00a7\u00a7 2(23), 3, 7, Pub. L. 119-27 (2025).'},
+    'rehypothecation':{name:'Rehypothecation',def:'The practice of a financial institution using assets held on behalf of a client as collateral for the institution\'s own borrowings. GENIUS \u00a7 4 prohibits PPSIs from rehypothecating payment stablecoin reserves.',source:'GENIUS Act \u00a7 4(b)(3), Pub. L. 119-27 (2025).'},
+    'rule10b5':{name:'Rule 10b-5',def:'17 C.F.R. \u00a7 240.10b-5. SEC antifraud rule under Exchange Act \u00a7 10(b): prohibits material misrepresentations, omissions, or deceptive devices in connection with purchase or sale of a security. Payment stablecoins are carved out of securities law under GENIUS \u00a7 17, so Rule 10b-5 no longer applies to them.',source:'17 C.F.R. \u00a7 240.10b-5; GENIUS Act \u00a7 17, Pub. L. 119-27 (2025).'},
+    'scienter':{name:'Scienter',def:'Knowledge of wrongdoing; in securities law, knowing or reckless conduct. Required element for private claims under Ernst & Ernst v. Hochfelder (1976). Under the GENIUS Act, willful violations of \u00a7 3(f) can trigger criminal penalties.',source:'Ernst & Ernst v. Hochfelder, 425 U.S. 185 (1976); GENIUS Act \u00a7 3(f).'},
+    'prudential':{name:'Prudential Regulation',def:'Ex ante supervision focused on ensuring financial institution safety and soundness before problems occur, as opposed to ex post litigation after harm. GENIUS adopts a prudential model for stablecoin issuance, assigning licensing, examination, and capital requirement authority to banking regulators.',source:'Board of Governors of Federal Reserve System; OCC; see generally Basel Committee on Banking Supervision, Core Principles for Effective Banking Supervision (2012).'},
+    'mica':{name:'MiCA (Markets in Crypto-Assets Regulation)',def:'EU Regulation 2023/1114, in force June 2023, fully applicable December 2024. Creates EU-wide licensing regime for asset-referenced tokens (ARTs), e-money tokens (EMTs), and other crypto-assets. EMTs are the EU analog to GENIUS payment stablecoins.',source:'Regulation (EU) 2023/1114 of the European Parliament and of the Council, OJ L 150, 9.6.2023.',link:'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114'},
+    'dao':{name:'Decentralized Autonomous Organization (DAO)',def:'Under RSA 301-B:5(VIII): \u201ca smart contract enterprise\u201d organized under RSA 301-B, operating on a permissionless blockchain, with organizational rules encoded in smart contracts accessible by network participants.',source:'N.H. Rev. Stat. Ann. \u00a7 301-B:5(VIII).'},
+    'decentralization':{name:'Decentralization (RSA 301-B)',def:'RSA 301-B:5(IX): A DAO is decentralized if (A) no person controls \u226520% of governance interests, (B) no person has unilateral control over assets or operations, and (C) source code is publicly available.',source:'N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX).'},
+    'decentralized-governance':{name:'Decentralized Governance',def:'RSA 301-B:5(IX)(a)(1)(C): Decision-making through consensus mechanisms encoded in smart contracts, without any single participant having unilateral authority. Critical element for RSA 301-B decentralization status.',source:'N.H. Rev. Stat. Ann. \u00a7 301-B:5(IX)(a)(1)(C).'},
+    'aml':{name:'AML/KYC (Anti-Money Laundering / Know Your Customer)',def:'Legal obligations under the Bank Secrecy Act (31 U.S.C. \u00a7\u00a7 5311-5336) and FinCEN regulations to identify customers, monitor transactions for suspicious activity, and file Suspicious Activity Reports (SARs). PPSIs under GENIUS \u00a7 8 are financial institutions subject to full BSA obligations.',source:'31 U.S.C. \u00a7\u00a7 5311-5336; 31 C.F.R. Chapter X; GENIUS Act \u00a7 8.'},
+    'narrow-bank':{name:'Narrow Bank',def:'A bank that accepts deposits but invests solely in safe, liquid government assets (typically Treasury bills or central bank reserves), paying no or minimal interest. GENIUS payment stablecoins function as a form of narrow bank \u2013100% government-asset reserves, no maturity transformation.',source:'John Kay, Narrow Banking: The Reform of Banking Regulation (2009); FDIC, Narrow Bank Proposal (2019).'},
+    'genius-act':{name:'GENIUS Act',def:'Guiding and Establishing National Innovation for U.S. Stablecoins Act, Pub. L. 119-27, enacted July 18, 2025. The first comprehensive federal stablecoin law in U.S. history. Creates the PPSI licensing regime, 100% reserve requirement, securities carve-out, and BSA integration for payment stablecoin issuers.',source:'Pub. L. 119-27, 119th Cong. (2025), \u201cGuiding and Establishing National Innovation for U.S. Stablecoins Act.\u201d'},
+    'ex-ante-post':{name:'Ex Ante / Ex Post Regulation',def:'Ex ante: regulation before the fact \u2013licenses, capital requirements, ongoing supervision. Ex post: regulation after the fact \u2013enforcement actions, litigation, private suits. GENIUS shifts stablecoin oversight from ex post (SEC enforcement) to ex ante (banking-style prudential supervision by OCC/Fed).',source:'Oranburg, The Genius of the GENIUS Act, Stanford JBLP (2026).'}
+  };
+
+  var tooltip=document.getElementById('termTooltip');
+  var activeSpan=null;
+
+  function positionTooltip(span){
+    var r=span.getBoundingClientRect();
+    var tw=300,th=180;
+    var left=r.left+window.scrollX;
+    var top=r.bottom+window.scrollY+8;
+    if(left+tw>window.innerWidth-10) left=window.innerWidth-tw-10;
+    if(left<6) left=6;
+    if(top+th>window.scrollY+window.innerHeight-10) top=r.top+window.scrollY-th-8;
+    tooltip.style.left=left+'px';
+    tooltip.style.top=top+'px';
+  }
+
+  document.addEventListener('click',function(e){
+    var span=e.target.closest('.defined-term');
+    if(span){
+      e.stopPropagation();
+      var key=span.getAttribute('data-term');
+      var term=TERMS[key];
+      if(!term) return;
+      document.getElementById('tooltipTerm').textContent=term.name;
+      document.getElementById('tooltipDef').textContent=term.def;
+      document.getElementById('tooltipSource').textContent=term.source||'';
+      var linkEl=document.getElementById('tooltipLink');
+      if(term.link){linkEl.href=term.link;linkEl.textContent='View source \u2192';linkEl.style.display='inline';}
+      else{linkEl.style.display='none';}
+      positionTooltip(span);
+      tooltip.classList.add('visible');
+      activeSpan=span;
+    } else {
+      tooltip.classList.remove('visible');
+      activeSpan=null;
+    }
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){tooltip.classList.remove('visible');activeSpan=null;}
+  });
+
+  window.addEventListener('scroll',function(){
+    if(tooltip.classList.contains('visible')&&activeSpan){positionTooltip(activeSpan);}
+  },{passive:true});
+</script>
+</body>
+</html>

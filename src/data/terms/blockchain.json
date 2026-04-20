@@ -1,0 +1,18 @@
+{
+  "id": "blockchain",
+  "term": "Blockchain",
+  "layer": 1,
+  "tags": ["protocol", "infrastructure"],
+  "parent": null,
+  "related": ["distributed-ledger", "consensus", "smart-contract"],
+  "definitions": {
+    "technical": "A distributed, append-only data structure composed of cryptographically linked blocks, each containing a batch of validated state transitions. The chain's integrity is maintained by a consensus mechanism that ensures all honest participants agree on the canonical sequence of blocks.",
+    "lay": "A shared digital record book spread across many computers, where each new page (block) is permanently linked to the one before it. Because thousands of computers hold identical copies, no single person or company can alter past entries without detection.",
+    "parenthetical": "(a distributed digital ledger linking cryptographically secured blocks of transaction data)"
+  },
+  "statutes": ["nh-rsa-301-b"],
+  "see_also": [],
+  "visualization": null,
+  "sources": ["nh-token-glossary"],
+  "verification": { "status": "verified" }
+}
