@@ -118,13 +118,16 @@
   margin: 0 auto;
 }
 
+/* Spacer between stack and section cards */
+.map-spacer {
+  height: 80px;
+}
+
 /* Section cards */
 .map-sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   gap: var(--space-lg);
-  margin-top: 4rem;
-  padding-top: 2rem;
 }
 
 .map-section {

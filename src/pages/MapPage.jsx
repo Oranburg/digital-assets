@@ -60,6 +60,7 @@ export default function MapPage() {
         ))}
       </div>
 
+      <div className="map-spacer" />
       <nav className="map-sections container">
         <Link to="/glossary" className="map-section card">
           <span className="map-section__emoji">📖</span>
