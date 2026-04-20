@@ -1,0 +1,30 @@
+{
+  "id": "repo-market-dislocation",
+  "term": "Repo Market Dislocation",
+  "tags": [
+    "money-markets",
+    "systemic-risk",
+    "finance"
+  ],
+  "parent": null,
+  "related": [
+    "repurchase-agreement",
+    "bilateral-reverse-repo",
+    "stress-testing"
+  ],
+  "definitions": {
+    "technical": "A disruption in the repurchase agreement market that makes it difficult or expensive to borrow cash against securities. In September 2019, overnight repo rates briefly spiked above 8%, illustrating this risk. The comment letter proposes a stress scenario based on this event.",
+    "lay": "A disruption in the market where financial institutions make short term loans using government bonds as collateral. When this market seizes up, borrowing costs can spike dramatically. In 2019, overnight rates briefly jumped above 8%, showing how quickly this market can malfunction.",
+    "parenthetical": "(a disruption in the repurchase agreement market causing borrowing cost spikes, as occurred in September 2019)",
+    "legal_significance": "The September 2019 repo market dislocation provides a concrete stress scenario for testing stablecoin reserve resilience. The comment letter recommends that the OCC require issuers to model their liquidity position under conditions where repo markets are unavailable or severely stressed."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

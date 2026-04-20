@@ -1,0 +1,31 @@
+{
+  "id": "outstanding-issuance-value",
+  "term": "Outstanding Issuance Value",
+  "tags": [
+    "stablecoin",
+    "accounting",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "fair-value",
+    "one-to-one-reserve",
+    "reserve-impairment",
+    "depeg"
+  ],
+  "definitions": {
+    "technical": "The total consolidated par value of all stablecoins an issuer has in circulation, as defined in proposed Section 15.2. This figure does not decrease when a stablecoin depegs in secondary markets, meaning the issuer's reserve obligation remains fixed at $1.00 per token regardless of market price.",
+    "lay": "The total face value of all stablecoin tokens a company has issued. Even if the market price of the stablecoin drops below one dollar, the company is still legally required to back every token at the full dollar amount. This creates extra financial pressure during a crisis.",
+    "parenthetical": "(the total par value of all outstanding stablecoins, which remains fixed at $1.00 per token regardless of secondary market price)",
+    "legal_significance": "The fixed nature of outstanding issuance value amplifies liquidity stress during a depeg. When USDC traded at $0.87 during the SVB crisis, Circle's reserve obligation remained at $1.00 per token, increasing the gap between market value and redemption liability."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

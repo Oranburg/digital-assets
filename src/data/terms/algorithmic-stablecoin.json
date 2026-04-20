@@ -1,0 +1,32 @@
+{
+  "id": "algorithmic-stablecoin",
+  "term": "Algorithmic Stablecoin",
+  "tags": [
+    "stablecoin",
+    "DeFi",
+    "risk"
+  ],
+  "parent": "stablecoin",
+  "related": [
+    "stablecoin",
+    "fiat-backed-stablecoin",
+    "depeg"
+  ],
+  "definitions": {
+    "technical": "A stablecoin that attempts to maintain its dollar peg through algorithmic mechanisms and economic incentives rather than holding fiat-denominated reserve assets. These tokens are collateralized endogenously (by protocol-native tokens) rather than exogenously (by external assets like dollars or Treasuries).",
+    "lay": "A type of stablecoin that tries to keep its value steady using computer code and market incentives instead of holding actual cash in reserve. The 2022 Terra Luna collapse showed how catastrophically these can fail when market confidence disappears.",
+    "parenthetical": "(a stablecoin maintaining its peg through algorithmic mechanisms rather than fiat reserves, excluded from the GENIUS Act's permitted framework)",
+    "legal_significance": "The GENIUS Act explicitly excludes algorithmic (endogenously collateralized) stablecoins from the permitted payment stablecoin framework, instead mandating further study. This exclusion reflects the systemic risk demonstrated by the Terra Luna collapse in 2022."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

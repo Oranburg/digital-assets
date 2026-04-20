@@ -1,0 +1,30 @@
+{
+  "id": "contingency-plan",
+  "term": "Contingency Plan",
+  "tags": [
+    "compliance",
+    "stablecoin",
+    "risk-management"
+  ],
+  "parent": null,
+  "related": [
+    "custodian-insolvency",
+    "fdic-receivership",
+    "stress-testing"
+  ],
+  "definitions": {
+    "technical": "A written document specifying what a stablecoin issuer will do if a reserve custodian fails, including which assets remain accessible, how reserves will be converted to cash, and how the issuer will communicate with regulators and the public.",
+    "lay": "A detailed written plan that a stablecoin company must prepare in advance, explaining exactly what it will do if one of the banks holding its reserves fails. The plan covers how to access remaining funds, move money around, and keep regulators and the public informed.",
+    "parenthetical": "(a required written plan specifying issuer response procedures for custodian failure events)",
+    "legal_significance": "The comment letter recommends requiring contingency plans as part of the proposed rule, arguing that the SVB episode demonstrated the inadequacy of ad hoc crisis responses. A documented plan becomes part of the administrative record for supervisory review."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

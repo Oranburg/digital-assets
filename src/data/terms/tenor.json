@@ -1,0 +1,28 @@
+{
+  "id": "tenor",
+  "term": "Tenor",
+  "tags": [
+    "finance",
+    "reserve-assets"
+  ],
+  "parent": null,
+  "related": [
+    "treasury-bill",
+    "reserve-assets"
+  ],
+  "definitions": {
+    "technical": "The remaining time until a financial instrument matures or becomes due. Reserve asset tenor affects liquidity because longer-tenor instruments cannot be converted to cash at par until maturity without potential market loss.",
+    "lay": "The amount of time left before a financial instrument pays out its full value. A Treasury bill with a 90-day tenor will return its face value in 90 days. Shorter tenors generally mean the asset can be turned into cash sooner.",
+    "parenthetical": "(the remaining time until a financial instrument matures, affecting its liquidity characteristics)",
+    "legal_significance": "Reserve asset tenor is relevant to the operational capability to monetize under proposed Section 15.11(a)(2). Longer-tenor instruments may comply with composition requirements but reduce practical liquidity, especially during stress periods when early sale would incur market losses."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

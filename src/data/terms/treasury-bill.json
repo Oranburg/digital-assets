@@ -1,0 +1,30 @@
+{
+  "id": "treasury-bill",
+  "term": "Treasury Bill (T-Bill)",
+  "tags": [
+    "reserve-assets",
+    "government-securities",
+    "finance"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-assets",
+    "reserve-composition",
+    "tenor"
+  ],
+  "definitions": {
+    "technical": "A short term U.S. government debt security that matures in one year or less, carrying the full faith and credit of the United States. Treasury bills are among the highest quality reserve assets for stablecoin issuers because they have virtually no credit risk.",
+    "lay": "A short term loan to the U.S. government that pays back in one year or less. These are considered among the safest investments in the world because the government guarantees repayment. Stablecoin issuers commonly hold them as reserve assets.",
+    "parenthetical": "(a short term U.S. government debt security maturing in one year or less, backed by the full faith and credit of the United States)",
+    "legal_significance": "Treasury bills are a permissible reserve asset under proposed Part 15 and are generally considered the gold standard for reserve quality. However, they are subject to market-side liquidity risk if sold before maturity during stressed conditions, and to receivership-side risk if held at a failed custodian."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "reserve-assets",
+  "term": "Reserve Assets",
+  "tags": [
+    "stablecoin",
+    "reserve-management",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-composition",
+    "one-to-one-reserve",
+    "treasury-bill"
+  ],
+  "definitions": {
+    "technical": "The pool of high quality assets that a stablecoin issuer holds to back the value of its outstanding stablecoins. Under proposed Part 15, permissible reserve assets include U.S. Treasury securities, demand deposits at insured banks, repurchase agreements, and money market fund shares.",
+    "lay": "The collection of safe, valuable assets that a stablecoin company holds to guarantee it can pay back every token at full value. Approved types include U.S. government bonds, bank deposits, short term lending agreements, and money market fund shares.",
+    "parenthetical": "(high quality assets backing outstanding stablecoins, including Treasuries, bank deposits, repos, and money market fund shares)",
+    "legal_significance": "Proposed Section 15.11(b) specifies the permissible categories of reserve assets. The comment letter argues that while the asset categories are appropriate, the proposed rule fails to address the risk that these assets become inaccessible when a custodian fails."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

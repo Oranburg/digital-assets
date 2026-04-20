@@ -1,0 +1,31 @@
+{
+  "id": "defi",
+  "term": "DeFi (Decentralized Finance)",
+  "tags": [
+    "DeFi",
+    "blockchain",
+    "finance"
+  ],
+  "parent": null,
+  "related": [
+    "smart-contract",
+    "liquidity-pool",
+    "cascading-liquidations",
+    "tradfi"
+  ],
+  "definitions": {
+    "technical": "Financial services built on blockchain technology that operate through automated smart contracts rather than traditional intermediaries. DeFi protocols use stablecoins extensively as collateral, settlement assets, and trading pairs, creating deep interconnections between stablecoin stability and DeFi market health.",
+    "lay": "A system of financial services (lending, borrowing, trading) that runs on blockchain technology using automated computer programs instead of banks. Stablecoins are the backbone of DeFi, so when a stablecoin loses its value, the effects ripple through the entire system.",
+    "parenthetical": "(blockchain-based financial services operating through automated smart contracts rather than traditional intermediaries)",
+    "legal_significance": "DeFi's reliance on stablecoins creates systemic interconnections that regulators must account for. The GENIUS Act's framework primarily addresses issuer-level compliance but does not directly regulate the DeFi protocols that amplify stablecoin stress events through cascading liquidations."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

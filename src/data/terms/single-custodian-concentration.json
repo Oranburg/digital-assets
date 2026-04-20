@@ -1,0 +1,30 @@
+{
+  "id": "single-custodian-concentration",
+  "term": "Single-Custodian Concentration",
+  "tags": [
+    "risk-management",
+    "stablecoin",
+    "reserve-management"
+  ],
+  "parent": null,
+  "related": [
+    "concentration-cap",
+    "custodian",
+    "svb"
+  ],
+  "definitions": {
+    "technical": "The amount of reserve assets held at one financial institution. Circle's $3.3 billion at SVB (roughly 8% of USDC's total reserves at the time) was sufficient to trigger a depeg and cascading DeFi liquidations.",
+    "lay": "How much of a stablecoin issuer's reserves are stored at a single bank. Circle had about 8% of its total USDC reserves at Silicon Valley Bank, and that concentration alone was enough to cause a crisis when the bank failed.",
+    "parenthetical": "(the share of total reserves held at a single custodian institution, where even small concentrations can trigger systemic events)",
+    "legal_significance": "The SVB episode demonstrated that even a relatively small single-custodian concentration (8%) can trigger a depeg and cascading liquidations. This finding supports the comment letter's recommendation for mandatory concentration caps under Option B."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

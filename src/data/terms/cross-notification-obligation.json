@@ -1,0 +1,30 @@
+{
+  "id": "cross-notification-obligation",
+  "term": "Cross-Notification Obligation",
+  "tags": [
+    "compliance",
+    "interagency",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "occ",
+    "cftc",
+    "memorandum-of-understanding"
+  ],
+  "definitions": {
+    "technical": "A proposed requirement that a stablecoin issuer notify both the OCC and the CFTC within 24 hours when a reserve custodian enters FDIC receivership or an equivalent proceeding.",
+    "lay": "A proposed rule that would require stablecoin issuers to alert both the OCC and the CFTC within one day whenever a bank holding their reserves fails. This ensures both agencies know immediately and can coordinate their response.",
+    "parenthetical": "(a proposed 24 hour dual-agency notification requirement triggered by reserve custodian failure)",
+    "legal_significance": "The comment letter proposes cross-notification as a practical mechanism to address the jurisdictional ambiguity created by GENIUS Act Section 17(f). Without it, the CFTC may not learn of a stress event until the commodity exclusion has already lapsed."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

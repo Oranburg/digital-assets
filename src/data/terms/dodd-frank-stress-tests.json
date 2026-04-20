@@ -1,0 +1,31 @@
+{
+  "id": "dodd-frank-stress-tests",
+  "term": "Dodd-Frank Act Stress Tests",
+  "tags": [
+    "banking",
+    "regulation",
+    "systemic-risk"
+  ],
+  "parent": null,
+  "related": [
+    "stress-testing",
+    "basel-iii-lcr"
+  ],
+  "definitions": {
+    "technical": "Annual tests required of large financial institutions under the Dodd-Frank Wall Street Reform and Consumer Protection Act, in which regulators evaluate whether a firm can withstand hypothetical adverse economic scenarios. The comment letter proposes analogous testing for stablecoin issuers.",
+    "lay": "Yearly tests that big banks must undergo to prove they can survive economic downturns. Regulators create imaginary worst case scenarios and check whether the bank would still be solvent. The comment letter argues that stablecoin issuers should face similar tests.",
+    "parenthetical": "(annual regulatory evaluations of whether large financial institutions can survive hypothetical adverse scenarios)",
+    "legal_significance": "Dodd-Frank stress tests (12 U.S.C. Section 5365(i)) provide a proven model for evaluating financial resilience. The comment letter argues that adapting this framework for stablecoin issuers would address the gap between static reserve composition requirements and dynamic stress scenarios."
+  },
+  "statutes": [
+    "dodd-frank-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

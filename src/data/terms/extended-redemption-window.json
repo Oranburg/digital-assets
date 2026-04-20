@@ -1,0 +1,30 @@
+{
+  "id": "extended-redemption-window",
+  "term": "Extended Redemption Window",
+  "tags": [
+    "stablecoin",
+    "GENIUS-Act",
+    "redemption"
+  ],
+  "parent": null,
+  "related": [
+    "redemption",
+    "ten-percent-threshold",
+    "depeg"
+  ],
+  "definitions": {
+    "technical": "A provision in proposed Section 15.12(c)(1) giving stablecoin issuers up to seven calendar days to process redemptions when stress conditions are present, instead of the normal requirement for timely redemption. The window activates when redemption demands exceed 10% of outstanding issuance value within 24 hours.",
+    "lay": "A special rule that gives stablecoin issuers up to seven days to process cash-out requests during a crisis, instead of the usual fast turnaround. It kicks in when more than 10% of all outstanding tokens are submitted for redemption within a single day.",
+    "parenthetical": "(a seven day redemption processing extension activated when stress-period redemption demands exceed 10% of outstanding issuance within 24 hours)",
+    "legal_significance": "Proposed Section 15.12(c)(1) creates a safety valve for issuers during periods of extreme redemption pressure. However, the comment letter notes that seven days may be insufficient if reserves are frozen in FDIC receivership, which can last considerably longer."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

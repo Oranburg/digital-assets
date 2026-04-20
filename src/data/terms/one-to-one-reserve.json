@@ -1,0 +1,32 @@
+{
+  "id": "one-to-one-reserve",
+  "term": "One-to-One Reserve Requirement",
+  "tags": [
+    "stablecoin",
+    "GENIUS-Act",
+    "reserve-management"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-assets",
+    "outstanding-issuance-value",
+    "fair-value"
+  ],
+  "definitions": {
+    "technical": "The GENIUS Act's mandate that stablecoin issuers maintain reserve assets with a total fair value at least equal to the total par value of all outstanding stablecoins. For every dollar of stablecoin in circulation, the issuer must hold at least one dollar in qualifying reserve assets.",
+    "lay": "The basic rule that for every stablecoin token worth one dollar, the issuer must hold at least one dollar in approved reserve assets. This ensures there is always enough money backing the tokens, at least on paper.",
+    "parenthetical": "(the requirement that reserve asset value equal or exceed the par value of all outstanding stablecoins)",
+    "legal_significance": "The one-to-one reserve requirement is the GENIUS Act's foundational prudential safeguard. However, the comment letter demonstrates that compliance with this requirement did not prevent the USDC depeg during the SVB crisis, because the issue was reserve accessibility, not reserve adequacy."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

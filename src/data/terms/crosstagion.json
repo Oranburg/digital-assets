@@ -1,0 +1,31 @@
+{
+  "id": "crosstagion",
+  "term": "Crosstagion",
+  "tags": [
+    "systemic-risk",
+    "DeFi",
+    "TradFi",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "forward-channel-risk",
+    "reverse-channel-risk",
+    "cascading-liquidations"
+  ],
+  "definitions": {
+    "technical": "A term coined by Professor Oranburg describing bidirectional stress transmission between traditional financial markets (TradFi) and decentralized finance (DeFi). The forward channel runs from stablecoin failure into banking. The reverse channel runs from banking failure into stablecoin markets.",
+    "lay": "A word created by Professor Oranburg to describe how financial trouble can spread in both directions between traditional banks and crypto markets. A stablecoin failure can hurt banks (forward channel), and a bank failure can destabilize stablecoins and DeFi (reverse channel).",
+    "parenthetical": "(bidirectional stress transmission between traditional finance and decentralized finance)",
+    "legal_significance": "The crosstagion framework reveals a structural gap in the GENIUS Act: while the statute addresses forward channel risk (stablecoin to bank contagion) through reserve requirements, it largely ignores reverse channel risk (bank to stablecoin contagion), as demonstrated by the SVB episode."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

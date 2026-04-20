@@ -1,0 +1,30 @@
+{
+  "id": "arbitrary-and-capricious-review",
+  "term": "Arbitrary and Capricious Review",
+  "tags": [
+    "administrative-law",
+    "judicial-review"
+  ],
+  "parent": null,
+  "related": [
+    "administrative-record",
+    "nprm"
+  ],
+  "definitions": {
+    "technical": "The legal standard under which courts evaluate whether a federal agency's rulemaking was reasonable. Under Motor Vehicle Manufacturers Association v. State Farm (1983), an agency must examine relevant data and articulate a satisfactory explanation for its action, including a rational connection between the facts and its policy choices.",
+    "lay": "The test courts use to decide whether a government agency made a reasonable decision when creating a rule. The agency must show it looked at the evidence and explained why its rule makes sense.",
+    "parenthetical": "(the judicial standard requiring agencies to demonstrate reasoned decision making based on relevant data)",
+    "legal_significance": "Motor Vehicle Mfrs. Ass'n v. State Farm, 463 U.S. 29 (1983), established this standard. Agency rules that fail to address important aspects of a problem or offer explanations contradicted by the evidence are vulnerable to vacatur."
+  },
+  "statutes": [
+    "apa-5-usc-706"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

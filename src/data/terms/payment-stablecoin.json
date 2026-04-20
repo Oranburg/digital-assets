@@ -1,0 +1,33 @@
+{
+  "id": "payment-stablecoin",
+  "term": "Payment Stablecoin",
+  "tags": [
+    "stablecoin",
+    "GENIUS-Act",
+    "payments"
+  ],
+  "parent": "stablecoin",
+  "related": [
+    "stablecoin",
+    "fiat-backed-stablecoin",
+    "permitted-payment-stablecoin-issuer",
+    "yield-bearing-stablecoin"
+  ],
+  "definitions": {
+    "technical": "A digital asset designed to maintain a stable value relative to a reference currency (typically the U.S. dollar) and used primarily for payments and settlement. Under the GENIUS Act, payment stablecoins are explicitly excluded from securities classification, and yield generated from reserves accrues to the issuer rather than passing through to token holders.",
+    "lay": "A type of stablecoin designed for making payments and settling transactions, not for earning investment returns. The GENIUS Act creates special rules for these tokens, treating them differently from investment products. Any profit the issuer earns from investing the reserves stays with the issuer, not the token holders.",
+    "parenthetical": "(a dollar-pegged digital asset used for payments, where reserve yield accrues to the issuer rather than the token holder)",
+    "legal_significance": "The GENIUS Act's definition of payment stablecoin determines which tokens fall under its framework. By excluding securities classification and requiring yield to accrue to the issuer (not the holder), the Act draws a bright line between payment stablecoins and yield-bearing stablecoins regulated as securities."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

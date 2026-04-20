@@ -1,0 +1,30 @@
+{
+  "id": "bilateral-reverse-repo",
+  "term": "Bilateral Reverse Repurchase Agreement",
+  "tags": [
+    "reserve-assets",
+    "stablecoin",
+    "money-markets"
+  ],
+  "parent": "repurchase-agreement",
+  "related": [
+    "repurchase-agreement",
+    "reserve-assets",
+    "reserve-composition"
+  ],
+  "definitions": {
+    "technical": "A contract in which a stablecoin issuer lends cash to a counterparty and receives securities (typically Treasury bills) as collateral, with the counterparty agreeing to repurchase the securities at a specified price. The arrangement earns a return on reserve cash while keeping it theoretically accessible.",
+    "lay": "A deal where a stablecoin issuer temporarily trades its cash for government bonds, earning interest in the process. The other party agrees to buy the bonds back later. This lets issuers earn money on their reserves without technically spending them.",
+    "parenthetical": "(a short term secured lending arrangement in which a stablecoin issuer receives securities as collateral for a cash loan)",
+    "legal_significance": "Bilateral reverse repos are a permissible reserve asset under proposed Part 15. However, the comment letter warns that reliance on repo markets introduces repo market dislocation risk, as demonstrated by the September 2019 rate spike."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

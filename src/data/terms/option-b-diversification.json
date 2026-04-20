@@ -1,0 +1,30 @@
+{
+  "id": "option-b-diversification",
+  "term": "Option B (Mandatory Quantitative Diversification)",
+  "tags": [
+    "stablecoin",
+    "reserve-management",
+    "GENIUS-Act"
+  ],
+  "parent": "diversification-requirements",
+  "related": [
+    "option-a-diversification",
+    "diversification-requirements",
+    "concentration-cap"
+  ],
+  "definitions": {
+    "technical": "The alternative approach to reserve diversification that imposes mandatory numerical limits on concentration, including a 40% cap on reserves held at any single institution. The comment letter recommends this approach.",
+    "lay": "A proposed approach that sets firm numerical limits on how stablecoin reserves must be spread out. For example, no more than 40% of reserves can be held at any one bank. The comment letter supports this approach because the numbers create clear, auditable rules.",
+    "parenthetical": "(a mandatory quantitative reserve diversification standard with a 40% single-institution concentration cap)",
+    "legal_significance": "The comment letter recommends Option B because its quantitative thresholds create auditable benchmarks compatible with the monthly attestation cycle. The 40% concentration cap directly addresses the SVB scenario and provides a clear enforcement standard."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

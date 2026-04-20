@@ -1,0 +1,32 @@
+{
+  "id": "redemption",
+  "term": "Redemption",
+  "tags": [
+    "stablecoin",
+    "GENIUS-Act",
+    "payments"
+  ],
+  "parent": null,
+  "related": [
+    "extended-redemption-window",
+    "ten-percent-threshold",
+    "depeg"
+  ],
+  "definitions": {
+    "technical": "The process by which a stablecoin holder returns tokens to the issuer in exchange for the underlying value (typically U.S. dollars) at par. The GENIUS Act and proposed Part 15 establish timelines and procedures for timely redemption.",
+    "lay": "The process of cashing in stablecoin tokens for real dollars at face value. The GENIUS Act sets rules for how quickly issuers must process these cash-out requests, with special provisions for crisis periods when many people try to redeem at once.",
+    "parenthetical": "(the process of returning stablecoin tokens to the issuer in exchange for par-value fiat currency)",
+    "legal_significance": "Timely redemption at par is the core promise of a payment stablecoin. The GENIUS Act establishes mandatory redemption timelines, with an extended window during stress periods. The comment letter argues that even the extended window may be insufficient if reserves are frozen in receivership."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

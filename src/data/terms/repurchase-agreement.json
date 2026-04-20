@@ -1,0 +1,30 @@
+{
+  "id": "repurchase-agreement",
+  "term": "Repurchase Agreement (Repo)",
+  "tags": [
+    "money-markets",
+    "reserve-assets",
+    "finance"
+  ],
+  "parent": null,
+  "related": [
+    "bilateral-reverse-repo",
+    "repo-market-dislocation",
+    "reserve-assets"
+  ],
+  "definitions": {
+    "technical": "A short term transaction in which one party sells securities to another with an agreement to buy them back at a specified price and date. Repos are a common mechanism for stablecoin issuers to earn a return on reserves while maintaining liquidity.",
+    "lay": "A short term deal where one party temporarily sells government bonds to another and agrees to buy them back at a slightly higher price on a set date. Stablecoin issuers use these deals to earn interest on their reserves without permanently parting with the money.",
+    "parenthetical": "(a short term secured transaction involving the sale and agreed-upon repurchase of securities at a specified price)",
+    "legal_significance": "Repurchase agreements are a permissible reserve asset under proposed Part 15. The comment letter warns that dependence on repo markets introduces stress vulnerability, as demonstrated by the September 2019 dislocation when overnight rates spiked above 8%."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

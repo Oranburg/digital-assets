@@ -1,0 +1,32 @@
+{
+  "id": "forward-channel-risk",
+  "term": "Forward-Channel Risk",
+  "tags": [
+    "systemic-risk",
+    "stablecoin",
+    "contagion"
+  ],
+  "parent": "crosstagion",
+  "related": [
+    "crosstagion",
+    "reverse-channel-risk",
+    "cascading-liquidations"
+  ],
+  "definitions": {
+    "technical": "The risk that a stablecoin failure causes harm in traditional banking markets. This is the direction of contagion the GENIUS Act primarily addresses through its reserve requirements, attestation mandates, and other prudential safeguards.",
+    "lay": "The risk that problems in the stablecoin or crypto world spill over and hurt traditional banks. The GENIUS Act focuses heavily on preventing this type of risk by requiring stablecoin issuers to hold solid reserves and undergo regular audits.",
+    "parenthetical": "(the risk of contagion flowing from stablecoin failure into traditional banking markets)",
+    "legal_significance": "The GENIUS Act's reserve composition, attestation, and redemption requirements are primarily designed to mitigate forward channel risk. The comment letter argues this focus, while necessary, is insufficient because it ignores the reverse channel demonstrated by the SVB episode."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

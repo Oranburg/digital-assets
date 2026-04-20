@@ -1,0 +1,30 @@
+{
+  "id": "basel-iii-lcr",
+  "term": "Basel III Liquidity Coverage Ratio",
+  "tags": [
+    "banking",
+    "liquidity",
+    "international-standards"
+  ],
+  "parent": null,
+  "related": [
+    "stress-testing",
+    "reserve-assets",
+    "liquidity-risk"
+  ],
+  "definitions": {
+    "technical": "An international banking standard published by the Basel Committee on Banking Supervision requiring banks to hold enough high quality liquid assets to survive 30 days of financial stress. The ratio is calculated as HQLA divided by total net cash outflows over a 30 day stress period.",
+    "lay": "A global banking rule that requires banks to keep enough easy to sell assets on hand to cover 30 days of financial trouble. The OCC comment letter uses this framework as a model for how stablecoin issuers should be stress tested.",
+    "parenthetical": "(an international standard requiring banks to maintain sufficient liquid assets for a 30 day stress period)",
+    "legal_significance": "The Basel III LCR provides a proven template for stablecoin reserve stress testing. The comment letter argues that the OCC should adapt this framework rather than building from scratch, given its established track record in banking supervision."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

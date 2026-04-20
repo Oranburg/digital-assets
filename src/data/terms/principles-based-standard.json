@@ -1,0 +1,28 @@
+{
+  "id": "principles-based-standard",
+  "term": "Principles-Based Standard",
+  "tags": [
+    "regulation",
+    "compliance"
+  ],
+  "parent": null,
+  "related": [
+    "option-a-diversification",
+    "attestation"
+  ],
+  "definitions": {
+    "technical": "A regulatory approach that states broad goals or principles rather than specific numerical requirements. The comment letter argues that principles-based diversification standards (Option A) cannot be reliably audited in the monthly attestation process because they lack clear quantitative benchmarks.",
+    "lay": "A style of regulation that sets general goals instead of specific numbers. For example, saying 'diversify your reserves adequately' instead of 'hold no more than 40% at any one bank.' The comment letter argues this approach makes it impossible for auditors to determine clear compliance.",
+    "parenthetical": "(a regulatory approach using broad goals rather than specific numerical thresholds, criticized for audit incompatibility)",
+    "legal_significance": "The tension between principles-based and rules-based regulation is central to the NPRM's diversification debate. The comment letter argues that the GENIUS Act's monthly attestation mandate effectively requires quantitative standards because auditors need clear, measurable criteria."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "attestation",
+  "term": "Attestation",
+  "tags": [
+    "compliance",
+    "stablecoin",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "attestation-cycle",
+    "ceo-cfo-certification",
+    "reserve-composition"
+  ],
+  "definitions": {
+    "technical": "A formal statement issued by an independent accounting firm confirming that a stablecoin issuer's reserves meet the composition and valuation standards required by the GENIUS Act. Attestations are required on a monthly cycle.",
+    "lay": "An official report from an outside accounting firm that checks whether a stablecoin issuer actually holds enough qualifying assets to back all the tokens it has issued. The GENIUS Act requires this check every month.",
+    "parenthetical": "(an independent accountant's formal confirmation that reserve assets meet statutory requirements)",
+    "legal_significance": "The GENIUS Act mandates monthly attestations as a core prudential safeguard. The comment letter argues that principles-based diversification standards (Option A) cannot be reliably audited through this attestation process."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

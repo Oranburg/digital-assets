@@ -1,0 +1,30 @@
+{
+  "id": "custodian",
+  "term": "Custodian",
+  "tags": [
+    "banking",
+    "stablecoin",
+    "reserve-management"
+  ],
+  "parent": null,
+  "related": [
+    "custodian-insolvency",
+    "fdic-receivership",
+    "single-custodian-concentration"
+  ],
+  "definitions": {
+    "technical": "A financial institution (typically a bank) that holds stablecoin reserve assets on behalf of the issuer. A custodian's failure can freeze reserves even when those reserves meet all composition requirements, creating a gap between regulatory compliance and operational liquidity.",
+    "lay": "A bank or financial company that stores a stablecoin issuer's reserve money. The core problem the comment letter identifies is that even if a custodian holds perfectly legal reserves, those reserves become inaccessible if the custodian goes bankrupt.",
+    "parenthetical": "(a financial institution holding stablecoin reserve assets on behalf of the issuer)",
+    "legal_significance": "The custodian's role is central to the comment letter's thesis: the GENIUS Act regulates what reserves consist of (composition) but inadequately addresses whether those reserves remain accessible when the custodian fails (liquidity). Circle's $3.3 billion at SVB exemplifies this gap."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

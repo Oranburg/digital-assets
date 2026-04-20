@@ -1,0 +1,30 @@
+{
+  "id": "stress-testing",
+  "term": "Stress Testing",
+  "tags": [
+    "risk-management",
+    "stablecoin",
+    "regulation"
+  ],
+  "parent": null,
+  "related": [
+    "dodd-frank-stress-tests",
+    "basel-iii-lcr",
+    "contingency-plan"
+  ],
+  "definitions": {
+    "technical": "The process of evaluating whether an institution can survive hypothetical adverse scenarios (such as a custodian failure, market dislocation, or sudden surge in redemption demands) by modeling the impact on its reserve portfolio and liquidity position.",
+    "lay": "A process where stablecoin issuers test whether they could survive worst case scenarios, like a bank holding their reserves going bankrupt, markets freezing up, or a sudden wave of customers demanding their money back, all at once.",
+    "parenthetical": "(the evaluation of institutional resilience under hypothetical adverse scenarios including custodian failure and redemption surges)",
+    "legal_significance": "The comment letter recommends that the OCC require stablecoin issuers to conduct stress tests modeled on the Dodd-Frank framework and Basel III LCR methodology. Proposed scenarios include simultaneous custodian failure, repo market dislocation, and a 10% redemption surge."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

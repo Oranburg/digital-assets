@@ -1,0 +1,33 @@
+{
+  "id": "permitted-payment-stablecoin-issuer",
+  "term": "Permitted Payment Stablecoin Issuer",
+  "tags": [
+    "stablecoin",
+    "GENIUS-Act",
+    "compliance"
+  ],
+  "parent": null,
+  "related": [
+    "payment-stablecoin",
+    "commodity-exclusion",
+    "occ",
+    "national-bank"
+  ],
+  "definitions": {
+    "technical": "An entity that has received approval under the GENIUS Act to issue payment stablecoins. Permitted issuers enjoy legal privileges (their stablecoins qualify as settlement assets and are excluded from the commodity definition) but must maintain continuous compliance with reserve, attestation, and redemption requirements. Categories include subsidiaries of insured depository institutions, federal qualified issuers, and state qualified issuers.",
+    "lay": "A company that has been officially approved under the GENIUS Act to issue stablecoins. Approved issuers get important legal benefits, like their tokens being recognized as legitimate settlement tools, but they must continuously follow all the rules. If they stop complying, they lose these benefits.",
+    "parenthetical": "(a GENIUS Act-approved entity authorized to issue payment stablecoins, with privileges contingent on continuous regulatory compliance)",
+    "legal_significance": "Permitted status is the gateway to the GENIUS Act's privileges, including settlement asset recognition and the commodity exclusion under Section 17(f). Loss of status simultaneously removes all privileges, creating a regulatory cliff that can worsen a crisis by triggering jurisdictional ambiguity."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

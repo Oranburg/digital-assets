@@ -1,0 +1,30 @@
+{
+  "id": "demand-deposits",
+  "term": "Demand Deposits",
+  "tags": [
+    "banking",
+    "reserve-assets",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-assets",
+    "reserve-composition",
+    "fdic-receivership"
+  ],
+  "definitions": {
+    "technical": "Funds held in bank accounts (such as checking accounts) that the depositor can withdraw at any time without advance notice. One of the reserve asset categories authorized by proposed Section 15.11(b)(2). Circle held $3.3 billion in demand deposits at SVB when it failed.",
+    "lay": "Money kept in bank accounts that can be withdrawn at any time, like checking accounts. These are one of the approved types of assets that stablecoin issuers can hold as reserves. However, the SVB crisis showed that even demand deposits can become temporarily inaccessible when a bank fails.",
+    "parenthetical": "(bank account funds available for immediate withdrawal, authorized as stablecoin reserve assets under proposed Part 15)",
+    "legal_significance": "Demand deposits at insured banks are a permissible reserve asset under proposed Section 15.11(b)(2). However, amounts exceeding the FDIC insurance limit ($250,000 per depositor) are subject to receivership risk, as demonstrated when Circle's $3.3 billion at SVB was temporarily frozen."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

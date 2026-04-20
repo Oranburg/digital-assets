@@ -1,26 +1,57 @@
-import { Link } from 'react-router-dom'
-import { getRootTerms, getTerm } from '../utils/terms'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { searchTerms, getAllTerms } from '../utils/terms'
 import './MapPage.css'
 
-function TermNode({ term, depth = 0 }) {
-  const children = (term.children || []).map(id => getTerm(id)).filter(Boolean)
+const CURATED_START = [
+  'blockchain',
+  'digital-asset',
+  'dao',
+  'smart-contract',
+  'stablecoin',
+  'consensus',
+  'genius-act',
+  'defi',
+]
+
+function SearchBar() {
+  const [query, setQuery] = useState('')
+  const [focused, setFocused] = useState(false)
+  const navigate = useNavigate()
+  const results = query.length > 1 ? searchTerms(query).slice(0, 8) : []
+  const total = getAllTerms().length
 
   return (
-    <div className="map-node" style={{ '--depth': depth }}>
-      <Link to={`/glossary/${term.id}`} className="map-node__link">
-        <span className="map-node__name">{term.term}</span>
-        {term.tags?.length > 0 && (
-          <span className="map-node__tags">
-            {term.tags.slice(0, 3).map(tag => (
-              <span key={tag} className="map-node__tag">{tag}</span>
-            ))}
-          </span>
-        )}
-      </Link>
-      {children.length > 0 && (
-        <div className="map-node__children">
-          {children.map(child => (
-            <TermNode key={child.id} term={child} depth={depth + 1} />
+    <div className="hero-search">
+      <input
+        type="text"
+        className="hero-search__input"
+        placeholder={`Search ${total} terms\u2026`}
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setTimeout(() => setFocused(false), 200)}
+        onKeyDown={e => {
+          if (e.key === 'Enter' && results.length > 0) {
+            navigate(`/glossary/${results[0].id}`)
+            setQuery('')
+          }
+        }}
+      />
+      {focused && results.length > 0 && (
+        <div className="hero-search__results">
+          {results.map(t => (
+            <Link
+              key={t.id}
+              to={`/glossary/${t.id}`}
+              className="hero-search__result"
+              onClick={() => setQuery('')}
+            >
+              <span className="hero-search__term">{t.term}</span>
+              <span className="hero-search__preview">
+                {t.definitions?.lay?.slice(0, 80)}\u2026
+              </span>
+            </Link>
           ))}
         </div>
       )}
@@ -29,47 +60,96 @@ function TermNode({ term, depth = 0 }) {
 }
 
 export default function MapPage() {
-  const roots = getRootTerms()
+  const startTerms = CURATED_START
+    .map(id => {
+      const all = getAllTerms()
+      return all.find(t => t.id === id)
+    })
+    .filter(Boolean)
 
   return (
     <div className="map-page">
-      <header className="map-hero container">
-        <h1 className="map-hero__title">Digital Assets</h1>
-        <p className="map-hero__subtitle serif">
-          An exploratory learning web covering blockchain technology, digital asset infrastructure, and the legal frameworks governing them. Click any term to explore.
+      <header className="hero">
+        <h1 className="hero__title">Digital Assets, Explained Three Ways</h1>
+        <p className="hero__subtitle serif">
+          Every term in blockchain law sits at an intersection: what it is, how it works, and what it is for. This glossary covers all three.
         </p>
+        <SearchBar />
       </header>
 
-      <div className="map-tree container">
-        {roots.map(term => (
-          <TermNode key={term.id} term={term} />
-        ))}
-      </div>
-
-      <div className="map-spacer" />
-
-      <nav className="map-sections container">
-        <Link to="/glossary" className="map-section card">
-          <span className="map-section__emoji">📖</span>
-          <h3>Glossary</h3>
-          <p className="serif">Search and explore all terms</p>
+      <section className="entry-cards container">
+        <Link to="/glossary/blockchain" className="entry-card">
+          <img
+            src="/digital-assets/images/lenses/ontology-no-bg.png"
+            alt=""
+            className="entry-card__img"
+          />
+          <h2 className="entry-card__title">What are digital assets?</h2>
+          <p className="entry-card__desc serif">
+            Start with the foundations: blockchain, tokens, stablecoins, and how they are classified.
+          </p>
+          <span className="entry-card__link">Browse &#8594;</span>
         </Link>
-        <Link to="/laws/states" className="map-section card">
-          <span className="map-section__emoji">⚖</span>
+
+        <Link to="/glossary/consensus" className="entry-card">
+          <img
+            src="/digital-assets/images/lenses/techne-no-bg.png"
+            alt=""
+            className="entry-card__img"
+          />
+          <h2 className="entry-card__title">How does blockchain work?</h2>
+          <p className="entry-card__desc serif">
+            Consensus, cryptography, smart contracts, and the mechanics underneath.
+          </p>
+          <span className="entry-card__link">Browse &#8594;</span>
+        </Link>
+
+        <Link to="/glossary/genius-act" className="entry-card">
+          <img
+            src="/digital-assets/images/lenses/telos-no-bg.png"
+            alt=""
+            className="entry-card__img"
+          />
+          <h2 className="entry-card__title">What is at stake?</h2>
+          <p className="entry-card__desc serif">
+            Regulation, systemic risk, DAO liability, and the legal consequences of getting it wrong.
+          </p>
+          <span className="entry-card__link">Browse &#8594;</span>
+        </Link>
+      </section>
+
+      <section className="start-here container">
+        <h2 className="start-here__heading">Start Here</h2>
+        <div className="start-here__list">
+          {startTerms.map(term => (
+            <Link
+              key={term.id}
+              to={`/glossary/${term.id}`}
+              className="start-here__item"
+            >
+              <span className="start-here__name">{term.term}</span>
+              <span className="start-here__def serif">
+                {term.definitions?.lay?.slice(0, 120)}{term.definitions?.lay?.length > 120 ? '\u2026' : ''}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="secondary-nav container">
+        <Link to="/laws/states" className="secondary-nav__block card">
           <h3>State Laws</h3>
           <p className="serif">DAO statutes across 5+ states</p>
         </Link>
-        <Link to="/laws/federal" className="map-section card">
-          <span className="map-section__emoji">🏛</span>
+        <Link to="/laws/federal" className="secondary-nav__block card">
           <h3>Federal Laws</h3>
           <p className="serif">GENIUS Act, CLARITY Act</p>
         </Link>
-        <Link to="/analysis" className="map-section card">
-          <span className="map-section__emoji">📊</span>
+        <Link to="/analysis" className="secondary-nav__block card">
           <h3>Analysis</h3>
           <p className="serif">Interactive tools and scholarly analysis</p>
         </Link>
-      </nav>
+      </section>
     </div>
   )
 }

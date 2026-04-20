@@ -1,0 +1,32 @@
+{
+  "id": "rehypothecation-prohibition",
+  "term": "Rehypothecation Prohibition",
+  "tags": [
+    "compliance",
+    "stablecoin",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "commingling-prohibition",
+    "reserve-assets",
+    "collateral"
+  ],
+  "definitions": {
+    "technical": "A rule preventing stablecoin issuers from pledging reserve assets as collateral for other transactions. This ensures that reserves remain fully available to back outstanding stablecoins and are not encumbered by third-party claims.",
+    "lay": "A rule that prevents stablecoin companies from using their reserve assets as collateral to borrow money or make other deals. The reserves must stay free and clear so they can always be used to pay back token holders.",
+    "parenthetical": "(a prohibition on pledging stablecoin reserve assets as collateral for other transactions)",
+    "legal_significance": "The rehypothecation prohibition works alongside the commingling prohibition to create a structural firewall protecting reserves from issuer creditors. Together, these prohibitions ensure that reserves are legally ring-fenced for the exclusive benefit of stablecoin holders."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

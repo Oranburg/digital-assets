@@ -1,0 +1,30 @@
+{
+  "id": "jurisdictional-ambiguity",
+  "term": "Jurisdictional Ambiguity",
+  "tags": [
+    "regulation",
+    "interagency",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "commodity-exclusion",
+    "cftc",
+    "occ"
+  ],
+  "definitions": {
+    "technical": "Uncertainty about which regulatory agency has authority over a stablecoin issuer, particularly when an issuer is at risk of losing its permitted status and the commodity exclusion under Section 17(f) may lapse.",
+    "lay": "Confusion about which government agency is in charge of regulating a stablecoin issuer. This becomes a serious problem when a stablecoin company is in trouble and might lose its approved status, because oversight could suddenly shift from one agency to another.",
+    "parenthetical": "(regulatory uncertainty arising when a stablecoin issuer's permitted status is at risk and the commodity exclusion may lapse)",
+    "legal_significance": "Jurisdictional ambiguity during a stablecoin crisis could leave both the OCC and the CFTC uncertain about their authority, delaying intervention at precisely the moment when speed is critical. The comment letter proposes an MOU and cross-notification obligations to address this gap."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

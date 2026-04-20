@@ -1,0 +1,30 @@
+{
+  "id": "administrative-record",
+  "term": "Administrative Record",
+  "tags": [
+    "administrative-law",
+    "rulemaking"
+  ],
+  "parent": null,
+  "related": [
+    "arbitrary-and-capricious-review",
+    "nprm"
+  ],
+  "definitions": {
+    "technical": "The complete set of documents, data, and reasoning that a federal agency relies on when issuing a regulation. Courts confine their review to this record when evaluating whether the agency acted within its statutory authority.",
+    "lay": "The full collection of evidence and explanations a government agency uses when creating a new rule. If the rule is challenged in court, the judge looks at this record to decide whether the agency acted reasonably.",
+    "parenthetical": "(the complete documentary basis for an agency's rulemaking decision)",
+    "legal_significance": "Under the APA (5 U.S.C. Section 706), courts review agency action based on the administrative record. A thin or poorly constructed record increases the likelihood that a rule will be vacated as arbitrary and capricious."
+  },
+  "statutes": [
+    "apa-5-usc-706"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

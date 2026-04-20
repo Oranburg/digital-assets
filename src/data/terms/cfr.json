@@ -1,0 +1,29 @@
+{
+  "id": "cfr",
+  "term": "Code of Federal Regulations (C.F.R.)",
+  "tags": [
+    "administrative-law",
+    "regulation"
+  ],
+  "parent": null,
+  "related": [
+    "federal-register",
+    "nprm",
+    "part-15"
+  ],
+  "definitions": {
+    "technical": "The official compilation of all permanent rules published by executive departments and agencies of the federal government. It is organized into 50 titles by subject area. Proposed Part 15 of Title 12 would add stablecoin regulations to this compilation.",
+    "lay": "The master collection of all permanent rules made by federal agencies, organized by topic. The OCC's proposed stablecoin rules would be added to the banking section (Title 12) as a new Part 15.",
+    "parenthetical": "(the official compilation of federal agency regulations, organized into 50 subject titles)",
+    "legal_significance": "Regulations codified in the C.F.R. carry the force of law. Proposed 12 C.F.R. Part 15 would establish binding requirements for stablecoin reserve composition, attestation, and redemption procedures."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

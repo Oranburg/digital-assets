@@ -1,0 +1,31 @@
+{
+  "id": "stablecoin-certification-review-committee",
+  "term": "Stablecoin Certification Review Committee",
+  "tags": [
+    "GENIUS-Act",
+    "regulation",
+    "interagency"
+  ],
+  "parent": "genius-act",
+  "related": [
+    "genius-act",
+    "permitted-payment-stablecoin-issuer"
+  ],
+  "definitions": {
+    "technical": "A regulatory body established by the GENIUS Act, chaired by the Secretary of the Treasury alongside leadership from the Federal Reserve Board and the FDIC. The committee reviews state-level regulatory regimes for substantial similarity to the federal framework and handles exceptions for non-financial public companies seeking to issue stablecoins.",
+    "lay": "A new government committee created by the GENIUS Act, led by the Treasury Secretary along with top officials from the Federal Reserve and FDIC. It checks whether state stablecoin regulations are strong enough to match federal standards and handles special cases for companies outside the banking sector that want to issue stablecoins.",
+    "parenthetical": "(a GENIUS Act body reviewing state regulatory equivalence and non-bank issuer exceptions, chaired by the Treasury Secretary)",
+    "legal_significance": "The Stablecoin Certification Review Committee is the mechanism through which the GENIUS Act maintains federal-state regulatory parity. Its determinations of 'substantial similarity' effectively control which state-regulated issuers can operate alongside federally regulated ones."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cftc",
+  "term": "CFTC (Commodity Futures Trading Commission)",
+  "tags": [
+    "agency",
+    "regulation",
+    "commodities"
+  ],
+  "parent": null,
+  "related": [
+    "commodity-exchange-act",
+    "commodity-exclusion",
+    "occ",
+    "jurisdictional-ambiguity"
+  ],
+  "definitions": {
+    "technical": "The independent federal agency that regulates commodity derivatives markets in the United States, including futures, options, and swaps. The CFTC becomes relevant to stablecoins when an issuer loses permitted status under the GENIUS Act, because the stablecoin may then be classified as a commodity subject to CFTC jurisdiction.",
+    "lay": "The government agency that oversees commodity trading markets in the U.S. It matters for stablecoins because if an issuer falls out of compliance with the GENIUS Act, its tokens could be reclassified as commodities, shifting oversight from the OCC to this agency.",
+    "parenthetical": "(the federal agency regulating commodity derivatives, which gains stablecoin jurisdiction if an issuer loses permitted status)",
+    "legal_significance": "Under GENIUS Act Section 17(f), compliant stablecoins are excluded from the Commodity Exchange Act's definition of 'commodity.' Loss of permitted status removes this exclusion, potentially triggering an abrupt jurisdictional shift from the OCC to the CFTC during a crisis."
+  },
+  "statutes": [
+    "commodity-exchange-act",
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

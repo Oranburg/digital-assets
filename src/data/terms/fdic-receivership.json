@@ -1,0 +1,33 @@
+{
+  "id": "fdic-receivership",
+  "term": "FDIC Receivership",
+  "tags": [
+    "banking",
+    "resolution",
+    "systemic-risk"
+  ],
+  "parent": "fdic",
+  "related": [
+    "fdic",
+    "systemic-risk-exception",
+    "custodian-insolvency",
+    "receivership-side-liquidity-risk"
+  ],
+  "definitions": {
+    "technical": "The legal process by which the FDIC takes control of a failed bank's assets and liabilities. During receivership, depositors may temporarily lose access to funds exceeding FDIC insurance limits. Circle's reserves at SVB were frozen under this process until the systemic risk exception was invoked.",
+    "lay": "The legal process triggered when a bank fails and the FDIC takes over. During this process, people and companies with more than $250,000 at the bank may not be able to access their money for days or weeks. This is exactly what happened to Circle's $3.3 billion at Silicon Valley Bank.",
+    "parenthetical": "(the FDIC process of taking control of a failed bank's assets, during which large deposits may be temporarily frozen)",
+    "legal_significance": "FDIC receivership (governed by 12 U.S.C. Section 1821) can freeze stablecoin reserves even when those reserves comply with all composition requirements. The comment letter argues that the proposed rule must account for this operational risk, not just asset quality."
+  },
+  "statutes": [
+    "12-usc-1821"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "yield-bearing-stablecoin",
+  "term": "Yield-Bearing Stablecoin",
+  "tags": [
+    "stablecoin",
+    "securities"
+  ],
+  "parent": "stablecoin",
+  "related": [
+    "stablecoin",
+    "payment-stablecoin",
+    "fiat-backed-stablecoin"
+  ],
+  "definitions": {
+    "technical": "A stablecoin structured so that yield generated from underlying reserve assets (typically U.S. Treasury investments) passes through to the token holder rather than being retained by the issuer. This pass-through structure causes classification as a security under U.S. law.",
+    "lay": "A type of stablecoin where the interest earned from the reserves is paid to the people holding the tokens, similar to a savings account. Because holders earn returns, these tokens are legally treated as investment securities, not as simple payment tools.",
+    "parenthetical": "(a stablecoin passing reserve yield through to holders, classified as a security and excluded from the GENIUS Act's payment stablecoin framework)",
+    "legal_significance": "Yield-bearing stablecoins are explicitly excluded from the GENIUS Act's payment stablecoin framework because their pass-through yield structure triggers securities classification under the Howey test. They fall under SEC jurisdiction rather than OCC oversight."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

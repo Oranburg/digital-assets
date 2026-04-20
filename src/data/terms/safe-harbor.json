@@ -1,0 +1,28 @@
+{
+  "id": "safe-harbor",
+  "term": "Safe Harbor",
+  "tags": [
+    "regulation",
+    "compliance"
+  ],
+  "parent": null,
+  "related": [
+    "option-a-diversification",
+    "principles-based-standard"
+  ],
+  "definitions": {
+    "technical": "A regulatory provision that shields an entity from enforcement action if it meets specified quantitative requirements, even if its conduct might otherwise raise concerns. Under Option A, issuers meeting the quantitative safe harbor would be presumed compliant with diversification requirements.",
+    "lay": "A rule that protects a company from regulatory penalties if it meets certain specific numerical targets. Under one proposed approach, stablecoin issuers that hit these targets would automatically be considered in compliance with diversification rules.",
+    "parenthetical": "(a regulatory provision shielding compliant entities from enforcement by establishing presumptive compliance through quantitative thresholds)",
+    "legal_significance": "The voluntary safe harbor in Option A creates a two-tier compliance system: issuers either meet quantitative thresholds (presumed compliant) or rely on principles-based assessment (subject to examiner judgment). The comment letter argues this ambiguity undermines the attestation process."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

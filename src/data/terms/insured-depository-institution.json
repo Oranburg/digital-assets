@@ -1,0 +1,32 @@
+{
+  "id": "insured-depository-institution",
+  "term": "Insured Depository Institution",
+  "tags": [
+    "banking",
+    "FDIC",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "fdic",
+    "national-bank",
+    "federal-savings-association"
+  ],
+  "definitions": {
+    "technical": "A bank or savings association whose deposits are insured by the FDIC. The GENIUS Act allows subsidiaries of insured depository institutions to become permitted stablecoin issuers.",
+    "lay": "A bank whose customer deposits are protected by FDIC insurance. Under the GENIUS Act, companies owned by these banks can apply to become approved stablecoin issuers.",
+    "parenthetical": "(an FDIC-insured bank or savings association whose subsidiaries may become permitted stablecoin issuers)",
+    "legal_significance": "The GENIUS Act uses the insured depository institution framework as a gateway for stablecoin issuance, leveraging existing banking supervision infrastructure. Subsidiaries of these institutions benefit from established regulatory relationships and examination procedures."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

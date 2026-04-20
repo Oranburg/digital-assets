@@ -1,0 +1,29 @@
+{
+  "id": "money-market-fund-shares",
+  "term": "Money Market Fund Shares",
+  "tags": [
+    "reserve-assets",
+    "finance",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-assets",
+    "reserve-composition"
+  ],
+  "definitions": {
+    "technical": "Shares in a mutual fund that invests in short term, high quality debt securities. These are among the permissible reserve asset types under the proposed rule for stablecoin issuers.",
+    "lay": "Shares in a special type of mutual fund that invests only in very safe, short term debt. Stablecoin issuers are allowed to count these shares as part of their reserves under the proposed rules.",
+    "parenthetical": "(mutual fund shares investing in short term, high quality debt, authorized as permissible stablecoin reserve assets)",
+    "legal_significance": "Money market fund shares are listed as a permissible reserve asset under proposed Part 15, providing issuers with a diversified, liquid option for reserve holdings. However, they introduce an additional layer of counterparty risk compared to direct Treasury holdings."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

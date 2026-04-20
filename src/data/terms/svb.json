@@ -1,0 +1,31 @@
+{
+  "id": "svb",
+  "term": "Silicon Valley Bank (SVB)",
+  "tags": [
+    "banking",
+    "case-study",
+    "systemic-risk"
+  ],
+  "parent": null,
+  "related": [
+    "fdic-receivership",
+    "usdc",
+    "depeg",
+    "systemic-risk-exception"
+  ],
+  "definitions": {
+    "technical": "A California-based bank that failed in March 2023, triggering a stablecoin crisis. Circle held approximately $3.3 billion in USDC reserves at SVB. When the FDIC placed SVB into receivership, those reserves were temporarily frozen, causing USDC to depeg to approximately $0.87.",
+    "lay": "A California bank that collapsed in March 2023 and became the central case study for stablecoin risk. Circle, the company behind USDC, had $3.3 billion stored at SVB. When the bank failed, that money was temporarily locked up, causing USDC to drop to about 87 cents on the dollar.",
+    "parenthetical": "(the California bank whose March 2023 failure froze $3.3 billion in USDC reserves, causing a depeg to $0.87)",
+    "legal_significance": "The SVB failure is the factual foundation of the comment letter. It demonstrates that fully compliant reserves can become operationally inaccessible during receivership, and that the systemic risk exception (12 U.S.C. Section 1823(c)(4)(G)) was the only mechanism that resolved the crisis."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "third-party-receivership",
+  "term": "Third-Party Receivership",
+  "tags": [
+    "banking",
+    "resolution",
+    "systemic-risk"
+  ],
+  "parent": null,
+  "related": [
+    "fdic-receivership",
+    "custodian-insolvency",
+    "receivership-side-liquidity-risk"
+  ],
+  "definitions": {
+    "technical": "A situation in which an external custodian holding a stablecoin issuer's reserves fails and is taken over by regulators. This is the core 'blind spot' identified in the comment letter: regulations assume reserves are always accessible, failing to account for the period during which they may be frozen in a third-party receivership.",
+    "lay": "A situation where a bank holding a stablecoin company's reserves fails and gets taken over by the government. This is the central problem the comment letter identifies: the rules assume reserve money is always available, but it can be locked up for days or weeks while the bank is being wound down.",
+    "parenthetical": "(the failure of an external reserve custodian, freezing legally adequate reserves during the resolution process)",
+    "legal_significance": "Third-party receivership risk is the comment letter's primary analytical contribution to the GENIUS Act debate. The proposed rule regulates what reserves consist of but does not address the operational risk that reserves become inaccessible when a custodian enters receivership."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

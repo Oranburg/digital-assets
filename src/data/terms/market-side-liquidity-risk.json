@@ -1,0 +1,29 @@
+{
+  "id": "market-side-liquidity-risk",
+  "term": "Market-Side Liquidity Risk",
+  "tags": [
+    "risk-management",
+    "stablecoin",
+    "finance"
+  ],
+  "parent": "liquidity-risk",
+  "related": [
+    "liquidity-risk",
+    "receivership-side-liquidity-risk"
+  ],
+  "definitions": {
+    "technical": "The risk that a reserve asset (such as a Treasury bill) cannot be sold at its full value because of adverse market conditions. This is the type of liquidity risk that standard reserve composition disclosures reveal.",
+    "lay": "The risk that reserve assets cannot be sold at their full price because market conditions are bad. For example, if many people are trying to sell Treasury bills at the same time, the price might drop below face value.",
+    "parenthetical": "(the risk that adverse market conditions prevent reserve assets from being sold at par value)",
+    "legal_significance": "Standard reserve composition disclosures and attestations are designed to reveal market-side liquidity risk. However, the comment letter argues that this focus creates a blind spot: reserves can be perfectly liquid from a market perspective yet completely inaccessible due to receivership."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

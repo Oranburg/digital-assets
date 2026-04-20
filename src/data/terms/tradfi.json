@@ -1,0 +1,28 @@
+{
+  "id": "tradfi",
+  "term": "TradFi (Traditional Finance)",
+  "tags": [
+    "finance",
+    "banking"
+  ],
+  "parent": null,
+  "related": [
+    "defi",
+    "crosstagion"
+  ],
+  "definitions": {
+    "technical": "The conventional financial system, including banks, broker-dealers, clearinghouses, and regulated exchanges. The term is used in contrast with DeFi (decentralized finance) to distinguish legacy institutional finance from blockchain-based alternatives.",
+    "lay": "The traditional financial system made up of banks, stock exchanges, and other established institutions. The term is used to contrast these familiar institutions with the newer world of blockchain-based decentralized finance.",
+    "parenthetical": "(the conventional financial system of banks, broker-dealers, and regulated exchanges, contrasted with DeFi)",
+    "legal_significance": "The TradFi/DeFi distinction is analytically important because the GENIUS Act's prudential framework is designed to prevent contagion from stablecoins into TradFi (forward channel) but does not adequately address contagion from TradFi into stablecoins (reverse channel)."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

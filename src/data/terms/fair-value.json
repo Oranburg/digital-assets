@@ -1,0 +1,30 @@
+{
+  "id": "fair-value",
+  "term": "Fair Value",
+  "tags": [
+    "accounting",
+    "reserve-assets",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-assets",
+    "outstanding-issuance-value",
+    "reserve-impairment"
+  ],
+  "definitions": {
+    "technical": "The market price at which reserve assets could be sold in an orderly transaction. Proposed Section 15.11(a)(1)(iii) requires that total reserve fair value equal or exceed outstanding issuance value at all times.",
+    "lay": "The current market price that a reserve asset would fetch if sold under normal conditions. Stablecoin issuers must ensure that the total market value of their reserves always equals or exceeds the total face value of all tokens they have issued.",
+    "parenthetical": "(the orderly-transaction market price of reserve assets, required to equal or exceed outstanding issuance value)",
+    "legal_significance": "Proposed Section 15.11(a)(1)(iii) establishes a continuous fair value floor for reserves. A decline below outstanding issuance value constitutes reserve impairment and may trigger supervisory action or loss of permitted status."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

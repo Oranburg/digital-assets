@@ -1,0 +1,32 @@
+{
+  "id": "systemic-risk-exception",
+  "term": "Systemic Risk Exception",
+  "tags": [
+    "banking",
+    "emergency",
+    "FDIC"
+  ],
+  "parent": null,
+  "related": [
+    "fdic",
+    "fdic-receivership",
+    "svb"
+  ],
+  "definitions": {
+    "technical": "An emergency provision (12 U.S.C. Section 1823(c)(4)(G)) allowing the FDIC to deviate from its normal least-cost resolution approach when a bank failure poses serious risks to the broader financial system. Invoking the exception requires a two-thirds vote of both the FDIC Board and the Federal Reserve Board of Governors, plus Treasury Secretary approval.",
+    "lay": "A rarely used emergency power that lets the government bail out all depositors at a failed bank (not just those under the $250,000 insurance limit) when the failure threatens the entire financial system. It requires votes from three different government bodies and was invoked to resolve the SVB crisis.",
+    "parenthetical": "(an emergency FDIC provision permitting deviation from least-cost resolution when bank failure threatens systemic stability)",
+    "legal_significance": "The systemic risk exception (12 U.S.C. Section 1823(c)(4)(G)) was the mechanism that resolved the USDC depeg during the SVB crisis. The comment letter argues that regulatory policy should not assume this discretionary, politically costly exception will be available in future crises."
+  },
+  "statutes": [
+    "12-usc-1823"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

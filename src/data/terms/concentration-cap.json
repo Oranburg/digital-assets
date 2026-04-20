@@ -1,0 +1,30 @@
+{
+  "id": "concentration-cap",
+  "term": "Concentration Cap",
+  "tags": [
+    "stablecoin",
+    "reserve-management",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "option-b-diversification",
+    "diversification-requirements",
+    "single-custodian-concentration"
+  ],
+  "definitions": {
+    "technical": "A maximum percentage of total reserves that an issuer may hold at a single institution. Option B in the proposed rule sets this cap at 40%, limiting exposure to any single custodian's failure.",
+    "lay": "A rule that limits how much of a stablecoin issuer's reserves can be kept at any one bank. Under one proposed approach, no more than 40% of reserves could be at a single institution, so that one bank's failure cannot wipe out the majority of an issuer's backing.",
+    "parenthetical": "(a regulatory ceiling on the share of reserves held at any single custodian institution)",
+    "legal_significance": "The 40% concentration cap in Option B directly addresses the SVB scenario, where Circle's 8% concentration at a single custodian was sufficient to trigger a depeg. The cap provides an auditable, enforceable bright line for the monthly attestation process."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

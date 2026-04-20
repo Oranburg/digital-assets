@@ -1,13 +1,82 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getTerm } from '../utils/terms'
 import './TermPage.css'
 
+const LENSES = [
+  {
+    key: 'ontology',
+    field: 'lay',
+    label: 'What is it?',
+    emoji: '🏷️',
+    cssVar: '--lens-ontology',
+  },
+  {
+    key: 'techne',
+    field: 'technical',
+    label: 'How does it work?',
+    emoji: '⚙️',
+    cssVar: '--lens-techne',
+  },
+  {
+    key: 'teleology',
+    field: 'legal_significance',
+    label: 'What is it for?',
+    emoji: '🎯',
+    cssVar: '--lens-teleology',
+  },
+]
+
+function Accordion({ lens, content, defaultOpen }) {
+  const [open, setOpen] = useState(defaultOpen)
+
+  if (!content) return null
+
+  return (
+    <div className={`accordion accordion--${lens.key}`}>
+      <button
+        className="accordion__header"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
+        <span className="accordion__icon">{lens.emoji}</span>
+        <span className="accordion__label">{lens.label}</span>
+        <span className="accordion__chevron">{open ? '▲' : '▼'}</span>
+      </button>
+      {open && (
+        <div className="accordion__body">
+          <p className="serif">{content}</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function GreekFootnote() {
+  const [shown, setShown] = useState(false)
+
+  useEffect(() => {
+    if (!localStorage.getItem('greekFootnoteSeen')) {
+      setShown(true)
+      localStorage.setItem('greekFootnoteSeen', 'true')
+    }
+  }, [])
+
+  if (!shown) return null
+
+  return (
+    <aside className="greek-footnote">
+      <button className="greek-footnote__close" onClick={() => setShown(false)}>✕</button>
+      <p className="serif">
+        These three perspectives draw on <em>ontology</em> (what a thing is), <em>techne</em> (how it works), and <em>teleology</em> (what it is for): a framework from Greek philosophy for examining any concept from multiple angles.
+      </p>
+    </aside>
+  )
+}
+
 export default function TermPage() {
   const { termId } = useParams()
   const term = getTerm(termId)
-  const [showTechnical, setShowTechnical] = useState(false)
-  const [showLegal, setShowLegal] = useState(false)
 
   if (!term) {
     return (
@@ -28,7 +97,7 @@ export default function TermPage() {
       <div className="container">
         {/* Breadcrumb */}
         <nav className="term-breadcrumb">
-          <Link to="/">Map</Link>
+          <Link to="/">Home</Link>
           <span>/</span>
           <Link to="/glossary">Glossary</Link>
           {parentTerm && (
@@ -43,61 +112,42 @@ export default function TermPage() {
 
         {/* Header */}
         <header className="term-header">
+          <h1 className="term-header__title">{term.term}</h1>
           {term.tags?.length > 0 && (
             <div className="term-header__tags">
               {term.tags.map(tag => (
-                <Link key={tag} to={`/glossary?tag=${tag}`} className="term-tag">{tag}</Link>
+                <span key={tag} className="term-tag">{tag}</span>
               ))}
             </div>
           )}
-          <h1 className="term-header__title">{term.term}</h1>
         </header>
 
-        {/* Lay definition (always visible) */}
+        {/* Plain definition — always visible */}
         <section className="term-definition">
           <p className="term-definition__text serif">{term.definitions?.lay}</p>
         </section>
 
-        {/* Technical definition (expandable) */}
-        {term.definitions?.technical && (
-          <section className="term-technical">
-            <button
-              className="term-technical__toggle"
-              onClick={() => setShowTechnical(!showTechnical)}
-            >
-              {showTechnical ? '▲' : '▼'} Technical Definition
-            </button>
-            {showTechnical && (
-              <div className="term-technical__content">
-                <p className="serif">{term.definitions.technical}</p>
-                {term.definitions.parenthetical && (
-                  <p className="term-parenthetical">
-                    <strong>Footnote form:</strong> {term.definitions.parenthetical}
-                  </p>
-                )}
-              </div>
-            )}
-          </section>
-        )}
+        {/* Three lenses as accordions */}
+        <div className="term-lenses">
+          {LENSES.map((lens, i) => (
+            <Accordion
+              key={lens.key}
+              lens={lens}
+              content={term.definitions?.[lens.field]}
+              defaultOpen={i === 0}
+            />
+          ))}
+          {term.definitions?.parenthetical && (
+            <div className="term-parenthetical">
+              <strong>Footnote form:</strong> {term.definitions.parenthetical}
+            </div>
+          )}
+        </div>
 
-        {/* Legal significance (expandable) */}
-        {term.definitions?.legal_significance && (
-          <section className="term-technical term-legal">
-            <button
-              className="term-technical__toggle"
-              onClick={() => setShowLegal(!showLegal)}
-            >
-              {showLegal ? '▲' : '▼'} Legal Significance
-            </button>
-            {showLegal && (
-              <div className="term-technical__content">
-                <p className="serif">{term.definitions.legal_significance}</p>
-              </div>
-            )}
-          </section>
-        )}
+        {/* Greek footnote — shown once */}
+        <GreekFootnote />
 
-        {/* Navigation: parent, children, related */}
+        {/* Navigation */}
         <div className="term-nav-grid">
           {parentTerm && (
             <div className="term-nav-section">

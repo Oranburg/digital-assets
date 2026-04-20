@@ -1,0 +1,32 @@
+{
+  "id": "commodity-exclusion",
+  "term": "Commodity Exclusion (GENIUS Act Section 17(f))",
+  "tags": [
+    "GENIUS-Act",
+    "commodities",
+    "regulation"
+  ],
+  "parent": "genius-act",
+  "related": [
+    "commodity-exchange-act",
+    "cftc",
+    "permitted-payment-stablecoin-issuer"
+  ],
+  "definitions": {
+    "technical": "The provision in GENIUS Act Section 17(f) that removes compliant stablecoins from the Commodity Exchange Act's definition of 'commodity.' If a stablecoin issuer loses its permitted status, this exclusion lapses, potentially shifting regulatory jurisdiction from the OCC to the CFTC.",
+    "lay": "A section of the GENIUS Act that says compliant stablecoins are not commodities. This matters because if a stablecoin company stops following the rules, its tokens could suddenly be classified as commodities, bringing in a completely different set of regulators.",
+    "parenthetical": "(the GENIUS Act provision excluding compliant stablecoins from the commodity definition, contingent on permitted status)",
+    "legal_significance": "Section 17(f) creates a regulatory cliff: loss of permitted status simultaneously removes the commodity exclusion, potentially triggering CFTC jurisdiction at the worst possible time (during a crisis). The comment letter argues this gap requires a formal OCC/CFTC coordination agreement."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

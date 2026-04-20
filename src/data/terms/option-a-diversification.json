@@ -1,0 +1,30 @@
+{
+  "id": "option-a-diversification",
+  "term": "Option A (Principles-Based Diversification)",
+  "tags": [
+    "stablecoin",
+    "reserve-management",
+    "GENIUS-Act"
+  ],
+  "parent": "diversification-requirements",
+  "related": [
+    "option-b-diversification",
+    "diversification-requirements",
+    "attestation"
+  ],
+  "definitions": {
+    "technical": "One of two approaches the NPRM proposes for reserve diversification. Option A sets a flexible, principles-based baseline standard with a voluntary quantitative safe harbor that issuers can elect to follow.",
+    "lay": "One of two proposed approaches for how stablecoin issuers should spread out their reserves. This option sets broad guidelines rather than hard numbers, with an optional set of specific targets issuers can choose to meet for extra regulatory comfort.",
+    "parenthetical": "(a flexible, principles-based reserve diversification standard with voluntary quantitative safe harbors)",
+    "legal_significance": "The comment letter argues against Option A because principles-based standards cannot be reliably audited through the monthly attestation process. Without quantitative thresholds, attestors lack clear benchmarks for determining compliance."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

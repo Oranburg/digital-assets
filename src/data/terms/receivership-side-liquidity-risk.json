@@ -1,0 +1,31 @@
+{
+  "id": "receivership-side-liquidity-risk",
+  "term": "Receivership-Side Liquidity Risk",
+  "tags": [
+    "risk-management",
+    "banking",
+    "stablecoin"
+  ],
+  "parent": "liquidity-risk",
+  "related": [
+    "liquidity-risk",
+    "market-side-liquidity-risk",
+    "fdic-receivership",
+    "custodian-insolvency"
+  ],
+  "definitions": {
+    "technical": "The risk that reserve assets become temporarily inaccessible because the custodian holding them has entered FDIC receivership, even though the assets themselves meet all quality and composition requirements. This is the specific risk the SVB episode demonstrated.",
+    "lay": "The risk that a stablecoin issuer's reserves become frozen because the bank holding them has failed and been taken over by the FDIC. The reserves might be perfectly good assets, but the issuer simply cannot access them while the bank is being wound down.",
+    "parenthetical": "(the risk of reserve inaccessibility due to custodian receivership, distinct from market-side asset quality risk)",
+    "legal_significance": "Receivership-side liquidity risk is the comment letter's central analytical contribution. The proposed rule addresses market-side liquidity (can you sell the asset?) but not receivership-side liquidity (can you access the asset?). The SVB episode demonstrated that this gap can trigger a depeg even with fully compliant reserves."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

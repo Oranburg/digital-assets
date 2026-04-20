@@ -1,0 +1,30 @@
+{
+  "id": "federal-register",
+  "term": "Federal Register",
+  "tags": [
+    "administrative-law",
+    "rulemaking"
+  ],
+  "parent": null,
+  "related": [
+    "cfr",
+    "nprm"
+  ],
+  "definitions": {
+    "technical": "The daily journal of the United States government in which proposed and final rules, executive orders, and other official documents are published. The OCC's proposed stablecoin rule appeared at 91 Fed. Reg. 10,202.",
+    "lay": "The government's daily newspaper for official rules and announcements. When a federal agency wants to create a new rule, it publishes the proposal here and invites public comments. The OCC published its stablecoin rule proposal in this journal.",
+    "parenthetical": "(the daily government publication for proposed rules, final rules, executive orders, and official notices)",
+    "legal_significance": "Publication in the Federal Register triggers the public comment period required by the APA (5 U.S.C. Section 553). Failure to publish or inadequate notice can invalidate a rule. The NPRM at 91 Fed. Reg. 10,202 is the document Professor Oranburg's comment letter responds to."
+  },
+  "statutes": [
+    "apa-5-usc-553"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

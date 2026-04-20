@@ -1,0 +1,31 @@
+{
+  "id": "wholesale-banking-payments",
+  "term": "Wholesale Banking Payments",
+  "tags": [
+    "payments",
+    "banking",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "settlement-asset",
+    "payment-stablecoin"
+  ],
+  "definitions": {
+    "technical": "Large-value transactions between financial institutions, as distinguished from retail transactions between consumers and merchants. Under the GENIUS Act, stablecoins from permitted issuers can serve as settlement assets in wholesale banking payments.",
+    "lay": "Big-money transactions between banks and financial institutions, as opposed to everyday consumer purchases. The GENIUS Act allows approved stablecoins to be used to settle these large institutional transactions.",
+    "parenthetical": "(large-value interbank transactions in which permitted stablecoins may serve as settlement assets under the GENIUS Act)",
+    "legal_significance": "Recognition of stablecoins as settlement assets in wholesale payments represents a significant integration of digital assets into the existing financial infrastructure. This privilege is reserved for stablecoins from permitted issuers and is contingent on maintaining compliance."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

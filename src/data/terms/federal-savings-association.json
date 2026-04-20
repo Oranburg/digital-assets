@@ -1,0 +1,32 @@
+{
+  "id": "federal-savings-association",
+  "term": "Federal Savings Association",
+  "tags": [
+    "banking",
+    "charter",
+    "OCC"
+  ],
+  "parent": null,
+  "related": [
+    "national-bank",
+    "occ",
+    "permitted-payment-stablecoin-issuer"
+  ],
+  "definitions": {
+    "technical": "A type of federally chartered financial institution, historically focused on home lending, that is supervised by the OCC. Like national banks, federal savings associations could become permitted stablecoin issuers under the GENIUS Act.",
+    "lay": "A type of bank with a federal charter that is overseen by the OCC. Originally focused on home loans and savings, these institutions can also apply to issue stablecoins under the GENIUS Act, just like nationally chartered banks.",
+    "parenthetical": "(a federally chartered, OCC-supervised financial institution eligible to become a permitted stablecoin issuer)",
+    "legal_significance": "Federal savings associations, alongside national banks, are the two categories of OCC-supervised institutions eligible to issue payment stablecoins under the GENIUS Act. Their inclusion in the framework expands the pool of potential federally regulated stablecoin issuers."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

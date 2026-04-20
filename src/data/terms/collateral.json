@@ -1,0 +1,33 @@
+{
+  "id": "collateral",
+  "term": "Collateral",
+  "tags": [
+    "DeFi",
+    "finance",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "cascading-liquidations",
+    "depeg",
+    "defi",
+    "rehypothecation-prohibition"
+  ],
+  "definitions": {
+    "technical": "Assets pledged as security for a financial obligation. In decentralized finance, stablecoins frequently serve as collateral for loans and trading positions, meaning that a stablecoin depeg can trigger forced liquidations across many protocols simultaneously.",
+    "lay": "Assets put up as a guarantee when borrowing money. In crypto lending, stablecoins are commonly used as collateral. When a stablecoin loses its dollar peg, the collateral loses value, which can trigger a wave of forced selling across many platforms.",
+    "parenthetical": "(assets pledged as security for financial obligations, including stablecoins used to back DeFi loans and positions)",
+    "legal_significance": "The GENIUS Act restricts how permitted stablecoin issuers may use reserve assets, prohibiting rehypothecation and commingling. Stablecoins from non-permitted issuers cannot be used as margin or collateral by futures commission merchants."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

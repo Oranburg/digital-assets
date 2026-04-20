@@ -1,0 +1,30 @@
+{
+  "id": "liquidity-risk",
+  "term": "Liquidity Risk",
+  "tags": [
+    "risk-management",
+    "stablecoin",
+    "finance"
+  ],
+  "parent": null,
+  "related": [
+    "market-side-liquidity-risk",
+    "receivership-side-liquidity-risk",
+    "reserve-liquidity"
+  ],
+  "definitions": {
+    "technical": "The risk that an entity cannot convert its assets to cash quickly enough to meet its obligations. The comment letter distinguishes two subtypes: market-side liquidity risk (inability to sell an asset at par) and receivership-side liquidity risk (inability to access an asset frozen in FDIC proceedings).",
+    "lay": "The risk that a company cannot turn its assets into cash fast enough to pay what it owes. For stablecoin issuers, this comes in two forms: difficulty selling assets at full price in bad markets, and inability to access assets trapped at a failed bank.",
+    "parenthetical": "(the risk of being unable to convert assets to cash quickly enough to meet obligations, including both market and receivership subtypes)",
+    "legal_significance": "The comment letter's central argument is that the proposed rule addresses market-side liquidity risk through reserve composition requirements but fails to address receivership-side liquidity risk. This distinction is critical because the SVB episode involved the latter, not the former."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

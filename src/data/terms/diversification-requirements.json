@@ -1,0 +1,30 @@
+{
+  "id": "diversification-requirements",
+  "term": "Diversification Requirements",
+  "tags": [
+    "stablecoin",
+    "reserve-management",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "option-a-diversification",
+    "option-b-diversification",
+    "concentration-cap"
+  ],
+  "definitions": {
+    "technical": "Rules specifying how stablecoin reserves must be spread across different asset types, custodians, and counterparties to reduce the risk that a single failure impairs the entire reserve portfolio.",
+    "lay": "Rules requiring stablecoin issuers to spread their reserves across multiple banks, asset types, and business partners. The goal is to ensure that no single failure can wipe out a large share of the reserves backing the stablecoin.",
+    "parenthetical": "(rules requiring reserve allocation across multiple asset types, custodians, and counterparties)",
+    "legal_significance": "The NPRM offers two approaches: Option A (principles-based) and Option B (mandatory quantitative limits). The comment letter recommends Option B because its 40% concentration cap creates an auditable standard compatible with the monthly attestation process."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "settlement-asset",
+  "term": "Settlement Asset",
+  "tags": [
+    "payments",
+    "stablecoin",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "payment-stablecoin",
+    "permitted-payment-stablecoin-issuer",
+    "wholesale-banking-payments"
+  ],
+  "definitions": {
+    "technical": "An instrument used to complete (settle) financial transactions with finality. Stablecoins issued by permitted issuers qualify as settlement assets in wholesale banking payments under the GENIUS Act.",
+    "lay": "A financial instrument used to finalize a transaction so both parties are fully paid. Under the GENIUS Act, stablecoins from approved issuers can serve this function in large bank-to-bank payments.",
+    "parenthetical": "(an instrument used to finalize financial transactions, a status granted to stablecoins from permitted issuers under the GENIUS Act)",
+    "legal_significance": "Settlement asset status is one of the key privileges conferred by the GENIUS Act on stablecoins from permitted issuers. This recognition integrates compliant stablecoins into the existing financial infrastructure for wholesale payments, but the privilege is contingent on maintaining permitted status."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

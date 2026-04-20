@@ -1,0 +1,33 @@
+{
+  "id": "reserve-requirement",
+  "term": "Reserve Requirement",
+  "tags": [
+    "stablecoin",
+    "GENIUS-Act",
+    "compliance"
+  ],
+  "parent": null,
+  "related": [
+    "one-to-one-reserve",
+    "reserve-assets",
+    "reserve-composition",
+    "reserve-liquidity"
+  ],
+  "definitions": {
+    "technical": "The mandate that permitted stablecoin issuers maintain sufficient qualifying assets to back all outstanding tokens. The GENIUS Act establishes federal reserve requirements for payment stablecoins, mandating strict one-to-one backing with high quality liquid assets.",
+    "lay": "The rule requiring stablecoin companies to hold enough approved assets to cover every token they have issued. The GENIUS Act makes this a strict one-for-one requirement: for every dollar of stablecoin, there must be a dollar of qualifying reserves.",
+    "parenthetical": "(the mandate for permitted issuers to maintain qualifying reserve assets equal to outstanding stablecoin value)",
+    "legal_significance": "The reserve requirement is the GENIUS Act's foundational prudential standard. The comment letter argues that meeting this requirement is necessary but insufficient, because the SVB episode showed that compliant reserves can be rendered inaccessible by custodian failure."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

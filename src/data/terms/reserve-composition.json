@@ -1,0 +1,30 @@
+{
+  "id": "reserve-composition",
+  "term": "Reserve Composition",
+  "tags": [
+    "stablecoin",
+    "reserve-management",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-assets",
+    "diversification-requirements",
+    "attestation"
+  ],
+  "definitions": {
+    "technical": "The mix of different asset types within a stablecoin issuer's reserve portfolio, including the proportions held in Treasury bills, demand deposits, repos, and money market fund shares. The comment letter distinguishes between reserve composition (what assets are held) and reserve liquidity (whether those assets are accessible).",
+    "lay": "The specific breakdown of how a stablecoin company divides its reserves among different types of assets, such as government bonds, bank accounts, and short term loans. The comment letter argues that having the right mix of assets is not enough if those assets become locked up at a failed bank.",
+    "parenthetical": "(the allocation of reserve holdings across asset types, distinct from the accessibility of those assets)",
+    "legal_significance": "Reserve composition is the primary focus of the GENIUS Act's prudential framework. The comment letter's central argument is that composition-focused regulation creates a false sense of security because it does not address receivership-side liquidity risk."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

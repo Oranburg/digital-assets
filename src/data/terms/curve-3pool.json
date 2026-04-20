@@ -1,0 +1,31 @@
+{
+  "id": "curve-3pool",
+  "term": "Curve 3pool",
+  "tags": [
+    "DeFi",
+    "liquidity",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "liquidity-pool",
+    "defi",
+    "cascading-liquidations",
+    "depeg"
+  ],
+  "definitions": {
+    "technical": "A decentralized finance liquidity pool on the Curve protocol that holds three major stablecoins (USDC, USDT, and DAI) and facilitates low-slippage swaps between them. During the SVB crisis, the pool became severely imbalanced as holders dumped USDC, illustrating how a banking failure can destabilize DeFi markets.",
+    "lay": "A large pool of digital dollars on the Curve exchange that lets people swap between three major stablecoins with low fees. When USDC lost its dollar peg during the SVB collapse, traders rushed to trade their USDC for other stablecoins in this pool, throwing it out of balance and spreading the panic across crypto markets.",
+    "parenthetical": "(a major DeFi liquidity pool for swapping between USDC, USDT, and DAI that became severely imbalanced during the SVB crisis)",
+    "legal_significance": "The Curve 3pool episode provides concrete evidence of reverse channel contagion: a traditional bank failure (SVB) caused measurable, immediate disruption in DeFi markets. This evidence supports the comment letter's argument that the OCC must address custodian failure risk."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

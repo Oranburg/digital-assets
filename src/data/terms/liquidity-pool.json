@@ -1,0 +1,29 @@
+{
+  "id": "liquidity-pool",
+  "term": "Liquidity Pool",
+  "tags": [
+    "DeFi",
+    "protocol"
+  ],
+  "parent": null,
+  "related": [
+    "curve-3pool",
+    "defi",
+    "smart-contract"
+  ],
+  "definitions": {
+    "technical": "A collection of digital assets locked in a smart contract to facilitate decentralized trading. Instead of matching buyers and sellers directly, DeFi protocols let users trade against the pooled assets. Pool imbalances during stress events can amplify price dislocations.",
+    "lay": "A shared pot of digital assets locked in a computer program that enables trading on decentralized exchanges. Instead of finding someone who wants to trade with you directly, you trade against the pool. During a crisis, these pools can become lopsided as everyone tries to sell the same asset.",
+    "parenthetical": "(a smart-contract-locked collection of digital assets facilitating decentralized trading, vulnerable to stress-driven imbalances)",
+    "legal_significance": "Liquidity pools are the mechanism through which stablecoin stress propagates across DeFi markets. The Curve 3pool's severe imbalance during the SVB crisis illustrates how unregulated DeFi infrastructure can amplify the effects of a regulated stablecoin's depeg."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

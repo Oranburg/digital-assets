@@ -1,0 +1,31 @@
+{
+  "id": "cascading-liquidations",
+  "term": "Cascading Liquidations",
+  "tags": [
+    "DeFi",
+    "systemic-risk",
+    "stablecoin"
+  ],
+  "parent": null,
+  "related": [
+    "depeg",
+    "defi",
+    "collateral",
+    "curve-3pool"
+  ],
+  "definitions": {
+    "technical": "A chain reaction in which falling asset prices trigger automated sell orders across multiple DeFi platforms, causing further price drops that trigger additional sell orders. Smart contracts execute these liquidations automatically, often completing the entire cascade in seconds.",
+    "lay": "A domino effect in crypto markets where falling prices force automatic selling, which pushes prices down further, which forces more selling. Because the process is run by computer code rather than people, it can spiral out of control almost instantly.",
+    "parenthetical": "(an automated chain reaction of forced asset sales across DeFi protocols, each sale driving further price declines)",
+    "legal_significance": "Cascading liquidations demonstrate how a single stablecoin depeg can cause billions of dollars in losses across DeFi markets within minutes. This speed renders traditional regulatory response mechanisms ineffective and supports the case for preventive reserve diversification rules."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

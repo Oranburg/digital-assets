@@ -1,0 +1,31 @@
+{
+  "id": "digital-asset-service-provider",
+  "term": "Digital Asset Service Provider (DASP)",
+  "tags": [
+    "regulation",
+    "GENIUS-Act",
+    "compliance"
+  ],
+  "parent": null,
+  "related": [
+    "permitted-payment-stablecoin-issuer",
+    "genius-act"
+  ],
+  "definitions": {
+    "technical": "A business that exchanges, transfers, or takes custody of digital assets for profit, such as a cryptocurrency exchange or wallet provider. The GENIUS Act places restrictions on DASPs, including prohibiting them from offering non-compliant or foreign stablecoins to U.S. persons.",
+    "lay": "A company that handles digital assets for customers, such as a cryptocurrency exchange or digital wallet service. Under the GENIUS Act, these businesses face strict rules, including a ban on offering unapproved or foreign stablecoins to people in the United States.",
+    "parenthetical": "(a business exchanging, transferring, or custodying digital assets, subject to GENIUS Act restrictions on non-compliant stablecoin offerings)",
+    "legal_significance": "The GENIUS Act's DASP restrictions create a market-enforcement mechanism: non-compliant stablecoins cannot be offered to U.S. persons through regulated service providers, effectively cutting off their access to the domestic market."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "fdic",
+  "term": "FDIC (Federal Deposit Insurance Corporation)",
+  "tags": [
+    "agency",
+    "banking",
+    "deposit-insurance"
+  ],
+  "parent": null,
+  "related": [
+    "fdic-receivership",
+    "systemic-risk-exception",
+    "insured-depository-institution"
+  ],
+  "definitions": {
+    "technical": "The federal agency that insures bank deposits up to $250,000 per depositor and manages the resolution of failed banks. When a bank fails, the FDIC places it into receivership, taking control of its assets and liabilities.",
+    "lay": "The government agency that protects bank depositors by insuring their accounts up to $250,000. When a bank fails, the FDIC steps in to take over and sort out who gets paid. Deposits above the insurance limit may be temporarily frozen.",
+    "parenthetical": "(the federal agency insuring bank deposits and managing failed bank resolutions)",
+    "legal_significance": "The FDIC's receivership process is central to the comment letter's analysis. Stablecoin reserves held at a failed bank in amounts exceeding the $250,000 insurance limit are subject to receivership delays, as demonstrated when Circle's $3.3 billion at SVB was temporarily inaccessible."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "custodian-insolvency",
+  "term": "Custodian Insolvency",
+  "tags": [
+    "banking",
+    "systemic-risk",
+    "stablecoin"
+  ],
+  "parent": "custodian",
+  "related": [
+    "custodian",
+    "fdic-receivership",
+    "receivership-side-liquidity-risk"
+  ],
+  "definitions": {
+    "technical": "The failure of a bank or other institution holding stablecoin reserves. This is the core risk the comment letter addresses, because reserves that are legally adequate may become operationally inaccessible when a custodian enters receivership.",
+    "lay": "When a bank holding stablecoin reserves goes bankrupt. Even though the reserves themselves may be in perfect order, the stablecoin issuer cannot access them while the bank is being wound down, which can take days or weeks.",
+    "parenthetical": "(the failure of a reserve-holding institution, rendering legally adequate reserves operationally inaccessible)",
+    "legal_significance": "Custodian insolvency exposes the gap between the GENIUS Act's reserve composition requirements and actual reserve accessibility. The SVB episode demonstrated that regulatory compliance alone does not prevent a depeg when reserves are frozen in receivership proceedings."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

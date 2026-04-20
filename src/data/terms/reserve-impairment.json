@@ -1,0 +1,30 @@
+{
+  "id": "reserve-impairment",
+  "term": "Reserve Impairment",
+  "tags": [
+    "stablecoin",
+    "risk-management",
+    "accounting"
+  ],
+  "parent": null,
+  "related": [
+    "fair-value",
+    "outstanding-issuance-value",
+    "one-to-one-reserve"
+  ],
+  "definitions": {
+    "technical": "A situation in which the total fair value of reserve assets falls below the outstanding issuance value, meaning the issuer can no longer fully back its stablecoins at one-to-one parity.",
+    "lay": "A condition where the total market value of a stablecoin issuer's reserves drops below the total face value of all its outstanding tokens. At this point, there is not enough money in the reserves to pay back every token holder at one dollar per token.",
+    "parenthetical": "(a shortfall condition where reserve fair value falls below outstanding issuance value, breaking one-to-one parity)",
+    "legal_significance": "Reserve impairment may trigger supervisory action, loss of permitted status, and the lapse of the commodity exclusion under GENIUS Act Section 17(f). The comment letter argues that receivership-side liquidity risk can cause effective impairment even when reserve composition meets all requirements."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

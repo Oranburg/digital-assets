@@ -1,0 +1,33 @@
+{
+  "id": "occ",
+  "term": "OCC (Office of the Comptroller of the Currency)",
+  "tags": [
+    "agency",
+    "banking",
+    "regulation"
+  ],
+  "parent": null,
+  "related": [
+    "national-bank",
+    "federal-savings-association",
+    "cftc",
+    "part-15"
+  ],
+  "definitions": {
+    "technical": "The independent bureau within the Treasury Department that charters, regulates, and supervises national banks and federal savings associations. The OCC is the primary federal regulator for stablecoin issuers operating under the GENIUS Act's federal framework.",
+    "lay": "The government bureau inside the Treasury Department that oversees nationally chartered banks. Under the GENIUS Act, the OCC becomes the lead federal regulator for approved stablecoin issuers, responsible for writing and enforcing the rules they must follow.",
+    "parenthetical": "(the Treasury bureau supervising national banks and serving as primary federal regulator for permitted stablecoin issuers)",
+    "legal_significance": "The OCC's proposed Part 15 would implement the GENIUS Act's requirements for nationally supervised stablecoin issuers. The comment letter urges the OCC to exercise its existing authority under Section 13(b) to coordinate with the CFTC on jurisdictional overlap."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

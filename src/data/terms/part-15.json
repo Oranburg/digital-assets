@@ -1,0 +1,33 @@
+{
+  "id": "part-15",
+  "term": "Part 15 (Proposed 12 C.F.R. pt. 15)",
+  "tags": [
+    "regulation",
+    "stablecoin",
+    "OCC"
+  ],
+  "parent": null,
+  "related": [
+    "cfr",
+    "nprm",
+    "occ",
+    "genius-act"
+  ],
+  "definitions": {
+    "technical": "The new section of the Code of Federal Regulations that the OCC proposes to add. Part 15 would implement the GENIUS Act's requirements for national banks and federal savings associations that issue payment stablecoins, covering reserve composition, attestation, redemption, and supervisory procedures.",
+    "lay": "The specific set of rules the OCC is proposing to add to the federal rulebook. Part 15 would spell out exactly how nationally supervised banks must manage their stablecoin reserves, get them audited, process redemptions, and report to regulators.",
+    "parenthetical": "(the proposed OCC regulation implementing GENIUS Act requirements for federally supervised stablecoin issuers)",
+    "legal_significance": "Proposed Part 15 would be the first comprehensive federal regulation specifically governing stablecoin issuance by nationally supervised institutions. The comment letter targets specific provisions, including Sections 15.11 (reserve composition), 15.12 (redemption), and the diversification framework."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

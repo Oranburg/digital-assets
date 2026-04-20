@@ -1,0 +1,30 @@
+{
+  "id": "reserve-liquidity",
+  "term": "Reserve Liquidity",
+  "tags": [
+    "stablecoin",
+    "liquidity",
+    "risk-management"
+  ],
+  "parent": null,
+  "related": [
+    "reserve-composition",
+    "liquidity-risk",
+    "receivership-side-liquidity-risk"
+  ],
+  "definitions": {
+    "technical": "The speed and certainty with which an issuer can convert its reserve assets into cash to meet customer redemption demands. The central argument of the comment letter is the gap between reserve composition (having the right assets) and reserve liquidity (being able to actually access them when a custodian fails).",
+    "lay": "How quickly and reliably a stablecoin issuer can turn its reserve assets into cash to pay token holders who want their money back. The comment letter's main point is that having the right kind of reserves does not help if those reserves are locked up at a bank that has failed.",
+    "parenthetical": "(the speed and certainty of converting reserve assets to cash, which may be impaired by custodian failure regardless of asset quality)",
+    "legal_significance": "Reserve liquidity is the analytical concept at the heart of the comment letter. The gap between reserve composition and reserve liquidity explains why Circle's fully compliant reserves at SVB did not prevent a depeg, and why the proposed rule needs receivership-specific safeguards."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

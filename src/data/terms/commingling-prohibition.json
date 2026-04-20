@@ -1,0 +1,32 @@
+{
+  "id": "commingling-prohibition",
+  "term": "Commingling Prohibition",
+  "tags": [
+    "compliance",
+    "stablecoin",
+    "GENIUS-Act"
+  ],
+  "parent": null,
+  "related": [
+    "rehypothecation-prohibition",
+    "reserve-assets",
+    "reserve-composition"
+  ],
+  "definitions": {
+    "technical": "A rule forbidding a stablecoin issuer from mixing its reserve assets with its own operating funds or other assets. The prohibition ensures structural separation between reserve holdings and issuer capital, protecting reserve holders in the event of issuer insolvency.",
+    "lay": "A rule that says stablecoin companies must keep the money backing their tokens completely separate from their own business funds. If the company goes bankrupt, this separation helps ensure that the reserve money belongs to the token holders, not to the company's creditors.",
+    "parenthetical": "(a rule requiring strict separation of stablecoin reserves from issuer operating funds)",
+    "legal_significance": "The GENIUS Act's commingling prohibition works alongside the rehypothecation prohibition to create a structural firewall protecting reserves. Violations could result in loss of permitted issuer status, triggering the commodity exclusion lapse under Section 17(f)."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "distributed-ledger",
+  "term": "Distributed Ledger",
+  "tags": [
+    "blockchain",
+    "protocol",
+    "infrastructure"
+  ],
+  "parent": null,
+  "related": [
+    "blockchain",
+    "smart-contract"
+  ],
+  "definitions": {
+    "technical": "A consensus-driven, cryptographically secured database replicated across multiple network participants, where data is shared to create a public record of verified transactions. The GENIUS Act legally defines it as a network where data is shared to create a cryptographically secured digital record.",
+    "lay": "A shared digital record book that is copied across many computers in a network. Every copy stays in sync, and the records are protected by cryptography so they cannot be secretly altered. This is the foundational technology behind blockchain.",
+    "parenthetical": "(a cryptographically secured, consensus-driven database replicated across multiple network participants)",
+    "legal_significance": "The GENIUS Act includes a statutory definition of 'distributed ledger technology,' which determines the technological scope of the regulatory framework. This definition is broader than 'blockchain' and may encompass future ledger architectures."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

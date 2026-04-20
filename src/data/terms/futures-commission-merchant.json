@@ -1,0 +1,32 @@
+{
+  "id": "futures-commission-merchant",
+  "term": "Futures Commission Merchant",
+  "tags": [
+    "regulation",
+    "commodities",
+    "CFTC"
+  ],
+  "parent": null,
+  "related": [
+    "cftc",
+    "commodity-exchange-act"
+  ],
+  "definitions": {
+    "technical": "A firm registered with the CFTC that accepts orders to buy or sell commodity futures and options. Under the GENIUS Act, stablecoins from non-permitted issuers cannot be used as margin or collateral by these firms.",
+    "lay": "A company registered with the CFTC to handle customers' commodity futures trades. The GENIUS Act restricts these firms from accepting stablecoins issued by non-compliant companies as collateral for trades.",
+    "parenthetical": "(a CFTC-registered firm handling commodity futures orders, restricted from accepting non-permitted stablecoins as collateral)",
+    "legal_significance": "The restriction on futures commission merchants accepting non-permitted stablecoins as margin creates a market-based enforcement mechanism. Issuers that lose permitted status will find their tokens excluded from commodity derivatives markets."
+  },
+  "statutes": [
+    "genius-act",
+    "commodity-exchange-act-7-usc-1"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "fiat-backed-stablecoin",
+  "term": "Fiat-Backed Stablecoin",
+  "tags": [
+    "stablecoin",
+    "reserve-management"
+  ],
+  "parent": "stablecoin",
+  "related": [
+    "stablecoin",
+    "payment-stablecoin",
+    "algorithmic-stablecoin",
+    "reserve-assets"
+  ],
+  "definitions": {
+    "technical": "A stablecoin backed by actual cash or cash-equivalent assets held in reserve, typically including bank deposits, U.S. Treasury bills, and repurchase agreements. For every token in circulation, the issuer holds corresponding reserves redeemable at face value.",
+    "lay": "A stablecoin backed by real money or safe financial assets like government bonds and bank deposits. For every token issued, the company holds an equivalent amount of actual assets. USDC is the primary example discussed in the comment letter.",
+    "parenthetical": "(a stablecoin backed by cash or cash-equivalent reserve assets, with each token redeemable at face value)",
+    "legal_significance": "The GENIUS Act establishes federal standards exclusively for fiat-backed stablecoins. The distinction between fiat-backed and algorithmic stablecoins is legally significant because only fiat-backed tokens with proper reserves can qualify as permitted payment stablecoins."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

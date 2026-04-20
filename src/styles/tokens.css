@@ -31,16 +31,10 @@
   --font-accent: 'Crimson Text', serif;
   --font-mono: 'Roboto Mono', 'Consolas', 'Courier New', monospace;
 
-  /* Layer accents */
-  --layer-1: #0A3255;    /* Protocol: deep blue */
-  --layer-1-text: #6DACDE;
-  --layer-1-bg: #081E36;
-  --layer-2: #2459A9;    /* Infrastructure: bright blue */
-  --layer-2-text: #6DACDE;
-  --layer-2-bg: #0D2E5C;
-  --layer-3: #C4972F;    /* Governance: gold */
-  --layer-3-text: #E8C560;
-  --layer-3-bg: #2A1F0A;
+  /* Lens accents (three philosophical perspectives) */
+  --lens-ontology: #7B9DBF;     /* What is it? — steel blue */
+  --lens-techne: #6BAF8D;       /* How does it work? — sage green */
+  --lens-teleology: #C4972F;    /* What is it for? — gold */
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -133,37 +127,10 @@ a:hover {
   color: var(--accent-2);
 }
 
-/* ===== Zone Badges ===== */
-.zone-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  padding: 3px 12px;
-  border-radius: 999px;
-  font-family: var(--font-headline);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.zone-badge--protocol {
-  background: var(--layer-1-bg);
-  color: var(--layer-1-text);
-  border: 1px solid var(--layer-1);
-}
-
-.zone-badge--infrastructure {
-  background: var(--layer-2-bg);
-  color: var(--layer-2-text);
-  border: 1px solid var(--layer-2);
-}
-
-.zone-badge--governance {
-  background: var(--layer-3-bg);
-  color: var(--layer-3-text);
-  border: 1px solid var(--layer-3);
-}
+/* ===== Lens Colors ===== */
+/* Ontology (What is it?) — steel blue */
+/* Techne (How does it work?) — sage green */
+/* Teleology (What is it for?) — gold */
 
 /* ===== Cards ===== */
 .card {

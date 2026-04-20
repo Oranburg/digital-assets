@@ -1,0 +1,32 @@
+{
+  "id": "commodity-exchange-act",
+  "term": "Commodity Exchange Act",
+  "tags": [
+    "statute",
+    "commodities",
+    "regulation"
+  ],
+  "parent": null,
+  "related": [
+    "cftc",
+    "commodity-exclusion",
+    "genius-act"
+  ],
+  "definitions": {
+    "technical": "The federal statute (7 U.S.C. Section 1 et seq.) governing commodity futures and derivatives markets. The GENIUS Act amends this statute to exclude compliant stablecoins from the definition of 'commodity,' but that exclusion is contingent on the issuer maintaining permitted status.",
+    "lay": "The federal law that governs trading in commodity futures and derivatives. The GENIUS Act changed this law so that compliant stablecoins are not considered commodities, but only as long as the issuer keeps following the rules.",
+    "parenthetical": "(the federal statute governing commodity derivatives markets, amended by the GENIUS Act to exclude compliant stablecoins)",
+    "legal_significance": "The GENIUS Act's amendment to the Commodity Exchange Act creates a conditional exclusion. If a stablecoin issuer loses permitted status, its tokens may revert to commodity classification, shifting jurisdiction from the OCC to the CFTC."
+  },
+  "statutes": [
+    "commodity-exchange-act-7-usc-1"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

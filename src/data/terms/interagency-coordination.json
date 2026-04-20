@@ -1,0 +1,33 @@
+{
+  "id": "interagency-coordination",
+  "term": "Interagency Coordination (GENIUS Act Section 13(b))",
+  "tags": [
+    "regulation",
+    "GENIUS-Act",
+    "interagency"
+  ],
+  "parent": "genius-act",
+  "related": [
+    "occ",
+    "cftc",
+    "memorandum-of-understanding",
+    "cross-notification-obligation"
+  ],
+  "definitions": {
+    "technical": "The statutory provision in GENIUS Act Section 13(b) encouraging federal and state regulators to coordinate when implementing the Act. The comment letter urges the OCC to use this authority to establish a formal agreement with the CFTC.",
+    "lay": "A section of the GENIUS Act that tells different government agencies to work together when enforcing stablecoin rules. The comment letter argues the OCC should use this provision to create a formal partnership agreement with the CFTC.",
+    "parenthetical": "(the GENIUS Act provision encouraging regulatory coordination, which the comment letter argues should support a formal OCC/CFTC agreement)",
+    "legal_significance": "Section 13(b) provides statutory authority for the OCC to establish the interagency coordination mechanisms the comment letter recommends. Without a formal agreement, jurisdictional confusion during a stablecoin stress event could delay regulatory response."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

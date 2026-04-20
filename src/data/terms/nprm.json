@@ -1,0 +1,32 @@
+{
+  "id": "nprm",
+  "term": "Notice of Proposed Rulemaking (NPRM)",
+  "tags": [
+    "administrative-law",
+    "rulemaking"
+  ],
+  "parent": null,
+  "related": [
+    "federal-register",
+    "cfr",
+    "administrative-record",
+    "part-15"
+  ],
+  "definitions": {
+    "technical": "A formal document published in the Federal Register in which a federal agency proposes a new regulation and invites public comment. The Administrative Procedure Act (5 U.S.C. Section 553) requires this notice-and-comment process for most rulemakings. The OCC's NPRM for proposed Part 15 is the document the comment letter responds to.",
+    "lay": "A public announcement by a government agency proposing a new rule and asking for feedback. Anyone can submit comments during the open period. The OCC published one of these for its stablecoin rules, and Professor Oranburg's comment letter is a formal response.",
+    "parenthetical": "(a Federal Register publication proposing new regulations and soliciting public comment under the APA)",
+    "legal_significance": "The APA's notice-and-comment requirement (5 U.S.C. Section 553) ensures public participation in rulemaking. Comments submitted during the NPRM process become part of the administrative record that courts review if the final rule is challenged."
+  },
+  "statutes": [
+    "apa-5-usc-553"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

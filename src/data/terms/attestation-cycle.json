@@ -1,0 +1,31 @@
+{
+  "id": "attestation-cycle",
+  "term": "Attestation Cycle",
+  "tags": [
+    "compliance",
+    "stablecoin",
+    "GENIUS-Act"
+  ],
+  "parent": "attestation",
+  "related": [
+    "attestation",
+    "ceo-cfo-certification"
+  ],
+  "definitions": {
+    "technical": "The recurring monthly schedule on which a stablecoin issuer must have its reserve composition independently examined and the results certified by its CEO and CFO.",
+    "lay": "The monthly schedule that stablecoin issuers must follow to have their reserves checked by an outside firm and signed off by their top executives.",
+    "parenthetical": "(the mandatory monthly reserve examination and certification schedule)",
+    "legal_significance": "Monthly attestation cycles are a cornerstone of the GENIUS Act's transparency framework. Gaps or delays in the cycle could signal compliance failures that affect an issuer's permitted status."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "reverse-channel-risk",
+  "term": "Reverse-Channel Risk",
+  "tags": [
+    "systemic-risk",
+    "stablecoin",
+    "contagion"
+  ],
+  "parent": "crosstagion",
+  "related": [
+    "crosstagion",
+    "forward-channel-risk",
+    "custodian-insolvency"
+  ],
+  "definitions": {
+    "technical": "The risk that a failure in traditional banking (such as a bank collapse) causes harm in stablecoin and DeFi markets. This is the direction of contagion that the comment letter argues the proposed rule does not adequately address.",
+    "lay": "The risk that problems in the traditional banking system spread into the crypto world. The SVB collapse demonstrated this: a bank failure caused a stablecoin to lose its dollar peg, which then triggered automated selling cascades across DeFi platforms.",
+    "parenthetical": "(the risk of contagion flowing from traditional banking failure into stablecoin and DeFi markets)",
+    "legal_significance": "Reverse-channel risk is the comment letter's primary regulatory concern. While the GENIUS Act effectively addresses forward-channel risk (crypto to bank), its framework largely ignores the possibility that a traditional bank failure can destabilize stablecoin markets, as demonstrated by the SVB episode."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "usdc",
+  "term": "USDC (USD Coin)",
+  "tags": [
+    "stablecoin",
+    "case-study"
+  ],
+  "parent": "stablecoin",
+  "related": [
+    "svb",
+    "depeg",
+    "fiat-backed-stablecoin",
+    "payment-stablecoin"
+  ],
+  "definitions": {
+    "technical": "A payment stablecoin issued by Circle Internet Financial that is pegged to the U.S. dollar. USDC is one of the largest stablecoins by market capitalization and was directly affected by the SVB failure in March 2023, when approximately $3.3 billion in reserves were temporarily frozen.",
+    "lay": "A major dollar-pegged stablecoin issued by Circle. It is one of the most widely used stablecoins in the world. During the SVB bank failure in March 2023, billions in USDC reserves were temporarily trapped, causing the token to drop to about 87 cents.",
+    "parenthetical": "(a major dollar-pegged stablecoin issued by Circle, whose March 2023 depeg during the SVB crisis illustrates custodian failure risk)",
+    "legal_significance": "USDC is the primary case study in the comment letter. Its depeg to $0.87 during the SVB crisis, despite Circle maintaining fully compliant reserves, demonstrates the gap between reserve composition compliance and operational reserve accessibility that the proposed rule must address."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "operational-capability-to-monetize",
+  "term": "Operational Capability to Monetize",
+  "tags": [
+    "stablecoin",
+    "liquidity",
+    "compliance"
+  ],
+  "parent": null,
+  "related": [
+    "market-side-liquidity-risk",
+    "receivership-side-liquidity-risk"
+  ],
+  "definitions": {
+    "technical": "The requirement under proposed Section 15.11(a)(2) that issuers demonstrate they can actually sell or convert their reserve assets to cash. This addresses market-side liquidity but not receivership-side liquidity (the ability to access frozen assets at a failed custodian).",
+    "lay": "A proposed rule requiring stablecoin issuers to prove they can actually turn their reserve assets into cash when needed. The comment letter points out that this rule only covers the ability to sell assets on the open market, not the problem of reserves being locked up at a bank that has failed.",
+    "parenthetical": "(the regulatory requirement that issuers demonstrate ability to convert reserves to cash, addressing market but not receivership liquidity)",
+    "legal_significance": "Proposed Section 15.11(a)(2) represents the OCC's attempt to move beyond static composition rules toward operational liquidity assurance. The comment letter argues it falls short because it does not address the scenario where reserves are legally accessible but operationally frozen."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

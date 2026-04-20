@@ -1,0 +1,28 @@
+{
+  "id": "preamble",
+  "term": "Preamble",
+  "tags": [
+    "administrative-law",
+    "rulemaking"
+  ],
+  "parent": null,
+  "related": [
+    "nprm",
+    "administrative-record"
+  ],
+  "definitions": {
+    "technical": "The explanatory text preceding a proposed regulation in which the agency describes its reasoning, the problem it is addressing, and the legal authority for the rule. The preamble becomes part of the administrative record and can be reviewed by courts.",
+    "lay": "The introduction to a proposed government rule that explains why the agency is creating the rule, what problem it solves, and what legal authority allows the agency to act. Courts can look at this explanation when deciding whether the rule is valid.",
+    "parenthetical": "(the explanatory introduction to a proposed regulation, forming part of the judicially reviewable administrative record)",
+    "legal_significance": "The preamble's reasoning becomes part of the administrative record subject to judicial review under Motor Vehicle Mfrs. Ass'n v. State Farm. Gaps or inconsistencies in the preamble's analysis can make the final rule vulnerable to challenge as arbitrary and capricious."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

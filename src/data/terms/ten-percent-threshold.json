@@ -1,0 +1,30 @@
+{
+  "id": "ten-percent-threshold",
+  "term": "10% Redemption Threshold",
+  "tags": [
+    "stablecoin",
+    "GENIUS-Act",
+    "redemption"
+  ],
+  "parent": null,
+  "related": [
+    "extended-redemption-window",
+    "redemption",
+    "outstanding-issuance-value"
+  ],
+  "definitions": {
+    "technical": "The trigger point under proposed Section 15.12(c)(1) at which the extended redemption window activates. When redemption demands exceed 10% of outstanding issuance value within a 24-hour period, the issuer may take up to seven calendar days to process redemptions.",
+    "lay": "A stress trigger built into the proposed rules. If more than 10% of all outstanding tokens are submitted for redemption within a single day, the stablecoin issuer gets extra time (up to seven days) to process the requests instead of the normal fast turnaround.",
+    "parenthetical": "(the 24-hour redemption demand threshold that activates the seven-day extended processing window under proposed Section 15.12(c)(1))",
+    "legal_significance": "The 10% threshold establishes a quantitative definition of a stablecoin stress event for regulatory purposes. The comment letter notes that while this provides a useful circuit breaker, the seven-day extension may still be inadequate if reserves are frozen in FDIC receivership proceedings."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

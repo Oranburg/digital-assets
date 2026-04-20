@@ -1,0 +1,32 @@
+{
+  "id": "national-bank",
+  "term": "National Bank",
+  "tags": [
+    "banking",
+    "charter",
+    "OCC"
+  ],
+  "parent": null,
+  "related": [
+    "occ",
+    "federal-savings-association",
+    "permitted-payment-stablecoin-issuer"
+  ],
+  "definitions": {
+    "technical": "A bank chartered by the federal government and supervised by the OCC. National banks are one category of institution that can apply to become permitted stablecoin issuers under the GENIUS Act.",
+    "lay": "A bank that receives its operating license from the federal government rather than from a state. These banks are overseen by the OCC and are eligible to apply for permission to issue stablecoins under the GENIUS Act.",
+    "parenthetical": "(a federally chartered, OCC-supervised bank eligible to become a permitted stablecoin issuer)",
+    "legal_significance": "National banks are directly supervised by the OCC, making them natural candidates for the GENIUS Act's federally regulated stablecoin issuance framework. Their existing examination and supervisory relationships simplify the addition of stablecoin-specific oversight."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

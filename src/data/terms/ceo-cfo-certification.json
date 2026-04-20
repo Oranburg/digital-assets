@@ -1,0 +1,32 @@
+{
+  "id": "ceo-cfo-certification",
+  "term": "CEO/CFO Certification",
+  "tags": [
+    "compliance",
+    "stablecoin",
+    "GENIUS-Act"
+  ],
+  "parent": "attestation",
+  "related": [
+    "attestation",
+    "attestation-cycle",
+    "reserve-composition"
+  ],
+  "definitions": {
+    "technical": "A monthly requirement under the GENIUS Act in which the chief executive officer and chief financial officer of a stablecoin issuer personally certify that the issuer's reserve composition report is accurate.",
+    "lay": "A rule requiring the top two executives of a stablecoin company to personally sign off every month that their reserve report is truthful. This makes them individually accountable for the accuracy of the information.",
+    "parenthetical": "(a monthly personal certification by senior executives that reserve disclosures are accurate)",
+    "legal_significance": "Personal certification by named officers mirrors the approach taken by Sarbanes-Oxley Act Section 302 for public company financial statements. It creates individual liability that incentivizes accurate reserve reporting."
+  },
+  "statutes": [
+    "genius-act"
+  ],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

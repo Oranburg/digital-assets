@@ -1,0 +1,30 @@
+{
+  "id": "memorandum-of-understanding",
+  "term": "Memorandum of Understanding (MOU)",
+  "tags": [
+    "interagency",
+    "regulation"
+  ],
+  "parent": null,
+  "related": [
+    "occ",
+    "cftc",
+    "interagency-coordination",
+    "cross-notification-obligation"
+  ],
+  "definitions": {
+    "technical": "A formal agreement between two government agencies specifying how they will coordinate their overlapping responsibilities. The comment letter proposes an MOU between the OCC and CFTC to address jurisdictional questions during stablecoin stress events.",
+    "lay": "A written agreement between two government agencies spelling out how they will work together on issues that fall under both of their areas of responsibility. The comment letter recommends this type of agreement between the OCC and the CFTC.",
+    "parenthetical": "(a formal interagency agreement specifying coordination procedures for overlapping regulatory responsibilities)",
+    "legal_significance": "An MOU between the OCC and CFTC would provide a pre-established framework for handling the jurisdictional transition that occurs when a stablecoin issuer loses permitted status under GENIUS Act Section 17(f). Without it, coordination during a crisis depends on ad hoc communication."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "occ-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}
