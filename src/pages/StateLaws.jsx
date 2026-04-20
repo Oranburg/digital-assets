@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom'
 import { getAllStatutes } from '../data/statutes/index.js'
+import TermTooltip from '../components/TermTooltip'
 import './StateLaws.css'
 
 const STATE_ORDER = ['NH', 'WY', 'UT', 'TN', 'VT']
 
 const STATE_INFO = {
-  NH: { name: 'New Hampshire', abbr: 'NH', color: '#4A90D9', note: 'Most prescriptive. Standalone entity, blockchain registry, 20% decentralization threshold.' },
+  NH: { name: 'New Hampshire', abbr: 'NH', color: '#4A90D9', note: <>Most prescriptive. Standalone entity, <TermTooltip termId="blockchain">blockchain</TermTooltip> registry, 20% decentralization threshold.</> },
   WY: { name: 'Wyoming', abbr: 'WY', color: '#8B4513', note: 'First in nation. LLC supplement, algorithmically managed option, standard LLC duties.' },
   UT: { name: 'Utah', abbr: 'UT', color: '#B8860B', note: 'Within LLC code. 9 certificate requirements, modified BJR, addresses forks and failures.' },
   TN: { name: 'Tennessee', abbr: 'TN', color: '#1A5276', note: 'Lightest touch. No fiduciary duties by default, no decentralization threshold.' },
-  VT: { name: 'Vermont', abbr: 'VT', color: '#2E7D32', note: 'Single section. Blockchain governance election on existing LLC, no separate entity type.' },
+  VT: { name: 'Vermont', abbr: 'VT', color: '#2E7D32', note: <><TermTooltip termId="blockchain">Blockchain</TermTooltip> governance election on existing LLC, no separate entity type.</> },
 }
 
 function StatuteCard({ statute }) {
@@ -94,7 +95,7 @@ export default function StateLaws() {
                     <p className="statute-card__name">VT BBLLC</p>
                     <p className="statute-card__cite">11 V.S.A. § 4173</p>
                     <p className="statute-card__desc serif">
-                      Single-section blockchain governance election for existing LLCs. First state to legislate (2018). Permissive/enabling rather than prescriptive.
+                      Single-section <TermTooltip termId="blockchain">blockchain</TermTooltip> governance election for existing LLCs. First state to legislate (2018). Permissive/enabling rather than prescriptive.
                     </p>
                     <div className="statute-card__footer">
                       <span className="statute-card__coming">Coming soon</span>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import TermTooltip from '../components/TermTooltip'
 import './Analysis.css'
 
 /* ===== Comparison table data ===== */
@@ -98,7 +99,7 @@ const ARTICLES = [
   {
     id: 'comparison',
     title: 'Choosing a Jurisdiction',
-    description: 'Side-by-side comparison of DAO statutes across New Hampshire, Wyoming, Utah, Tennessee, and Vermont.',
+    description: <>Side-by-side comparison of <TermTooltip termId="dao">DAO</TermTooltip> statutes across New Hampshire, Wyoming, Utah, Tennessee, and Vermont.</>,
     emoji: '📋',
     status: 'available',
     link: null, // rendered inline below
@@ -122,7 +123,7 @@ const ARTICLES = [
   {
     id: 'stable-tokens',
     title: 'The GENIUS Dilemma',
-    description: 'How the GENIUS Act intersects with New Hampshire DAO law and the Commission to Study Stable Tokens.',
+    description: <>How the <TermTooltip termId="genius-act">GENIUS Act</TermTooltip> intersects with New Hampshire <TermTooltip termId="dao">DAO</TermTooltip> law and the Commission to Study Stable Tokens.</>,
     emoji: '⚡',
     status: 'migrating',
     link: 'https://oranburg.law/NH-RSA-301-B/stable-tokens.html',
@@ -134,7 +135,7 @@ function ComparisonTable() {
     <section className="comparison-section">
       <h2>Jurisdiction Comparison</h2>
       <p className="serif analysis-lead">
-        Five states have enacted DAO-specific legislation. Each takes a different approach —
+        Five states have enacted <TermTooltip termId="dao">DAO</TermTooltip>-specific legislation. Each takes a different approach —
         from New Hampshire&apos;s prescriptive 11-requirement framework to Vermont&apos;s permissive LLC overlay.
       </p>
       <div className="comparison-table-wrap">

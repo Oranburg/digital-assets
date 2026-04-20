@@ -1,0 +1,29 @@
+{
+  "id": "fork",
+  "term": "Fork",
+  "tags": [
+    "protocol",
+    "governance"
+  ],
+  "parent": "blockchain",
+  "related": [
+    "soft-fork",
+    "hard-fork",
+    "consensus"
+  ],
+  "definitions": {
+    "technical": "A divergence in the blockchain protocol or chain state that produces two or more competing versions of the transaction history. Forks may be intentional (protocol upgrades) or accidental (simultaneous block production). The term also refers to changes in the software rules governing block validity.",
+    "lay": "A fork occurs when a blockchain splits into two separate paths, either because participants disagree on the rules or because an upgrade changes how the system works. The split can be temporary or permanent depending on whether the community reunites around one version.",
+    "parenthetical": "(a divergence in a blockchain's protocol or transaction history producing competing chain versions)",
+    "legal_significance": "Forks create novel property law questions about which chain's tokens a holder 'owns' after a split. The IRS addressed forked assets in Revenue Ruling 2019-24, holding that an airdrop following a hard fork is ordinary income. Courts may need to determine which fork represents the 'original' asset for purposes of contract performance."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

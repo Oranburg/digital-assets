@@ -1,0 +1,30 @@
+{
+  "id": "zk-stark",
+  "term": "zk-STARK",
+  "tags": [
+    "cryptography",
+    "privacy",
+    "scaling"
+  ],
+  "parent": "zero-knowledge-proof",
+  "related": [
+    "zk-snark",
+    "zero-knowledge-proof",
+    "rollup"
+  ],
+  "definitions": {
+    "technical": "A Zero Knowledge Scalable Transparent Argument of Knowledge: a proof system that requires no trusted setup and relies only on hash functions and public randomness, making it resistant to quantum computing attacks. zk-STARKs produce larger proofs than zk-SNARKs but offer transparency (no secret parameters) and post quantum security. StarkNet and StarkEx use zk-STARKs for Layer 2 scaling.",
+    "lay": "A zk-STARK is a type of zero knowledge proof that does not require any special trusted setup, making it more transparent than its cousin the zk-SNARK. It is also designed to resist attacks from future quantum computers. The tradeoff is that the proofs are larger, though ongoing research continues to reduce their size.",
+    "parenthetical": "(a transparent, quantum resistant zero knowledge proof system requiring no trusted setup)",
+    "legal_significance": "The transparency property of zk-STARKs eliminates the governance risk associated with trusted setup ceremonies, which may be relevant to regulators evaluating systemic risk. Their quantum resistance is significant as NIST advances post quantum cryptography standards, since financial regulators increasingly require institutions to plan for quantum computing threats to existing cryptographic infrastructure."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

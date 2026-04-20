@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { getAllStatutes } from '../data/statutes/index.js'
+import TermTooltip from '../components/TermTooltip'
 
 const EXTRA_LAWS = [
   {
@@ -7,7 +8,7 @@ const EXTRA_LAWS = [
     name: 'CLARITY Act',
     cite: 'H.R. 3633, 119th Cong. (2025)',
     status: 'placeholder',
-    description: 'Establishes a "digital commodity" category with CFTC jurisdiction. Mutual exclusion clause with GENIUS Act creates a classification cliff — an asset cannot simultaneously be a payment stablecoin and a digital commodity.',
+    description: <>Establishes a &ldquo;digital commodity&rdquo; category with <TermTooltip termId="cftc">CFTC</TermTooltip> jurisdiction. Mutual exclusion clause with <TermTooltip termId="genius-act">GENIUS Act</TermTooltip> creates a classification cliff — an asset cannot simultaneously be a payment <TermTooltip termId="stablecoin">stablecoin</TermTooltip> and a digital commodity.</>,
     glossaryLink: null,
   },
   {
@@ -15,7 +16,7 @@ const EXTRA_LAWS = [
     name: 'Dodd-Frank (Selected Sections)',
     cite: '12 U.S.C. §§ 5322, 5323, 5329',
     status: 'placeholder',
-    description: 'FSOC coordination authority (§§ 112, 113, 119) relevant to tri-agency stablecoin oversight gaps. Systemic risk exception and orderly liquidation authority sections intersect with GENIUS Act insolvency priority rules.',
+    description: <>FSOC coordination authority (§§ 112, 113, 119) relevant to tri-agency <TermTooltip termId="stablecoin">stablecoin</TermTooltip> oversight gaps. Systemic risk exception and orderly liquidation authority sections intersect with <TermTooltip termId="genius-act">GENIUS Act</TermTooltip> insolvency priority rules.</>,
     glossaryLink: null,
   },
 ]
@@ -28,7 +29,7 @@ export default function FederalLaws() {
       <header style={{ marginBottom: 'var(--space-2xl)' }}>
         <h1>Federal Laws</h1>
         <p className="serif" style={{ color: 'var(--text-secondary)', maxWidth: '40rem', lineHeight: 1.7 }}>
-          Federal legislation governing digital assets, stablecoins, and inter-agency coordination.
+          Federal legislation governing digital assets, <TermTooltip termId="stablecoin">stablecoins</TermTooltip>, and inter-agency coordination.
         </p>
       </header>
 
@@ -100,7 +101,7 @@ export default function FederalLaws() {
 
       <div className="card" style={{ textAlign: 'center' }}>
         <p className="serif" style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-md)' }}>
-          See how the GENIUS Act intersects with state DAO law in the analysis tools.
+          See how the <TermTooltip termId="genius-act">GENIUS Act</TermTooltip> intersects with state <TermTooltip termId="dao">DAO</TermTooltip> law in the analysis tools.
         </p>
         <Link to="/analysis" style={{ color: 'var(--accent)' }}>
           Explore Analysis →

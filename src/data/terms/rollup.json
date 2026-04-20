@@ -1,0 +1,30 @@
+{
+  "id": "rollup",
+  "term": "Rollup",
+  "tags": [
+    "scaling",
+    "infrastructure"
+  ],
+  "parent": "blockchain",
+  "related": [
+    "zero-knowledge-proof",
+    "sharding",
+    "gas-fees",
+    "blockchain"
+  ],
+  "definitions": {
+    "technical": "A Layer 2 scaling solution that executes transactions off chain but posts transaction data or validity proofs to the Layer 1 chain for security. Optimistic rollups assume transactions are valid and allow a challenge period for fraud proofs, while zero knowledge rollups submit cryptographic validity proofs with each batch. Both approaches inherit the security guarantees of the underlying Layer 1.",
+    "lay": "A rollup is a system that processes blockchain transactions on a separate, faster layer and then sends a compressed summary back to the main blockchain. This allows many more transactions to be handled at lower cost while still relying on the main blockchain's security. There are two main types: optimistic rollups that assume honesty and allow challenges, and zero knowledge rollups that include mathematical proof of correctness.",
+    "parenthetical": "(a Layer 2 scaling solution that executes transactions off chain while posting data or proofs to the base layer)",
+    "legal_significance": "Rollups introduce additional intermediary layers that complicate the question of who is responsible for transaction processing and where regulatory jurisdiction lies. The sequencer operating a rollup may be subject to money transmission regulations. Regulators must also consider whether assets on a rollup have the same legal status as assets on the base layer."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

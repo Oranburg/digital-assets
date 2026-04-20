@@ -1,0 +1,29 @@
+{
+  "id": "node",
+  "term": "Node",
+  "tags": [
+    "infrastructure",
+    "protocol"
+  ],
+  "parent": "blockchain",
+  "related": [
+    "validator",
+    "consensus",
+    "distributed-ledger"
+  ],
+  "definitions": {
+    "technical": "A computer running blockchain client software that maintains a copy of the ledger and participates in the peer to peer network. Full nodes independently validate all transactions and blocks against the protocol rules. Light nodes verify only block headers and rely on full nodes for transaction data. Archive nodes store the complete historical state.",
+    "lay": "A node is any computer that connects to a blockchain network and helps maintain a copy of the shared record. Some nodes store the entire history and check every transaction, while others store only summaries. The more independent nodes a network has, the harder it is for anyone to manipulate the system.",
+    "parenthetical": "(a computer participating in a blockchain network by maintaining and validating ledger data)",
+    "legal_significance": "Node count and geographic distribution are key metrics in decentralization analysis, which affects whether a network qualifies as 'sufficiently decentralized' to fall outside securities regulation. Running a node may also raise questions about liability for processing illicit transactions, though no U.S. court has held mere node operation to be a money transmission activity."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

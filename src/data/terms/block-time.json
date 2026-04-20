@@ -1,0 +1,29 @@
+{
+  "id": "block-time",
+  "term": "Block Time",
+  "tags": [
+    "protocol",
+    "infrastructure"
+  ],
+  "parent": "blockchain",
+  "related": [
+    "consensus",
+    "blockchain",
+    "settlement-asset"
+  ],
+  "definitions": {
+    "technical": "The average interval between the addition of successive blocks to a blockchain. Bitcoin targets approximately 10 minutes through difficulty adjustment, while Ethereum targets approximately 12 seconds. Block time directly affects transaction throughput, confirmation latency, and the security assumptions of the network.",
+    "lay": "Block time is how long it takes for a blockchain to add a new batch of transactions. Bitcoin adds a new block roughly every 10 minutes, while Ethereum does so approximately every 12 seconds. Shorter block times mean faster transaction confirmation but require different security tradeoffs.",
+    "parenthetical": "(the average interval between successive blocks added to a blockchain)",
+    "legal_significance": "Block time affects settlement finality, which is critical for payment system regulation. Regulators evaluating stablecoin payment rails must consider whether the block time provides settlement speed comparable to existing payment infrastructure. The UCC and Regulation CC impose specific timing requirements that blockchain settlement must satisfy."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "sharding",
+  "term": "Sharding",
+  "tags": [
+    "scaling",
+    "infrastructure"
+  ],
+  "parent": "blockchain",
+  "related": [
+    "rollup",
+    "blockchain",
+    "node"
+  ],
+  "definitions": {
+    "technical": "A horizontal scaling technique that partitions the blockchain state and transaction processing across multiple parallel chains (shards), each handling a subset of the network's workload. Validators are assigned to specific shards, and a beacon chain or equivalent coordination layer maintains cross shard consistency. This approach increases throughput linearly with the number of shards.",
+    "lay": "Sharding is a method of speeding up a blockchain by splitting it into smaller sections that process transactions simultaneously. Instead of every computer checking every transaction, groups of computers each handle a portion of the work. This allows the network to process many more transactions at the same time.",
+    "parenthetical": "(a scaling technique that partitions blockchain processing across parallel chains to increase throughput)",
+    "legal_significance": "Sharding affects the decentralization analysis because validators on individual shards see only a subset of network activity, which may complicate surveillance and compliance obligations. The reduced validator set per shard also changes the security model, which regulators may consider when evaluating network resilience for payment system approval."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

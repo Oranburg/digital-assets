@@ -1,0 +1,29 @@
+{
+  "id": "hash-function",
+  "term": "Hash Function",
+  "tags": [
+    "cryptography",
+    "security"
+  ],
+  "parent": "blockchain",
+  "related": [
+    "merkle-tree",
+    "consensus",
+    "blockchain"
+  ],
+  "definitions": {
+    "technical": "A deterministic algorithm that maps arbitrary input data to a fixed length output (the hash or digest) such that the mapping is practically irreversible, collision resistant, and avalanche sensitive. Blockchain systems typically use SHA-256 or Keccak-256 to ensure data integrity and to link blocks in sequence.",
+    "lay": "A hash function is a mathematical formula that takes any piece of data and converts it into a unique fixed length string of characters. Even a tiny change to the input produces a completely different output, which makes it easy to detect tampering. Blockchains use hash functions to secure every block.",
+    "parenthetical": "(a cryptographic algorithm producing a unique fixed length fingerprint from arbitrary input data)",
+    "legal_significance": "Hash functions underpin digital signatures and data integrity mechanisms that courts increasingly accept as evidence. NIST standards govern acceptable hash algorithms for federal use. The tamper evidence provided by cryptographic hashing is central to arguments that blockchain records satisfy authentication requirements under FRE 901(b)(9)."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

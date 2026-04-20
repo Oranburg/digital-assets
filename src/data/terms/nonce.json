@@ -1,0 +1,29 @@
+{
+  "id": "nonce",
+  "term": "Nonce",
+  "tags": [
+    "consensus",
+    "cryptography"
+  ],
+  "parent": "consensus",
+  "related": [
+    "proof-of-work",
+    "hash-function",
+    "blockchain"
+  ],
+  "definitions": {
+    "technical": "A number used once in a cryptographic operation. In proof of work systems, miners iteratively vary the block header nonce to find a hash that satisfies the network's difficulty target. In account based blockchains like Ethereum, the nonce is a sequential transaction counter that prevents replay attacks.",
+    "lay": "A nonce is a number that blockchain miners change repeatedly while trying to solve the mathematical puzzle required to add a new block. Each guess produces a different result, and the miner who finds the right number first earns the right to add the block. The term means 'number used once.'",
+    "parenthetical": "(a single use number varied by miners to satisfy the proof of work difficulty requirement)",
+    "legal_significance": "The nonce mechanism is central to the energy expenditure in proof of work mining, which has drawn environmental regulatory scrutiny. Understanding nonces is also relevant to replay attack analysis, where the absence of proper nonce management can enable unauthorized duplicate transactions."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

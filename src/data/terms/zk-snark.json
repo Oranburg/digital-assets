@@ -1,0 +1,30 @@
+{
+  "id": "zk-snark",
+  "term": "zk-SNARK",
+  "tags": [
+    "cryptography",
+    "privacy",
+    "scaling"
+  ],
+  "parent": "zero-knowledge-proof",
+  "related": [
+    "zk-stark",
+    "zero-knowledge-proof",
+    "rollup"
+  ],
+  "definitions": {
+    "technical": "A Zero Knowledge Succinct Non Interactive Argument of Knowledge: a proof system that produces constant size proofs verifiable in constant time regardless of the complexity of the underlying computation. zk-SNARKs require a trusted setup ceremony to generate public parameters. They are used in Zcash for private transactions and in various Layer 2 rollup systems for batch verification.",
+    "lay": "A zk-SNARK is a specific type of zero knowledge proof that is very small and quick to verify, no matter how complex the original computation was. The tradeoff is that it requires a special one time setup process that participants must trust was performed honestly. Zcash uses zk-SNARKs to enable fully private cryptocurrency transactions.",
+    "parenthetical": "(a succinct, non interactive zero knowledge proof system requiring a trusted setup ceremony)",
+    "legal_significance": "The privacy features enabled by zk-SNARKs have drawn regulatory scrutiny. OFAC sanctioned the Tornado Cash mixer, which used zk-SNARKs to obscure transaction origins. Courts in Van Loon v. Department of the Treasury (2024) examined whether sanctioning open source smart contract code exceeds OFAC's statutory authority. The trusted setup requirement also raises governance questions about who controls the system's foundational parameters."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

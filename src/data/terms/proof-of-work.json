@@ -1,0 +1,30 @@
+{
+  "id": "proof-of-work",
+  "term": "Proof of Work",
+  "tags": [
+    "consensus",
+    "security"
+  ],
+  "parent": "consensus",
+  "related": [
+    "proof-of-stake",
+    "nonce",
+    "51-percent-attack",
+    "consensus"
+  ],
+  "definitions": {
+    "technical": "A consensus mechanism in which miners compete to find a nonce that produces a block hash below a target difficulty threshold, with the winner earning the right to append the next block and collect the block reward plus transaction fees. The computational cost of mining makes it economically prohibitive to rewrite confirmed blocks. Bitcoin's implementation uses the SHA-256 hash function with a difficulty adjustment every 2,016 blocks.",
+    "lay": "Proof of work is the original method Bitcoin uses to secure its network. Computers called miners race to solve a mathematical puzzle, and the winner gets to add the next batch of transactions and earn a reward. The process requires significant energy because the puzzle is intentionally difficult, which is what makes the network secure against tampering.",
+    "parenthetical": "(a consensus mechanism requiring miners to expend computational resources to validate blocks and earn rewards)",
+    "legal_significance": "Proof of work mining has attracted environmental regulation, including the New York State moratorium on new fossil fuel powered mining operations (2022). The CFTC has classified Bitcoin (a proof of work asset) as a commodity. Mining operations raise questions about energy regulation, local zoning, and whether miners are money transmitters under FinCEN guidance."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

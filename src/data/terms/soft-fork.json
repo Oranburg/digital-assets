@@ -1,0 +1,29 @@
+{
+  "id": "soft-fork",
+  "term": "Soft Fork",
+  "tags": [
+    "protocol",
+    "governance"
+  ],
+  "parent": "fork",
+  "related": [
+    "hard-fork",
+    "consensus",
+    "blockchain"
+  ],
+  "definitions": {
+    "technical": "A backward compatible protocol change that tightens the set of valid blocks. Nodes running the old software will still accept blocks produced under the new rules, because the new rules are a strict subset of the old ones. Soft forks require only a majority of miners or validators to enforce the change.",
+    "lay": "A soft fork is a rule change to a blockchain that works with older software. Computers that have not updated will still accept new transactions because the new rules are stricter, not different. This makes soft forks less disruptive than hard forks.",
+    "parenthetical": "(a backward compatible blockchain protocol change that tightens validation rules without splitting the network)",
+    "legal_significance": "Soft forks raise fewer legal complications than hard forks because they do not create a competing asset. However, they can still alter the functional characteristics of a token in ways that may affect its regulatory classification or the rights of existing holders."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

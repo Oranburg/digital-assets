@@ -1,0 +1,29 @@
+{
+  "id": "gas-fees",
+  "term": "Gas Fees",
+  "tags": [
+    "protocol",
+    "economics"
+  ],
+  "parent": "blockchain",
+  "related": [
+    "smart-contract",
+    "blockchain",
+    "consensus"
+  ],
+  "definitions": {
+    "technical": "A unit of computational work on the Ethereum Virtual Machine, where each opcode has a fixed gas cost and users pay gas fees (gas units multiplied by gas price in gwei) to compensate validators for executing transactions. EIP-1559 introduced a base fee that is burned and an optional priority fee (tip) that goes to validators, creating a dual fee market.",
+    "lay": "Gas fees are the charges users pay to have their transactions processed on blockchains like Ethereum. The fee reflects how much computational work the transaction requires. When the network is busy, gas fees rise because users compete to have their transactions included first.",
+    "parenthetical": "(transaction fees paid to blockchain validators measured in units of computational work)",
+    "legal_significance": "Gas fees function as transaction costs that can affect the economic analysis of whether a token is a security under the Howey test. High or unpredictable gas fees may also raise consumer protection concerns. The fee burning mechanism introduced by EIP-1559 has implications for token supply economics and potentially for the classification of ETH as a commodity or security."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "validator",
+  "term": "Validator",
+  "tags": [
+    "consensus",
+    "infrastructure"
+  ],
+  "parent": "consensus",
+  "related": [
+    "proof-of-stake",
+    "node",
+    "consensus",
+    "attestation"
+  ],
+  "definitions": {
+    "technical": "A network participant in a proof of stake system that locks collateral (a stake) and is selected by the protocol to propose or attest to new blocks. Validators who follow the rules earn staking rewards, while those who act dishonestly or go offline face slashing penalties that destroy a portion of their stake. Ethereum requires a minimum stake of 32 ETH per validator.",
+    "lay": "A validator is a participant who helps secure a proof of stake blockchain by locking up cryptocurrency as a deposit. Validators are chosen to confirm new transactions and earn rewards for honest work. If a validator tries to cheat or goes offline, the system automatically deducts from their deposit as a penalty.",
+    "parenthetical": "(a proof of stake network participant that locks collateral to propose and attest to new blocks)",
+    "legal_significance": "Validator operations may constitute a money services business under FinCEN guidance. Staking rewards raise tax classification questions about whether they are income at receipt or at sale. The SEC has scrutinized staking as a service programs as potential securities offerings, as seen in SEC v. Kraken (2023), where the exchange settled charges over its staking program."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

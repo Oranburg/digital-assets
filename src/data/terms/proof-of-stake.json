@@ -1,0 +1,30 @@
+{
+  "id": "proof-of-stake",
+  "term": "Proof of Stake",
+  "tags": [
+    "consensus",
+    "security"
+  ],
+  "parent": "consensus",
+  "related": [
+    "proof-of-work",
+    "validator",
+    "consensus",
+    "stablecoin"
+  ],
+  "definitions": {
+    "technical": "A consensus mechanism in which validators are selected to propose and attest to blocks in proportion to the amount of cryptocurrency they have locked as collateral (their stake). Honest behavior is incentivized through staking rewards, while protocol violations trigger slashing penalties that destroy a portion of the validator's stake. Proof of stake consumes orders of magnitude less energy than proof of work.",
+    "lay": "Proof of stake is a method for securing a blockchain where participants lock up their own cryptocurrency as a security deposit instead of using energy intensive computing. The system randomly selects deposit holders to verify new transactions, rewarding them for honest work and penalizing dishonesty by taking away part of their deposit.",
+    "parenthetical": "(a consensus mechanism where validators lock cryptocurrency as collateral to earn the right to validate blocks)",
+    "legal_significance": "The SEC has suggested that proof of stake tokens may be securities because staking rewards resemble investment returns from the efforts of others under the Howey test. SEC enforcement actions against staking as a service providers (such as the Kraken settlement in 2023) reflect this view. RSA 301-B:5(VII) references consensus mechanisms generically, encompassing proof of stake systems within New Hampshire's DAO framework."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

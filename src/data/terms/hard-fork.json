@@ -1,0 +1,29 @@
+{
+  "id": "hard-fork",
+  "term": "Hard Fork",
+  "tags": [
+    "protocol",
+    "governance"
+  ],
+  "parent": "fork",
+  "related": [
+    "soft-fork",
+    "consensus",
+    "blockchain"
+  ],
+  "definitions": {
+    "technical": "A backward incompatible protocol change that expands or alters the set of valid blocks. Nodes that do not upgrade will reject blocks produced under the new rules, causing a permanent chain split if any meaningful portion of the network continues operating under the old rules. The Ethereum/Ethereum Classic split of 2016 is the canonical example.",
+    "lay": "A hard fork is a major rule change to a blockchain that is not compatible with older software. If some participants refuse to update, the blockchain permanently splits into two separate networks, each with its own version of the transaction history and its own token.",
+    "parenthetical": "(a backward incompatible blockchain protocol change that can permanently split the network into two chains)",
+    "legal_significance": "Hard forks create new assets that raise questions under tax law, securities law, and contract law. IRS Revenue Ruling 2019-24 treats tokens received from a hard fork as taxable income. Courts must determine which chain satisfies contractual obligations referencing the original asset. The SEC has considered whether forked tokens constitute new securities."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

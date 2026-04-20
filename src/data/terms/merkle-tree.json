@@ -1,0 +1,29 @@
+{
+  "id": "merkle-tree",
+  "term": "Merkle Tree",
+  "tags": [
+    "cryptography",
+    "infrastructure"
+  ],
+  "parent": "hash-function",
+  "related": [
+    "hash-function",
+    "blockchain",
+    "distributed-ledger"
+  ],
+  "definitions": {
+    "technical": "A binary tree data structure in which every leaf node contains the hash of a data block and every non leaf node contains the hash of its two children. The single root hash (Merkle root) enables efficient verification that any specific transaction is included in a block without downloading the entire block. Bitcoin and Ethereum both store transaction Merkle roots in their block headers.",
+    "lay": "A Merkle tree is a way of organizing data so that you can quickly verify whether a specific transaction is included in a block. It works by repeatedly combining pairs of data fingerprints until a single master fingerprint remains. Checking one transaction requires only a small number of steps rather than reviewing every transaction in the block.",
+    "parenthetical": "(a hash based tree structure enabling efficient verification of data inclusion within a block)",
+    "legal_significance": "Merkle proofs allow lightweight clients to verify transaction inclusion without full node operation, which matters for evidentiary standards. A party can demonstrate that a specific transaction occurred at a specific time by presenting a compact Merkle proof rather than the entire blockchain, reducing the burden of producing electronic records in discovery."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}

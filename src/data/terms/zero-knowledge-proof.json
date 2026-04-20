@@ -1,0 +1,30 @@
+{
+  "id": "zero-knowledge-proof",
+  "term": "Zero Knowledge Proof",
+  "tags": [
+    "cryptography",
+    "privacy"
+  ],
+  "parent": null,
+  "related": [
+    "zk-snark",
+    "zk-stark",
+    "hash-function",
+    "rollup"
+  ],
+  "definitions": {
+    "technical": "An interactive or non interactive cryptographic protocol that allows a prover to convince a verifier that a statement is true without revealing any information beyond the validity of the statement itself. A zero knowledge proof must satisfy three properties: completeness (honest provers convince honest verifiers), soundness (dishonest provers cannot deceive), and zero knowledge (the verifier learns nothing beyond the statement's truth).",
+    "lay": "A zero knowledge proof is a cryptographic method that lets someone prove they know a secret or that a statement is true without revealing the secret itself. For example, a person could prove they are over 21 without revealing their actual birthdate. Blockchains use this technology for privacy and for verifying large batches of transactions efficiently.",
+    "parenthetical": "(a cryptographic protocol enabling proof of a statement's truth without revealing the underlying information)",
+    "legal_significance": "Zero knowledge proofs enable privacy preserving compliance, allowing users to demonstrate regulatory compliance (such as KYC or AML status) without exposing personal data. This intersects with GDPR data minimization principles and with the Bank Secrecy Act's record keeping requirements. The Financial Action Task Force has examined how zero knowledge technology affects the travel rule for virtual asset transfers."
+  },
+  "statutes": [],
+  "see_also": [],
+  "visualization": null,
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "unverified"
+  }
+}
