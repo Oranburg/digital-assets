@@ -1,59 +1,123 @@
 import { Link } from 'react-router-dom'
+import { getAllStatutes } from '../data/statutes/index.js'
+import './StateLaws.css'
 
-const states = [
-  { id: 'nh', name: 'New Hampshire', statutes: [{ name: 'RSA 301-B (DAO Act)', status: 'available', year: 2024 }], status: 'available' },
-  { id: 'wy', name: 'Wyoming', statutes: [{ name: 'W.S. 17-31 (DAO LLC)', status: 'placeholder', year: 2021 }, { name: 'W.S. 17-32 (DUNA)', status: 'placeholder', year: 2024 }], status: 'placeholder' },
-  { id: 'ut', name: 'Utah', statutes: [{ name: 'Utah Code 48-5 (DAO)', status: 'placeholder', year: 2023 }, { name: 'DUNA', status: 'placeholder', year: 2024 }], status: 'placeholder' },
-  { id: 'tn', name: 'Tennessee', statutes: [{ name: 'Tenn. Code 48-250 (DAO)', status: 'placeholder', year: 2022 }], status: 'placeholder' },
-  { id: 'vt', name: 'Vermont', statutes: [{ name: '11C V.S.A. (BBLLC)', status: 'placeholder', year: 2018 }], status: 'placeholder' },
-]
+const STATE_ORDER = ['NH', 'WY', 'UT', 'TN', 'VT']
+
+const STATE_INFO = {
+  NH: { name: 'New Hampshire', abbr: 'NH', color: '#4A90D9', note: 'Most prescriptive. Standalone entity, blockchain registry, 20% decentralization threshold.' },
+  WY: { name: 'Wyoming', abbr: 'WY', color: '#8B4513', note: 'First in nation. LLC supplement, algorithmically managed option, standard LLC duties.' },
+  UT: { name: 'Utah', abbr: 'UT', color: '#B8860B', note: 'Within LLC code. 9 certificate requirements, modified BJR, addresses forks and failures.' },
+  TN: { name: 'Tennessee', abbr: 'TN', color: '#1A5276', note: 'Lightest touch. No fiduciary duties by default, no decentralization threshold.' },
+  VT: { name: 'Vermont', abbr: 'VT', color: '#2E7D32', note: 'Single section. Blockchain governance election on existing LLC, no separate entity type.' },
+}
+
+function StatuteCard({ statute }) {
+  const isAvailable = statute.status === 'available'
+  const isShell = statute.status === 'shell'
+
+  return (
+    <div className={`statute-card ${isAvailable ? 'statute-card--available' : ''} ${isShell ? 'statute-card--shell' : ''}`}>
+      <div className="statute-card__header">
+        <span className="statute-card__name">{statute.shortTitle}</span>
+        <span className={`statute-card__status ${isAvailable ? 'statute-card__status--available' : isShell ? 'statute-card__status--shell' : ''}`}>
+          {isAvailable ? '✓' : isShell ? '⬡' : '○'} {statute.year}
+        </span>
+      </div>
+      <p className="statute-card__cite">{statute.cite}</p>
+      <p className="statute-card__desc serif">{statute.description}</p>
+      <div className="statute-card__footer">
+        {(isAvailable || isShell) ? (
+          <Link to={`/laws/states/${statute.id}`} className="statute-card__link">
+            Read statute →
+          </Link>
+        ) : (
+          <span className="statute-card__coming">Coming soon</span>
+        )}
+        <span className="statute-card__enacted">{statute.enacted}</span>
+      </div>
+    </div>
+  )
+}
 
 export default function StateLaws() {
+  const allStatutes = getAllStatutes().filter(s => s.state !== 'US')
+
+  const byState = STATE_ORDER.reduce((acc, abbr) => {
+    acc[abbr] = allStatutes.filter(s => s.state === abbr)
+    return acc
+  }, {})
+
   return (
-    <div className="container section">
-      <header style={{ marginBottom: 'var(--space-2xl)' }}>
+    <div className="state-laws section">
+      <header className="state-laws__header container">
         <h1>State DAO Laws</h1>
-        <p className="serif" style={{ color: 'var(--text-secondary)', maxWidth: '40rem' }}>
-          Interactive statute readers for state-level DAO and digital asset entity legislation.
-          Each reader includes defined-term tooltips, cross-references, and links to the glossary.
+        <p className="serif">
+          Five states have enacted DAO-specific legislation. Each takes a different approach —
+          from New Hampshire&apos;s prescriptive 11-requirement framework to Vermont&apos;s permissive LLC overlay.
         </p>
+        <div className="state-laws__summary">
+          {STATE_ORDER.map(abbr => {
+            const info = STATE_INFO[abbr]
+            const statutes = byState[abbr] || []
+            const hasAvailable = statutes.some(s => s.status === 'available')
+            return (
+              <div key={abbr} className="state-pill" style={{ '--state-color': info.color }}>
+                <span className="state-pill__abbr">{abbr}</span>
+                <span className="state-pill__count">{statutes.length} statute{statutes.length !== 1 ? 's' : ''}</span>
+                {hasAvailable && <span className="state-pill__dot" title="Full text available" />}
+              </div>
+            )
+          })}
+        </div>
       </header>
 
-      <div style={{ display: 'grid', gap: 'var(--space-lg)' }}>
-        {states.map(state => (
-          <div key={state.id} className="card">
-            <h2 style={{ textTransform: 'none', marginBottom: 'var(--space-sm)' }}>
-              {state.name}
-            </h2>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--space-sm)' }}>
-              {state.statutes.map(s => (
-                <div
-                  key={s.name}
-                  style={{
-                    padding: 'var(--space-sm) var(--space-md)',
-                    background: s.status === 'available' ? 'var(--layer-1-bg)' : 'var(--bg-soft)',
-                    border: `1px solid ${s.status === 'available' ? 'var(--accent)' : 'var(--border)'}`,
-                    borderRadius: 'var(--radius-md)',
-                    fontSize: '0.9rem',
-                  }}
-                >
-                  {s.status === 'available' ? '✓' : '○'} {s.name} ({s.year})
-                  {s.status === 'placeholder' && (
-                    <span style={{ color: 'var(--muted)', marginLeft: 'var(--space-sm)', fontSize: '0.75rem' }}>
-                      Coming soon
-                    </span>
-                  )}
+      <div className="state-laws__grid container">
+        {STATE_ORDER.map(abbr => {
+          const info = STATE_INFO[abbr]
+          const statutes = byState[abbr] || []
+
+          return (
+            <section key={abbr} className="state-section">
+              <div className="state-section__header">
+                <span className="state-badge" style={{ background: info.color }}>{abbr}</span>
+                <div>
+                  <h2 className="state-section__name">{info.name}</h2>
+                  <p className="state-section__note serif">{info.note}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
+              </div>
+              <div className="state-section__statutes">
+                {statutes.length > 0 ? (
+                  statutes.map(s => <StatuteCard key={s.id} statute={s} />)
+                ) : (
+                  <div className="statute-card statute-card--placeholder">
+                    <p className="statute-card__name">VT BBLLC</p>
+                    <p className="statute-card__cite">11 V.S.A. § 4173</p>
+                    <p className="statute-card__desc serif">
+                      Single-section blockchain governance election for existing LLCs. First state to legislate (2018). Permissive/enabling rather than prescriptive.
+                    </p>
+                    <div className="statute-card__footer">
+                      <span className="statute-card__coming">Coming soon</span>
+                      <span className="statute-card__enacted">2018</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </section>
+          )
+        })}
       </div>
 
-      <div className="card" style={{ marginTop: 'var(--space-xl)', textAlign: 'center' }}>
-        <p className="serif" style={{ color: 'var(--text-secondary)' }}>
-          See also: <Link to="/analysis">Comparison Table</Link> for a side-by-side analysis of all five state DAO statutes.
-        </p>
+      <div className="container">
+        <div className="card" style={{ marginTop: 'var(--space-2xl)', textAlign: 'center' }}>
+          <p className="serif" style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-md)' }}>
+            Compare all five jurisdictions side by side, including formation requirements,
+            decentralization standards, fiduciary duties, and dispute resolution.
+          </p>
+          <Link to="/analysis" style={{ color: 'var(--accent)' }}>
+            View Comparison Table →
+          </Link>
+        </div>
       </div>
     </div>
   )

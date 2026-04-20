@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getTerm } from '../utils/terms'
 import './TermPage.css'
@@ -53,20 +53,24 @@ function Accordion({ lens, content, defaultOpen }) {
 }
 
 function GreekFootnote() {
-  const [shown, setShown] = useState(false)
-
-  useEffect(() => {
-    if (!localStorage.getItem('greekFootnoteSeen')) {
-      setShown(true)
-      localStorage.setItem('greekFootnoteSeen', 'true')
+  const [shown, setShown] = useState(() => {
+    try {
+      return !localStorage.getItem('greekFootnoteSeen')
+    } catch {
+      return false
     }
-  }, [])
+  })
+
+  const dismiss = () => {
+    setShown(false)
+    try { localStorage.setItem('greekFootnoteSeen', 'true') } catch { /* ignore */ }
+  }
 
   if (!shown) return null
 
   return (
     <aside className="greek-footnote">
-      <button className="greek-footnote__close" onClick={() => setShown(false)}>✕</button>
+      <button className="greek-footnote__close" onClick={dismiss}>✕</button>
       <p className="serif">
         These three perspectives draw on <em>ontology</em> (what a thing is), <em>techne</em> (how it works), and <em>teleology</em> (what it is for): a framework from Greek philosophy for examining any concept from multiple angles.
       </p>

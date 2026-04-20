@@ -1,0 +1,209 @@
+/* ===== State Laws Page ===== */
+
+.state-laws__header {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-xl);
+  max-width: 52rem;
+}
+
+.state-laws__header h1 {
+  margin-bottom: var(--space-sm);
+}
+
+.state-laws__header > p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+  max-width: 40rem;
+}
+
+/* State summary pills */
+.state-laws__summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.state-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--state-color, var(--border));
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+}
+
+.state-pill__abbr {
+  font-family: var(--font-headline);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--state-color, var(--accent));
+}
+
+.state-pill__count {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.state-pill__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6BAF8D;
+}
+
+/* Grid of states */
+.state-laws__grid {
+  display: grid;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-3xl);
+}
+
+/* State section */
+.state-section__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.state-badge {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-family: var(--font-headline);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.state-section__name {
+  font-size: 1.4rem;
+  text-transform: none;
+  margin-bottom: var(--space-xs);
+}
+
+.state-section__note {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Statutes list */
+.state-section__statutes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--space-md);
+  margin-left: calc(3.2rem + var(--space-md));
+}
+
+/* Statute card */
+.statute-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  transition: border-color var(--transition-fast);
+}
+
+.statute-card--available {
+  border-color: var(--accent);
+}
+
+.statute-card--shell {
+  border-color: rgba(196, 151, 47, 0.4);
+}
+
+.statute-card--placeholder {
+  border-style: dashed;
+  opacity: 0.7;
+}
+
+.statute-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statute-card__name {
+  font-family: var(--font-headline);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.statute-card__status {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+}
+
+.statute-card__status--available { color: #6BAF8D; }
+.statute-card__status--shell { color: var(--gold); }
+
+.statute-card__cite {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.statute-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.statute-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border);
+}
+
+.statute-card__link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.statute-card__link:hover {
+  color: var(--gold);
+}
+
+.statute-card__coming {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.statute-card__enacted {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .state-section__statutes {
+    margin-left: 0;
+  }
+  .state-section__header {
+    flex-direction: column;
+  }
+}
