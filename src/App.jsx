@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 import MapPage from './pages/MapPage'
 import GlossaryIndex from './pages/GlossaryIndex'
 import TermPage from './pages/TermPage'
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/analysis" element={<Analysis />} />
         </Routes>
       </main>
+      <Footer />
     </>
   )
 }
