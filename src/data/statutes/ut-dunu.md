@@ -26,7 +26,7 @@ The "Decentralized Unincorporated Nonprofit Association" (DUNA) is a legal entit
 - Governance through smart contracts and token voting
 - Flexibility without mandatory annual filings or fee structures
 
-Wyoming pioneered the DUNA form in 2024. The a16z-backed Catena Foundation model and major protocol DAOs like Uniswap have considered DUNA structures.
+Wyoming pioneered the DUNA form in 2024. The a16z-backed Catena Foundation model and major protocol DAOs like Uniswap have considered the DUNA structure.
 
 ---
 

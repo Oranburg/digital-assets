@@ -64,7 +64,11 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="mobile-menu" className="nav__mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <div
+          id="mobile-menu"
+          className="nav__mobile"
+          aria-label="Mobile navigation"
+        >
           {links.map(({ to, label, emoji }) => (
             <NavLink
               key={to}

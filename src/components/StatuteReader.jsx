@@ -4,6 +4,16 @@ import { marked } from 'marked'
 import { getAllTerms } from '../utils/terms'
 import './StatuteReader.css'
 
+/** HTML-escape a plain string for safe use in attributes and text */
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+}
+
 /** Build a slug from a heading string */
 function slugify(text) {
   return text
@@ -44,7 +54,7 @@ function highlightGlossaryTerms(html, terms) {
     const re = new RegExp(`\\b(${safe})\\b(?![^<]*>)`, 'gi')
     result = result.replace(
       re,
-      `<a href="#/glossary/${term.id}" class="statute-term-link" title="${term.definitions?.lay?.slice(0, 80) || ''}">$1</a>`
+      `<a href="#/glossary/${term.id}" class="statute-term-link" title="${escapeHtml(term.definitions?.lay?.slice(0, 80) || '')}">$1</a>`
     )
   }
   return result
@@ -81,12 +91,19 @@ export default function StatuteReader({ meta, markdownText }) {
   const rawHtml = marked.parse(markdownText || '')
   const html = highlightGlossaryTerms(rawHtml, allTerms)
 
-  // Highlight search matches in the content
+  // Highlight search matches in the content — operate only on text nodes to avoid
+  // injecting raw HTML from user input, which would be an XSS vector.
   const displayHtml = searchQuery.length > 2
-    ? html.replace(
-        new RegExp(`(${searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'),
-        '<mark class="statute-highlight">$1</mark>'
-      )
+    ? (() => {
+        // Escape the query for safe regex use AND safe HTML substitution
+        const escapedRegex = searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        const escapedHtml = escapeHtml(searchQuery)
+        return html.replace(
+          // Only match text outside HTML tags: use a negative lookahead for `>`
+          new RegExp(`(${escapedRegex})(?=[^<]*(?:<|$))`, 'gi'),
+          `<mark class="statute-highlight">${escapedHtml}</mark>`
+        )
+      })()
     : html
 
   // Track active section via IntersectionObserver
