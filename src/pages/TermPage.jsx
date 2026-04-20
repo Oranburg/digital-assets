@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { getTerm, ZONES } from '../utils/terms'
+import { getTerm } from '../utils/terms'
 import './TermPage.css'
 
 export default function TermPage() {
@@ -19,47 +19,37 @@ export default function TermPage() {
     )
   }
 
-  const zone = ZONES[term.zone]
   const parentTerm = term.parent ? getTerm(term.parent) : null
   const childTerms = (term.children || []).map(id => getTerm(id)).filter(Boolean)
   const relatedTerms = (term.related || []).map(id => getTerm(id)).filter(Boolean)
 
   return (
-    <div
-      className="term-page"
-      style={{ '--current-layer': zone?.color, '--current-layer-text': zone?.textColor, '--current-layer-bg': zone?.bgColor }}
-    >
-      <div className="term-page__layer-bar" />
-
+    <div className="term-page">
       <div className="container">
         {/* Breadcrumb */}
         <nav className="term-breadcrumb">
           <Link to="/">Map</Link>
           <span>/</span>
-          {zone && (
-            <>
-              <Link to={`/zones/${zone.id}`}>{zone.name}</Link>
-              <span>/</span>
-            </>
-          )}
+          <Link to="/glossary">Glossary</Link>
           {parentTerm && (
             <>
-              <Link to={`/glossary/${parentTerm.id}`}>{parentTerm.term}</Link>
               <span>/</span>
+              <Link to={`/glossary/${parentTerm.id}`}>{parentTerm.term}</Link>
             </>
           )}
+          <span>/</span>
           <span className="term-breadcrumb__current">{term.term}</span>
         </nav>
 
         {/* Header */}
         <header className="term-header">
-          <div className="term-header__meta">
-            {zone && (
-              <span className={`zone-badge zone-badge--${term.zone}`}>
-                {zone.emoji} {zone.name}
-              </span>
-            )}
-          </div>
+          {term.tags?.length > 0 && (
+            <div className="term-header__tags">
+              {term.tags.map(tag => (
+                <Link key={tag} to={`/glossary?tag=${tag}`} className="term-tag">{tag}</Link>
+              ))}
+            </div>
+          )}
           <h1 className="term-header__title">{term.term}</h1>
         </header>
 
@@ -82,7 +72,7 @@ export default function TermPage() {
                 <p className="serif">{term.definitions.technical}</p>
                 {term.definitions.parenthetical && (
                   <p className="term-parenthetical">
-                    <strong>Parenthetical footnote form:</strong> {term.definitions.parenthetical}
+                    <strong>Footnote form:</strong> {term.definitions.parenthetical}
                   </p>
                 )}
               </div>
@@ -113,11 +103,6 @@ export default function TermPage() {
             <div className="term-nav-section">
               <h3>↑ Go Broader</h3>
               <Link to={`/glossary/${parentTerm.id}`} className="term-nav-link card">
-                {ZONES[parentTerm.zone] && (
-                  <span className={`zone-badge zone-badge--${parentTerm.zone}`}>
-                    {ZONES[parentTerm.zone].emoji}
-                  </span>
-                )}
                 {parentTerm.term}
               </Link>
             </div>
@@ -128,11 +113,6 @@ export default function TermPage() {
               <h3>↓ Go Deeper</h3>
               {childTerms.map(child => (
                 <Link key={child.id} to={`/glossary/${child.id}`} className="term-nav-link card">
-                  {ZONES[child.zone] && (
-                    <span className={`zone-badge zone-badge--${child.zone}`}>
-                      {ZONES[child.zone].emoji}
-                    </span>
-                  )}
                   {child.term}
                 </Link>
               ))}
@@ -144,11 +124,6 @@ export default function TermPage() {
               <h3>↔ Related</h3>
               {relatedTerms.map(rel => (
                 <Link key={rel.id} to={`/glossary/${rel.id}`} className="term-nav-link card">
-                  {ZONES[rel.zone] && (
-                    <span className={`zone-badge zone-badge--${rel.zone}`}>
-                      {ZONES[rel.zone].emoji}
-                    </span>
-                  )}
                   {rel.term}
                 </Link>
               ))}

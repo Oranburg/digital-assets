@@ -49,12 +49,28 @@ export function getTerm(id) {
   return termMap.get(id) || null
 }
 
-/** Get all terms for a given zone */
-export function getTermsByZone(zone) {
-  return getAllTerms().filter(t => t.zone === zone)
+/** Get all unique tags across all terms */
+export function getAllTags() {
+  const tags = new Set()
+  for (const term of termMap.values()) {
+    for (const tag of (term.tags || [])) {
+      tags.add(tag)
+    }
+  }
+  return [...tags].sort()
 }
 
-/** Search terms by query string (matches term name and definitions) */
+/** Get all terms matching a tag */
+export function getTermsByTag(tag) {
+  return getAllTerms().filter(t => t.tags?.includes(tag))
+}
+
+/** Get root terms (no parent) */
+export function getRootTerms() {
+  return getAllTerms().filter(t => !t.parent)
+}
+
+/** Search terms by query string (matches term name, definitions, and tags) */
 export function searchTerms(query) {
   if (!query) return getAllTerms()
   const q = query.toLowerCase()
@@ -64,40 +80,4 @@ export function searchTerms(query) {
     t.definitions?.technical?.toLowerCase().includes(q) ||
     t.tags?.some(tag => tag.toLowerCase().includes(q))
   )
-}
-
-/**
- * Zone metadata.
- * These are NOT blockchain "layers" (L1/L2/L3), which have specific
- * technical meanings in the industry. These are organizational zones
- * for navigating the glossary by the role each concept plays.
- */
-export const ZONES = {
-  protocol: {
-    id: 'protocol',
-    name: 'Protocol',
-    emoji: '⛓',
-    description: 'The technology law must understand: blockchain architecture, consensus mechanisms, cryptography, smart contracts, and network security.',
-    color: 'var(--layer-1)',
-    textColor: 'var(--layer-1-text)',
-    bgColor: 'var(--layer-1-bg)',
-  },
-  infrastructure: {
-    id: 'infrastructure',
-    name: 'Infrastructure',
-    emoji: '🏗',
-    description: 'The financial products law must regulate: stablecoins, DeFi, tokenization, custody, settlement, and digital asset markets.',
-    color: 'var(--layer-2)',
-    textColor: 'var(--layer-2-text)',
-    bgColor: 'var(--layer-2-bg)',
-  },
-  governance: {
-    id: 'governance',
-    name: 'Governance',
-    emoji: '⚖',
-    description: 'The regulatory architecture itself: federal and state legislation, agency jurisdiction, entity formation, and compliance frameworks.',
-    color: 'var(--layer-3)',
-    textColor: 'var(--layer-3-text)',
-    bgColor: 'var(--layer-3-bg)',
-  },
 }

@@ -4,7 +4,6 @@ import Footer from './components/Footer'
 import MapPage from './pages/MapPage'
 import GlossaryIndex from './pages/GlossaryIndex'
 import TermPage from './pages/TermPage'
-import LayerView from './pages/LayerView'
 import StateLaws from './pages/StateLaws'
 import FederalLaws from './pages/FederalLaws'
 import Analysis from './pages/Analysis'
@@ -18,7 +17,6 @@ export default function App() {
           <Route path="/" element={<MapPage />} />
           <Route path="/glossary" element={<GlossaryIndex />} />
           <Route path="/glossary/:termId" element={<TermPage />} />
-          <Route path="/zones/:layerId" element={<LayerView />} />
           <Route path="/laws/states" element={<StateLaws />} />
           <Route path="/laws/federal" element={<FederalLaws />} />
           <Route path="/analysis" element={<Analysis />} />

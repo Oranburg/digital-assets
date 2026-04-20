@@ -38,6 +38,43 @@
   color: var(--muted);
 }
 
+.glossary-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.glossary-tag-btn {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.glossary-tag-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.glossary-tag-btn--active {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.glossary-tag-btn--active:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  color: var(--bg);
+}
+
 .glossary-results {
   display: grid;
   gap: var(--space-md);

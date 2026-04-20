@@ -1,66 +1,53 @@
 import { Link } from 'react-router-dom'
-import { getTermsByZone, ZONES } from '../utils/terms'
+import { getRootTerms, getTerm } from '../utils/terms'
 import './MapPage.css'
 
-const zoneOrder = ['governance', 'infrastructure', 'protocol']
-
-function ZoneBand({ zoneId }) {
-  const meta = ZONES[zoneId]
-  const terms = getTermsByZone(zoneId)
+function TermNode({ term, depth = 0 }) {
+  const children = (term.children || []).map(id => getTerm(id)).filter(Boolean)
 
   return (
-    <section
-      className="map-layer"
-      style={{ '--layer-accent': meta.color, '--layer-text': meta.textColor, '--layer-bg': meta.bgColor }}
-    >
-      <div className="map-layer__header">
-        <Link to={`/zones/${meta.id}`} className="map-layer__title">
-          <span className="map-layer__emoji">{meta.emoji}</span>
-          <span>
-            <strong>{meta.name}</strong>
+    <div className="map-node" style={{ '--depth': depth }}>
+      <Link to={`/glossary/${term.id}`} className="map-node__link">
+        <span className="map-node__name">{term.term}</span>
+        {term.tags?.length > 0 && (
+          <span className="map-node__tags">
+            {term.tags.slice(0, 3).map(tag => (
+              <span key={tag} className="map-node__tag">{tag}</span>
+            ))}
           </span>
-        </Link>
-        <p className="map-layer__desc serif">{meta.description}</p>
-      </div>
-
-      <div className="map-layer__terms">
-        {terms.map(t => (
-          <Link
-            key={t.id}
-            to={`/glossary/${t.id}`}
-            className="map-term"
-          >
-            <span className="map-term__name">{t.term}</span>
-          </Link>
-        ))}
-        {terms.length === 0 && (
-          <span className="map-layer__empty">Terms coming soon</span>
         )}
-      </div>
-    </section>
+      </Link>
+      {children.length > 0 && (
+        <div className="map-node__children">
+          {children.map(child => (
+            <TermNode key={child.id} term={child} depth={depth + 1} />
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 
 export default function MapPage() {
+  const roots = getRootTerms()
+
   return (
     <div className="map-page">
       <header className="map-hero container">
         <h1 className="map-hero__title">Digital Assets</h1>
         <p className="map-hero__subtitle serif">
-          An exploratory learning web covering blockchain technology, digital asset infrastructure, and the legal frameworks governing them.
+          An exploratory learning web covering blockchain technology, digital asset infrastructure, and the legal frameworks governing them. Click any term to explore.
         </p>
       </header>
 
-      <div className="map-stack container">
-        {zoneOrder.map((zoneId, i) => (
-          <div key={zoneId}>
-            {i > 0 && <div className="map-connector" />}
-            <ZoneBand zoneId={zoneId} />
-          </div>
+      <div className="map-tree container">
+        {roots.map(term => (
+          <TermNode key={term.id} term={term} />
         ))}
       </div>
 
       <div className="map-spacer" />
+
       <nav className="map-sections container">
         <Link to="/glossary" className="map-section card">
           <span className="map-section__emoji">📖</span>
