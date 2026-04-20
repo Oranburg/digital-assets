@@ -1,18 +1,33 @@
 {
   "id": "consensus",
   "term": "Consensus Mechanism",
-  "layer": 1,
-  "tags": ["protocol", "security"],
+  "tags": [
+    "protocol",
+    "security"
+  ],
   "parent": "blockchain",
-  "related": ["bft", "proof-of-stake", "proof-of-work", "finality"],
+  "related": [
+    "bft",
+    "proof-of-stake",
+    "proof-of-work",
+    "finality"
+  ],
   "definitions": {
     "technical": "A protocol by which distributed nodes reach agreement on the current state of a shared ledger without relying on a central authority. Consensus mechanisms must balance safety (no conflicting states finalized), liveness (the system continues producing blocks), and fault tolerance (resilience to node failures or adversarial behavior).",
     "lay": "The method a blockchain uses to get all its computers to agree on which transactions are valid. Different blockchains use different methods, each with tradeoffs between speed, energy use, and security.",
-    "parenthetical": "(the method by which distributed network participants agree on the valid state of the ledger)"
+    "parenthetical": "(the method by which distributed network participants agree on the valid state of the ledger)",
+    "legal_significance": "The consensus mechanism determines who validates transactions and how disputes are resolved. RSA 301-B:5(VII) defines 'consensus mechanism' specifically. The choice of mechanism affects regulatory classification: proof-of-work networks consume energy (environmental regulation), while proof-of-stake networks involve staking (potential securities implications)."
   },
   "statutes": [],
-  "see_also": ["/analysis/decentralization/"],
+  "see_also": [
+    "/analysis/decentralization/"
+  ],
   "visualization": null,
-  "sources": ["nh-token-glossary"],
-  "verification": { "status": "verified" }
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "verified"
+  },
+  "zone": "protocol"
 }

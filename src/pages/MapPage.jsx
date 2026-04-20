@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
-import { getTermsByLayer, LAYERS } from '../utils/terms'
+import { getTermsByZone, ZONES } from '../utils/terms'
 import './MapPage.css'
 
-function LayerBand({ layer }) {
-  const meta = LAYERS[layer]
-  const terms = getTermsByLayer(layer)
+const zoneOrder = ['governance', 'infrastructure', 'protocol']
+
+function ZoneBand({ zoneId }) {
+  const meta = ZONES[zoneId]
+  const terms = getTermsByZone(zoneId)
 
   return (
     <section
@@ -12,11 +14,10 @@ function LayerBand({ layer }) {
       style={{ '--layer-accent': meta.color, '--layer-text': meta.textColor, '--layer-bg': meta.bgColor }}
     >
       <div className="map-layer__header">
-        <Link to={`/layers/${meta.slug}`} className="map-layer__title">
+        <Link to={`/zones/${meta.id}`} className="map-layer__title">
           <span className="map-layer__emoji">{meta.emoji}</span>
           <span>
-            <strong>Layer {meta.id}</strong>
-            <span className="map-layer__name">{meta.name}</span>
+            <strong>{meta.name}</strong>
           </span>
         </Link>
         <p className="map-layer__desc serif">{meta.description}</p>
@@ -51,11 +52,12 @@ export default function MapPage() {
       </header>
 
       <div className="map-stack container">
-        <LayerBand layer={3} />
-        <div className="map-connector" />
-        <LayerBand layer={2} />
-        <div className="map-connector" />
-        <LayerBand layer={1} />
+        {zoneOrder.map((zoneId, i) => (
+          <div key={zoneId}>
+            {i > 0 && <div className="map-connector" />}
+            <ZoneBand zoneId={zoneId} />
+          </div>
+        ))}
       </div>
 
       <nav className="map-sections container">

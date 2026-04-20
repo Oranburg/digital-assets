@@ -1,18 +1,38 @@
 {
   "id": "dao",
   "term": "Decentralized Autonomous Organization (DAO)",
-  "layer": 3,
-  "tags": ["governance", "entity", "blockchain"],
+  "tags": [
+    "governance",
+    "entity",
+    "blockchain"
+  ],
   "parent": null,
-  "related": ["smart-contract", "blockchain", "dao-llc", "duna"],
+  "related": [
+    "smart-contract",
+    "blockchain",
+    "dao-llc",
+    "duna"
+  ],
   "definitions": {
     "technical": "A protocol governed through token-weighted on-chain voting, where governance proposals are submitted, deliberated, and executed via smart contracts without centralized management. Legal recognition varies by jurisdiction: New Hampshire (RSA 301-B) recognizes DAOs as legal entities with limited liability, requiring a 20% decentralization threshold and registration on a blockchain-based registry. Wyoming, Utah, Tennessee, and Vermont offer alternative statutory frameworks with different formation requirements and liability structures.",
     "lay": "An organization that runs on blockchain code instead of having traditional managers or a board of directors. Members vote on decisions using digital tokens, and the organization's rules are enforced automatically by computer programs. Several U.S. states now recognize DAOs as legal entities, giving their members liability protection similar to what LLCs provide.",
-    "parenthetical": "(a blockchain-governed organization where members vote with tokens and rules are enforced by smart contracts)"
+    "parenthetical": "(a blockchain-governed organization where members vote with tokens and rules are enforced by smart contracts)",
+    "legal_significance": "Five U.S. states recognize DAOs as legal entities: New Hampshire (RSA 301-B, 2024), Wyoming (W.S. 17-31, 2021; W.S. 17-32 DUNA, 2024), Utah (2023), Tennessee (Tenn. Code 48-250, 2022), and Vermont (BBLLC, 2018). Each statute takes a different approach to liability, decentralization thresholds, and governance requirements. Sarcuni v. bZx DAO, 664 F. Supp. 3d 1100 (S.D. Cal. 2023) held that unregistered DAO token holders may face personal liability as general partners."
   },
-  "statutes": ["nh-rsa-301-b"],
-  "see_also": ["/laws/states/", "/analysis/comparison/", "/analysis/decentralization/"],
+  "statutes": [
+    "nh-rsa-301-b"
+  ],
+  "see_also": [
+    "/laws/states/",
+    "/analysis/comparison/",
+    "/analysis/decentralization/"
+  ],
   "visualization": null,
-  "sources": ["nh-token-glossary"],
-  "verification": { "status": "verified" }
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "verified"
+  },
+  "zone": "governance"
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { searchTerms, LAYERS } from '../utils/terms'
+import { searchTerms, ZONES } from '../utils/terms'
 import './GlossaryIndex.css'
 
 export default function GlossaryIndex() {
@@ -11,7 +11,7 @@ export default function GlossaryIndex() {
     <div className="glossary-index container">
       <header className="glossary-index__header">
         <h1>Glossary</h1>
-        <p className="serif">Search and explore digital asset terminology across all three layers.</p>
+        <p className="serif">Search and explore digital asset terminology across Protocol, Infrastructure, and Governance.</p>
         <input
           type="text"
           className="glossary-search"
@@ -27,7 +27,7 @@ export default function GlossaryIndex() {
           <p className="glossary-empty">No terms match "{query}"</p>
         )}
         {results.map(term => {
-          const layer = LAYERS[term.layer]
+          const zone = ZONES[term.zone]
           return (
             <Link
               key={term.id}
@@ -36,9 +36,11 @@ export default function GlossaryIndex() {
             >
               <div className="glossary-card__header">
                 <h3 className="glossary-card__term">{term.term}</h3>
-                <span className={`layer-badge layer-badge--${term.layer}`}>
-                  {layer.emoji} L{term.layer}
-                </span>
+                {zone && (
+                  <span className={`zone-badge zone-badge--${term.zone}`}>
+                    {zone.emoji} {zone.name}
+                  </span>
+                )}
               </div>
               <p className="glossary-card__def serif">{term.definitions?.lay}</p>
               {term.tags?.length > 0 && (

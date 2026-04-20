@@ -18,7 +18,7 @@ export default function App() {
           <Route path="/" element={<MapPage />} />
           <Route path="/glossary" element={<GlossaryIndex />} />
           <Route path="/glossary/:termId" element={<TermPage />} />
-          <Route path="/layers/:layerId" element={<LayerView />} />
+          <Route path="/zones/:layerId" element={<LayerView />} />
           <Route path="/laws/states" element={<StateLaws />} />
           <Route path="/laws/federal" element={<FederalLaws />} />
           <Route path="/analysis" element={<Analysis />} />

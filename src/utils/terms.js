@@ -49,9 +49,9 @@ export function getTerm(id) {
   return termMap.get(id) || null
 }
 
-/** Get all terms for a given layer (1, 2, or 3) */
-export function getTermsByLayer(layer) {
-  return getAllTerms().filter(t => t.layer === layer)
+/** Get all terms for a given zone */
+export function getTermsByZone(zone) {
+  return getAllTerms().filter(t => t.zone === zone)
 }
 
 /** Search terms by query string (matches term name and definitions) */
@@ -66,34 +66,36 @@ export function searchTerms(query) {
   )
 }
 
-/** Layer metadata */
-export const LAYERS = {
-  1: {
-    id: 1,
+/**
+ * Zone metadata.
+ * These are NOT blockchain "layers" (L1/L2/L3), which have specific
+ * technical meanings in the industry. These are organizational zones
+ * for navigating the glossary by the role each concept plays.
+ */
+export const ZONES = {
+  protocol: {
+    id: 'protocol',
     name: 'Protocol',
-    slug: 'protocol',
     emoji: '⛓',
-    description: 'The foundation layer: blockchain consensus, cryptography, smart contracts, and network security.',
+    description: 'The technology law must understand: blockchain architecture, consensus mechanisms, cryptography, smart contracts, and network security.',
     color: 'var(--layer-1)',
     textColor: 'var(--layer-1-text)',
     bgColor: 'var(--layer-1-bg)',
   },
-  2: {
-    id: 2,
+  infrastructure: {
+    id: 'infrastructure',
     name: 'Infrastructure',
-    slug: 'infrastructure',
     emoji: '🏗',
-    description: 'The financial products layer: stablecoins, DeFi, tokenization, custody, and settlement.',
+    description: 'The financial products law must regulate: stablecoins, DeFi, tokenization, custody, settlement, and digital asset markets.',
     color: 'var(--layer-2)',
     textColor: 'var(--layer-2-text)',
     bgColor: 'var(--layer-2-bg)',
   },
-  3: {
-    id: 3,
+  governance: {
+    id: 'governance',
     name: 'Governance',
-    slug: 'governance',
     emoji: '⚖',
-    description: 'The regulatory layer: federal and state legislation, agency jurisdiction, compliance frameworks.',
+    description: 'The regulatory architecture itself: federal and state legislation, agency jurisdiction, entity formation, and compliance frameworks.',
     color: 'var(--layer-3)',
     textColor: 'var(--layer-3-text)',
     bgColor: 'var(--layer-3-bg)',

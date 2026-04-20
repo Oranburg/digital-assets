@@ -1,18 +1,32 @@
 {
   "id": "bft",
   "term": "Byzantine Fault Tolerance (BFT)",
-  "layer": 1,
-  "tags": ["consensus", "security"],
+  "tags": [
+    "consensus",
+    "security"
+  ],
   "parent": "consensus",
-  "related": ["51-percent-attack", "liveness-attack", "finality"],
+  "related": [
+    "51-percent-attack",
+    "liveness-attack",
+    "finality"
+  ],
   "definitions": {
     "technical": "A consensus property ensuring that a distributed network reaches agreement on state transitions even when up to one-third of participating nodes are faulty or adversarial. BFT systems achieve safety (no conflicting states are finalized) and liveness (the system continues producing new states) under this threshold. The one-third bound is a theoretical limit proved by Lamport, Shostak, and Pease (1982): no deterministic protocol can tolerate more than f Byzantine faults among 3f+1 nodes.",
     "lay": "A system designed to keep working correctly even when some participants are dishonest or go offline. As long as fewer than one-third of the participants are bad actors, the system reaches agreement and keeps running. Named after a thought experiment about Byzantine generals who must coordinate an attack despite traitors in their ranks.",
-    "parenthetical": "(a property ensuring network agreement despite faulty or malicious nodes, up to a one-third threshold)"
+    "parenthetical": "(a property ensuring network agreement despite faulty or malicious nodes, up to a one-third threshold)",
+    "legal_significance": "The 1/3 liveness threshold is the security assumption underlying decentralization requirements. New Hampshire's 20% single-entity threshold (RSA 301-B:5(IX)) is more conservative than the BFT bound, creating a buffer. A governance attack crossing the 1/3 threshold could trigger the 'contentious fork' provisions of RSA 301-B:25."
   },
   "statutes": [],
-  "see_also": ["/analysis/decentralization/"],
+  "see_also": [
+    "/analysis/decentralization/"
+  ],
   "visualization": null,
-  "sources": ["nh-token-glossary"],
-  "verification": { "status": "verified" }
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "verified"
+  },
+  "zone": "protocol"
 }

@@ -109,6 +109,15 @@
   color: var(--muted);
 }
 
+/* Legal significance accent */
+.term-legal {
+  border-color: var(--gold);
+}
+
+.term-legal .term-technical__toggle {
+  color: var(--gold);
+}
+
 /* Navigation grid */
 .term-nav-grid {
   display: grid;

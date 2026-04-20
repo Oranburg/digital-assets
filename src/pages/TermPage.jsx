@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { getTerm, LAYERS } from '../utils/terms'
+import { getTerm, ZONES } from '../utils/terms'
 import './TermPage.css'
 
 export default function TermPage() {
   const { termId } = useParams()
   const term = getTerm(termId)
   const [showTechnical, setShowTechnical] = useState(false)
+  const [showLegal, setShowLegal] = useState(false)
 
   if (!term) {
     return (
@@ -18,7 +19,7 @@ export default function TermPage() {
     )
   }
 
-  const layer = LAYERS[term.layer]
+  const zone = ZONES[term.zone]
   const parentTerm = term.parent ? getTerm(term.parent) : null
   const childTerms = (term.children || []).map(id => getTerm(id)).filter(Boolean)
   const relatedTerms = (term.related || []).map(id => getTerm(id)).filter(Boolean)
@@ -26,7 +27,7 @@ export default function TermPage() {
   return (
     <div
       className="term-page"
-      style={{ '--current-layer': layer.color, '--current-layer-text': layer.textColor, '--current-layer-bg': layer.bgColor }}
+      style={{ '--current-layer': zone?.color, '--current-layer-text': zone?.textColor, '--current-layer-bg': zone?.bgColor }}
     >
       <div className="term-page__layer-bar" />
 
@@ -35,8 +36,12 @@ export default function TermPage() {
         <nav className="term-breadcrumb">
           <Link to="/">Map</Link>
           <span>/</span>
-          <Link to={`/layers/${layer.slug}`}>L{term.layer}: {layer.name}</Link>
-          <span>/</span>
+          {zone && (
+            <>
+              <Link to={`/zones/${zone.id}`}>{zone.name}</Link>
+              <span>/</span>
+            </>
+          )}
           {parentTerm && (
             <>
               <Link to={`/glossary/${parentTerm.id}`}>{parentTerm.term}</Link>
@@ -49,9 +54,11 @@ export default function TermPage() {
         {/* Header */}
         <header className="term-header">
           <div className="term-header__meta">
-            <span className={`layer-badge layer-badge--${term.layer}`}>
-              {layer.emoji} Layer {term.layer}: {layer.name}
-            </span>
+            {zone && (
+              <span className={`zone-badge zone-badge--${term.zone}`}>
+                {zone.emoji} {zone.name}
+              </span>
+            )}
           </div>
           <h1 className="term-header__title">{term.term}</h1>
         </header>
@@ -83,15 +90,34 @@ export default function TermPage() {
           </section>
         )}
 
+        {/* Legal significance (expandable) */}
+        {term.definitions?.legal_significance && (
+          <section className="term-technical term-legal">
+            <button
+              className="term-technical__toggle"
+              onClick={() => setShowLegal(!showLegal)}
+            >
+              {showLegal ? '▲' : '▼'} Legal Significance
+            </button>
+            {showLegal && (
+              <div className="term-technical__content">
+                <p className="serif">{term.definitions.legal_significance}</p>
+              </div>
+            )}
+          </section>
+        )}
+
         {/* Navigation: parent, children, related */}
         <div className="term-nav-grid">
           {parentTerm && (
             <div className="term-nav-section">
               <h3>↑ Go Broader</h3>
               <Link to={`/glossary/${parentTerm.id}`} className="term-nav-link card">
-                <span className={`layer-badge layer-badge--${parentTerm.layer}`}>
-                  L{parentTerm.layer}
-                </span>
+                {ZONES[parentTerm.zone] && (
+                  <span className={`zone-badge zone-badge--${parentTerm.zone}`}>
+                    {ZONES[parentTerm.zone].emoji}
+                  </span>
+                )}
                 {parentTerm.term}
               </Link>
             </div>
@@ -102,9 +128,11 @@ export default function TermPage() {
               <h3>↓ Go Deeper</h3>
               {childTerms.map(child => (
                 <Link key={child.id} to={`/glossary/${child.id}`} className="term-nav-link card">
-                  <span className={`layer-badge layer-badge--${child.layer}`}>
-                    L{child.layer}
-                  </span>
+                  {ZONES[child.zone] && (
+                    <span className={`zone-badge zone-badge--${child.zone}`}>
+                      {ZONES[child.zone].emoji}
+                    </span>
+                  )}
                   {child.term}
                 </Link>
               ))}
@@ -116,9 +144,11 @@ export default function TermPage() {
               <h3>↔ Related</h3>
               {relatedTerms.map(rel => (
                 <Link key={rel.id} to={`/glossary/${rel.id}`} className="term-nav-link card">
-                  <span className={`layer-badge layer-badge--${rel.layer}`}>
-                    L{rel.layer}
-                  </span>
+                  {ZONES[rel.zone] && (
+                    <span className={`zone-badge zone-badge--${rel.zone}`}>
+                      {ZONES[rel.zone].emoji}
+                    </span>
+                  )}
                   {rel.term}
                 </Link>
               ))}

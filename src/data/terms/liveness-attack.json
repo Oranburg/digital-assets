@@ -1,18 +1,32 @@
 {
   "id": "liveness-attack",
   "term": "Liveness Attack (1/3 Threshold)",
-  "layer": 1,
-  "tags": ["security", "consensus"],
+  "tags": [
+    "security",
+    "consensus"
+  ],
   "parent": "bft",
-  "related": ["51-percent-attack", "consensus", "finality"],
+  "related": [
+    "51-percent-attack",
+    "consensus",
+    "finality"
+  ],
   "definitions": {
     "technical": "An attack on a BFT consensus system in which an adversary controlling one-third or more of validators can halt the network by refusing to participate in consensus rounds. While the adversary cannot finalize false transactions (safety is preserved up to the one-third bound), it can prevent the network from reaching agreement on new blocks, effectively freezing the chain. This is the dual of the safety bound: BFT guarantees safety with up to f faults among 3f+1 nodes, but liveness requires at least 2f+1 honest participants actively responding.",
     "lay": "In certain blockchain systems, if one-third or more of the validators stop cooperating, the entire network can freeze. The bad actors cannot steal funds or fake transactions, but they can prevent anyone from making new ones. This is the price of the stronger security guarantees that BFT systems provide compared to proof-of-work chains.",
-    "parenthetical": "(an attack where one-third of validators can halt a BFT network by refusing to participate in consensus)"
+    "parenthetical": "(an attack where one-third of validators can halt a BFT network by refusing to participate in consensus)",
+    "legal_significance": "A liveness attack that freezes a blockchain holding stablecoin reserves could trigger the same receivership-side liquidity crisis documented in the SVB/USDC episode. No existing statute addresses the regulatory response when a consensus failure (rather than a bank failure) freezes reserve assets."
   },
   "statutes": [],
-  "see_also": ["/analysis/decentralization/"],
+  "see_also": [
+    "/analysis/decentralization/"
+  ],
   "visualization": null,
-  "sources": ["nh-token-glossary"],
-  "verification": { "status": "verified" }
+  "sources": [
+    "nh-token-glossary"
+  ],
+  "verification": {
+    "status": "verified"
+  },
+  "zone": "protocol"
 }
