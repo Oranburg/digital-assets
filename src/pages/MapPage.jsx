@@ -78,43 +78,43 @@ export default function MapPage() {
       </header>
 
       <section className="entry-cards container">
-        <Link to="/glossary/blockchain" className="entry-card">
+        <Link to="/lens/ontology" className="entry-card">
           <img
             src="/digital-assets/images/lenses/ontology-no-bg.png"
             alt=""
             className="entry-card__img"
           />
-          <h2 className="entry-card__title">What are digital assets?</h2>
+          <h2 className="entry-card__title">🏷️ What is it?</h2>
           <p className="entry-card__desc serif">
-            Start with the foundations: blockchain, tokens, stablecoins, and how they are classified.
+            Classification, identity, and legal nature. How digital assets are defined and why it matters.
           </p>
-          <span className="entry-card__link">Browse &#8594;</span>
+          <span className="entry-card__link">Explore ontology &#8594;</span>
         </Link>
 
-        <Link to="/glossary/consensus" className="entry-card">
+        <Link to="/lens/techne" className="entry-card">
           <img
             src="/digital-assets/images/lenses/techne-no-bg.png"
             alt=""
             className="entry-card__img"
           />
-          <h2 className="entry-card__title">How does blockchain work?</h2>
+          <h2 className="entry-card__title">⚙️ How does it work?</h2>
           <p className="entry-card__desc serif">
             Consensus, cryptography, smart contracts, and the mechanics underneath.
           </p>
-          <span className="entry-card__link">Browse &#8594;</span>
+          <span className="entry-card__link">Explore techne &#8594;</span>
         </Link>
 
-        <Link to="/glossary/genius-act" className="entry-card">
+        <Link to="/lens/teleology" className="entry-card">
           <img
             src="/digital-assets/images/lenses/telos-no-bg.png"
             alt=""
             className="entry-card__img"
           />
-          <h2 className="entry-card__title">What is at stake?</h2>
+          <h2 className="entry-card__title">🎯 What is it for?</h2>
           <p className="entry-card__desc serif">
-            Regulation, systemic risk, DAO liability, and the legal consequences of getting it wrong.
+            Purpose, consequences, and stakes. Regulation, systemic risk, and why it all matters.
           </p>
-          <span className="entry-card__link">Browse &#8594;</span>
+          <span className="entry-card__link">Explore teleology &#8594;</span>
         </Link>
       </section>
 
