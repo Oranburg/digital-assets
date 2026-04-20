@@ -1,0 +1,51 @@
+.statute-placeholder {
+  max-width: 44rem;
+  margin: var(--space-3xl) auto;
+}
+
+.statute-placeholder__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-family: var(--font-headline);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+.statute-placeholder__title {
+  text-transform: none;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-xs);
+}
+
+.statute-placeholder__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+}
+
+.statute-placeholder__note {
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(196, 151, 47, 0.07);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.statute-placeholder__note p {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
