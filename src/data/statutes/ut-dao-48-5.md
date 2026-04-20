@@ -1,353 +1,114 @@
-Utah Code §§ 48-5-101 to -406
+Utah Decentralized Autonomous Organization Act
 ===
 
-**TITLE 48 -- PARTNERSHIP AND OTHER UNINCORPORATED ENTITIES**
+**TITLE 48 -- CORPORATIONS**
 
 **CHAPTER 5 -- DECENTRALIZED AUTONOMOUS ORGANIZATIONS**
 
-*Utah Decentralized Autonomous Organization Act*
+*Utah Code Ann. § 48-5-101 et seq.*
 
-Enacted by HB 0357 (2023 General Session). Signed by Governor Cox. Effective May 3, 2023.
+Enacted: 2023 General Session
 
----
+## § 48-5-101. Definitions
 
-## Part 1 — General Provisions
+As used in this chapter: (1) 'Administrator' means a person appointed in a manner specified in the by-laws to make decisions for specific, predefined operations of the DAO. (2) 'Asset' means an item of value, whether on-chain or off-chain. (3) 'By-laws' means the procedural rules and regulations that govern the DAO and the interaction of its members and participants. (4) 'Cryptographic proof' means a mathematical proof that verifies that a message has not been tampered with or altered in any way and can be verified by a person that has access to the original message and the proof. (5) 'Decentralized' means that decision-making is distributed among multiple persons. (6) 'Decentralized autonomous organization' means an organization: (a) created by one or more smart contracts; (b) that implements rules enabling individuals to coordinate for decentralized governance of an organization; and (c) that is an entity formed under this chapter. (7)(a) 'Developer' means a person involved in the development or maintenance of a DAO. (b) 'Developer' includes a person that provides: (i) software code; or (ii) design, business, legal, or ancillary support. (8)(a) 'Dispute resolution mechanism' means an on-chain alternative dispute resolution system that enables persons to resolve disputes arising out of a DAO. (b) 'Dispute resolution mechanism' includes: (i) arbitration; (ii) expert determination; or (iii) an on-chain alternative court system. (9) 'Division' means the Division of Corporations and Commercial Code. (10) 'Failure event' means an error in the DAO's software code or an exploit that: (a) renders the DAO inoperative; or (b) fundamentally changes the expected operation of the DAO. (11) 'Graphical user interface' means a publicly accessible interface through which a person interacts with computer software through visual indicator representations. (12) 'Hard fork' means a blockchain software upgrade that is not compatible with previous versions and requires all users to upgrade. (13) 'Legal representative' means an individual appointed in the manner specified in the by-laws to perform procedural functions off-chain on behalf of a DAO. (14) 'Majority chain' means the version of the blockchain accepted by more than half of the validators following a hard fork. (15) 'Meeting' means a synchronous or asynchronous event for the purpose of discussing and acting upon DAO related matters by members or participants. (16)(a) 'Member' means a person who has governance rights in a DAO. (b) 'Member' does not include an individual that has involuntarily received a token with governance rights, unless that person has chosen to participate in governance by undertaking a governance behavior, on-chain or off-chain. (17) 'Minority chain' means the version of the chain that is not the majority chain following a hard fork. (18) 'Off-chain' means any action that is not on-chain. (19) 'On-chain' means any action that is recorded and verified on a blockchain. (20) 'On-chain contribution' refers to any token segregated and locked in one of the DAO's smart contracts for the purpose of member buy-in and the provision of withdrawable capital. (21) 'Organizer' means a person that submits the certificate of filing as required in Section 48-5-201. (22) 'Participant' means a person that: (a) is not a member of a DAO; and (b) holds or interacts with a token of a DAO. (23) 'Permissionless blockchain' means a publicly distributed ledger that allows a person to transact and produce blocks in accordance with the blockchain protocol, in which the validity of the block is independent of the identity of the user. (24) 'Public address' means a unique, durable identifier that an individual can transact with on a permissionless blockchain. (25) 'Public forum' means a freely accessible online environment commonly used for the exercise of speech and public debate. (26) 'Public signal' means a declaration authorized by the DAO in a public forum. (27) 'Quality assurance' means a security review of the software code of the DAO in accordance with industry standards. (28) 'Redeem' means to exchange a token for the value that the token represents. (29) 'Smart contract' means software code that: (a) is deployed on a permissionless blockchain; (b) consists of a set of predefined instructions executed in a distributed manner by the nodes of an underlying blockchain network; and (c) produces a change on the blockchain network. (30) 'Token' means a record on a permissionless blockchain that represents an asset, participation right, or other entitlement. (31) 'Transaction' means a new entry in a permissionless blockchain, including the recording of a change in ownership of an asset or participation in a DAO.
 
-### § 48-5-101. Short Title
+## § 48-5-102. Governing document hierarchy -- Governing law
 
-This chapter is known as the "Utah Decentralized Autonomous Organization Act."
+A DAO shall be governed by the following, listed in order of primacy: (1) this act; (2) the by-laws of the DAO; (3) if this act and the DAO's by-laws are silent, the provisions of Chapter 3a, Utah Revised Uniform Limited Liability Company Act; and (4) principles of law and equity.
 
+## § 48-5-103. Powers of the division
 
-### § 48-5-102. Definitions
+(1)(a) The division may make, amend, or rescind a rule, form, or order when necessary to carry out this chapter. (b) The division shall make rules in accordance with Title 63G, Chapter 3, Utah Administrative Rulemaking Act. (2) The division may by rule: (a) provide the form and content of a registration requirement required under this chapter; (b) provide the method of determining whether formation requirements described in Section 48-5-201 have been met and when to issue a certificate of organization; and (c) identify industry standards for determining whether the DAO has undergone security review for quality assurance.
 
-As used in this chapter:
+## § 48-5-104. Legal personality
 
-(1) "Certificate of organization" means the document filed with the Division of Corporations and Commercial Code to form a decentralized autonomous organization LLC.
+A DAO that meets the requirements of this act: (1) shall be deemed a legal entity separate and distinct from the DAO's members; (2) has the capacity to sue and be sued in the DAO's own name and the power to do all things necessary or convenient to carry on the DAO's activities and affairs; (3) shall meet the DAO's liabilities through the DAO's assets; (4) may have any lawful purpose; and (5) has perpetual duration.
 
-(2) "Decentralized" means, with respect to a decentralized autonomous organization, that:
+## § 48-5-105. Permitted names
 
-(a) the governance of the organization is conducted primarily through a smart contract or token-based voting mechanism;
+(1)(a) The name of a limited liability DAO shall contain the words limited liability decentralized autonomous organization or limited decentralized autonomous organization or the abbreviation L.L.D., LLD, L.D., or LD. (b) Limited may be abbreviated as Ltd., and decentralized autonomous organization may be abbreviated as DAO.
 
-(b) no single person or group of persons acting in concert controls more than 50% of the voting power of the organization at the time of certification; and
+## § 48-5-106. Registered agent
 
-(c) the technical requirements of Section 48-5-201 are satisfied.
+Each DAO shall designate a registered agent in this state in accordance with Subsection 16-17-203(1) and maintain a registered agent in the state.
 
-(3) "Decentralized autonomous organization" or "DAO" means an organization that:
+## § 48-5-107. Fees
 
-(a) is formed and governed through a smart contract;
+Unless otherwise provided by statute, the division shall charge and collect a fee for services established by the division in accordance with Section 63J-1-504.
 
-(b) operates on an open blockchain; and
+## § 48-5-108. Certificates issued by the division
 
-(c) is registered as a DAO LLC pursuant to this chapter.
+(1) Any person may apply to the division for: (a) a certificate of existence for a DAO; or (b) a certificate that sets forth any facts of record in the division.
 
-(4) "DAO LLC" means a decentralized autonomous organization formed as a limited liability company pursuant to this chapter.
+## § 48-5-109. Electronic documents
 
-(5) "Failure event" means:
+(1) Subject to Section 48-5-107, the division shall by rule permit a writing required or permitted to be filed with the division under this chapter to be delivered, mailed, or filed: (a) in an electronic medium; or (b) by electronic transmission.
 
-(a) a material security vulnerability in the smart contract governing the DAO;
+## § 48-5-201. Formation requirements
 
-(b) a fork resulting in two conflicting versions of the DAO;
+(1)(a) One or more persons may act as organizers to form a DAO by delivering to the division for filing a certificate of organization. (b) At least one of the organizers shall be an individual. (2)(a) A certificate of organization shall provide: (i) the name of the DAO, which shall comply with Section 48-3a-108; (ii) the name of an organizer that is an individual; (iii) the street and mailing address of the organizer; (iv) the name and address of the legal representative; and (v) the information required by Subsection 16-17-203(1). (3) A DAO shall submit evidence to the division that the DAO has complied with requirements including: (a) deployed on a permissionless blockchain; (b) has a unique public address; (c) software code is available in a public forum; (d) software code has undergone quality assurance; (e) has a graphical user interface; (f) the governance system is decentralized; (g) has at least one member; (h) publicly specified communication mechanism; and (i) describes or provides a dispute resolution mechanism. (5) A DAO is formed when the certificate of organization becomes effective and the evidence in Subsection (3) is submitted. (6) Upon formation, the DAO shall have limited liability, subject to Section 48-5-202.
 
-(c) the permanent loss of access to the smart contract governing the DAO; or
+## § 48-5-202. Limited liability
 
-(d) any other event specified in the certificate of organization.
+(1) Except as set forth in Subsections (2) and (3), a member: (a) may only be liable for the on-chain contributions that the member has committed to the DAO; (b) may not be held personally liable for any excess liability after the DAO's assets have been exhausted; (c) may not be held personally liable for any obligation incurred by the DAO; and (d) may not be held personally liable, in the member's capacity as a member, for the wrongful act or omission of any other member of the DAO. (2) If a DAO refuses to comply with an enforceable judgment, order, or award entered against the DAO, the members who voted against compliance may be liable for any monetary payments ordered in the judgment, order, or award in proportion to the member's share of governance rights. (3) Subsections (1) and (2) do not affect the personal liability of a member in tort for a member's own wrongful act or omission.
 
-(6) "Fork" means a divergence in the software or protocol governing a DAO that results in two or more versions of the DAO existing concurrently.
+## § 48-5-203. By-laws
 
-(7) "Governance protocol" means the rules, procedures, and mechanisms by which a DAO makes decisions, including through smart contracts, token voting, or other means.
+(1) A DAO shall adopt by-laws that establish internal organization and procedures. (2) The by-laws shall be set out in plain terms. (3) The by-laws may contain any provision for managing the entity and regulating the affairs of the DAO that is not inconsistent with law.
 
-(8) "Member" means a person who holds membership interests in a DAO LLC.
+## § 48-5-204. Annual report to the division
 
-(9) "On-chain" means recorded on, or executed by, a blockchain.
+(1) A DAO shall deliver to the division for filing an annual report that states: (a) the name of the DAO; and (b) the information required by Subsection 16-17-203(1). (2) Information in the annual report must be current as of the date the report is signed. (3) Every 12 months after the DAO has been issued a certificate of organization, the DAO shall submit the annual report.
 
-(10) "Open blockchain" means as defined in W.S. 34-29-106(a)(i) of the Wyoming Statutes, or equivalent: a blockchain that is publicly accessible and operates without the need for permission from any central authority.
+## § 48-5-301. Classes of participation rights -- Membership
 
-(11) "Smart contract" means a self-executing contract with the terms of the agreement between parties directly written into lines of code that are deployed on a blockchain.
+(1) A DAO's by-laws may create multiple classes of member participation rights. (2) Where the DAO has tokens providing governance powers to the token holder, the token holder shall be considered a member: (a) from the time the ownership of the tokens is established to be in the possession of an address; or (b) from the time when ownership is first acknowledged by the token holder through an on-chain interaction with the DAO. (3) This section does not apply in the event of a hard fork.
 
-(12) "Token" means a unit of account on a blockchain that may represent a membership interest, governance right, or other interest in a DAO.
+## § 48-5-302. Voting rights
 
-(13) "Voting power" means the power to vote on governance matters as set forth in the DAO's governance protocol or certificate of organization.
+(1) The by-laws shall set out the distribution of voting rights for the classes of member participation rights. (2) The method by which these voting rights are computed and distributed shall be set out in the by-laws.
 
+## § 48-5-303. Proxies
 
-### § 48-5-103. Scope; Application
+(1) A member may be represented by a proxy. (2) The by-laws may establish requirements for representation by proxy. (3) A proxy may exercise all rights of a member.
 
-(a) This chapter applies to a decentralized autonomous organization formed under this chapter.
+## § 48-5-304. Minority rights protection
 
-(b) A DAO LLC formed under this chapter is subject to Title 48, Chapter 2c (Utah Revised Uniform Limited Liability Company Act) except to the extent this chapter provides otherwise.
+The DAO shall state in the by-laws whether the DAO provides minority rights protection.
 
-(c) This chapter does not apply to a limited liability company formed under Title 48, Chapter 2c that has not elected to be governed as a DAO LLC under this chapter.
+## § 48-5-305. Administrators
 
+(1) Unless mandated in the DAO's by-laws, a DAO is not required to have an administrator, including a board of directors or a trustee. (2) In the absence of a provision requiring administrators, all the powers and tasks of an administrator shall be vested in the DAO members as a class. (3) The voting mechanism for nominating and appointing an administrator shall be set out in the DAO's by-laws.
 
-### § 48-5-104. Legal Entity; Powers
+## § 48-5-306. Legal representation
 
-(a) A DAO LLC formed under this chapter is a legal entity separate from its members.
+(1) A DAO shall retain a legal representative to undertake tasks that cannot be achieved on-chain. (2) Legal representation shall be carried out by the legal representative in the manner provided in the by-laws, as evidenced by an authorization displayed on a public forum, and verifiable by cryptographic proof. (3) The legal representative may undertake and execute any and all acts and contracts included within the scope of such authorization. (4) The legal representative may not be required to reside in Utah. (5) A legal representative may not be personally liable for acts performed on behalf of the DAO.
 
-(b) A DAO LLC has all the powers of a limited liability company under Title 48, Chapter 2c, and may:
+## § 48-5-307. No implicit fiduciary status
 
-(i) own property;
+A developer, member, participant, or legal representative of a DAO may not be imputed to have fiduciary duties towards each other or third parties solely on account of their role, unless the developer, member, participant, or legal representative: (1) explicitly holds themselves out as a fiduciary; or (2) stipulates to assume a fiduciary status as provided in the DAO's by-laws.
 
-(ii) enter into contracts;
+## § 48-5-401. Asset subscription and payment
 
-(iii) sue and be sued;
+(1) No minimum capital requirements may apply to a DAO recognized by this act. (2) If the DAO wishes to maintain a minimum amount of capital, the by-laws shall specify the rules for subscription and payment. (3) The by-laws shall provide the rules for exiting the DAO that address the consequences of voluntary and involuntary member and participant exit on subscriptions and payments. (4) No member may compel the dissolution of the DAO for failure to return the member's on-chain contribution.
 
-(iv) hold and transfer digital assets and tokens on-chain;
+## § 48-5-402. Meetings
 
-(v) execute smart contracts; and
+(1) A DAO may hold meetings as provided in the DAO's by-laws. (2) Unless explicitly specified in the by-laws, meetings are not required to be in person. (3) If the by-laws include a meeting requirement, the by-laws shall include an explicit and transparent mechanism of giving notice and a defined time period for deliberating upon proposals. (4) Notice of any required meeting shall be communicated through a graphical user interface. (5) The quorum and majority requirements for meetings shall be specified in the by-laws.
 
-(vi) engage in any lawful activity.
+## § 48-5-403. Contentious forks in the underlying blockchain
 
----
+(1) In the event of a hard fork: (a) the legal representation of the DAO remains on the majority chain; and (b) any off-chain assets shall belong to the DAO on the majority chain. (2)(a) A DAO may choose to maintain legal presence on a minority chain if the DAO expresses an intent to do so by public signal. (b) If the DAO expresses intent to maintain legal presence on a minority chain, any off-chain assets shall belong to the DAO on the selected minority chain. (3) The DAO may liquidate on-chain assets after a hard fork to move those assets to the chosen chain. (4) The DAO may split into multiple legal entities after a hard fork, each on a separate chain, after public signal of an intent to do so, provided there is a definitive distribution of off-chain assets between the majority and minority chain.
 
-## Part 2 — Formation
+## § 48-5-404. Restructuring
 
-### § 48-5-201. Certificate of Organization; Requirements
+(1) When a DAO is restructured, whether through modification, upgrade, or migration, the DAO's legal personality and limited liability is retained only to the extent that: (a) the new software code fulfills all the formation requirements of Section 48-5-201; and (b) where the DAO has to be associated with a new unique public address, proper notice is provided by way of public signal. (2) A DAO that is restructured in compliance with Subsection (1) inherits the rights and obligations of the original DAO as a successor.
 
-(a) To form a DAO LLC, a person shall file a certificate of organization with the Division of Corporations and Commercial Code that includes:
+## § 48-5-405. Failure event
 
-(1) the name of the DAO LLC, which shall include "DAO LLC" or "Decentralized Autonomous Organization Limited Liability Company" or an abbreviation;
+(1) In the case of a failure event, legal personality and limited liability are maintained to the extent necessary to protect DAO members and participants from personal liability. (2) A failure event may trigger liability on the person deploying or upgrading the DAO if that person: (a) acted in bad faith; or (b) engaged in gross negligence.
 
-(2) the address of a registered office in Utah and the name and address of its registered agent in Utah;
+## § 48-5-406. Taxation
 
-(3) the address of the smart contract or contracts governing the DAO, including the blockchain network and contract address;
-
-(4) a statement that the DAO LLC is decentralized as defined in Section 48-5-102(2) at the time of formation;
-
-(5) a description of the DAO's governance protocol;
-
-(6) the token or tokens that represent membership interests or governance rights;
-
-(7) a description of the procedures for proposing and adopting governance decisions;
-
-(8) a description of the DAO's treasury management;
-
-(9) a description of the failure event procedures; and
-
-(10) any other information required by the Division of Corporations.
-
-(b) The certificate of organization shall be signed by an organizer.
-
-
-### § 48-5-202. Name
-
-(a) The name of a DAO LLC shall:
-
-(i) contain the phrase "decentralized autonomous organization," "DAO," or "DAO LLC"; and
-
-(ii) be distinguishable from any other entity name on file with the Division.
-
-(b) The name requirement is in addition to any requirements under Title 48, Chapter 2c.
-
-
-### § 48-5-203. Registered Agent
-
-A DAO LLC shall maintain a registered agent in Utah pursuant to Section 16-17-202.
-
-
-### § 48-5-204. Smart Contract Requirements
-
-(a) The smart contract or contracts governing a DAO LLC shall:
-
-(i) be deployed on an open blockchain;
-
-(ii) be publicly accessible and verifiable;
-
-(iii) govern the voting and governance rights of members; and
-
-(iv) execute or record governance decisions.
-
-(b) A DAO LLC may amend its governing smart contract through the governance process set forth in the certificate of organization.
-
-
-### § 48-5-205. Annual Filing
-
-(a) A DAO LLC shall file an annual report with the Division that includes:
-
-(i) the current address of the smart contract and blockchain network;
-
-(ii) a statement that the DAO LLC remains decentralized as of the filing date or, if the DAO LLC is no longer decentralized, a statement of the failure event and remediation status;
-
-(iii) a list of changes to the governance protocol since the prior annual filing; and
-
-(iv) payment of the applicable fee.
-
----
-
-## Part 3 — Governance and Members
-
-### § 48-5-301. Governance Protocol
-
-(a) The governance of a DAO LLC shall be conducted through the governance protocol specified in the certificate of organization.
-
-(b) The governance protocol shall include:
-
-(i) procedures for proposing governance matters;
-
-(ii) the voting threshold required for approval;
-
-(iii) the procedures for executing approved decisions; and
-
-(iv) the quorum requirement, if any.
-
-(c) The governance protocol may be amended through a vote of members as specified in the certificate of organization.
-
-
-### § 48-5-302. Membership Interests; Tokens
-
-(a) Membership interests in a DAO LLC shall be represented by tokens issued on the open blockchain.
-
-(b) The certificate of organization shall specify:
-
-(i) the token or tokens that represent membership interests;
-
-(ii) the rights and restrictions associated with each class of token; and
-
-(iii) the transferability of membership interests.
-
-(c) Transfer of a token constituting a membership interest transfers the associated governance and economic rights unless the certificate of organization provides otherwise.
-
-
-### § 48-5-303. Member Rights
-
-(a) Each member has the right to:
-
-(i) vote on governance matters in accordance with the governance protocol;
-
-(ii) receive distributions in accordance with the certificate of organization;
-
-(iii) inspect records maintained by the DAO LLC on-chain; and
-
-(iv) seek judicial relief for a breach of the certificate of organization or this chapter.
-
-
-### § 48-5-304. Fiduciary Duties; Business Judgment
-
-(a) A member or manager of a DAO LLC shall, in acting in such capacity:
-
-(i) act in good faith; and
-
-(ii) act in a manner reasonably believed to be in the best interests of the DAO LLC.
-
-(b) A member or manager does not breach a fiduciary duty solely by voting in accordance with a pre-established governance protocol or smart contract instruction.
-
-(c) In evaluating a governance decision, a court shall apply a business judgment standard that takes into account:
-
-(i) the role of the smart contract in executing the decision; and
-
-(ii) the extent to which the decision was disclosed and voted upon through the governance protocol.
-
-(d) The certificate of organization may limit or eliminate fiduciary duties consistent with this section.
-
-
-### § 48-5-305. Liability
-
-(a) A member of a DAO LLC is not personally liable for a debt, obligation, or liability of the DAO LLC solely by reason of being a member.
-
-(b) A member may be personally liable if:
-
-(i) the member expressly assumes liability;
-
-(ii) the member participates in wrongful or fraudulent conduct; or
-
-(iii) a court pierces the organizational veil.
-
-(c) The limited liability of members is not affected by participation in governance through voting or smart contract interaction.
-
-
-### § 48-5-306. Operating Agreement
-
-(a) A DAO LLC may have an operating agreement, which may be embodied in a smart contract or in a written document or both.
-
-(b) To the extent of any conflict between the operating agreement and the certificate of organization, the certificate of organization governs.
-
-
-### § 48-5-307. Standards of Conduct: Smart Contracts
-
-A member or manager who acts in reliance on a smart contract that is deployed in good faith and in accordance with the governance protocol shall not be liable for the outcome of such action, provided:
-
-(i) the member or manager acted in good faith; and
-
-(ii) the smart contract was the proper mechanism for the decision under the governance protocol.
-
-
-### § 48-5-308. Dispute Resolution
-
-(a) The certificate of organization shall include a mechanism for resolving disputes among members.
-
-(b) Members may submit disputes to binding arbitration, mediation, or other dispute resolution mechanisms as specified in the certificate of organization.
-
-(c) Any dispute resolution mechanism must comply with applicable state and federal law.
-
----
-
-## Part 4 — Failure Events, Dissolution, and Other Matters
-
-### § 48-5-401. Failure Events
-
-(a) Upon the occurrence of a failure event, the DAO LLC shall:
-
-(i) notify members through the governance protocol or on-chain communication;
-
-(ii) initiate the remediation process specified in the certificate of organization; and
-
-(iii) file a notice with the Division within 90 days.
-
-(b) If a failure event cannot be remediated, the DAO LLC shall be dissolved pursuant to Section 48-5-403.
-
-(c) The certificate of organization shall specify:
-
-(i) the events that constitute a failure event;
-
-(ii) the procedures for addressing a failure event; and
-
-(iii) the allocation of responsibility for remediation.
-
-
-### § 48-5-402. Forks
-
-(a) If a fork occurs in the blockchain or smart contract governing the DAO LLC:
-
-(i) the DAO LLC shall convene a governance vote to determine which version of the DAO LLC shall continue;
-
-(ii) the version receiving majority approval shall be the surviving DAO LLC; and
-
-(iii) the surviving DAO LLC shall file an amended certificate of organization with the Division.
-
-(b) The certificate of organization may establish procedures for handling forks that differ from this section.
-
-
-### § 48-5-403. Dissolution
-
-(a) A DAO LLC may be dissolved by:
-
-(i) vote of the members as specified in the certificate of organization;
-
-(ii) occurrence of a failure event that cannot be remediated;
-
-(iii) judicial dissolution; or
-
-(iv) administrative dissolution by the Division for failure to file an annual report.
-
-(b) Dissolution of a DAO LLC shall be conducted pursuant to Title 48, Chapter 2c, to the extent consistent with this chapter.
-
-
-### § 48-5-404. Conversions and Mergers
-
-A DAO LLC may convert to or from another form of entity, or merge with another entity, pursuant to Title 48, Chapter 2c, provided the surviving or resulting entity complies with this chapter if it continues as a DAO LLC.
-
-
-### § 48-5-405. Fees
-
-The Division shall establish fees for the filing of a certificate of organization, annual report, and other documents required under this chapter.
-
-
-### § 48-5-406. Relation to Other Law
-
-(a) This chapter shall be construed in conjunction with Title 48, Chapter 2c (Utah Revised Uniform Limited Liability Company Act).
-
-(b) This chapter does not limit the application of any other state or federal law to a DAO LLC.
-
-(c) A DAO LLC formed under this chapter shall comply with all applicable state and federal laws, including securities laws, money transmission laws, and tax laws.
-
----
-
-*Authority: HB 0357 (2023 General Session); Utah Code §§ 48-5-101 to -406. This rendering is based on the enacted statute as of 2023. Verify current text at the Utah Legislature website.*
+(1) If a DAO recognized by this act is eligible to elect to be classified as a corporation for federal tax purposes, and the DAO makes that election, the DAO shall be subject to the provisions of Title 59, Chapter 7, Corporate Franchise and Income Taxes. (2)(a) Unless the DAO makes the election described in Subsection (1), a DAO recognized by this act shall be classified as a partnership for tax purposes and subject to the provisions of Title 59, Chapter 10, Part 14, Pass-Through Entities and Pass-Through Entity Taxpayer Act. (b) For purposes of taxation, a DAO shall allocate the distributive share of income, gain, loss, deduction, and credit derived from the DAO's activities, to each member in proportion to the member's membership interest in the entity.
