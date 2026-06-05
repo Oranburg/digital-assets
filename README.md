@@ -61,7 +61,7 @@ Expanded from the [NH DAO Law Explorer](https://oranburg.law/NH-RSA-301-B/).
 
 ## Author
 
-Seth C. Oranburg, Professor of Law
+Seth C. Oranburg, Ordinary Professor of Law and Director of the Law and Entrepreneurship Program, The Catholic University of America, Columbus School of Law
 
 ## License
 
