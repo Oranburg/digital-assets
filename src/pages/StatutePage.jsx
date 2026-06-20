@@ -15,8 +15,9 @@ function getMarkdown(fileId) {
   return statuteModules[key] || null
 }
 
-export default function StatutePage() {
-  const { statuteId } = useParams()
+export default function StatutePage({ statuteId: statuteIdProp } = {}) {
+  const params = useParams()
+  const statuteId = statuteIdProp ?? params.statuteId
   const meta = getStatute(statuteId)
   const markdownText = meta ? getMarkdown(meta.file) : null
 

@@ -57,6 +57,9 @@ export default function StateLaws() {
           Five states have enacted DAO-specific legislation. Each takes a different approach —
           from New Hampshire&apos;s prescriptive 11-requirement framework to Vermont&apos;s permissive LLC overlay.
         </p>
+        <p className="serif">
+          <Link to="/nh-rsa-301b">Read the full New Hampshire RSA 301-B statutory text →</Link>
+        </p>
         <div className="state-laws__summary">
           {STATE_ORDER.map(abbr => {
             const info = STATE_INFO[abbr]

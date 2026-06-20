@@ -57,7 +57,7 @@ function FederalLawsBreadcrumb() {
   return <Breadcrumb trail={[HOME, DA]} current="Federal Laws" />
 }
 
-function StatuteBreadcrumb({ base, baseLabel, basePath }) {
+function StatuteBreadcrumb({ baseLabel, basePath }) {
   const { statuteId } = useParams()
   const meta = getStatute(statuteId)
   return (
@@ -66,6 +66,25 @@ function StatuteBreadcrumb({ base, baseLabel, basePath }) {
       current={meta?.shortTitle ?? statuteId}
     />
   )
+}
+
+// Canonical alias for the migrated NH RSA 301-B statute. Renders the shared
+// StatutePage with a fixed statuteId so /nh-rsa-301b reaches the full text
+// directly, in addition to the /laws/states/nh-rsa-301-b path.
+const NH_RSA_301B_ID = 'nh-rsa-301-b'
+
+function NhRsa301bBreadcrumb() {
+  const meta = getStatute(NH_RSA_301B_ID)
+  return (
+    <Breadcrumb
+      trail={[HOME, DA, { label: "State Laws", href: "/laws/states" }]}
+      current={meta?.shortTitle ?? 'NH RSA 301-B'}
+    />
+  )
+}
+
+function NhRsa301bPage() {
+  return <StatutePage statuteId={NH_RSA_301B_ID} />
 }
 
 function AnalysisBreadcrumb() {
@@ -96,6 +115,7 @@ export default function App() {
           <Route path="/laws/states/:statuteId" element={
             <><StatuteBreadcrumb baseLabel="State Laws" basePath="/laws/states" /><StatutePage /></>
           } />
+          <Route path="/nh-rsa-301b" element={<><NhRsa301bBreadcrumb /><NhRsa301bPage /></>} />
           <Route path="/laws/federal" element={<><FederalLawsBreadcrumb /><FederalLaws /></>} />
           <Route path="/laws/federal/:statuteId" element={
             <><StatuteBreadcrumb baseLabel="Federal Laws" basePath="/laws/federal" /><StatutePage /></>
