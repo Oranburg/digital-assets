@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { Link } from 'react-router-dom'
 import { marked } from 'marked'
 import { getAllTerms } from '../utils/terms'
 import './StatuteReader.css'
@@ -145,13 +144,6 @@ export default function StatuteReader({ meta, markdownText }) {
     <div className="statute-reader">
       {/* Header */}
       <header className="statute-header">
-        <nav className="statute-breadcrumb">
-          <Link to="/">Home</Link>
-          <span>/</span>
-          <Link to="/laws/states">State Laws</Link>
-          <span>/</span>
-          <span>{meta.shortTitle}</span>
-        </nav>
         <div className="statute-header__inner">
           <div className="statute-header__meta">
             <span className="statute-state-badge" style={{ background: meta.color }}>
