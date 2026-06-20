@@ -1,0 +1,49 @@
+/*
+  Oranburg shared breadcrumb (React: vite-react and next).
+
+  Visually and structurally identical to design-system/partials/og-breadcrumb.html
+  and design-system/astro/Breadcrumb.astro: same nav[aria-label="Breadcrumb"] > ol > li
+  structure, same .og-breadcrumb class names, same aria-current="page" current crumb,
+  same CSS-generated separators from og-tokens.css.
+
+  Accessibility contract (WCAG 2.2):
+    - nav[aria-label="Breadcrumb"] wraps an ordered list.
+    - Each ancestor is a list item with a link.
+    - The current page is plain text carrying aria-current="page" (no link).
+    - Separators are CSS ::before generated content, never an in-DOM glyph.
+    - a:focus-visible outlines live in og-tokens.css (2.4.7 / 2.4.11).
+
+  No invented links: the caller supplies `trail`. When `trail` is empty the
+  breadcrumb falls back to the single shared default link (oranburg.law).
+
+  Import og-tokens.css once at the app entry (e.g. main.jsx or _app/layout) so
+  the .og-breadcrumb rules and the design tokens are in scope. This component
+  has no client-side state, so it is safe to render on the server (Next RSC).
+
+  Usage:
+    <Breadcrumb
+      trail={[{ label: "Home", href: "https://oranburg.law" },
+              { label: "Scholarship", href: "/scholarship/" }]}
+      current="Architects of the Void"
+    />
+*/
+export default function Breadcrumb({ trail = [], current }) {
+  const items =
+    trail.length > 0 ? trail : [{ label: "Home", href: "https://oranburg.law" }];
+  return (
+    <nav aria-label="Breadcrumb" className="og-breadcrumb">
+      <ol>
+        {items.map((item) => (
+          <li key={item.href}>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))}
+        {current && (
+          <li>
+            <span aria-current="page">{current}</span>
+          </li>
+        )}
+      </ol>
+    </nav>
+  );
+}
