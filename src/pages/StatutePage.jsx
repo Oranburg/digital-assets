@@ -35,13 +35,6 @@ export default function StatutePage() {
   if (!markdownText) {
     return (
       <div className="container section">
-        <nav className="statute-breadcrumb" style={{ marginBottom: 'var(--space-lg)' }}>
-          <Link to="/">Home</Link>
-          <span>/</span>
-          <Link to="/laws/states">State Laws</Link>
-          <span>/</span>
-          <span>{meta.shortTitle}</span>
-        </nav>
         <div className="statute-placeholder card">
           <span className="statute-placeholder__badge" style={{ background: meta.color }}>
             {meta.state}

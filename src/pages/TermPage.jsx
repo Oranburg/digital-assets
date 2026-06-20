@@ -9,21 +9,18 @@ const LENSES = [
     field: 'lay',
     label: 'What is it?',
     emoji: '🏷️',
-    cssVar: '--lens-ontology',
   },
   {
     key: 'techne',
     field: 'technical',
     label: 'How does it work?',
     emoji: '⚙️',
-    cssVar: '--lens-techne',
   },
   {
     key: 'teleology',
     field: 'legal_significance',
     label: 'What is it for?',
     emoji: '🎯',
-    cssVar: '--lens-teleology',
   },
 ]
 
@@ -99,21 +96,6 @@ export default function TermPage() {
   return (
     <div className="term-page">
       <div className="container">
-        {/* Breadcrumb */}
-        <nav className="term-breadcrumb">
-          <Link to="/">Home</Link>
-          <span>/</span>
-          <Link to="/glossary">Glossary</Link>
-          {parentTerm && (
-            <>
-              <span>/</span>
-              <Link to={`/glossary/${parentTerm.id}`}>{parentTerm.term}</Link>
-            </>
-          )}
-          <span>/</span>
-          <span className="term-breadcrumb__current">{term.term}</span>
-        </nav>
-
         {/* Header */}
         <header className="term-header">
           <h1 className="term-header__title">{term.term}</h1>
@@ -129,7 +111,7 @@ export default function TermPage() {
           )}
         </header>
 
-        {/* Plain definition — always visible */}
+        {/* Plain definition (always visible) */}
         <section className="term-definition">
           <p className="term-definition__text serif">{term.definitions?.lay}</p>
         </section>
@@ -151,7 +133,7 @@ export default function TermPage() {
           )}
         </div>
 
-        {/* Greek footnote — shown once */}
+        {/* Greek footnote (shown once) */}
         <GreekFootnote />
 
         {/* Navigation */}
